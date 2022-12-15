@@ -1,0 +1,33 @@
+Internal fan state
+External fan state
+cooling state
+Machine state
+Internal fan alarm
+External fan alarm
+Compressor fault
+Condenser temp
+Return air temp sensor fault
+Condenser temp sensor fault
+High DC voltage alarm
+Low DC voltage alarm
+Internal fan speed
+External fan speed
+Return air temp
+DC power voltage
+Cabinet inside high temp limit
+Compressor starting temp
+Internal fan alarm
+External fan alarm
+Compressor fault
+Heater overload alarm
+Heater underload alarm
+Return air Temp sensor fault
+Condenser Temp sensor fault
+High DC voltage alarm
+Low DC voltage alarm
+Inside high temp alarm
+Inside low temp alarm
+High pressure alarm
+Door alarm
+Water alarm
+Smoke alarm
