@@ -40,7 +40,10 @@ class AddPoint:
             self.write_aiot_point()
 
     def write_aiot_point(self):
-        point_sql = '''INSERT INTO aiot_point("id", "name", "english_name", "field", "point_set_id", "data_id", "asset_model_id", "controllable", "data_type", "register_addres", "range_max", "range_min", "create_time") VALUES ({id}, '{name}','{english_name}', '{field}', {point_set_id}, {data_id}, {asset_model_id}, {controllable}, {data_type}, {register_addres}, {range_max}, {range_min}, '{create_time}');''' \
+        point_sql = '''INSERT INTO aiot_equipment_point("id", "name", "english_name", "field", "asset_point_id", "data_id", 
+        "equipment_model_id", "data_type", "register_address", "range_max", "range_min", "create_time") 
+        VALUES ({id}, '{name}','{english_name}', '{field}', {point_set_id}, {data_id}, {asset_model_id}, 
+        {data_type}, {register_addres}, {range_max}, {range_min}, '{create_time}');''' \
             .format(id=self.id, name=self.name, english_name=self.english_name, field=self.field,
                     point_set_id=self.point_set_id, data_id=self.data_id, asset_model_id=self.asset_model_id,
                     controllable=self.controllable, data_type=self.data_type, register_addres=self.register_addres,
@@ -64,8 +67,8 @@ class AddPointSet:
         # Java 自动生成
         GeneratorTestFile.writelines(
             "tableMap.put({influx_15m}, {influx15m}); \ntableMap.put({influx_1h}, {influx1h});"
-                .format(influx_15m=influx_name_15m, influx15m=self.name_convert_to_camel(influx_name_15m),
-                        influx_1h=influx_name_1h, influx1h=self.name_convert_to_camel(influx_name_1h)))
+            .format(influx_15m=influx_name_15m, influx15m=self.name_convert_to_camel(influx_name_15m),
+                    influx_1h=influx_name_1h, influx1h=self.name_convert_to_camel(influx_name_1h)))
         aiot_point_set = elx_field.sheet_by_name("point_set_air_con")
         # 注入数据
         for current_line in range(2, aiot_point_set_end_line_number):
@@ -133,11 +136,16 @@ class AddPointSet:
             create1hTableFile.writelines(self.field + " float8,\n")
 
     def write_aiot_point_set(self):
-        point_set_sql = '''insert into aiot_point_set(id, "name", "english_name", field, unit, asset_class_id, virtual_sige, atts_type, data_type, create_time) VALUES ({point_set_id}, '{point_set_name}', '{english_name}', '{point_set_field}', '{point_set_unit}', {asset_class_id}, {virtual_sige}, {atts_type}, {data_type}, '{create_time}');'''. \
-            format(point_set_id=self.id, point_set_name=self.name, english_name=self.english_name,
-                   point_set_field=self.field, point_set_unit=self.unit, asset_class_id=self.asset_class_id,
-                   virtual_sige=self.virtual_sige, atts_type=self.atts_type, data_type=self.data_type,
-                   create_time=new_datetime)
+        point_set_sql = '''insert into aiot_asset_point(id, "name", "english_name", field, unit, asset_class_id, 
+        virtual_sign, controllable, atts_type, data_type, create_time) VALUES ({point_set_id}, '{point_set_name}', 
+        '{english_name}', '{point_set_field}', '{point_set_unit}', {asset_class_id}, {virtual_sige}, {controllable}, 
+        {atts_type}, {data_type}, '{create_time}');'''.format(point_set_id=self.id, point_set_name=self.name,
+                                                              english_name=self.english_name,
+                                                              point_set_field=self.field, point_set_unit=self.unit,
+                                                              asset_class_id=self.asset_class_id,
+                                                              virtual_sige=self.virtual_sige,
+                                                              controllable=self.controllable, atts_type=self.atts_type,
+                                                              data_type=self.data_type, create_time=new_datetime)
         AiotPointSetFile.writelines(point_set_sql + "\n")
         curses.execute(point_set_sql)
 

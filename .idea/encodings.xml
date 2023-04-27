@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/C5/Excel2Data/JavaClassTable/FieldConstants.txt" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/C5/Excel2Data/JavaClassTable/GelBattery.txt" charset="GBK" />
     <file url="file://$PROJECT_DIR$/C5/Excel2Data/JavaClassTable/air_con_dc.txt" charset="GBK" />
     <file url="file://$PROJECT_DIR$/C5/Excel2Data/JavaClassTable/dc_air_con.txt" charset="GBK" />
     <file url="file://$PROJECT_DIR$/C5/Excel2Data/SqlScript/20221009_Nick.txt" charset="GBK" />
