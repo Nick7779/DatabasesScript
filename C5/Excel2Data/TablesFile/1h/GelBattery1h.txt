@@ -1,0 +1,101 @@
+/** 
+ * 电池状态. 
+ */ 
+ @ApiModelProperty("电池状态") 
+ private Long vrlaState;
+public static final String VRLA_STATE = "vrla_state";/** 
+ * 胶体电池SOC. 
+ */ 
+ @ApiModelProperty("胶体电池SOC") 
+ private Double vrlaSoc;
+public static final String VRLA_SOC = "vrla_soc";/** 
+ * 胶体电池浅放电时间. 
+ */ 
+ @ApiModelProperty("胶体电池浅放电时间") 
+ private Double vrlaLightDischargeTime;
+public static final String VRLA_LIGHT_DISCHARGE_TIME = "vrla_light_discharge_time";/** 
+ * 胶体电池温度. 
+ */ 
+ @ApiModelProperty("胶体电池温度") 
+ private Double vrlaTemp;
+public static final String VRLA_TEMP = "vrla_temp";/** 
+ * 胶体电池电流. 
+ */ 
+ @ApiModelProperty("胶体电池电流") 
+ private Double vrlaCurrent;
+public static final String VRLA_CURRENT = "vrla_current";/** 
+ * 胶体电池电量. 
+ */ 
+ @ApiModelProperty("胶体电池电量") 
+ private Double vrlaCapacity;
+public static final String VRLA_CAPACITY = "vrla_capacity";/** 
+ * 胶体电池深放电时间. 
+ */ 
+ @ApiModelProperty("胶体电池深放电时间") 
+ private Double vrlaDeepDischargeTime;
+public static final String VRLA_DEEP_DISCHARGE_TIME = "vrla_deep_discharge_time";/** 
+ * 胶体电池电压. 
+ */ 
+ @ApiModelProperty("胶体电池电压") 
+ private Double vrlaVoltage;
+public static final String VRLA_VOLTAGE = "vrla_voltage";/** 
+ * 胶体电池中间电压. 
+ */ 
+ @ApiModelProperty("胶体电池中间电压") 
+ private Double vrlaMiddleVoltage;
+public static final String VRLA_MIDDLE_VOLTAGE = "vrla_middle_voltage";/** 
+ * 胶体电池高温1报警值. 
+ */ 
+ @ApiModelProperty("胶体电池高温1报警值") 
+ private Double vrlaHighTemp1Alarm;
+public static final String VRLA_HIGH_TEMP1_ALARM = "vrla_high_temp1_alarm";/** 
+ * 胶体电池组数量. 
+ */ 
+ @ApiModelProperty("胶体电池组数量") 
+ private Long vrlaNumOfGroups;
+public static final String VRLA_NUM_OF_GROUPS = "vrla_num_of_groups";/** 
+ * 胶体电池过放电次数. 
+ */ 
+ @ApiModelProperty("胶体电池过放电次数") 
+ private Long vrlaOverDischargeNum;
+public static final String VRLA_OVER_DISCHARGE_NUM = "vrla_over_discharge_num";/** 
+ * 胶体电池放电时间. 
+ */ 
+ @ApiModelProperty("胶体电池放电时间") 
+ private Double vrlaDischargeTime;
+public static final String VRLA_DISCHARGE_TIME = "vrla_discharge_time";/** 
+ * 胶体电池能量. 
+ */ 
+ @ApiModelProperty("胶体电池能量") 
+ private Double vrlaDischargeEnergy;
+public static final String VRLA_DISCHARGE_ENERGY = "vrla_discharge_energy";/** 
+ * 胶体电池低温2报警值. 
+ */ 
+ @ApiModelProperty("胶体电池低温2报警值") 
+ private Double vrlaLowTemp2Alarm;
+public static final String VRLA_LOW_TEMP2_ALARM = "vrla_low_temp2_alarm";/** 
+ * 胶体电池低温1报警值. 
+ */ 
+ @ApiModelProperty("胶体电池低温1报警值") 
+ private Double vrlaLowTemp1Alarm;
+public static final String VRLA_LOW_TEMP1_ALARM = "vrla_low_temp1_alarm";/** 
+ * 胶体电池深放电次数. 
+ */ 
+ @ApiModelProperty("胶体电池深放电次数") 
+ private Long vrlaDeepDischargeNum;
+public static final String VRLA_DEEP_DISCHARGE_NUM = "vrla_deep_discharge_num";/** 
+ * 胶体电池过放电时间. 
+ */ 
+ @ApiModelProperty("胶体电池过放电时间") 
+ private Double vrlaOverDischargeTime;
+public static final String VRLA_OVER_DISCHARGE_TIME = "vrla_over_discharge_time";/** 
+ * 胶体电池高温2报警值. 
+ */ 
+ @ApiModelProperty("胶体电池高温2报警值") 
+ private Double vrlaHighTemp2Alarm;
+public static final String VRLA_HIGH_TEMP2_ALARM = "vrla_high_temp2_alarm";/** 
+ * 胶体电池浅放电次数. 
+ */ 
+ @ApiModelProperty("胶体电池浅放电次数") 
+ private Long vrlaLightDischargeNum;
+public static final String VRLA_LIGHT_DISCHARGE_NUM = "vrla_light_discharge_num";private static final long serialVersionUID = 1L;

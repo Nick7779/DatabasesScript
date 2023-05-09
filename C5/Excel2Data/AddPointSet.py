@@ -164,7 +164,7 @@ if __name__ == '__main__':
     # SQL结果输出文件
     sqlDataFileName = time.strftime('%m%d', time.localtime(time.time())) + "_Nick.txt"
     AiotPointSetFile = open("./SqlScript/" + sqlDataFileName, 'w+')
-    AiotPointFile = open("./SqlScript/AiotPoint/" + sqlDataFileName, 'w+')
+    AiotPointFile = open("./SqlScript/InsertPoint/" + sqlDataFileName, 'w+')
 
     asset_class = elx_field.sheet_by_name('asset_class')
     for line in range(2, asset_class.nrows):

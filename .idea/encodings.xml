@@ -8,7 +8,10 @@
     <file url="file://$PROJECT_DIR$/C5/Excel2Data/SqlScript/20221009_Nick.txt" charset="GBK" />
     <file url="file://$PROJECT_DIR$/C5/Excel2Data/SqlScript/20221017_Nick.txt" charset="GBK" />
     <file url="file://$PROJECT_DIR$/C5/Excel2Data/SqlScript/20221018_Nick.txt" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/C5/Excel2Data/SqlScript/AiotPoint/1019_Nick.txt" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/C5/Excel2Data/SqlScript/CreateTable/GelBattery.sql" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/C5/Excel2Data/SqlScript/InsertPoint/1019_Nick.txt" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/C5/Excel2Data/TablesFile/15m/GelBattery15m.txt" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/C5/Excel2Data/TablesFile/1h/GelBattery1h.txt" charset="GBK" />
     <file url="file://$PROJECT_DIR$/requirements.txt" charset="GBK" />
   </component>
 </project>
