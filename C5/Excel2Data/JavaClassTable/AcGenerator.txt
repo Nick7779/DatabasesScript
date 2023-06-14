@@ -1,0 +1,835 @@
+ /** 
+ * 冷却液温度停机告警. 
+ */ 
+ @Column(name = "genset_coolant_temp_level2") 
+ private Double gensetCoolantTempLevel2;
+ /** 
+ * 冷却液温度告警. 
+ */ 
+ @Column(name = "genset_coolant_temp_level1") 
+ private Double gensetCoolantTempLevel1;
+ /** 
+ * 油位告警. 
+ */ 
+ @Column(name = "genset_fuel_level_level1") 
+ private Double gensetFuelLevelLevel1;
+ /** 
+ * Cooling Time Setting. 
+ */ 
+ @Column(name = "genset_cooling_time_setting") 
+ private Double gensetCoolingTimeSetting;
+ /** 
+ * 开关状态. 
+ */ 
+ @Column(name = "genset_breaker_state") 
+ private Long gensetBreakerState;
+ /** 
+ * 油位. 
+ */ 
+ @Column(name = "genset_fuel_level") 
+ private Long gensetFuelLevel;
+ /** 
+ * 冷却液温蒂传感器故障. 
+ */ 
+ @Column(name = "genset_coolant_temp_sensor_failure") 
+ private Double gensetCoolantTempSensorFailure;
+ /** 
+ * 低油位停机告警. 
+ */ 
+ @Column(name = "genset_low_oil_pressure_shutdown") 
+ private Double gensetLowOilPressureShutdown;
+ /** 
+ * Battery Low Voltage. 
+ */ 
+ @Column(name = "genset_battery_low_voltage") 
+ private Double gensetBatteryLowVoltage;
+ /** 
+ * Battery High Voltage. 
+ */ 
+ @Column(name = "genset_battery_high_voltage") 
+ private Double gensetBatteryHighVoltage;
+ /** 
+ * 总油耗. 
+ */ 
+ @Column(name = "genset_total_fuel_consumption") 
+ private Long gensetTotalFuelConsumption;
+ /** 
+ * 油箱总容量. 
+ */ 
+ @Column(name = "genset_fuel_tank_volume") 
+ private Long gensetFuelTankVolume;
+ /** 
+ * zz远程停止. 
+ */ 
+ @Column(name = "genset_rem_sto_zz") 
+ private Double gensetRemStoZz;
+ /** 
+ * 油位传感器故障. 
+ */ 
+ @Column(name = "genset_fuel_level_sensor_failure") 
+ private Double gensetFuelLevelSensorFailure;
+ /** 
+ * 油位停机. 
+ */ 
+ @Column(name = "genset_fuel_level_level2") 
+ private Double gensetFuelLevelLevel2;
+ /** 
+ * Generator Overvoltage Shut Down. 
+ */ 
+ @Column(name = "genset_generator_overvoltage_shut_down") 
+ private Double gensetGeneratorOvervoltageShutDown;
+ /** 
+ * 启动失败. 
+ */ 
+ @Column(name = "genset_sd_start_fail_level1") 
+ private Double gensetSdStartFailLevel1;
+ /** 
+ * 转速过低停机. 
+ */ 
+ @Column(name = "genset_sd_underspeed_level2") 
+ private Double gensetSdUnderspeedLevel2;
+ /** 
+ * BOC发电电压不平衡ph-n告警. 
+ */ 
+ @Column(name = "genset_boc_gen_voltage_unbalance_phn_level1") 
+ private Double gensetBocGenVoltageUnbalancePhnLevel1;
+ /** 
+ * BOC发电电压不平衡ph-ph Level 2停机告警. 
+ */ 
+ @Column(name = "genset_boc_gen_voltage_unbalance_phph_level2") 
+ private Double gensetBocGenVoltageUnbalancePhphLevel2;
+ /** 
+ * BOC发电电压不平衡ph-ph告警. 
+ */ 
+ @Column(name = "genset_boc_gen_voltage_unbalance_phph_level1") 
+ private Double gensetBocGenVoltageUnbalancePhphLevel1;
+ /** 
+ * L3L1发电电压停机. 
+ */ 
+ @Column(name = "genset_generator_voltage_l3l1_level2") 
+ private Double gensetGeneratorVoltageL3l1Level2;
+ /** 
+ * L3L1发电电压告警. 
+ */ 
+ @Column(name = "genset_generator_voltage_l3l1_level1") 
+ private Double gensetGeneratorVoltageL3l1Level1;
+ /** 
+ * L2L3发电电压告警. 
+ */ 
+ @Column(name = "genset_generator_voltage_l2l3_level1") 
+ private Double gensetGeneratorVoltageL2l3Level1;
+ /** 
+ * L1L2发电电压告警. 
+ */ 
+ @Column(name = "genset_generator_voltage_l1l2_level1") 
+ private Double gensetGeneratorVoltageL1l2Level1;
+ /** 
+ * 电池过压告警. 
+ */ 
+ @Column(name = "genset_wrn_battery_overvoltage_level1") 
+ private Double gensetWrnBatteryOvervoltageLevel1;
+ /** 
+ * 电池欠压停机. 
+ */ 
+ @Column(name = "genset_wrn_battery_undervoltage_level2") 
+ private Double gensetWrnBatteryUndervoltageLevel2;
+ /** 
+ * 电池欠压告警. 
+ */ 
+ @Column(name = "genset_wrn_battery_undervoltage_level1") 
+ private Double gensetWrnBatteryUndervoltageLevel1;
+ /** 
+ * L2发电欠压停机. 
+ */ 
+ @Column(name = "genset_generator_l2_undervoltage_level2") 
+ private Double gensetGeneratorL2UndervoltageLevel2;
+ /** 
+ * L2发电欠压告警. 
+ */ 
+ @Column(name = "genset_generator_l2_undervoltage_level1") 
+ private Double gensetGeneratorL2UndervoltageLevel1;
+ /** 
+ * L1发电欠压停机. 
+ */ 
+ @Column(name = "genset_generator_l1_undervoltage_level2") 
+ private Double gensetGeneratorL1UndervoltageLevel2;
+ /** 
+ * L1发电欠压告警. 
+ */ 
+ @Column(name = "genset_generator_l1_undervoltage_level1") 
+ private Double gensetGeneratorL1UndervoltageLevel1;
+ /** 
+ * L2L3发电过压停机. 
+ */ 
+ @Column(name = "genset_generator_l2l3_overvoltage_level2") 
+ private Double gensetGeneratorL2l3OvervoltageLevel2;
+ /** 
+ * L2L3发电过压告警. 
+ */ 
+ @Column(name = "genset_generator_l2l3_overvoltage_level1") 
+ private Double gensetGeneratorL2l3OvervoltageLevel1;
+ /** 
+ * L1L2发电过压停机. 
+ */ 
+ @Column(name = "genset_generator_l1l2_overvoltage_level2") 
+ private Double gensetGeneratorL1l2OvervoltageLevel2;
+ /** 
+ * L1L2发电过压告警. 
+ */ 
+ @Column(name = "genset_generator_l1l2_overvoltage_level1") 
+ private Double gensetGeneratorL1l2OvervoltageLevel1;
+ /** 
+ * Generator Overvoltage Warning. 
+ */ 
+ @Column(name = "genset_generator_overvoltage_warning") 
+ private Double gensetGeneratorOvervoltageWarning;
+ /** 
+ * Generator Undervoltage Warning. 
+ */ 
+ @Column(name = "genset_generator_undervoltage_warning") 
+ private Double gensetGeneratorUndervoltageWarning;
+ /** 
+ * Generator UndervolTage Shut Off Cooling. 
+ */ 
+ @Column(name = "genset_generator_undervoltage_shut_off_cooling") 
+ private Double gensetGeneratorUndervoltageShutOffCooling;
+ /** 
+ * Generator Overfrequency Warning. 
+ */ 
+ @Column(name = "genset_generator_overfrequency_warning") 
+ private Double gensetGeneratorOverfrequencyWarning;
+ /** 
+ * 市电L3-L1线电压. 
+ */ 
+ @Column(name = "genset_mains_l3_l1_voltage") 
+ private Double gensetMainsL3L1Voltage;
+ /** 
+ * 市电L2-N相电压. 
+ */ 
+ @Column(name = "genset_mains_l2_voltage_n") 
+ private Double gensetMainsL2VoltageN;
+ /** 
+ * 市电L1-N相电压. 
+ */ 
+ @Column(name = "genset_mains_l1_voltage_n") 
+ private Double gensetMainsL1VoltageN;
+ /** 
+ * 市电L3-N相电压. 
+ */ 
+ @Column(name = "genset_mains_l3_voltage_n") 
+ private Double gensetMainsL3VoltageN;
+ /** 
+ * 发电机控制模式. 
+ */ 
+ @Column(name = "genset_controller_mode_switch") 
+ private Double gensetControllerModeSwitch;
+ /** 
+ * 发电机冷却液温度. 
+ */ 
+ @Column(name = "genset_engine_coolant_temp") 
+ private Double gensetEngineCoolantTemp;
+ /** 
+ * 发电机控制模式状态. 
+ */ 
+ @Column(name = "genset_controller_mode_status") 
+ private Long gensetControllerModeStatus;
+ /** 
+ * 发电机L1-L2电压. 
+ */ 
+ @Column(name = "genset_l1_l2_voltage") 
+ private Double gensetL1L2Voltage;
+ /** 
+ * 发电机L1-N电压. 
+ */ 
+ @Column(name = "genset_l1_voltage_n") 
+ private Double gensetL1VoltageN;
+ /** 
+ * 发电机L3功率. 
+ */ 
+ @Column(name = "genset_l3_power") 
+ private Double gensetL3Power;
+ /** 
+ * 发电机L2功率. 
+ */ 
+ @Column(name = "genset_l2_power") 
+ private Double gensetL2Power;
+ /** 
+ * 发电机交流电机充电电压. 
+ */ 
+ @Column(name = "genset_charging_alternator_voltage") 
+ private Double gensetChargingAlternatorVoltage;
+ /** 
+ * 发电机L1功率. 
+ */ 
+ @Column(name = "genset_l1_power") 
+ private Double gensetL1Power;
+ /** 
+ * 发电机启动电池电压. 
+ */ 
+ @Column(name = "genset_starter_battery_voltage") 
+ private Double gensetStarterBatteryVoltage;
+ /** 
+ * 发电机功率因数L3. 
+ */ 
+ @Column(name = "genset_pf_l3") 
+ private Double gensetPfL3;
+ /** 
+ * 发电机功率因数L2. 
+ */ 
+ @Column(name = "genset_pf_l2") 
+ private Double gensetPfL2;
+ /** 
+ * 发电机运行时间. 
+ */ 
+ @Column(name = "genset_runtime") 
+ private Double gensetRuntime;
+ /** 
+ * 发电机总功率. 
+ */ 
+ @Column(name = "genset_total_power") 
+ private Double gensetTotalPower;
+ /** 
+ * 发电机启动次数. 
+ */ 
+ @Column(name = "genset_num_of_starts") 
+ private Long gensetNumOfStarts;
+ /** 
+ * 发电机紧急停止次数. 
+ */ 
+ @Column(name = "genset_num_of_estop") 
+ private Long gensetNumOfEstop;
+ /** 
+ * 发电机油压. 
+ */ 
+ @Column(name = "genset_oil_pressure") 
+ private Double gensetOilPressure;
+ /** 
+ * 发电机L3电流. 
+ */ 
+ @Column(name = "genset_l3_current") 
+ private Double gensetL3Current;
+ /** 
+ * 发电机L2电流. 
+ */ 
+ @Column(name = "genset_l2_current") 
+ private Double gensetL2Current;
+ /** 
+ * 发电机L1电流. 
+ */ 
+ @Column(name = "genset_l1_current") 
+ private Double gensetL1Current;
+ /** 
+ * 发电机单个机组能量. 
+ */ 
+ @Column(name = "genset_energy") 
+ private Double gensetEnergy;
+ /** 
+ * 发电机发动机运行状态. 
+ */ 
+ @Column(name = "genset_engine_operation_status") 
+ private Long gensetEngineOperationStatus;
+ /** 
+ * 发电机组功率. 
+ */ 
+ @Column(name = "genset_group_power") 
+ private Double gensetGroupPower;
+ /** 
+ * 发电机总有功功率. 
+ */ 
+ @Column(name = "genset_total_active_power") 
+ private Double gensetTotalActivePower;
+ /** 
+ * 发电机L3有功功率. 
+ */ 
+ @Column(name = "genset_l3_active_power") 
+ private Double gensetL3ActivePower;
+ /** 
+ * 发电机L2有功功率. 
+ */ 
+ @Column(name = "genset_l2_active_power") 
+ private Double gensetL2ActivePower;
+ /** 
+ * 发电机L1有功功率. 
+ */ 
+ @Column(name = "genset_l1_active_power") 
+ private Double gensetL1ActivePower;
+ /** 
+ * 发电机电机转速. 
+ */ 
+ @Column(name = "genset_engine_speed") 
+ private Double gensetEngineSpeed;
+ /** 
+ * 发电机L2-N电压. 
+ */ 
+ @Column(name = "genset_l2_voltage_n") 
+ private Double gensetL2VoltageN;
+ /** 
+ * 发电机L2-L3电压. 
+ */ 
+ @Column(name = "genset_l2_l3_voltage") 
+ private Double gensetL2L3Voltage;
+ /** 
+ * 发电机L3-L1电压. 
+ */ 
+ @Column(name = "genset_l3_l1_voltage") 
+ private Double gensetL3L1Voltage;
+ /** 
+ * 市电L1-L2线电压. 
+ */ 
+ @Column(name = "genset_mains_l1_l2_voltage") 
+ private Double gensetMainsL1L2Voltage;
+ /** 
+ * 市电L2-L3线电压. 
+ */ 
+ @Column(name = "genset_mains_l2_l3_voltage") 
+ private Double gensetMainsL2L3Voltage;
+ /** 
+ * 市电L3相无功功率. 
+ */ 
+ @Column(name = "genset_mains_l3_var") 
+ private Double gensetMainsL3Var;
+ /** 
+ * 发电机的频率. 
+ */ 
+ @Column(name = "genset_freq") 
+ private Double gensetFreq;
+ /** 
+ * 市电L1相视在功率. 
+ */ 
+ @Column(name = "genset_mains_l1_va") 
+ private Double gensetMainsL1Va;
+ /** 
+ * 市电L3相有功功率. 
+ */ 
+ @Column(name = "genset_mains_l3_watts") 
+ private Double gensetMainsL3Watts;
+ /** 
+ * 市电L2相电流. 
+ */ 
+ @Column(name = "genset_mains_l2_current") 
+ private Double gensetMainsL2Current;
+ /** 
+ * 逆功率停机告警. 
+ */ 
+ @Column(name = "genset_reverse_power_alarm_shutdown_zz") 
+ private Long gensetReversePowerAlarmShutdownZz;
+ /** 
+ * 发电机功率因数L1. 
+ */ 
+ @Column(name = "genset_pf_l1") 
+ private Double gensetPfL1;
+ /** 
+ * 发电机L3-N电压. 
+ */ 
+ @Column(name = "genset_l3_voltage_n") 
+ private Double gensetL3VoltageN;
+ /** 
+ * 发电机远程开启/关闭. 
+ */ 
+ @Column(name = "genset_remote_on_and_off") 
+ private String gensetRemoteOnAndOff;
+ /** 
+ * 远程复位. 
+ */ 
+ @Column(name = "genset_remote_reset") 
+ private Double gensetRemoteReset;
+ /** 
+ * 深海发电机手动模式状态. 
+ */ 
+ @Column(name = "genset_manual_led_status_dse") 
+ private Double gensetManualLedStatusDse;
+ /** 
+ * 深海发电机自动模式状态. 
+ */ 
+ @Column(name = "genset_auto_led_status_dse") 
+ private Double gensetAutoLedStatusDse;
+ /** 
+ * 深海发电机测试模式状态. 
+ */ 
+ @Column(name = "genset_test_led_status_dse") 
+ private Double gensetTestLedStatusDse;
+ /** 
+ * 低油位告警. 
+ */ 
+ @Column(name = "genset_low_oil_pressure_warning") 
+ private Double gensetLowOilPressureWarning;
+ /** 
+ * 远程开关机传感器故障. 
+ */ 
+ @Column(name = "genset_remote_startstop_sensor_failure") 
+ private Double gensetRemoteStartstopSensorFailure;
+ /** 
+ * 远程启动关机告警. 
+ */ 
+ @Column(name = "genset_remote_startstop") 
+ private Double gensetRemoteStartstop;
+ /** 
+ * 紧急停机传感器故障. 
+ */ 
+ @Column(name = "genset_emergency_stop_sensor_failure") 
+ private Double gensetEmergencyStopSensorFailure;
+ /** 
+ * 紧急停机关机. 
+ */ 
+ @Column(name = "genset_emergency_stop_level2") 
+ private Double gensetEmergencyStopLevel2;
+ /** 
+ * 众智机组的分钟时间. 
+ */ 
+ @Column(name = "genset_runtime_minutes_zz") 
+ private Double gensetRuntimeMinutesZz;
+ /** 
+ * 深海发电机停止模式状态. 
+ */ 
+ @Column(name = "genset_stop_led_status_dse") 
+ private Double gensetStopLedStatusDse;
+ /** 
+ * 市电相序滞后/超前. 
+ */ 
+ @Column(name = "genset_mains_voltage_phase_lagorlead") 
+ private Double gensetMainsVoltagePhaseLagorlead;
+ /** 
+ * 充电发电机故障. 
+ */ 
+ @Column(name = "genset_charge_alternator_failure_dse") 
+ private Double gensetChargeAlternatorFailureDse;
+ /** 
+ * 停机失败. 
+ */ 
+ @Column(name = "genset_fail_to_stop_dse") 
+ private Double gensetFailToStopDse;
+ /** 
+ * 停止发电失败. 
+ */ 
+ @Column(name = "genset_generator_fail_to_close_dse") 
+ private Double gensetGeneratorFailToCloseDse;
+ /** 
+ * 市电关闭失败. 
+ */ 
+ @Column(name = "genset_mains_fail_to_close_dse") 
+ private Double gensetMainsFailToCloseDse;
+ /** 
+ * 油压发送器故障. 
+ */ 
+ @Column(name = "genset_oil_pressure_sender_fault_dse") 
+ private Double gensetOilPressureSenderFaultDse;
+ /** 
+ * 磁感应丢失. 
+ */ 
+ @Column(name = "genset_loss_of_magnetic_pick_up_dse") 
+ private Double gensetLossOfMagneticPickUpDse;
+ /** 
+ * 磁感应开路. 
+ */ 
+ @Column(name = "genset_magnetic_pick_up_open_circuit_dse") 
+ private Double gensetMagneticPickUpOpenCircuitDse;
+ /** 
+ * 发电机电流打. 
+ */ 
+ @Column(name = "genset_generator_high_current_dse") 
+ private Double gensetGeneratorHighCurrentDse;
+ /** 
+ * CAN ECU警告. 
+ */ 
+ @Column(name = "genset_can_ecu_warning_dse") 
+ private Double gensetCanEcuWarningDse;
+ /** 
+ * CAN ECU关机. 
+ */ 
+ @Column(name = "genset_can_ecu_shutdown_dse") 
+ private Double gensetCanEcuShutdownDse;
+ /** 
+ * CAN ECU数据失败. 
+ */ 
+ @Column(name = "genset_can_ecu_data_fail_dse") 
+ private Double gensetCanEcuDataFailDse;
+ /** 
+ * 低油位开关. 
+ */ 
+ @Column(name = "genset_low_oil_level_switch_dse") 
+ private Double gensetLowOilLevelSwitchDse;
+ /** 
+ * 高温开关. 
+ */ 
+ @Column(name = "genset_high_temperature_switch_dse") 
+ private Double gensetHighTemperatureSwitchDse;
+ /** 
+ * 低燃油位开关. 
+ */ 
+ @Column(name = "genset_low_fuel_level_switch_dse") 
+ private Double gensetLowFuelLevelSwitchDse;
+ /** 
+ * 扩展单元看门狗报警. 
+ */ 
+ @Column(name = "genset_expansion_unit_watchdog_alarm_dse") 
+ private Double gensetExpansionUnitWatchdogAlarmDse;
+ /** 
+ * kW过载报警器. 
+ */ 
+ @Column(name = "genset_kw_overload_alarm_dse") 
+ private Double gensetKwOverloadAlarmDse;
+ /** 
+ * 负相序电流报警. 
+ */ 
+ @Column(name = "genset_negative_phase_sequence_current_alarm_dse") 
+ private Double gensetNegativePhaseSequenceCurrentAlarmDse;
+ /** 
+ * 接地故障跳闸报警器. 
+ */ 
+ @Column(name = "genset_earth_fault_trip_alarm_dse") 
+ private Double gensetEarthFaultTripAlarmDse;
+ /** 
+ * 发电机相位旋转报警器. 
+ */ 
+ @Column(name = "genset_generator_phase_rotation_alarm_dse") 
+ private Double gensetGeneratorPhaseRotationAlarmDse;
+ /** 
+ * 自动电压检测故障. 
+ */ 
+ @Column(name = "genset_auto_voltage_sense_fail_dse") 
+ private Double gensetAutoVoltageSenseFailDse;
+ /** 
+ * 负载电压报警. 
+ */ 
+ @Column(name = "genset_loading_voltage_alarm_dse") 
+ private Double gensetLoadingVoltageAlarmDse;
+ /** 
+ * 发电机短路. 
+ */ 
+ @Column(name = "genset_generator_short_circuit_dse") 
+ private Double gensetGeneratorShortCircuitDse;
+ /** 
+ * 市电大电流. 
+ */ 
+ @Column(name = "genset_mains_high_current_dse") 
+ private Double gensetMainsHighCurrentDse;
+ /** 
+ * 市电接地故障. 
+ */ 
+ @Column(name = "genset_mains_earth_fault_dse") 
+ private Double gensetMainsEarthFaultDse;
+ /** 
+ * 市电短路. 
+ */ 
+ @Column(name = "genset_mains_short_circuit_zz") 
+ private Double gensetMainsShortCircuitZz;
+ /** 
+ * ECU保护. 
+ */ 
+ @Column(name = "genset_ecu_protect_zz") 
+ private Double gensetEcuProtectZz;
+ /** 
+ * 超速报警停机. 
+ */ 
+ @Column(name = "genset_overspeed_alarm_shutdown_zz") 
+ private Double gensetOverspeedAlarmShutdownZz;
+ /** 
+ * Sd超速. 
+ */ 
+ @Column(name = "genset_sd_overspeed") 
+ private Double gensetSdOverspeed;
+ /** 
+ * Sd RPM测量失败. 
+ */ 
+ @Column(name = "genset_sd_rpm_measurement_fail") 
+ private Double gensetSdRpmMeasurementFail;
+ /** 
+ * Wrn停止失败. 
+ */ 
+ @Column(name = "genset_wrn_stop_fail") 
+ private Double gensetWrnStopFail;
+ /** 
+ * Sd充电发电机故障. 
+ */ 
+ @Column(name = "genset_sd_charging_alternator_fail") 
+ private Double gensetSdChargingAlternatorFail;
+ /** 
+ * Wrn充电发电机故障. 
+ */ 
+ @Column(name = "genset_wrn_charging_alternator_fail") 
+ private Double gensetWrnChargingAlternatorFail;
+ /** 
+ * 高温输入停机告警. 
+ */ 
+ @Column(name = "genset_high_temp_input_alarm_shutdown_zz") 
+ private Long gensetHighTempInputAlarmShutdownZz;
+ /** 
+ * 过功率停机告警. 
+ */ 
+ @Column(name = "genset_over_power_alarm_shutdown_zz") 
+ private Long gensetOverPowerAlarmShutdownZz;
+ /** 
+ * 发电过流停机告警. 
+ */ 
+ @Column(name = "genset_gen_over_current_shutdown_zz") 
+ private Long gensetGenOverCurrentShutdownZz;
+ /** 
+ * 速度信号丢失报警. 
+ */ 
+ @Column(name = "genset_loss_of_speed_signal_alarm_zz") 
+ private Long gensetLossOfSpeedSignalAlarmZz;
+ /** 
+ * 发电欠频停机告警. 
+ */ 
+ @Column(name = "genset_under_freq_sd_zz") 
+ private Long gensetUnderFreqSdZz;
+ /** 
+ * 加载频率报警. 
+ */ 
+ @Column(name = "genset_loading_freq_alarm_dse") 
+ private Long gensetLoadingFreqAlarmDse;
+ /** 
+ * 发电过频停机报警. 
+ */ 
+ @Column(name = "genset_over_freq_sd_alarm_zz") 
+ private Long gensetOverFreqSdAlarmZz;
+ /** 
+ * 市电灯状态. 
+ */ 
+ @Column(name = "genset_mains_led_status") 
+ private Double gensetMainsLedStatus;
+ /** 
+ * 市电平均功率因素. 
+ */ 
+ @Column(name = "genset_mains_average_power_factor") 
+ private Double gensetMainsAveragePowerFactor;
+ /** 
+ * 市电L2相功率因素. 
+ */ 
+ @Column(name = "genset_mains_power_factor_l2") 
+ private Double gensetMainsPowerFactorL2;
+ /** 
+ * 市电L3相功率因素. 
+ */ 
+ @Column(name = "genset_mains_power_factor_l3") 
+ private Double gensetMainsPowerFactorL3;
+ /** 
+ * 市电断路器灯状态. 
+ */ 
+ @Column(name = "genset_mains_breaker_led_status") 
+ private Double gensetMainsBreakerLedStatus;
+ /** 
+ * 市电L1相功率因素. 
+ */ 
+ @Column(name = "genset_mains_power_factor_l1") 
+ private Double gensetMainsPowerFactorL1;
+ /** 
+ * 市电总无功功率. 
+ */ 
+ @Column(name = "genset_mains_total_var") 
+ private Double gensetMainsTotalVar;
+ /** 
+ * 市电L2相无功功率. 
+ */ 
+ @Column(name = "genset_mains_l2_var") 
+ private Double gensetMainsL2Var;
+ /** 
+ * 市电L1相无功功率. 
+ */ 
+ @Column(name = "genset_mains_l1_var") 
+ private Double gensetMainsL1Var;
+ /** 
+ * 市电总视在功率. 
+ */ 
+ @Column(name = "genset_mains_total_va") 
+ private Double gensetMainsTotalVa;
+ /** 
+ * 市电L3相视在功率. 
+ */ 
+ @Column(name = "genset_mains_l3_va") 
+ private Double gensetMainsL3Va;
+ /** 
+ * 市电L2相视在功率. 
+ */ 
+ @Column(name = "genset_mains_l2_va") 
+ private Double gensetMainsL2Va;
+ /** 
+ * 市电总有功功率. 
+ */ 
+ @Column(name = "genset_mains_total_watts") 
+ private Double gensetMainsTotalWatts;
+ /** 
+ * 市电L2相有功功率. 
+ */ 
+ @Column(name = "genset_mains_l2_watts") 
+ private Double gensetMainsL2Watts;
+ /** 
+ * 市电L1相有功功率. 
+ */ 
+ @Column(name = "genset_mains_l1_watts") 
+ private Double gensetMainsL1Watts;
+ /** 
+ * 市电接地电流. 
+ */ 
+ @Column(name = "genset_mains_earth_current") 
+ private Double gensetMainsEarthCurrent;
+ /** 
+ * 市电L3相电流. 
+ */ 
+ @Column(name = "genset_mains_l3_current") 
+ private Double gensetMainsL3Current;
+ /** 
+ * 市电L1相电流. 
+ */ 
+ @Column(name = "genset_mains_l1_current") 
+ private Double gensetMainsL1Current;
+ /** 
+ * 市电电流滞后/超前. 
+ */ 
+ @Column(name = "genset_mains_current_lagorlead") 
+ private Double gensetMainsCurrentLagorlead;
+ /** 
+ * 市电相序顺序. 
+ */ 
+ @Column(name = "genset_mains_phase_rotation") 
+ private Double gensetMainsPhaseRotation;
+ /** 
+ * 发电频率停机. 
+ */ 
+ @Column(name = "genset_freq_level2") 
+ private Long gensetFreqLevel2;
+ /** 
+ * Sd电池. 
+ */ 
+ @Column(name = "genset_sd_battery_flat") 
+ private Double gensetSdBatteryFlat;
+ /** 
+ * zz远程手动. 
+ */ 
+ @Column(name = "genset_rem_man_zz") 
+ private Double gensetRemManZz;
+ /** 
+ * zz远程自动. 
+ */ 
+ @Column(name = "genset_rem_aut_zz") 
+ private Double gensetRemAutZz;
+ /** 
+ * zz远程启动. 
+ */ 
+ @Column(name = "genset_rem_sta_zz") 
+ private Double gensetRemStaZz;
+ /** 
+ * 电池过压停机. 
+ */ 
+ @Column(name = "genset_wrn_battery_overvoltage_level2") 
+ private Double gensetWrnBatteryOvervoltageLevel2;
+ /** 
+ * BOC发电电压不平衡ph-n Level 2停机告警. 
+ */ 
+ @Column(name = "genset_boc_gen_voltage_unbalance_phn_level2") 
+ private Double gensetBocGenVoltageUnbalancePhnLevel2;
+ /** 
+ * 油位传感器故障. 
+ */ 
+ @Column(name = "genset_oil_pressure_sensor_failure") 
+ private Double gensetOilPressureSensorFailure;
+ /** 
+ * 紧急停机告警. 
+ */ 
+ @Column(name = "genset_emergency_stop_level1") 
+ private Double gensetEmergencyStopLevel1;
+ /** 
+ * 发电频率告警. 
+ */ 
+ @Column(name = "genset_freq_level1") 
+ private Long gensetFreqLevel1;

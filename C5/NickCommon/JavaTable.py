@@ -55,8 +55,8 @@ def write_backups_txt():
 
 
 def write_create15m_sql():
-    create_heat = f'''DROP TABLE IF EXISTS "public"."influxdb_{table_name_snake}_15m";
-                        CREATE TABLE "public"."influxdb_{table_name_snake}_15m" (
+    create_heat = f'''DROP TABLE IF EXISTS "public"."iot_{table_name_snake}_15m";
+                        CREATE TABLE "public"."iot_{table_name_snake}_15m" (
                       "id" int8,
                       "create_time" timestamp(6),
                       "customer_id" int8,
@@ -71,24 +71,24 @@ def write_create15m_sql():
         field_row_sql = f"{field_row} float8"
         field_row_sql_list.append(field_row_sql)
     SqlCreateFile.write(",\n".join(field_row_sql_list) + "); \n")
-    comment_heat = f'''COMMENT ON COLUMN "public"."influxdb_{table_name_snake}_15m"."id" IS '主键';
-COMMENT ON COLUMN "public"."influxdb_{table_name_snake}_15m"."create_time" IS '创建时间';
-COMMENT ON COLUMN "public"."influxdb_{table_name_snake}_15m"."customer_id" IS '公司ID';
-COMMENT ON COLUMN "public"."influxdb_{table_name_snake}_15m"."site_id" IS '站点ID';
-COMMENT ON COLUMN "public"."influxdb_{table_name_snake}_15m"."asset_id" IS '资产ID';
-COMMENT ON COLUMN "public"."influxdb_{table_name_snake}_15m"."time" IS 'influxdb时间';'''
+    comment_heat = f'''COMMENT ON COLUMN "public"."iot_{table_name_snake}_15m"."id" IS '主键';
+COMMENT ON COLUMN "public"."iot_{table_name_snake}_15m"."create_time" IS '创建时间';
+COMMENT ON COLUMN "public"."iot_{table_name_snake}_15m"."customer_id" IS '公司ID';
+COMMENT ON COLUMN "public"."iot_{table_name_snake}_15m"."site_id" IS '站点ID';
+COMMENT ON COLUMN "public"."iot_{table_name_snake}_15m"."asset_id" IS '资产ID';
+COMMENT ON COLUMN "public"."iot_{table_name_snake}_15m"."time" IS 'influxdb时间';'''
     SqlCreateFile.writelines(comment_heat)
 
     for point in asset_point_list:
         name = point[1]
         field_row = point[3]
-        comment_sql = f'''COMMENT ON COLUMN "public"."influxdb_{table_name_snake}_15m"."{field_row}" IS '{name}'; \n'''
+        comment_sql = f'''COMMENT ON COLUMN "public"."iot_{table_name_snake}_15m"."{field_row}" IS '{name}'; \n'''
         SqlCreateFile.writelines(comment_sql)
 
 
 def write_create1h_sql():
-    create_heat = f'''DROP TABLE IF EXISTS "public"."influxdb_{table_name_snake}_1h";
-                            CREATE TABLE "public"."influxdb_{table_name_snake}_1h" (
+    create_heat = f'''DROP TABLE IF EXISTS "public"."iot_{table_name_snake}_1h";
+                            CREATE TABLE "public"."iot_{table_name_snake}_1h" (
                           "id" int8,
                           "create_time" timestamp(6),
                           "customer_id" int8,
@@ -103,18 +103,18 @@ def write_create1h_sql():
         field_row_sql = f"{field_row} float8"
         field_row_sql_list.append(field_row_sql)
     SqlCreateFile.write(",\n".join(field_row_sql_list) + "); \n")
-    comment_heat = f'''COMMENT ON COLUMN "public"."influxdb_{table_name_snake}_1h"."id" IS '主键';
-    COMMENT ON COLUMN "public"."influxdb_{table_name_snake}_1h"."create_time" IS '创建时间';
-    COMMENT ON COLUMN "public"."influxdb_{table_name_snake}_1h"."customer_id" IS '公司ID';
-    COMMENT ON COLUMN "public"."influxdb_{table_name_snake}_1h"."site_id" IS '站点ID';
-    COMMENT ON COLUMN "public"."influxdb_{table_name_snake}_1h"."asset_id" IS '资产ID';
-    COMMENT ON COLUMN "public"."influxdb_{table_name_snake}_1h"."time" IS 'influxdb时间';'''
+    comment_heat = f'''COMMENT ON COLUMN "public"."iot_{table_name_snake}_1h"."id" IS '主键';
+    COMMENT ON COLUMN "public"."iot_{table_name_snake}_1h"."create_time" IS '创建时间';
+    COMMENT ON COLUMN "public"."iot_{table_name_snake}_1h"."customer_id" IS '公司ID';
+    COMMENT ON COLUMN "public"."iot_{table_name_snake}_1h"."site_id" IS '站点ID';
+    COMMENT ON COLUMN "public"."iot_{table_name_snake}_1h"."asset_id" IS '资产ID';
+    COMMENT ON COLUMN "public"."iot_{table_name_snake}_1h"."time" IS 'influxdb时间';'''
     SqlCreateFile.writelines(comment_heat)
 
     for point in asset_point_list:
         name = point[1]
         field_row = point[3]
-        comment_sql = f'''COMMENT ON COLUMN "public"."influxdb_{table_name_snake}_1h"."{field_row}" IS '{name}'; \n'''
+        comment_sql = f'''COMMENT ON COLUMN "public"."iot_{table_name_snake}_1h"."{field_row}" IS '{name}'; \n'''
         SqlCreateFile.writelines(comment_sql)
 
 
@@ -126,7 +126,9 @@ if __name__ == '__main__':
 
     # 获取资产类
     # asset_class_list = asset_class()
-    asset_class_list = [(1003, 'Gel Battery', 3, 'gel_battery', None, '胶体电池', 'vrla_')]
+    # asset_class_list = [(1003, 'Gel Battery', 3, 'gel_battery', None, '胶体电池', 'vrla_')]
+    # asset_class_list = [(1004, 'Grid', 4, 'grid', None, '市电', 'grid_')]
+    asset_class_list = [(1005, 'Ac Generator', 5, 'ac_generator', None, '交流发电机', 'genset_')]
     print(asset_class_list)
     # 依次生成所有资产类
     for asset_class in asset_class_list:

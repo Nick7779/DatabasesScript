@@ -1,0 +1,140 @@
+ /** 
+ * A相电压. 
+ */ 
+ @Column(name = "grid_phase_voltage_a") 
+ private Double gridPhaseVoltageA;
+ /** 
+ * B相电压. 
+ */ 
+ @Column(name = "grid_phase_voltage_b") 
+ private Double gridPhaseVoltageB;
+ /** 
+ * A相电流. 
+ */ 
+ @Column(name = "grid_phase_current_a") 
+ private Double gridPhaseCurrentA;
+ /** 
+ * B相电流. 
+ */ 
+ @Column(name = "grid_phase_current_b") 
+ private Double gridPhaseCurrentB;
+ /** 
+ * C相电流. 
+ */ 
+ @Column(name = "grid_phase_current_c") 
+ private Double gridPhaseCurrentC;
+ /** 
+ * 总有功功率. 
+ */ 
+ @Column(name = "grid_total_active_power") 
+ private Double gridTotalActivePower;
+ /** 
+ * 总无功功率. 
+ */ 
+ @Column(name = "grid_total_reactive_power") 
+ private Double gridTotalReactivePower;
+ /** 
+ * 总视在功率. 
+ */ 
+ @Column(name = "grid_total_apparent_power") 
+ private Double gridTotalApparentPower;
+ /** 
+ * 总功率因数. 
+ */ 
+ @Column(name = "grid_total_power_factor") 
+ private Double gridTotalPowerFactor;
+ /** 
+ * 总有功能量. 
+ */ 
+ @Column(name = "grid_active_total_energy") 
+ private Double gridActiveTotalEnergy;
+ /** 
+ * AC相线电压. 
+ */ 
+ @Column(name = "grid_ac_line_voltage") 
+ private Double gridAcLineVoltage;
+ /** 
+ * BC相电压. 
+ */ 
+ @Column(name = "grid_bc_line_voltage") 
+ private Double gridBcLineVoltage;
+ /** 
+ * AB相电压. 
+ */ 
+ @Column(name = "grid_ab_line_voltage") 
+ private Double gridAbLineVoltage;
+ /** 
+ * A相功率因数. 
+ */ 
+ @Column(name = "grid_power_factor_a") 
+ private Double gridPowerFactorA;
+ /** 
+ * B相功率因数. 
+ */ 
+ @Column(name = "grid_power_factor_b") 
+ private Double gridPowerFactorB;
+ /** 
+ * C相功率因数. 
+ */ 
+ @Column(name = "grid_power_factor_c") 
+ private Double gridPowerFactorC;
+ /** 
+ * A相有功功率. 
+ */ 
+ @Column(name = "grid_active_power_a") 
+ private Double gridActivePowerA;
+ /** 
+ * B相有功功率. 
+ */ 
+ @Column(name = "grid_active_power_b") 
+ private Double gridActivePowerB;
+ /** 
+ * C相有功功率. 
+ */ 
+ @Column(name = "grid_active_power_c") 
+ private Double gridActivePowerC;
+ /** 
+ * A相无功功率. 
+ */ 
+ @Column(name = "grid_reactive_power_a") 
+ private Double gridReactivePowerA;
+ /** 
+ * B相无功功率. 
+ */ 
+ @Column(name = "grid_reactive_power_b") 
+ private Double gridReactivePowerB;
+ /** 
+ * C相无功功率. 
+ */ 
+ @Column(name = "grid_reactive_power_c") 
+ private Double gridReactivePowerC;
+ /** 
+ * A相视在功率. 
+ */ 
+ @Column(name = "grid_apparent_power_a") 
+ private Double gridApparentPowerA;
+ /** 
+ * B相视在功率. 
+ */ 
+ @Column(name = "grid_apparent_power_b") 
+ private Double gridApparentPowerB;
+ /** 
+ * C相视在功率. 
+ */ 
+ @Column(name = "grid_apparent_power_c") 
+ private Double gridApparentPowerC;
+ /** 
+ * 频率. 
+ */ 
+ @Column(name = "grid_frequency") 
+ private Double gridFrequency;
+ /** 
+ * S1 闭合. 
+ */ 
+ @Column(name = "grid_s1_normal") 
+ private Double gridS1Normal;
+ /** 
+ * C相电压. 
+ */ 
+ @Column(name = "grid_phase_voltage_c") 
+ private Double gridPhaseVoltageC;
