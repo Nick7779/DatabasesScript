@@ -1,140 +1,272 @@
+package com.tellhow.iot.dao.vo.front.influxdb;
+import io.swagger.annotations.ApiModelProperty;
+import lombok.Data;
+import lombok.EqualsAndHashCode;
+import lombok.experimental.Accessors;
+import java.io.Serializable;
+import java.util.Date;
+/**
+ * Grid influxdb实体类
+ *
+ * @author Nick
+ * @date 2023-07-11
+ */
+@Data
+@Measurement(name = "grid")
+public class GridTable {
+
+    /**
+     * 站点ID.
+     */
+    @Column(name = "site_id", tag = true)
+    private String siteId;
+    /**
+     * 资产ID.
+     */
+    @Column(name = "asset_id", tag = true)
+    private String assetId;
+    /**
+     * 时间.
+     */
+    @Column(name = "time", tag = true)
+    private Instant time;
  /** 
- * A相电压. 
+ * A相电压.Phase A voltage 
  */ 
  @Column(name = "grid_phase_voltage_a") 
  private Double gridPhaseVoltageA;
  /** 
- * B相电压. 
+ * B相电压.Phase B voltage 
  */ 
  @Column(name = "grid_phase_voltage_b") 
  private Double gridPhaseVoltageB;
  /** 
- * A相电流. 
+ * C相电压.Phase C voltage 
+ */ 
+ @Column(name = "grid_phase_voltage_c") 
+ private Double gridPhaseVoltageC;
+ /** 
+ * A相电流.Phase A current 
  */ 
  @Column(name = "grid_phase_current_a") 
  private Double gridPhaseCurrentA;
  /** 
- * B相电流. 
+ * B相电流.Phase B current 
  */ 
  @Column(name = "grid_phase_current_b") 
  private Double gridPhaseCurrentB;
  /** 
- * C相电流. 
+ * C相电流.Phase C current 
  */ 
  @Column(name = "grid_phase_current_c") 
  private Double gridPhaseCurrentC;
  /** 
- * 总有功功率. 
+ * 总有功功率.Total active power 
  */ 
  @Column(name = "grid_total_active_power") 
  private Double gridTotalActivePower;
  /** 
- * 总无功功率. 
+ * 总无功功率.Total reactive power 
  */ 
  @Column(name = "grid_total_reactive_power") 
  private Double gridTotalReactivePower;
  /** 
- * 总视在功率. 
+ * 总视在功率.Total apparent power 
  */ 
  @Column(name = "grid_total_apparent_power") 
  private Double gridTotalApparentPower;
  /** 
- * 总功率因数. 
+ * 总功率因数.Total power factor 
  */ 
  @Column(name = "grid_total_power_factor") 
  private Double gridTotalPowerFactor;
  /** 
- * 总有功能量. 
- */ 
- @Column(name = "grid_active_total_energy") 
- private Double gridActiveTotalEnergy;
- /** 
- * AC相线电压. 
- */ 
- @Column(name = "grid_ac_line_voltage") 
- private Double gridAcLineVoltage;
- /** 
- * BC相电压. 
- */ 
- @Column(name = "grid_bc_line_voltage") 
- private Double gridBcLineVoltage;
- /** 
- * AB相电压. 
- */ 
- @Column(name = "grid_ab_line_voltage") 
- private Double gridAbLineVoltage;
- /** 
- * A相功率因数. 
- */ 
- @Column(name = "grid_power_factor_a") 
- private Double gridPowerFactorA;
- /** 
- * B相功率因数. 
- */ 
- @Column(name = "grid_power_factor_b") 
- private Double gridPowerFactorB;
- /** 
- * C相功率因数. 
- */ 
- @Column(name = "grid_power_factor_c") 
- private Double gridPowerFactorC;
- /** 
- * A相有功功率. 
- */ 
- @Column(name = "grid_active_power_a") 
- private Double gridActivePowerA;
- /** 
- * B相有功功率. 
- */ 
- @Column(name = "grid_active_power_b") 
- private Double gridActivePowerB;
- /** 
- * C相有功功率. 
- */ 
- @Column(name = "grid_active_power_c") 
- private Double gridActivePowerC;
- /** 
- * A相无功功率. 
- */ 
- @Column(name = "grid_reactive_power_a") 
- private Double gridReactivePowerA;
- /** 
- * B相无功功率. 
- */ 
- @Column(name = "grid_reactive_power_b") 
- private Double gridReactivePowerB;
- /** 
- * C相无功功率. 
- */ 
- @Column(name = "grid_reactive_power_c") 
- private Double gridReactivePowerC;
- /** 
- * A相视在功率. 
- */ 
- @Column(name = "grid_apparent_power_a") 
- private Double gridApparentPowerA;
- /** 
- * B相视在功率. 
- */ 
- @Column(name = "grid_apparent_power_b") 
- private Double gridApparentPowerB;
- /** 
- * C相视在功率. 
- */ 
- @Column(name = "grid_apparent_power_c") 
- private Double gridApparentPowerC;
- /** 
- * 频率. 
+ * 频率.frequency 
  */ 
  @Column(name = "grid_frequency") 
  private Double gridFrequency;
  /** 
- * S1 闭合. 
+ * 总有功能量.Total active energy 
+ */ 
+ @Column(name = "grid_active_total_energy") 
+ private Double gridActiveTotalEnergy;
+ /** 
+ * AC相线电压.AC line voltage 
+ */ 
+ @Column(name = "grid_ac_line_voltage") 
+ private Double gridAcLineVoltage;
+ /** 
+ * BC相线电压.BC line voltage 
+ */ 
+ @Column(name = "grid_bc_line_voltage") 
+ private Double gridBcLineVoltage;
+ /** 
+ * AB相线电压.AB line voltage 
+ */ 
+ @Column(name = "grid_ab_line_voltage") 
+ private Double gridAbLineVoltage;
+ /** 
+ * A相功率因数.Phase A power factor 
+ */ 
+ @Column(name = "grid_power_factor_a") 
+ private Double gridPowerFactorA;
+ /** 
+ * B相功率因数.Phase B power factor 
+ */ 
+ @Column(name = "grid_power_factor_b") 
+ private Double gridPowerFactorB;
+ /** 
+ * C相功率因数.Phase C power factor 
+ */ 
+ @Column(name = "grid_power_factor_c") 
+ private Double gridPowerFactorC;
+ /** 
+ * A相有功功率.Phase A active power 
+ */ 
+ @Column(name = "grid_active_power_a") 
+ private Double gridActivePowerA;
+ /** 
+ * B相有功功率.Phase B active power 
+ */ 
+ @Column(name = "grid_active_power_b") 
+ private Double gridActivePowerB;
+ /** 
+ * C相有功功率.Phase C active power 
+ */ 
+ @Column(name = "grid_active_power_c") 
+ private Double gridActivePowerC;
+ /** 
+ * A相无功功率.Phase A reactive power 
+ */ 
+ @Column(name = "grid_reactive_power_a") 
+ private Double gridReactivePowerA;
+ /** 
+ * B相无功功率.Phase B reactive power 
+ */ 
+ @Column(name = "grid_reactive_power_b") 
+ private Double gridReactivePowerB;
+ /** 
+ * C相无功功率.Phase C reactive power 
+ */ 
+ @Column(name = "grid_reactive_power_c") 
+ private Double gridReactivePowerC;
+ /** 
+ * A相视在功率.Phase A apparent power 
+ */ 
+ @Column(name = "grid_apparent_power_a") 
+ private Double gridApparentPowerA;
+ /** 
+ * B相视在功率.Phase B apparent power 
+ */ 
+ @Column(name = "grid_apparent_power_b") 
+ private Double gridApparentPowerB;
+ /** 
+ * C相视在功率.Phase C apparent power 
+ */ 
+ @Column(name = "grid_apparent_power_c") 
+ private Double gridApparentPowerC;
+ /** 
+ * S1 闭合.S1 normal 
  */ 
  @Column(name = "grid_s1_normal") 
- private Double gridS1Normal;
+ private Long gridS1Normal;
  /** 
- * C相电压. 
+ * 告警.alarm 
  */ 
- @Column(name = "grid_phase_voltage_c") 
- private Double gridPhaseVoltageC;
+ @Column(name = "grid_alarm") 
+ private Double gridAlarm;
+ /** 
+ * 按小时计算.By the hour 
+ */ 
+ @Column(name = "grid_by_the_hour") 
+ private Double gridByTheHour;
+ /** 
+ * 总的用电量.Total electricity consumption 
+ */ 
+ @Column(name = "grid_total_electricity_consumption") 
+ private Double gridTotalElectricityConsumption;
+ /** 
+ * 正向无功总能量.Positive reactive total energy 
+ */ 
+ @Column(name = "grid_positive_reactive_total_energy") 
+ private Double gridPositiveReactiveTotalEnergy;
+ /** 
+ * 反向有效总能量.Reverse effective total energy 
+ */ 
+ @Column(name = "grid_reverse_effective_total_energy") 
+ private Double gridReverseEffectiveTotalEnergy;
+ /** 
+ * 反向无功总能量.Reverse reactive total energy 
+ */ 
+ @Column(name = "grid_reverse_reactive_total_energy") 
+ private Double gridReverseReactiveTotalEnergy;
+ /** 
+ * 中性电流.Neutral current 
+ */ 
+ @Column(name = "grid_neutral_current") 
+ private Double gridNeutralCurrent;
+ /** 
+ * 总消耗表观能量.Total apparent energy consumed 
+ */ 
+ @Column(name = "grid_total_apparent_energy_consumed") 
+ private Double gridTotalApparentEnergyConsumed;
+ /** 
+ * L3电流总谐波失真.Total harmonic distortion of L3 current 
+ */ 
+ @Column(name = "grid_l3_current_total_harmonic_distortion") 
+ private Double gridL3CurrentTotalHarmonicDistortion;
+ /** 
+ * L1电流总谐波失真.Total harmonic distortion of L1 current 
+ */ 
+ @Column(name = "grid_l1_current_total_harmonic_distortion") 
+ private Double gridL1CurrentTotalHarmonicDistortion;
+ /** 
+ * L2电流总谐波失真.Total harmonic distortion of L2 current 
+ */ 
+ @Column(name = "grid_l2_current_total_harmonic_distortion") 
+ private Double gridL2CurrentTotalHarmonicDistortion;
+ /** 
+ * 综合无功功率2总电能.Comprehensive reactive power 2 total electric energy 
+ */ 
+ @Column(name = "grid_compre_reactive_power2_total_electric_energy") 
+ private Double gridCompreReactivePower2TotalElectricEnergy;
+ /** 
+ * 综合无功功率1总电能.Comprehensive reactive power 1 total electric energy 
+ */ 
+ @Column(name = "grid_compre_reactive_power1_total_electric_energy") 
+ private Double gridCompreReactivePower1TotalElectricEnergy;
+ /** 
+ * 电流总谐波失真.Total harmonic distortion of current 
+ */ 
+ @Column(name = "grid_total_harmonic_distortion_of_current") 
+ private Double gridTotalHarmonicDistortionOfCurrent;
+ /** 
+ * A相电源负极.A phase source negative terminal 
+ */ 
+ @Column(name = "grid_source_negative_terminal_phase_a") 
+ private Double gridSourceNegativeTerminalPhaseA;
+ /** 
+ * B相电源负极.B phase source negative terminal 
+ */ 
+ @Column(name = "grid_source_negative_terminal_phase_b") 
+ private Double gridSourceNegativeTerminalPhaseB;
+ /** 
+ * C相电源负极.C phase source negative terminal 
+ */ 
+ @Column(name = "grid_source_negative_terminal_phase_c") 
+ private Double gridSourceNegativeTerminalPhaseC;
+ /** 
+ * 电流时序错误.Current timing error 
+ */ 
+ @Column(name = "grid_current_timing_error") 
+ private Double gridCurrentTimingError;
+ /** 
+ * 电压序列错误.Voltage sequence error 
+ */ 
+ @Column(name = "grid_voltage_sequence_error") 
+ private Double gridVoltageSequenceError;
+
+    public Date getTime() {
+        return Date.from(time);
+    }
+}

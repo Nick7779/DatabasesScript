@@ -8,6 +8,7 @@ DROP TABLE IF EXISTS "public"."iot_grid_15m";
                       "time" timestamp(6), 
 grid_phase_voltage_a float8,
 grid_phase_voltage_b float8,
+grid_phase_voltage_c float8,
 grid_phase_current_a float8,
 grid_phase_current_b float8,
 grid_phase_current_c float8,
@@ -15,6 +16,7 @@ grid_total_active_power float8,
 grid_total_reactive_power float8,
 grid_total_apparent_power float8,
 grid_total_power_factor float8,
+grid_frequency float8,
 grid_active_total_energy float8,
 grid_ac_line_voltage float8,
 grid_bc_line_voltage float8,
@@ -31,9 +33,26 @@ grid_reactive_power_c float8,
 grid_apparent_power_a float8,
 grid_apparent_power_b float8,
 grid_apparent_power_c float8,
-grid_frequency float8,
 grid_s1_normal float8,
-grid_phase_voltage_c float8); 
+grid_alarm float8,
+grid_by_the_hour float8,
+grid_total_electricity_consumption float8,
+grid_positive_reactive_total_energy float8,
+grid_reverse_effective_total_energy float8,
+grid_reverse_reactive_total_energy float8,
+grid_neutral_current float8,
+grid_total_apparent_energy_consumed float8,
+grid_l3_current_total_harmonic_distortion float8,
+grid_l1_current_total_harmonic_distortion float8,
+grid_l2_current_total_harmonic_distortion float8,
+grid_compre_reactive_power2_total_electric_energy float8,
+grid_compre_reactive_power1_total_electric_energy float8,
+grid_total_harmonic_distortion_of_current float8,
+grid_source_negative_terminal_phase_a float8,
+grid_source_negative_terminal_phase_b float8,
+grid_source_negative_terminal_phase_c float8,
+grid_current_timing_error float8,
+grid_voltage_sequence_error float8); 
 COMMENT ON COLUMN "public"."iot_grid_15m"."id" IS 'Ö÷¼ü';
 COMMENT ON COLUMN "public"."iot_grid_15m"."create_time" IS '´´½¨Ê±¼ä';
 COMMENT ON COLUMN "public"."iot_grid_15m"."customer_id" IS '¹«Ë¾ID';
@@ -41,6 +60,7 @@ COMMENT ON COLUMN "public"."iot_grid_15m"."site_id" IS 'Õ¾µãID';
 COMMENT ON COLUMN "public"."iot_grid_15m"."asset_id" IS '×Ê²úID';
 COMMENT ON COLUMN "public"."iot_grid_15m"."time" IS 'influxdbÊ±¼ä';COMMENT ON COLUMN "public"."iot_grid_15m"."grid_phase_voltage_a" IS 'AÏàµçÑ¹'; 
 COMMENT ON COLUMN "public"."iot_grid_15m"."grid_phase_voltage_b" IS 'BÏàµçÑ¹'; 
+COMMENT ON COLUMN "public"."iot_grid_15m"."grid_phase_voltage_c" IS 'CÏàµçÑ¹'; 
 COMMENT ON COLUMN "public"."iot_grid_15m"."grid_phase_current_a" IS 'AÏàµçÁ÷'; 
 COMMENT ON COLUMN "public"."iot_grid_15m"."grid_phase_current_b" IS 'BÏàµçÁ÷'; 
 COMMENT ON COLUMN "public"."iot_grid_15m"."grid_phase_current_c" IS 'CÏàµçÁ÷'; 
@@ -48,10 +68,11 @@ COMMENT ON COLUMN "public"."iot_grid_15m"."grid_total_active_power" IS '×ÜÓĞ¹¦¹¦
 COMMENT ON COLUMN "public"."iot_grid_15m"."grid_total_reactive_power" IS '×ÜÎŞ¹¦¹¦ÂÊ'; 
 COMMENT ON COLUMN "public"."iot_grid_15m"."grid_total_apparent_power" IS '×ÜÊÓÔÚ¹¦ÂÊ'; 
 COMMENT ON COLUMN "public"."iot_grid_15m"."grid_total_power_factor" IS '×Ü¹¦ÂÊÒòÊı'; 
+COMMENT ON COLUMN "public"."iot_grid_15m"."grid_frequency" IS 'ÆµÂÊ'; 
 COMMENT ON COLUMN "public"."iot_grid_15m"."grid_active_total_energy" IS '×ÜÓĞ¹¦ÄÜÁ¿'; 
 COMMENT ON COLUMN "public"."iot_grid_15m"."grid_ac_line_voltage" IS 'ACÏàÏßµçÑ¹'; 
-COMMENT ON COLUMN "public"."iot_grid_15m"."grid_bc_line_voltage" IS 'BCÏàµçÑ¹'; 
-COMMENT ON COLUMN "public"."iot_grid_15m"."grid_ab_line_voltage" IS 'ABÏàµçÑ¹'; 
+COMMENT ON COLUMN "public"."iot_grid_15m"."grid_bc_line_voltage" IS 'BCÏàÏßµçÑ¹'; 
+COMMENT ON COLUMN "public"."iot_grid_15m"."grid_ab_line_voltage" IS 'ABÏàÏßµçÑ¹'; 
 COMMENT ON COLUMN "public"."iot_grid_15m"."grid_power_factor_a" IS 'AÏà¹¦ÂÊÒòÊı'; 
 COMMENT ON COLUMN "public"."iot_grid_15m"."grid_power_factor_b" IS 'BÏà¹¦ÂÊÒòÊı'; 
 COMMENT ON COLUMN "public"."iot_grid_15m"."grid_power_factor_c" IS 'CÏà¹¦ÂÊÒòÊı'; 
@@ -64,9 +85,26 @@ COMMENT ON COLUMN "public"."iot_grid_15m"."grid_reactive_power_c" IS 'CÏàÎŞ¹¦¹¦Â
 COMMENT ON COLUMN "public"."iot_grid_15m"."grid_apparent_power_a" IS 'AÏàÊÓÔÚ¹¦ÂÊ'; 
 COMMENT ON COLUMN "public"."iot_grid_15m"."grid_apparent_power_b" IS 'BÏàÊÓÔÚ¹¦ÂÊ'; 
 COMMENT ON COLUMN "public"."iot_grid_15m"."grid_apparent_power_c" IS 'CÏàÊÓÔÚ¹¦ÂÊ'; 
-COMMENT ON COLUMN "public"."iot_grid_15m"."grid_frequency" IS 'ÆµÂÊ'; 
 COMMENT ON COLUMN "public"."iot_grid_15m"."grid_s1_normal" IS 'S1 ±ÕºÏ'; 
-COMMENT ON COLUMN "public"."iot_grid_15m"."grid_phase_voltage_c" IS 'CÏàµçÑ¹'; 
+COMMENT ON COLUMN "public"."iot_grid_15m"."grid_alarm" IS '¸æ¾¯'; 
+COMMENT ON COLUMN "public"."iot_grid_15m"."grid_by_the_hour" IS '°´Ğ¡Ê±¼ÆËã'; 
+COMMENT ON COLUMN "public"."iot_grid_15m"."grid_total_electricity_consumption" IS '×ÜµÄÓÃµçÁ¿'; 
+COMMENT ON COLUMN "public"."iot_grid_15m"."grid_positive_reactive_total_energy" IS 'ÕıÏòÎŞ¹¦×ÜÄÜÁ¿'; 
+COMMENT ON COLUMN "public"."iot_grid_15m"."grid_reverse_effective_total_energy" IS '·´ÏòÓĞĞ§×ÜÄÜÁ¿'; 
+COMMENT ON COLUMN "public"."iot_grid_15m"."grid_reverse_reactive_total_energy" IS '·´ÏòÎŞ¹¦×ÜÄÜÁ¿'; 
+COMMENT ON COLUMN "public"."iot_grid_15m"."grid_neutral_current" IS 'ÖĞĞÔµçÁ÷'; 
+COMMENT ON COLUMN "public"."iot_grid_15m"."grid_total_apparent_energy_consumed" IS '×ÜÏûºÄ±í¹ÛÄÜÁ¿'; 
+COMMENT ON COLUMN "public"."iot_grid_15m"."grid_l3_current_total_harmonic_distortion" IS 'L3µçÁ÷×ÜĞ³²¨Ê§Õæ'; 
+COMMENT ON COLUMN "public"."iot_grid_15m"."grid_l1_current_total_harmonic_distortion" IS 'L1µçÁ÷×ÜĞ³²¨Ê§Õæ'; 
+COMMENT ON COLUMN "public"."iot_grid_15m"."grid_l2_current_total_harmonic_distortion" IS 'L2µçÁ÷×ÜĞ³²¨Ê§Õæ'; 
+COMMENT ON COLUMN "public"."iot_grid_15m"."grid_compre_reactive_power2_total_electric_energy" IS '×ÛºÏÎŞ¹¦¹¦ÂÊ2×ÜµçÄÜ'; 
+COMMENT ON COLUMN "public"."iot_grid_15m"."grid_compre_reactive_power1_total_electric_energy" IS '×ÛºÏÎŞ¹¦¹¦ÂÊ1×ÜµçÄÜ'; 
+COMMENT ON COLUMN "public"."iot_grid_15m"."grid_total_harmonic_distortion_of_current" IS 'µçÁ÷×ÜĞ³²¨Ê§Õæ'; 
+COMMENT ON COLUMN "public"."iot_grid_15m"."grid_source_negative_terminal_phase_a" IS 'AÏàµçÔ´¸º¼«'; 
+COMMENT ON COLUMN "public"."iot_grid_15m"."grid_source_negative_terminal_phase_b" IS 'BÏàµçÔ´¸º¼«'; 
+COMMENT ON COLUMN "public"."iot_grid_15m"."grid_source_negative_terminal_phase_c" IS 'CÏàµçÔ´¸º¼«'; 
+COMMENT ON COLUMN "public"."iot_grid_15m"."grid_current_timing_error" IS 'µçÁ÷Ê±Ğò´íÎó'; 
+COMMENT ON COLUMN "public"."iot_grid_15m"."grid_voltage_sequence_error" IS 'µçÑ¹ĞòÁĞ´íÎó'; 
 DROP TABLE IF EXISTS "public"."iot_grid_1h";
                             CREATE TABLE "public"."iot_grid_1h" (
                           "id" int8,
@@ -77,6 +115,7 @@ DROP TABLE IF EXISTS "public"."iot_grid_1h";
                           "time" timestamp(6), 
 grid_phase_voltage_a float8,
 grid_phase_voltage_b float8,
+grid_phase_voltage_c float8,
 grid_phase_current_a float8,
 grid_phase_current_b float8,
 grid_phase_current_c float8,
@@ -84,6 +123,7 @@ grid_total_active_power float8,
 grid_total_reactive_power float8,
 grid_total_apparent_power float8,
 grid_total_power_factor float8,
+grid_frequency float8,
 grid_active_total_energy float8,
 grid_ac_line_voltage float8,
 grid_bc_line_voltage float8,
@@ -100,9 +140,26 @@ grid_reactive_power_c float8,
 grid_apparent_power_a float8,
 grid_apparent_power_b float8,
 grid_apparent_power_c float8,
-grid_frequency float8,
 grid_s1_normal float8,
-grid_phase_voltage_c float8); 
+grid_alarm float8,
+grid_by_the_hour float8,
+grid_total_electricity_consumption float8,
+grid_positive_reactive_total_energy float8,
+grid_reverse_effective_total_energy float8,
+grid_reverse_reactive_total_energy float8,
+grid_neutral_current float8,
+grid_total_apparent_energy_consumed float8,
+grid_l3_current_total_harmonic_distortion float8,
+grid_l1_current_total_harmonic_distortion float8,
+grid_l2_current_total_harmonic_distortion float8,
+grid_compre_reactive_power2_total_electric_energy float8,
+grid_compre_reactive_power1_total_electric_energy float8,
+grid_total_harmonic_distortion_of_current float8,
+grid_source_negative_terminal_phase_a float8,
+grid_source_negative_terminal_phase_b float8,
+grid_source_negative_terminal_phase_c float8,
+grid_current_timing_error float8,
+grid_voltage_sequence_error float8); 
 COMMENT ON COLUMN "public"."iot_grid_1h"."id" IS 'Ö÷¼ü';
     COMMENT ON COLUMN "public"."iot_grid_1h"."create_time" IS '´´½¨Ê±¼ä';
     COMMENT ON COLUMN "public"."iot_grid_1h"."customer_id" IS '¹«Ë¾ID';
@@ -110,6 +167,7 @@ COMMENT ON COLUMN "public"."iot_grid_1h"."id" IS 'Ö÷¼ü';
     COMMENT ON COLUMN "public"."iot_grid_1h"."asset_id" IS '×Ê²úID';
     COMMENT ON COLUMN "public"."iot_grid_1h"."time" IS 'influxdbÊ±¼ä';COMMENT ON COLUMN "public"."iot_grid_1h"."grid_phase_voltage_a" IS 'AÏàµçÑ¹'; 
 COMMENT ON COLUMN "public"."iot_grid_1h"."grid_phase_voltage_b" IS 'BÏàµçÑ¹'; 
+COMMENT ON COLUMN "public"."iot_grid_1h"."grid_phase_voltage_c" IS 'CÏàµçÑ¹'; 
 COMMENT ON COLUMN "public"."iot_grid_1h"."grid_phase_current_a" IS 'AÏàµçÁ÷'; 
 COMMENT ON COLUMN "public"."iot_grid_1h"."grid_phase_current_b" IS 'BÏàµçÁ÷'; 
 COMMENT ON COLUMN "public"."iot_grid_1h"."grid_phase_current_c" IS 'CÏàµçÁ÷'; 
@@ -117,10 +175,11 @@ COMMENT ON COLUMN "public"."iot_grid_1h"."grid_total_active_power" IS '×ÜÓĞ¹¦¹¦Â
 COMMENT ON COLUMN "public"."iot_grid_1h"."grid_total_reactive_power" IS '×ÜÎŞ¹¦¹¦ÂÊ'; 
 COMMENT ON COLUMN "public"."iot_grid_1h"."grid_total_apparent_power" IS '×ÜÊÓÔÚ¹¦ÂÊ'; 
 COMMENT ON COLUMN "public"."iot_grid_1h"."grid_total_power_factor" IS '×Ü¹¦ÂÊÒòÊı'; 
+COMMENT ON COLUMN "public"."iot_grid_1h"."grid_frequency" IS 'ÆµÂÊ'; 
 COMMENT ON COLUMN "public"."iot_grid_1h"."grid_active_total_energy" IS '×ÜÓĞ¹¦ÄÜÁ¿'; 
 COMMENT ON COLUMN "public"."iot_grid_1h"."grid_ac_line_voltage" IS 'ACÏàÏßµçÑ¹'; 
-COMMENT ON COLUMN "public"."iot_grid_1h"."grid_bc_line_voltage" IS 'BCÏàµçÑ¹'; 
-COMMENT ON COLUMN "public"."iot_grid_1h"."grid_ab_line_voltage" IS 'ABÏàµçÑ¹'; 
+COMMENT ON COLUMN "public"."iot_grid_1h"."grid_bc_line_voltage" IS 'BCÏàÏßµçÑ¹'; 
+COMMENT ON COLUMN "public"."iot_grid_1h"."grid_ab_line_voltage" IS 'ABÏàÏßµçÑ¹'; 
 COMMENT ON COLUMN "public"."iot_grid_1h"."grid_power_factor_a" IS 'AÏà¹¦ÂÊÒòÊı'; 
 COMMENT ON COLUMN "public"."iot_grid_1h"."grid_power_factor_b" IS 'BÏà¹¦ÂÊÒòÊı'; 
 COMMENT ON COLUMN "public"."iot_grid_1h"."grid_power_factor_c" IS 'CÏà¹¦ÂÊÒòÊı'; 
@@ -133,6 +192,23 @@ COMMENT ON COLUMN "public"."iot_grid_1h"."grid_reactive_power_c" IS 'CÏàÎŞ¹¦¹¦ÂÊ
 COMMENT ON COLUMN "public"."iot_grid_1h"."grid_apparent_power_a" IS 'AÏàÊÓÔÚ¹¦ÂÊ'; 
 COMMENT ON COLUMN "public"."iot_grid_1h"."grid_apparent_power_b" IS 'BÏàÊÓÔÚ¹¦ÂÊ'; 
 COMMENT ON COLUMN "public"."iot_grid_1h"."grid_apparent_power_c" IS 'CÏàÊÓÔÚ¹¦ÂÊ'; 
-COMMENT ON COLUMN "public"."iot_grid_1h"."grid_frequency" IS 'ÆµÂÊ'; 
 COMMENT ON COLUMN "public"."iot_grid_1h"."grid_s1_normal" IS 'S1 ±ÕºÏ'; 
-COMMENT ON COLUMN "public"."iot_grid_1h"."grid_phase_voltage_c" IS 'CÏàµçÑ¹'; 
+COMMENT ON COLUMN "public"."iot_grid_1h"."grid_alarm" IS '¸æ¾¯'; 
+COMMENT ON COLUMN "public"."iot_grid_1h"."grid_by_the_hour" IS '°´Ğ¡Ê±¼ÆËã'; 
+COMMENT ON COLUMN "public"."iot_grid_1h"."grid_total_electricity_consumption" IS '×ÜµÄÓÃµçÁ¿'; 
+COMMENT ON COLUMN "public"."iot_grid_1h"."grid_positive_reactive_total_energy" IS 'ÕıÏòÎŞ¹¦×ÜÄÜÁ¿'; 
+COMMENT ON COLUMN "public"."iot_grid_1h"."grid_reverse_effective_total_energy" IS '·´ÏòÓĞĞ§×ÜÄÜÁ¿'; 
+COMMENT ON COLUMN "public"."iot_grid_1h"."grid_reverse_reactive_total_energy" IS '·´ÏòÎŞ¹¦×ÜÄÜÁ¿'; 
+COMMENT ON COLUMN "public"."iot_grid_1h"."grid_neutral_current" IS 'ÖĞĞÔµçÁ÷'; 
+COMMENT ON COLUMN "public"."iot_grid_1h"."grid_total_apparent_energy_consumed" IS '×ÜÏûºÄ±í¹ÛÄÜÁ¿'; 
+COMMENT ON COLUMN "public"."iot_grid_1h"."grid_l3_current_total_harmonic_distortion" IS 'L3µçÁ÷×ÜĞ³²¨Ê§Õæ'; 
+COMMENT ON COLUMN "public"."iot_grid_1h"."grid_l1_current_total_harmonic_distortion" IS 'L1µçÁ÷×ÜĞ³²¨Ê§Õæ'; 
+COMMENT ON COLUMN "public"."iot_grid_1h"."grid_l2_current_total_harmonic_distortion" IS 'L2µçÁ÷×ÜĞ³²¨Ê§Õæ'; 
+COMMENT ON COLUMN "public"."iot_grid_1h"."grid_compre_reactive_power2_total_electric_energy" IS '×ÛºÏÎŞ¹¦¹¦ÂÊ2×ÜµçÄÜ'; 
+COMMENT ON COLUMN "public"."iot_grid_1h"."grid_compre_reactive_power1_total_electric_energy" IS '×ÛºÏÎŞ¹¦¹¦ÂÊ1×ÜµçÄÜ'; 
+COMMENT ON COLUMN "public"."iot_grid_1h"."grid_total_harmonic_distortion_of_current" IS 'µçÁ÷×ÜĞ³²¨Ê§Õæ'; 
+COMMENT ON COLUMN "public"."iot_grid_1h"."grid_source_negative_terminal_phase_a" IS 'AÏàµçÔ´¸º¼«'; 
+COMMENT ON COLUMN "public"."iot_grid_1h"."grid_source_negative_terminal_phase_b" IS 'BÏàµçÔ´¸º¼«'; 
+COMMENT ON COLUMN "public"."iot_grid_1h"."grid_source_negative_terminal_phase_c" IS 'CÏàµçÔ´¸º¼«'; 
+COMMENT ON COLUMN "public"."iot_grid_1h"."grid_current_timing_error" IS 'µçÁ÷Ê±Ğò´íÎó'; 
+COMMENT ON COLUMN "public"."iot_grid_1h"."grid_voltage_sequence_error" IS 'µçÑ¹ĞòÁĞ´íÎó'; 

@@ -1,668 +1,188 @@
  /** 
- * 冷却液温度停机告警 genset_coolant_temp_level2. 
+ * A相电压 grid_phase_voltage_a. 
  */ 
- String GENSET_COOLANT_TEMP_LEVEL2 = "genset_coolant_temp_level2";
+ String GRID_PHASE_VOLTAGE_A = "grid_phase_voltage_a";
  /** 
- * 冷却液温度告警 genset_coolant_temp_level1. 
+ * B相电压 grid_phase_voltage_b. 
  */ 
- String GENSET_COOLANT_TEMP_LEVEL1 = "genset_coolant_temp_level1";
+ String GRID_PHASE_VOLTAGE_B = "grid_phase_voltage_b";
  /** 
- * 油位告警 genset_fuel_level_level1. 
+ * A相电流 grid_phase_current_a. 
  */ 
- String GENSET_FUEL_LEVEL_LEVEL1 = "genset_fuel_level_level1";
+ String GRID_PHASE_CURRENT_A = "grid_phase_current_a";
  /** 
- * Cooling Time Setting genset_cooling_time_setting. 
+ * B相电流 grid_phase_current_b. 
  */ 
- String GENSET_COOLING_TIME_SETTING = "genset_cooling_time_setting";
+ String GRID_PHASE_CURRENT_B = "grid_phase_current_b";
  /** 
- * 开关状态 genset_breaker_state. 
+ * C相电流 grid_phase_current_c. 
  */ 
- String GENSET_BREAKER_STATE = "genset_breaker_state";
+ String GRID_PHASE_CURRENT_C = "grid_phase_current_c";
  /** 
- * 油位 genset_fuel_level. 
+ * 总有功功率 grid_total_active_power. 
  */ 
- String GENSET_FUEL_LEVEL = "genset_fuel_level";
+ String GRID_TOTAL_ACTIVE_POWER = "grid_total_active_power";
  /** 
- * 冷却液温蒂传感器故障 genset_coolant_temp_sensor_failure. 
+ * 总无功功率 grid_total_reactive_power. 
  */ 
- String GENSET_COOLANT_TEMP_SENSOR_FAILURE = "genset_coolant_temp_sensor_failure";
+ String GRID_TOTAL_REACTIVE_POWER = "grid_total_reactive_power";
  /** 
- * 低油位停机告警 genset_low_oil_pressure_shutdown. 
+ * 总视在功率 grid_total_apparent_power. 
  */ 
- String GENSET_LOW_OIL_PRESSURE_SHUTDOWN = "genset_low_oil_pressure_shutdown";
+ String GRID_TOTAL_APPARENT_POWER = "grid_total_apparent_power";
  /** 
- * Battery Low Voltage genset_battery_low_voltage. 
+ * 总功率因数 grid_total_power_factor. 
  */ 
- String GENSET_BATTERY_LOW_VOLTAGE = "genset_battery_low_voltage";
+ String GRID_TOTAL_POWER_FACTOR = "grid_total_power_factor";
  /** 
- * Battery High Voltage genset_battery_high_voltage. 
+ * 总有功能量 grid_active_total_energy. 
  */ 
- String GENSET_BATTERY_HIGH_VOLTAGE = "genset_battery_high_voltage";
+ String GRID_ACTIVE_TOTAL_ENERGY = "grid_active_total_energy";
  /** 
- * 总油耗 genset_total_fuel_consumption. 
+ * AC相线电压 grid_ac_line_voltage. 
  */ 
- String GENSET_TOTAL_FUEL_CONSUMPTION = "genset_total_fuel_consumption";
+ String GRID_AC_LINE_VOLTAGE = "grid_ac_line_voltage";
  /** 
- * 油箱总容量 genset_fuel_tank_volume. 
+ * BC相电压 grid_bc_line_voltage. 
  */ 
- String GENSET_FUEL_TANK_VOLUME = "genset_fuel_tank_volume";
+ String GRID_BC_LINE_VOLTAGE = "grid_bc_line_voltage";
  /** 
- * zz远程停止 genset_rem_sto_zz. 
+ * AB相电压 grid_ab_line_voltage. 
  */ 
- String GENSET_REM_STO_ZZ = "genset_rem_sto_zz";
+ String GRID_AB_LINE_VOLTAGE = "grid_ab_line_voltage";
  /** 
- * 油位传感器故障 genset_fuel_level_sensor_failure. 
+ * A相功率因数 grid_power_factor_a. 
  */ 
- String GENSET_FUEL_LEVEL_SENSOR_FAILURE = "genset_fuel_level_sensor_failure";
+ String GRID_POWER_FACTOR_A = "grid_power_factor_a";
  /** 
- * 油位停机 genset_fuel_level_level2. 
+ * B相功率因数 grid_power_factor_b. 
  */ 
- String GENSET_FUEL_LEVEL_LEVEL2 = "genset_fuel_level_level2";
+ String GRID_POWER_FACTOR_B = "grid_power_factor_b";
  /** 
- * Generator Overvoltage Shut Down genset_generator_overvoltage_shut_down. 
+ * C相功率因数 grid_power_factor_c. 
  */ 
- String GENSET_GENERATOR_OVERVOLTAGE_SHUT_DOWN = "genset_generator_overvoltage_shut_down";
+ String GRID_POWER_FACTOR_C = "grid_power_factor_c";
  /** 
- * 启动失败 genset_sd_start_fail_level1. 
+ * A相有功功率 grid_active_power_a. 
  */ 
- String GENSET_SD_START_FAIL_LEVEL1 = "genset_sd_start_fail_level1";
+ String GRID_ACTIVE_POWER_A = "grid_active_power_a";
  /** 
- * 转速过低停机 genset_sd_underspeed_level2. 
+ * B相有功功率 grid_active_power_b. 
  */ 
- String GENSET_SD_UNDERSPEED_LEVEL2 = "genset_sd_underspeed_level2";
+ String GRID_ACTIVE_POWER_B = "grid_active_power_b";
  /** 
- * BOC发电电压不平衡ph-n告警 genset_boc_gen_voltage_unbalance_phn_level1. 
+ * C相有功功率 grid_active_power_c. 
  */ 
- String GENSET_BOC_GEN_VOLTAGE_UNBALANCE_PHN_LEVEL1 = "genset_boc_gen_voltage_unbalance_phn_level1";
+ String GRID_ACTIVE_POWER_C = "grid_active_power_c";
  /** 
- * BOC发电电压不平衡ph-ph Level 2停机告警 genset_boc_gen_voltage_unbalance_phph_level2. 
+ * A相无功功率 grid_reactive_power_a. 
  */ 
- String GENSET_BOC_GEN_VOLTAGE_UNBALANCE_PHPH_LEVEL2 = "genset_boc_gen_voltage_unbalance_phph_level2";
+ String GRID_REACTIVE_POWER_A = "grid_reactive_power_a";
  /** 
- * BOC发电电压不平衡ph-ph告警 genset_boc_gen_voltage_unbalance_phph_level1. 
+ * B相无功功率 grid_reactive_power_b. 
  */ 
- String GENSET_BOC_GEN_VOLTAGE_UNBALANCE_PHPH_LEVEL1 = "genset_boc_gen_voltage_unbalance_phph_level1";
+ String GRID_REACTIVE_POWER_B = "grid_reactive_power_b";
  /** 
- * L3L1发电电压停机 genset_generator_voltage_l3l1_level2. 
+ * C相无功功率 grid_reactive_power_c. 
  */ 
- String GENSET_GENERATOR_VOLTAGE_L3L1_LEVEL2 = "genset_generator_voltage_l3l1_level2";
+ String GRID_REACTIVE_POWER_C = "grid_reactive_power_c";
  /** 
- * L3L1发电电压告警 genset_generator_voltage_l3l1_level1. 
+ * A相视在功率 grid_apparent_power_a. 
  */ 
- String GENSET_GENERATOR_VOLTAGE_L3L1_LEVEL1 = "genset_generator_voltage_l3l1_level1";
+ String GRID_APPARENT_POWER_A = "grid_apparent_power_a";
  /** 
- * L2L3发电电压告警 genset_generator_voltage_l2l3_level1. 
+ * B相视在功率 grid_apparent_power_b. 
  */ 
- String GENSET_GENERATOR_VOLTAGE_L2L3_LEVEL1 = "genset_generator_voltage_l2l3_level1";
+ String GRID_APPARENT_POWER_B = "grid_apparent_power_b";
  /** 
- * L1L2发电电压告警 genset_generator_voltage_l1l2_level1. 
+ * C相视在功率 grid_apparent_power_c. 
  */ 
- String GENSET_GENERATOR_VOLTAGE_L1L2_LEVEL1 = "genset_generator_voltage_l1l2_level1";
+ String GRID_APPARENT_POWER_C = "grid_apparent_power_c";
  /** 
- * 电池过压告警 genset_wrn_battery_overvoltage_level1. 
+ * 频率 grid_frequency. 
  */ 
- String GENSET_WRN_BATTERY_OVERVOLTAGE_LEVEL1 = "genset_wrn_battery_overvoltage_level1";
+ String GRID_FREQUENCY = "grid_frequency";
  /** 
- * 电池欠压停机 genset_wrn_battery_undervoltage_level2. 
+ * S1 闭合 grid_s1_normal. 
  */ 
- String GENSET_WRN_BATTERY_UNDERVOLTAGE_LEVEL2 = "genset_wrn_battery_undervoltage_level2";
+ String GRID_S1_NORMAL = "grid_s1_normal";
  /** 
- * 电池欠压告警 genset_wrn_battery_undervoltage_level1. 
+ * A相电源负极 grid_source_negative_terminal_phase_a. 
  */ 
- String GENSET_WRN_BATTERY_UNDERVOLTAGE_LEVEL1 = "genset_wrn_battery_undervoltage_level1";
+ String GRID_SOURCE_NEGATIVE_TERMINAL_PHASE_A = "grid_source_negative_terminal_phase_a";
  /** 
- * L2发电欠压停机 genset_generator_l2_undervoltage_level2. 
+ * 电流总谐波失真 grid_total_harmonic_distortion_of_current. 
  */ 
- String GENSET_GENERATOR_L2_UNDERVOLTAGE_LEVEL2 = "genset_generator_l2_undervoltage_level2";
+ String GRID_TOTAL_HARMONIC_DISTORTION_OF_CURRENT = "grid_total_harmonic_distortion_of_current";
  /** 
- * L2发电欠压告警 genset_generator_l2_undervoltage_level1. 
+ * 综合无功功率1总电能 grid_compre_reactive_power1_total_electric_energy. 
  */ 
- String GENSET_GENERATOR_L2_UNDERVOLTAGE_LEVEL1 = "genset_generator_l2_undervoltage_level1";
+ String GRID_COMPRE_REACTIVE_POWER1_TOTAL_ELECTRIC_ENERGY = "grid_compre_reactive_power1_total_electric_energy";
  /** 
- * L1发电欠压停机 genset_generator_l1_undervoltage_level2. 
+ * 综合无功功率2总电能 grid_compre_reactive_power2_total_electric_energy. 
  */ 
- String GENSET_GENERATOR_L1_UNDERVOLTAGE_LEVEL2 = "genset_generator_l1_undervoltage_level2";
+ String GRID_COMPRE_REACTIVE_POWER2_TOTAL_ELECTRIC_ENERGY = "grid_compre_reactive_power2_total_electric_energy";
  /** 
- * L1发电欠压告警 genset_generator_l1_undervoltage_level1. 
+ * L2电流总谐波失真 grid_l2_current_total_harmonic_distortion. 
  */ 
- String GENSET_GENERATOR_L1_UNDERVOLTAGE_LEVEL1 = "genset_generator_l1_undervoltage_level1";
+ String GRID_L2_CURRENT_TOTAL_HARMONIC_DISTORTION = "grid_l2_current_total_harmonic_distortion";
  /** 
- * L2L3发电过压停机 genset_generator_l2l3_overvoltage_level2. 
+ * L1电流总谐波失真 grid_l1_current_total_harmonic_distortion. 
  */ 
- String GENSET_GENERATOR_L2L3_OVERVOLTAGE_LEVEL2 = "genset_generator_l2l3_overvoltage_level2";
+ String GRID_L1_CURRENT_TOTAL_HARMONIC_DISTORTION = "grid_l1_current_total_harmonic_distortion";
  /** 
- * L2L3发电过压告警 genset_generator_l2l3_overvoltage_level1. 
+ * L3电流总谐波失真 grid_l3_current_total_harmonic_distortion. 
  */ 
- String GENSET_GENERATOR_L2L3_OVERVOLTAGE_LEVEL1 = "genset_generator_l2l3_overvoltage_level1";
+ String GRID_L3_CURRENT_TOTAL_HARMONIC_DISTORTION = "grid_l3_current_total_harmonic_distortion";
  /** 
- * L1L2发电过压停机 genset_generator_l1l2_overvoltage_level2. 
+ * 总消耗表观能量 grid_total_apparent_energy_consumed. 
  */ 
- String GENSET_GENERATOR_L1L2_OVERVOLTAGE_LEVEL2 = "genset_generator_l1l2_overvoltage_level2";
+ String GRID_TOTAL_APPARENT_ENERGY_CONSUMED = "grid_total_apparent_energy_consumed";
  /** 
- * L1L2发电过压告警 genset_generator_l1l2_overvoltage_level1. 
+ * 中性电流 grid_neutral_current. 
  */ 
- String GENSET_GENERATOR_L1L2_OVERVOLTAGE_LEVEL1 = "genset_generator_l1l2_overvoltage_level1";
+ String GRID_NEUTRAL_CURRENT = "grid_neutral_current";
  /** 
- * Generator Overvoltage Warning genset_generator_overvoltage_warning. 
+ * 反向无功总能量 grid_reverse_reactive_total_energy. 
  */ 
- String GENSET_GENERATOR_OVERVOLTAGE_WARNING = "genset_generator_overvoltage_warning";
+ String GRID_REVERSE_REACTIVE_TOTAL_ENERGY = "grid_reverse_reactive_total_energy";
  /** 
- * Generator Undervoltage Warning genset_generator_undervoltage_warning. 
+ * 反向有效总能量 grid_reverse_effective_total_energy. 
  */ 
- String GENSET_GENERATOR_UNDERVOLTAGE_WARNING = "genset_generator_undervoltage_warning";
+ String GRID_REVERSE_EFFECTIVE_TOTAL_ENERGY = "grid_reverse_effective_total_energy";
  /** 
- * Generator UndervolTage Shut Off Cooling genset_generator_undervoltage_shut_off_cooling. 
+ * 正向无功总能量 grid_positive_reactive_total_energy. 
  */ 
- String GENSET_GENERATOR_UNDERVOLTAGE_SHUT_OFF_COOLING = "genset_generator_undervoltage_shut_off_cooling";
+ String GRID_POSITIVE_REACTIVE_TOTAL_ENERGY = "grid_positive_reactive_total_energy";
  /** 
- * Generator Overfrequency Warning genset_generator_overfrequency_warning. 
+ * 总的用电量 grid_total_electricity_consumption. 
  */ 
- String GENSET_GENERATOR_OVERFREQUENCY_WARNING = "genset_generator_overfrequency_warning";
+ String GRID_TOTAL_ELECTRICITY_CONSUMPTION = "grid_total_electricity_consumption";
  /** 
- * 市电L3-L1线电压 genset_mains_l3_l1_voltage. 
+ * 按小时计算 grid_by_the_hour. 
  */ 
- String GENSET_MAINS_L3_L1_VOLTAGE = "genset_mains_l3_l1_voltage";
+ String GRID_BY_THE_HOUR = "grid_by_the_hour";
  /** 
- * 市电L2-N相电压 genset_mains_l2_voltage_n. 
+ * 告警 grid_alarm. 
  */ 
- String GENSET_MAINS_L2_VOLTAGE_N = "genset_mains_l2_voltage_n";
+ String GRID_ALARM = "grid_alarm";
  /** 
- * 市电L1-N相电压 genset_mains_l1_voltage_n. 
+ * 电压序列错误 grid_voltage_sequence_error. 
  */ 
- String GENSET_MAINS_L1_VOLTAGE_N = "genset_mains_l1_voltage_n";
+ String GRID_VOLTAGE_SEQUENCE_ERROR = "grid_voltage_sequence_error";
  /** 
- * 市电L3-N相电压 genset_mains_l3_voltage_n. 
+ * 电流时序错误 grid_current_timing_error. 
  */ 
- String GENSET_MAINS_L3_VOLTAGE_N = "genset_mains_l3_voltage_n";
+ String GRID_CURRENT_TIMING_ERROR = "grid_current_timing_error";
  /** 
- * 发电机控制模式 genset_controller_mode_switch. 
+ * C相电源负极 grid_source_negative_terminal_phase_c. 
  */ 
- String GENSET_CONTROLLER_MODE_SWITCH = "genset_controller_mode_switch";
+ String GRID_SOURCE_NEGATIVE_TERMINAL_PHASE_C = "grid_source_negative_terminal_phase_c";
  /** 
- * 发电机冷却液温度 genset_engine_coolant_temp. 
+ * B相电源负极 grid_source_negative_terminal_phase_b. 
  */ 
- String GENSET_ENGINE_COOLANT_TEMP = "genset_engine_coolant_temp";
+ String GRID_SOURCE_NEGATIVE_TERMINAL_PHASE_B = "grid_source_negative_terminal_phase_b";
  /** 
- * 发电机控制模式状态 genset_controller_mode_status. 
+ * C相电压 grid_phase_voltage_c. 
  */ 
- String GENSET_CONTROLLER_MODE_STATUS = "genset_controller_mode_status";
- /** 
- * 发电机L1-L2电压 genset_l1_l2_voltage. 
- */ 
- String GENSET_L1_L2_VOLTAGE = "genset_l1_l2_voltage";
- /** 
- * 发电机L1-N电压 genset_l1_voltage_n. 
- */ 
- String GENSET_L1_VOLTAGE_N = "genset_l1_voltage_n";
- /** 
- * 发电机L3功率 genset_l3_power. 
- */ 
- String GENSET_L3_POWER = "genset_l3_power";
- /** 
- * 发电机L2功率 genset_l2_power. 
- */ 
- String GENSET_L2_POWER = "genset_l2_power";
- /** 
- * 发电机交流电机充电电压 genset_charging_alternator_voltage. 
- */ 
- String GENSET_CHARGING_ALTERNATOR_VOLTAGE = "genset_charging_alternator_voltage";
- /** 
- * 发电机L1功率 genset_l1_power. 
- */ 
- String GENSET_L1_POWER = "genset_l1_power";
- /** 
- * 发电机启动电池电压 genset_starter_battery_voltage. 
- */ 
- String GENSET_STARTER_BATTERY_VOLTAGE = "genset_starter_battery_voltage";
- /** 
- * 发电机功率因数L3 genset_pf_l3. 
- */ 
- String GENSET_PF_L3 = "genset_pf_l3";
- /** 
- * 发电机功率因数L2 genset_pf_l2. 
- */ 
- String GENSET_PF_L2 = "genset_pf_l2";
- /** 
- * 发电机运行时间 genset_runtime. 
- */ 
- String GENSET_RUNTIME = "genset_runtime";
- /** 
- * 发电机总功率 genset_total_power. 
- */ 
- String GENSET_TOTAL_POWER = "genset_total_power";
- /** 
- * 发电机启动次数 genset_num_of_starts. 
- */ 
- String GENSET_NUM_OF_STARTS = "genset_num_of_starts";
- /** 
- * 发电机紧急停止次数 genset_num_of_estop. 
- */ 
- String GENSET_NUM_OF_ESTOP = "genset_num_of_estop";
- /** 
- * 发电机油压 genset_oil_pressure. 
- */ 
- String GENSET_OIL_PRESSURE = "genset_oil_pressure";
- /** 
- * 发电机L3电流 genset_l3_current. 
- */ 
- String GENSET_L3_CURRENT = "genset_l3_current";
- /** 
- * 发电机L2电流 genset_l2_current. 
- */ 
- String GENSET_L2_CURRENT = "genset_l2_current";
- /** 
- * 发电机L1电流 genset_l1_current. 
- */ 
- String GENSET_L1_CURRENT = "genset_l1_current";
- /** 
- * 发电机单个机组能量 genset_energy. 
- */ 
- String GENSET_ENERGY = "genset_energy";
- /** 
- * 发电机发动机运行状态 genset_engine_operation_status. 
- */ 
- String GENSET_ENGINE_OPERATION_STATUS = "genset_engine_operation_status";
- /** 
- * 发电机组功率 genset_group_power. 
- */ 
- String GENSET_GROUP_POWER = "genset_group_power";
- /** 
- * 发电机总有功功率 genset_total_active_power. 
- */ 
- String GENSET_TOTAL_ACTIVE_POWER = "genset_total_active_power";
- /** 
- * 发电机L3有功功率 genset_l3_active_power. 
- */ 
- String GENSET_L3_ACTIVE_POWER = "genset_l3_active_power";
- /** 
- * 发电机L2有功功率 genset_l2_active_power. 
- */ 
- String GENSET_L2_ACTIVE_POWER = "genset_l2_active_power";
- /** 
- * 发电机L1有功功率 genset_l1_active_power. 
- */ 
- String GENSET_L1_ACTIVE_POWER = "genset_l1_active_power";
- /** 
- * 发电机电机转速 genset_engine_speed. 
- */ 
- String GENSET_ENGINE_SPEED = "genset_engine_speed";
- /** 
- * 发电机L2-N电压 genset_l2_voltage_n. 
- */ 
- String GENSET_L2_VOLTAGE_N = "genset_l2_voltage_n";
- /** 
- * 发电机L2-L3电压 genset_l2_l3_voltage. 
- */ 
- String GENSET_L2_L3_VOLTAGE = "genset_l2_l3_voltage";
- /** 
- * 发电机L3-L1电压 genset_l3_l1_voltage. 
- */ 
- String GENSET_L3_L1_VOLTAGE = "genset_l3_l1_voltage";
- /** 
- * 市电L1-L2线电压 genset_mains_l1_l2_voltage. 
- */ 
- String GENSET_MAINS_L1_L2_VOLTAGE = "genset_mains_l1_l2_voltage";
- /** 
- * 市电L2-L3线电压 genset_mains_l2_l3_voltage. 
- */ 
- String GENSET_MAINS_L2_L3_VOLTAGE = "genset_mains_l2_l3_voltage";
- /** 
- * 市电L3相无功功率 genset_mains_l3_var. 
- */ 
- String GENSET_MAINS_L3_VAR = "genset_mains_l3_var";
- /** 
- * 发电机的频率 genset_freq. 
- */ 
- String GENSET_FREQ = "genset_freq";
- /** 
- * 市电L1相视在功率 genset_mains_l1_va. 
- */ 
- String GENSET_MAINS_L1_VA = "genset_mains_l1_va";
- /** 
- * 市电L3相有功功率 genset_mains_l3_watts. 
- */ 
- String GENSET_MAINS_L3_WATTS = "genset_mains_l3_watts";
- /** 
- * 市电L2相电流 genset_mains_l2_current. 
- */ 
- String GENSET_MAINS_L2_CURRENT = "genset_mains_l2_current";
- /** 
- * 逆功率停机告警 genset_reverse_power_alarm_shutdown_zz. 
- */ 
- String GENSET_REVERSE_POWER_ALARM_SHUTDOWN_ZZ = "genset_reverse_power_alarm_shutdown_zz";
- /** 
- * 发电机功率因数L1 genset_pf_l1. 
- */ 
- String GENSET_PF_L1 = "genset_pf_l1";
- /** 
- * 发电机L3-N电压 genset_l3_voltage_n. 
- */ 
- String GENSET_L3_VOLTAGE_N = "genset_l3_voltage_n";
- /** 
- * 发电机远程开启/关闭 genset_remote_on_and_off. 
- */ 
- String GENSET_REMOTE_ON_AND_OFF = "genset_remote_on_and_off";
- /** 
- * 远程复位 genset_remote_reset. 
- */ 
- String GENSET_REMOTE_RESET = "genset_remote_reset";
- /** 
- * 深海发电机手动模式状态 genset_manual_led_status_dse. 
- */ 
- String GENSET_MANUAL_LED_STATUS_DSE = "genset_manual_led_status_dse";
- /** 
- * 深海发电机自动模式状态 genset_auto_led_status_dse. 
- */ 
- String GENSET_AUTO_LED_STATUS_DSE = "genset_auto_led_status_dse";
- /** 
- * 深海发电机测试模式状态 genset_test_led_status_dse. 
- */ 
- String GENSET_TEST_LED_STATUS_DSE = "genset_test_led_status_dse";
- /** 
- * 低油位告警 genset_low_oil_pressure_warning. 
- */ 
- String GENSET_LOW_OIL_PRESSURE_WARNING = "genset_low_oil_pressure_warning";
- /** 
- * 远程开关机传感器故障 genset_remote_startstop_sensor_failure. 
- */ 
- String GENSET_REMOTE_STARTSTOP_SENSOR_FAILURE = "genset_remote_startstop_sensor_failure";
- /** 
- * 远程启动关机告警 genset_remote_startstop. 
- */ 
- String GENSET_REMOTE_STARTSTOP = "genset_remote_startstop";
- /** 
- * 紧急停机传感器故障 genset_emergency_stop_sensor_failure. 
- */ 
- String GENSET_EMERGENCY_STOP_SENSOR_FAILURE = "genset_emergency_stop_sensor_failure";
- /** 
- * 紧急停机关机 genset_emergency_stop_level2. 
- */ 
- String GENSET_EMERGENCY_STOP_LEVEL2 = "genset_emergency_stop_level2";
- /** 
- * 众智机组的分钟时间 genset_runtime_minutes_zz. 
- */ 
- String GENSET_RUNTIME_MINUTES_ZZ = "genset_runtime_minutes_zz";
- /** 
- * 深海发电机停止模式状态 genset_stop_led_status_dse. 
- */ 
- String GENSET_STOP_LED_STATUS_DSE = "genset_stop_led_status_dse";
- /** 
- * 市电相序滞后/超前 genset_mains_voltage_phase_lagorlead. 
- */ 
- String GENSET_MAINS_VOLTAGE_PHASE_LAGORLEAD = "genset_mains_voltage_phase_lagorlead";
- /** 
- * 充电发电机故障 genset_charge_alternator_failure_dse. 
- */ 
- String GENSET_CHARGE_ALTERNATOR_FAILURE_DSE = "genset_charge_alternator_failure_dse";
- /** 
- * 停机失败 genset_fail_to_stop_dse. 
- */ 
- String GENSET_FAIL_TO_STOP_DSE = "genset_fail_to_stop_dse";
- /** 
- * 停止发电失败 genset_generator_fail_to_close_dse. 
- */ 
- String GENSET_GENERATOR_FAIL_TO_CLOSE_DSE = "genset_generator_fail_to_close_dse";
- /** 
- * 市电关闭失败 genset_mains_fail_to_close_dse. 
- */ 
- String GENSET_MAINS_FAIL_TO_CLOSE_DSE = "genset_mains_fail_to_close_dse";
- /** 
- * 油压发送器故障 genset_oil_pressure_sender_fault_dse. 
- */ 
- String GENSET_OIL_PRESSURE_SENDER_FAULT_DSE = "genset_oil_pressure_sender_fault_dse";
- /** 
- * 磁感应丢失 genset_loss_of_magnetic_pick_up_dse. 
- */ 
- String GENSET_LOSS_OF_MAGNETIC_PICK_UP_DSE = "genset_loss_of_magnetic_pick_up_dse";
- /** 
- * 磁感应开路 genset_magnetic_pick_up_open_circuit_dse. 
- */ 
- String GENSET_MAGNETIC_PICK_UP_OPEN_CIRCUIT_DSE = "genset_magnetic_pick_up_open_circuit_dse";
- /** 
- * 发电机电流打 genset_generator_high_current_dse. 
- */ 
- String GENSET_GENERATOR_HIGH_CURRENT_DSE = "genset_generator_high_current_dse";
- /** 
- * CAN ECU警告 genset_can_ecu_warning_dse. 
- */ 
- String GENSET_CAN_ECU_WARNING_DSE = "genset_can_ecu_warning_dse";
- /** 
- * CAN ECU关机 genset_can_ecu_shutdown_dse. 
- */ 
- String GENSET_CAN_ECU_SHUTDOWN_DSE = "genset_can_ecu_shutdown_dse";
- /** 
- * CAN ECU数据失败 genset_can_ecu_data_fail_dse. 
- */ 
- String GENSET_CAN_ECU_DATA_FAIL_DSE = "genset_can_ecu_data_fail_dse";
- /** 
- * 低油位开关 genset_low_oil_level_switch_dse. 
- */ 
- String GENSET_LOW_OIL_LEVEL_SWITCH_DSE = "genset_low_oil_level_switch_dse";
- /** 
- * 高温开关 genset_high_temperature_switch_dse. 
- */ 
- String GENSET_HIGH_TEMPERATURE_SWITCH_DSE = "genset_high_temperature_switch_dse";
- /** 
- * 低燃油位开关 genset_low_fuel_level_switch_dse. 
- */ 
- String GENSET_LOW_FUEL_LEVEL_SWITCH_DSE = "genset_low_fuel_level_switch_dse";
- /** 
- * 扩展单元看门狗报警 genset_expansion_unit_watchdog_alarm_dse. 
- */ 
- String GENSET_EXPANSION_UNIT_WATCHDOG_ALARM_DSE = "genset_expansion_unit_watchdog_alarm_dse";
- /** 
- * kW过载报警器 genset_kw_overload_alarm_dse. 
- */ 
- String GENSET_KW_OVERLOAD_ALARM_DSE = "genset_kw_overload_alarm_dse";
- /** 
- * 负相序电流报警 genset_negative_phase_sequence_current_alarm_dse. 
- */ 
- String GENSET_NEGATIVE_PHASE_SEQUENCE_CURRENT_ALARM_DSE = "genset_negative_phase_sequence_current_alarm_dse";
- /** 
- * 接地故障跳闸报警器 genset_earth_fault_trip_alarm_dse. 
- */ 
- String GENSET_EARTH_FAULT_TRIP_ALARM_DSE = "genset_earth_fault_trip_alarm_dse";
- /** 
- * 发电机相位旋转报警器 genset_generator_phase_rotation_alarm_dse. 
- */ 
- String GENSET_GENERATOR_PHASE_ROTATION_ALARM_DSE = "genset_generator_phase_rotation_alarm_dse";
- /** 
- * 自动电压检测故障 genset_auto_voltage_sense_fail_dse. 
- */ 
- String GENSET_AUTO_VOLTAGE_SENSE_FAIL_DSE = "genset_auto_voltage_sense_fail_dse";
- /** 
- * 负载电压报警 genset_loading_voltage_alarm_dse. 
- */ 
- String GENSET_LOADING_VOLTAGE_ALARM_DSE = "genset_loading_voltage_alarm_dse";
- /** 
- * 发电机短路 genset_generator_short_circuit_dse. 
- */ 
- String GENSET_GENERATOR_SHORT_CIRCUIT_DSE = "genset_generator_short_circuit_dse";
- /** 
- * 市电大电流 genset_mains_high_current_dse. 
- */ 
- String GENSET_MAINS_HIGH_CURRENT_DSE = "genset_mains_high_current_dse";
- /** 
- * 市电接地故障 genset_mains_earth_fault_dse. 
- */ 
- String GENSET_MAINS_EARTH_FAULT_DSE = "genset_mains_earth_fault_dse";
- /** 
- * 市电短路 genset_mains_short_circuit_zz. 
- */ 
- String GENSET_MAINS_SHORT_CIRCUIT_ZZ = "genset_mains_short_circuit_zz";
- /** 
- * ECU保护 genset_ecu_protect_zz. 
- */ 
- String GENSET_ECU_PROTECT_ZZ = "genset_ecu_protect_zz";
- /** 
- * 超速报警停机 genset_overspeed_alarm_shutdown_zz. 
- */ 
- String GENSET_OVERSPEED_ALARM_SHUTDOWN_ZZ = "genset_overspeed_alarm_shutdown_zz";
- /** 
- * Sd超速 genset_sd_overspeed. 
- */ 
- String GENSET_SD_OVERSPEED = "genset_sd_overspeed";
- /** 
- * Sd RPM测量失败 genset_sd_rpm_measurement_fail. 
- */ 
- String GENSET_SD_RPM_MEASUREMENT_FAIL = "genset_sd_rpm_measurement_fail";
- /** 
- * Wrn停止失败 genset_wrn_stop_fail. 
- */ 
- String GENSET_WRN_STOP_FAIL = "genset_wrn_stop_fail";
- /** 
- * Sd充电发电机故障 genset_sd_charging_alternator_fail. 
- */ 
- String GENSET_SD_CHARGING_ALTERNATOR_FAIL = "genset_sd_charging_alternator_fail";
- /** 
- * Wrn充电发电机故障 genset_wrn_charging_alternator_fail. 
- */ 
- String GENSET_WRN_CHARGING_ALTERNATOR_FAIL = "genset_wrn_charging_alternator_fail";
- /** 
- * 高温输入停机告警 genset_high_temp_input_alarm_shutdown_zz. 
- */ 
- String GENSET_HIGH_TEMP_INPUT_ALARM_SHUTDOWN_ZZ = "genset_high_temp_input_alarm_shutdown_zz";
- /** 
- * 过功率停机告警 genset_over_power_alarm_shutdown_zz. 
- */ 
- String GENSET_OVER_POWER_ALARM_SHUTDOWN_ZZ = "genset_over_power_alarm_shutdown_zz";
- /** 
- * 发电过流停机告警 genset_gen_over_current_shutdown_zz. 
- */ 
- String GENSET_GEN_OVER_CURRENT_SHUTDOWN_ZZ = "genset_gen_over_current_shutdown_zz";
- /** 
- * 速度信号丢失报警 genset_loss_of_speed_signal_alarm_zz. 
- */ 
- String GENSET_LOSS_OF_SPEED_SIGNAL_ALARM_ZZ = "genset_loss_of_speed_signal_alarm_zz";
- /** 
- * 发电欠频停机告警 genset_under_freq_sd_zz. 
- */ 
- String GENSET_UNDER_FREQ_SD_ZZ = "genset_under_freq_sd_zz";
- /** 
- * 加载频率报警 genset_loading_freq_alarm_dse. 
- */ 
- String GENSET_LOADING_FREQ_ALARM_DSE = "genset_loading_freq_alarm_dse";
- /** 
- * 发电过频停机报警 genset_over_freq_sd_alarm_zz. 
- */ 
- String GENSET_OVER_FREQ_SD_ALARM_ZZ = "genset_over_freq_sd_alarm_zz";
- /** 
- * 市电灯状态 genset_mains_led_status. 
- */ 
- String GENSET_MAINS_LED_STATUS = "genset_mains_led_status";
- /** 
- * 市电平均功率因素 genset_mains_average_power_factor. 
- */ 
- String GENSET_MAINS_AVERAGE_POWER_FACTOR = "genset_mains_average_power_factor";
- /** 
- * 市电L2相功率因素 genset_mains_power_factor_l2. 
- */ 
- String GENSET_MAINS_POWER_FACTOR_L2 = "genset_mains_power_factor_l2";
- /** 
- * 市电L3相功率因素 genset_mains_power_factor_l3. 
- */ 
- String GENSET_MAINS_POWER_FACTOR_L3 = "genset_mains_power_factor_l3";
- /** 
- * 市电断路器灯状态 genset_mains_breaker_led_status. 
- */ 
- String GENSET_MAINS_BREAKER_LED_STATUS = "genset_mains_breaker_led_status";
- /** 
- * 市电L1相功率因素 genset_mains_power_factor_l1. 
- */ 
- String GENSET_MAINS_POWER_FACTOR_L1 = "genset_mains_power_factor_l1";
- /** 
- * 市电总无功功率 genset_mains_total_var. 
- */ 
- String GENSET_MAINS_TOTAL_VAR = "genset_mains_total_var";
- /** 
- * 市电L2相无功功率 genset_mains_l2_var. 
- */ 
- String GENSET_MAINS_L2_VAR = "genset_mains_l2_var";
- /** 
- * 市电L1相无功功率 genset_mains_l1_var. 
- */ 
- String GENSET_MAINS_L1_VAR = "genset_mains_l1_var";
- /** 
- * 市电总视在功率 genset_mains_total_va. 
- */ 
- String GENSET_MAINS_TOTAL_VA = "genset_mains_total_va";
- /** 
- * 市电L3相视在功率 genset_mains_l3_va. 
- */ 
- String GENSET_MAINS_L3_VA = "genset_mains_l3_va";
- /** 
- * 市电L2相视在功率 genset_mains_l2_va. 
- */ 
- String GENSET_MAINS_L2_VA = "genset_mains_l2_va";
- /** 
- * 市电总有功功率 genset_mains_total_watts. 
- */ 
- String GENSET_MAINS_TOTAL_WATTS = "genset_mains_total_watts";
- /** 
- * 市电L2相有功功率 genset_mains_l2_watts. 
- */ 
- String GENSET_MAINS_L2_WATTS = "genset_mains_l2_watts";
- /** 
- * 市电L1相有功功率 genset_mains_l1_watts. 
- */ 
- String GENSET_MAINS_L1_WATTS = "genset_mains_l1_watts";
- /** 
- * 市电接地电流 genset_mains_earth_current. 
- */ 
- String GENSET_MAINS_EARTH_CURRENT = "genset_mains_earth_current";
- /** 
- * 市电L3相电流 genset_mains_l3_current. 
- */ 
- String GENSET_MAINS_L3_CURRENT = "genset_mains_l3_current";
- /** 
- * 市电L1相电流 genset_mains_l1_current. 
- */ 
- String GENSET_MAINS_L1_CURRENT = "genset_mains_l1_current";
- /** 
- * 市电电流滞后/超前 genset_mains_current_lagorlead. 
- */ 
- String GENSET_MAINS_CURRENT_LAGORLEAD = "genset_mains_current_lagorlead";
- /** 
- * 市电相序顺序 genset_mains_phase_rotation. 
- */ 
- String GENSET_MAINS_PHASE_ROTATION = "genset_mains_phase_rotation";
- /** 
- * 发电频率停机 genset_freq_level2. 
- */ 
- String GENSET_FREQ_LEVEL2 = "genset_freq_level2";
- /** 
- * Sd电池 genset_sd_battery_flat. 
- */ 
- String GENSET_SD_BATTERY_FLAT = "genset_sd_battery_flat";
- /** 
- * zz远程手动 genset_rem_man_zz. 
- */ 
- String GENSET_REM_MAN_ZZ = "genset_rem_man_zz";
- /** 
- * zz远程自动 genset_rem_aut_zz. 
- */ 
- String GENSET_REM_AUT_ZZ = "genset_rem_aut_zz";
- /** 
- * zz远程启动 genset_rem_sta_zz. 
- */ 
- String GENSET_REM_STA_ZZ = "genset_rem_sta_zz";
- /** 
- * 电池过压停机 genset_wrn_battery_overvoltage_level2. 
- */ 
- String GENSET_WRN_BATTERY_OVERVOLTAGE_LEVEL2 = "genset_wrn_battery_overvoltage_level2";
- /** 
- * BOC发电电压不平衡ph-n Level 2停机告警 genset_boc_gen_voltage_unbalance_phn_level2. 
- */ 
- String GENSET_BOC_GEN_VOLTAGE_UNBALANCE_PHN_LEVEL2 = "genset_boc_gen_voltage_unbalance_phn_level2";
- /** 
- * 油位传感器故障 genset_oil_pressure_sensor_failure. 
- */ 
- String GENSET_OIL_PRESSURE_SENSOR_FAILURE = "genset_oil_pressure_sensor_failure";
- /** 
- * 紧急停机告警 genset_emergency_stop_level1. 
- */ 
- String GENSET_EMERGENCY_STOP_LEVEL1 = "genset_emergency_stop_level1";
- /** 
- * 发电频率告警 genset_freq_level1. 
- */ 
- String GENSET_FREQ_LEVEL1 = "genset_freq_level1";
+ String GRID_PHASE_VOLTAGE_C = "grid_phase_voltage_c";

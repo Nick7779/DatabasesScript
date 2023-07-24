@@ -1,141 +1,236 @@
 /** 
- * A相电压. 
+ * A相电压.Phase A voltage 
  */ 
  @ApiModelProperty("A相电压") 
  private Double gridPhaseVoltageA;
 public static final String GRID_PHASE_VOLTAGE_A = "grid_phase_voltage_a";/** 
- * B相电压. 
+ * B相电压.Phase B voltage 
  */ 
  @ApiModelProperty("B相电压") 
  private Double gridPhaseVoltageB;
 public static final String GRID_PHASE_VOLTAGE_B = "grid_phase_voltage_b";/** 
- * A相电流. 
+ * C相电压.Phase C voltage 
+ */ 
+ @ApiModelProperty("C相电压") 
+ private Double gridPhaseVoltageC;
+public static final String GRID_PHASE_VOLTAGE_C = "grid_phase_voltage_c";/** 
+ * A相电流.Phase A current 
  */ 
  @ApiModelProperty("A相电流") 
  private Double gridPhaseCurrentA;
 public static final String GRID_PHASE_CURRENT_A = "grid_phase_current_a";/** 
- * B相电流. 
+ * B相电流.Phase B current 
  */ 
  @ApiModelProperty("B相电流") 
  private Double gridPhaseCurrentB;
 public static final String GRID_PHASE_CURRENT_B = "grid_phase_current_b";/** 
- * C相电流. 
+ * C相电流.Phase C current 
  */ 
  @ApiModelProperty("C相电流") 
  private Double gridPhaseCurrentC;
 public static final String GRID_PHASE_CURRENT_C = "grid_phase_current_c";/** 
- * 总有功功率. 
+ * 总有功功率.Total active power 
  */ 
  @ApiModelProperty("总有功功率") 
  private Double gridTotalActivePower;
 public static final String GRID_TOTAL_ACTIVE_POWER = "grid_total_active_power";/** 
- * 总无功功率. 
+ * 总无功功率.Total reactive power 
  */ 
  @ApiModelProperty("总无功功率") 
  private Double gridTotalReactivePower;
 public static final String GRID_TOTAL_REACTIVE_POWER = "grid_total_reactive_power";/** 
- * 总视在功率. 
+ * 总视在功率.Total apparent power 
  */ 
  @ApiModelProperty("总视在功率") 
  private Double gridTotalApparentPower;
 public static final String GRID_TOTAL_APPARENT_POWER = "grid_total_apparent_power";/** 
- * 总功率因数. 
+ * 总功率因数.Total power factor 
  */ 
  @ApiModelProperty("总功率因数") 
  private Double gridTotalPowerFactor;
 public static final String GRID_TOTAL_POWER_FACTOR = "grid_total_power_factor";/** 
- * 总有功能量. 
- */ 
- @ApiModelProperty("总有功能量") 
- private Double gridActiveTotalEnergy;
-public static final String GRID_ACTIVE_TOTAL_ENERGY = "grid_active_total_energy";/** 
- * AC相线电压. 
- */ 
- @ApiModelProperty("AC相线电压") 
- private Double gridAcLineVoltage;
-public static final String GRID_AC_LINE_VOLTAGE = "grid_ac_line_voltage";/** 
- * BC相电压. 
- */ 
- @ApiModelProperty("BC相电压") 
- private Double gridBcLineVoltage;
-public static final String GRID_BC_LINE_VOLTAGE = "grid_bc_line_voltage";/** 
- * AB相电压. 
- */ 
- @ApiModelProperty("AB相电压") 
- private Double gridAbLineVoltage;
-public static final String GRID_AB_LINE_VOLTAGE = "grid_ab_line_voltage";/** 
- * A相功率因数. 
- */ 
- @ApiModelProperty("A相功率因数") 
- private Double gridPowerFactorA;
-public static final String GRID_POWER_FACTOR_A = "grid_power_factor_a";/** 
- * B相功率因数. 
- */ 
- @ApiModelProperty("B相功率因数") 
- private Double gridPowerFactorB;
-public static final String GRID_POWER_FACTOR_B = "grid_power_factor_b";/** 
- * C相功率因数. 
- */ 
- @ApiModelProperty("C相功率因数") 
- private Double gridPowerFactorC;
-public static final String GRID_POWER_FACTOR_C = "grid_power_factor_c";/** 
- * A相有功功率. 
- */ 
- @ApiModelProperty("A相有功功率") 
- private Double gridActivePowerA;
-public static final String GRID_ACTIVE_POWER_A = "grid_active_power_a";/** 
- * B相有功功率. 
- */ 
- @ApiModelProperty("B相有功功率") 
- private Double gridActivePowerB;
-public static final String GRID_ACTIVE_POWER_B = "grid_active_power_b";/** 
- * C相有功功率. 
- */ 
- @ApiModelProperty("C相有功功率") 
- private Double gridActivePowerC;
-public static final String GRID_ACTIVE_POWER_C = "grid_active_power_c";/** 
- * A相无功功率. 
- */ 
- @ApiModelProperty("A相无功功率") 
- private Double gridReactivePowerA;
-public static final String GRID_REACTIVE_POWER_A = "grid_reactive_power_a";/** 
- * B相无功功率. 
- */ 
- @ApiModelProperty("B相无功功率") 
- private Double gridReactivePowerB;
-public static final String GRID_REACTIVE_POWER_B = "grid_reactive_power_b";/** 
- * C相无功功率. 
- */ 
- @ApiModelProperty("C相无功功率") 
- private Double gridReactivePowerC;
-public static final String GRID_REACTIVE_POWER_C = "grid_reactive_power_c";/** 
- * A相视在功率. 
- */ 
- @ApiModelProperty("A相视在功率") 
- private Double gridApparentPowerA;
-public static final String GRID_APPARENT_POWER_A = "grid_apparent_power_a";/** 
- * B相视在功率. 
- */ 
- @ApiModelProperty("B相视在功率") 
- private Double gridApparentPowerB;
-public static final String GRID_APPARENT_POWER_B = "grid_apparent_power_b";/** 
- * C相视在功率. 
- */ 
- @ApiModelProperty("C相视在功率") 
- private Double gridApparentPowerC;
-public static final String GRID_APPARENT_POWER_C = "grid_apparent_power_c";/** 
- * 频率. 
+ * 频率.frequency 
  */ 
  @ApiModelProperty("频率") 
  private Double gridFrequency;
 public static final String GRID_FREQUENCY = "grid_frequency";/** 
- * S1 闭合. 
+ * 总有功能量.Total active energy 
+ */ 
+ @ApiModelProperty("总有功能量") 
+ private Double gridActiveTotalEnergy;
+public static final String GRID_ACTIVE_TOTAL_ENERGY = "grid_active_total_energy";/** 
+ * AC相线电压.AC line voltage 
+ */ 
+ @ApiModelProperty("AC相线电压") 
+ private Double gridAcLineVoltage;
+public static final String GRID_AC_LINE_VOLTAGE = "grid_ac_line_voltage";/** 
+ * BC相线电压.BC line voltage 
+ */ 
+ @ApiModelProperty("BC相线电压") 
+ private Double gridBcLineVoltage;
+public static final String GRID_BC_LINE_VOLTAGE = "grid_bc_line_voltage";/** 
+ * AB相线电压.AB line voltage 
+ */ 
+ @ApiModelProperty("AB相线电压") 
+ private Double gridAbLineVoltage;
+public static final String GRID_AB_LINE_VOLTAGE = "grid_ab_line_voltage";/** 
+ * A相功率因数.Phase A power factor 
+ */ 
+ @ApiModelProperty("A相功率因数") 
+ private Double gridPowerFactorA;
+public static final String GRID_POWER_FACTOR_A = "grid_power_factor_a";/** 
+ * B相功率因数.Phase B power factor 
+ */ 
+ @ApiModelProperty("B相功率因数") 
+ private Double gridPowerFactorB;
+public static final String GRID_POWER_FACTOR_B = "grid_power_factor_b";/** 
+ * C相功率因数.Phase C power factor 
+ */ 
+ @ApiModelProperty("C相功率因数") 
+ private Double gridPowerFactorC;
+public static final String GRID_POWER_FACTOR_C = "grid_power_factor_c";/** 
+ * A相有功功率.Phase A active power 
+ */ 
+ @ApiModelProperty("A相有功功率") 
+ private Double gridActivePowerA;
+public static final String GRID_ACTIVE_POWER_A = "grid_active_power_a";/** 
+ * B相有功功率.Phase B active power 
+ */ 
+ @ApiModelProperty("B相有功功率") 
+ private Double gridActivePowerB;
+public static final String GRID_ACTIVE_POWER_B = "grid_active_power_b";/** 
+ * C相有功功率.Phase C active power 
+ */ 
+ @ApiModelProperty("C相有功功率") 
+ private Double gridActivePowerC;
+public static final String GRID_ACTIVE_POWER_C = "grid_active_power_c";/** 
+ * A相无功功率.Phase A reactive power 
+ */ 
+ @ApiModelProperty("A相无功功率") 
+ private Double gridReactivePowerA;
+public static final String GRID_REACTIVE_POWER_A = "grid_reactive_power_a";/** 
+ * B相无功功率.Phase B reactive power 
+ */ 
+ @ApiModelProperty("B相无功功率") 
+ private Double gridReactivePowerB;
+public static final String GRID_REACTIVE_POWER_B = "grid_reactive_power_b";/** 
+ * C相无功功率.Phase C reactive power 
+ */ 
+ @ApiModelProperty("C相无功功率") 
+ private Double gridReactivePowerC;
+public static final String GRID_REACTIVE_POWER_C = "grid_reactive_power_c";/** 
+ * A相视在功率.Phase A apparent power 
+ */ 
+ @ApiModelProperty("A相视在功率") 
+ private Double gridApparentPowerA;
+public static final String GRID_APPARENT_POWER_A = "grid_apparent_power_a";/** 
+ * B相视在功率.Phase B apparent power 
+ */ 
+ @ApiModelProperty("B相视在功率") 
+ private Double gridApparentPowerB;
+public static final String GRID_APPARENT_POWER_B = "grid_apparent_power_b";/** 
+ * C相视在功率.Phase C apparent power 
+ */ 
+ @ApiModelProperty("C相视在功率") 
+ private Double gridApparentPowerC;
+public static final String GRID_APPARENT_POWER_C = "grid_apparent_power_c";/** 
+ * S1 闭合.S1 normal 
  */ 
  @ApiModelProperty("S1 闭合") 
- private Double gridS1Normal;
+ private Long gridS1Normal;
 public static final String GRID_S1_NORMAL = "grid_s1_normal";/** 
- * C相电压. 
+ * 告警.alarm 
  */ 
- @ApiModelProperty("C相电压") 
- private Double gridPhaseVoltageC;
-public static final String GRID_PHASE_VOLTAGE_C = "grid_phase_voltage_c";private static final long serialVersionUID = 1L;
+ @ApiModelProperty("告警") 
+ private Double gridAlarm;
+public static final String GRID_ALARM = "grid_alarm";/** 
+ * 按小时计算.By the hour 
+ */ 
+ @ApiModelProperty("按小时计算") 
+ private Double gridByTheHour;
+public static final String GRID_BY_THE_HOUR = "grid_by_the_hour";/** 
+ * 总的用电量.Total electricity consumption 
+ */ 
+ @ApiModelProperty("总的用电量") 
+ private Double gridTotalElectricityConsumption;
+public static final String GRID_TOTAL_ELECTRICITY_CONSUMPTION = "grid_total_electricity_consumption";/** 
+ * 正向无功总能量.Positive reactive total energy 
+ */ 
+ @ApiModelProperty("正向无功总能量") 
+ private Double gridPositiveReactiveTotalEnergy;
+public static final String GRID_POSITIVE_REACTIVE_TOTAL_ENERGY = "grid_positive_reactive_total_energy";/** 
+ * 反向有效总能量.Reverse effective total energy 
+ */ 
+ @ApiModelProperty("反向有效总能量") 
+ private Double gridReverseEffectiveTotalEnergy;
+public static final String GRID_REVERSE_EFFECTIVE_TOTAL_ENERGY = "grid_reverse_effective_total_energy";/** 
+ * 反向无功总能量.Reverse reactive total energy 
+ */ 
+ @ApiModelProperty("反向无功总能量") 
+ private Double gridReverseReactiveTotalEnergy;
+public static final String GRID_REVERSE_REACTIVE_TOTAL_ENERGY = "grid_reverse_reactive_total_energy";/** 
+ * 中性电流.Neutral current 
+ */ 
+ @ApiModelProperty("中性电流") 
+ private Double gridNeutralCurrent;
+public static final String GRID_NEUTRAL_CURRENT = "grid_neutral_current";/** 
+ * 总消耗表观能量.Total apparent energy consumed 
+ */ 
+ @ApiModelProperty("总消耗表观能量") 
+ private Double gridTotalApparentEnergyConsumed;
+public static final String GRID_TOTAL_APPARENT_ENERGY_CONSUMED = "grid_total_apparent_energy_consumed";/** 
+ * L3电流总谐波失真.Total harmonic distortion of L3 current 
+ */ 
+ @ApiModelProperty("L3电流总谐波失真") 
+ private Double gridL3CurrentTotalHarmonicDistortion;
+public static final String GRID_L3_CURRENT_TOTAL_HARMONIC_DISTORTION = "grid_l3_current_total_harmonic_distortion";/** 
+ * L1电流总谐波失真.Total harmonic distortion of L1 current 
+ */ 
+ @ApiModelProperty("L1电流总谐波失真") 
+ private Double gridL1CurrentTotalHarmonicDistortion;
+public static final String GRID_L1_CURRENT_TOTAL_HARMONIC_DISTORTION = "grid_l1_current_total_harmonic_distortion";/** 
+ * L2电流总谐波失真.Total harmonic distortion of L2 current 
+ */ 
+ @ApiModelProperty("L2电流总谐波失真") 
+ private Double gridL2CurrentTotalHarmonicDistortion;
+public static final String GRID_L2_CURRENT_TOTAL_HARMONIC_DISTORTION = "grid_l2_current_total_harmonic_distortion";/** 
+ * 综合无功功率2总电能.Comprehensive reactive power 2 total electric energy 
+ */ 
+ @ApiModelProperty("综合无功功率2总电能") 
+ private Double gridCompreReactivePower2TotalElectricEnergy;
+public static final String GRID_COMPRE_REACTIVE_POWER2_TOTAL_ELECTRIC_ENERGY = "grid_compre_reactive_power2_total_electric_energy";/** 
+ * 综合无功功率1总电能.Comprehensive reactive power 1 total electric energy 
+ */ 
+ @ApiModelProperty("综合无功功率1总电能") 
+ private Double gridCompreReactivePower1TotalElectricEnergy;
+public static final String GRID_COMPRE_REACTIVE_POWER1_TOTAL_ELECTRIC_ENERGY = "grid_compre_reactive_power1_total_electric_energy";/** 
+ * 电流总谐波失真.Total harmonic distortion of current 
+ */ 
+ @ApiModelProperty("电流总谐波失真") 
+ private Double gridTotalHarmonicDistortionOfCurrent;
+public static final String GRID_TOTAL_HARMONIC_DISTORTION_OF_CURRENT = "grid_total_harmonic_distortion_of_current";/** 
+ * A相电源负极.A phase source negative terminal 
+ */ 
+ @ApiModelProperty("A相电源负极") 
+ private Double gridSourceNegativeTerminalPhaseA;
+public static final String GRID_SOURCE_NEGATIVE_TERMINAL_PHASE_A = "grid_source_negative_terminal_phase_a";/** 
+ * B相电源负极.B phase source negative terminal 
+ */ 
+ @ApiModelProperty("B相电源负极") 
+ private Double gridSourceNegativeTerminalPhaseB;
+public static final String GRID_SOURCE_NEGATIVE_TERMINAL_PHASE_B = "grid_source_negative_terminal_phase_b";/** 
+ * C相电源负极.C phase source negative terminal 
+ */ 
+ @ApiModelProperty("C相电源负极") 
+ private Double gridSourceNegativeTerminalPhaseC;
+public static final String GRID_SOURCE_NEGATIVE_TERMINAL_PHASE_C = "grid_source_negative_terminal_phase_c";/** 
+ * 电流时序错误.Current timing error 
+ */ 
+ @ApiModelProperty("电流时序错误") 
+ private Double gridCurrentTimingError;
+public static final String GRID_CURRENT_TIMING_ERROR = "grid_current_timing_error";/** 
+ * 电压序列错误.Voltage sequence error 
+ */ 
+ @ApiModelProperty("电压序列错误") 
+ private Double gridVoltageSequenceError;
+public static final String GRID_VOLTAGE_SEQUENCE_ERROR = "grid_voltage_sequence_error";private static final long serialVersionUID = 1L;
