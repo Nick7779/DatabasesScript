@@ -116,23 +116,7 @@ def write_create1h_sql():
 
 
 def write_java_class_head():
-    default_head = f'''package com.tellhow.iot.dao.vo.front.influxdb;
-import io.swagger.annotations.ApiModelProperty;
-import lombok.Data;
-import lombok.EqualsAndHashCode;
-import lombok.experimental.Accessors;
-import java.io.Serializable;
-import java.util.Date;
-/**
- * {case_convert.pascal_case(asset_class_list[0][1])} influxdb实体类
- *
- * @author Nick
- * @date {datetime.datetime.now().strftime('%Y-%m-%d')}
- */
-@Data
-@Measurement(name = "{case_convert.snake_case(asset_class_list[0][1])}")
-public class {case_convert.pascal_case(asset_class_list[0][1]) + "Table"} {'{'}
-
+    default_head = f'''
     /**
      * 站点ID.
      */

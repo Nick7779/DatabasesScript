@@ -159,26 +159,26 @@ public static final String SOLAR_E2PROM_FAULT = "solar_e2prom_fault";/**
  @ApiModelProperty("CAN通信故障") 
  private Long solarCanCommunicationFault;
 public static final String SOLAR_CAN_COMMUNICATION_FAULT = "solar_can_communication_fault";/** 
- * 第二端通信故障.Second Side Commmunication Fault 
+ * 第二端通信故障.Second Side Communication Fault 
  */ 
  @ApiModelProperty("第二端通信故障") 
- private Long solarSecondSideCommmunicationFault;
-public static final String SOLAR_SECOND_SIDE_COMMMUNICATION_FAULT = "solar_second_side_commmunication_fault";/** 
- * 主侧通信故障.Primary Side Commmunication Fault 
+ private Double solarSecondSideCommunicationFault;
+public static final String SOLAR_SECOND_SIDE_COMMUNICATION_FAULT = "solar_second_side_communication_fault";/** 
+ * 主侧通信故障.Primary Side Communication Fault 
  */ 
  @ApiModelProperty("主侧通信故障") 
- private Long solarPrimarySideCommmunicationFault;
-public static final String SOLAR_PRIMARY_SIDE_COMMMUNICATION_FAULT = "solar_primary_side_commmunication_fault";/** 
+ private Double solarPrimarySideCommunicationFault;
+public static final String SOLAR_PRIMARY_SIDE_COMMUNICATION_FAULT = "solar_primary_side_communication_fault";/** 
  * 风扇故障.Fan Fault 
  */ 
  @ApiModelProperty("风扇故障") 
  private Long solarFanFault;
 public static final String SOLAR_FAN_FAULT = "solar_fan_fault";/** 
- * PFC过电压保护.PFC Over voltage Protection 
+ * PFC过电压保护.PFC Overvoltage Protection 
  */ 
  @ApiModelProperty("PFC过电压保护") 
- private Long solarPfcOverVoltageProtection;
-public static final String SOLAR_PFC_OVER_VOLTAGE_PROTECTION = "solar_pfc_over_voltage_protection";/** 
+ private Double solarPfcOvervoltageProtection;
+public static final String SOLAR_PFC_OVERVOLTAGE_PROTECTION = "solar_pfc_overvoltage_protection";/** 
  * PFC欠压保护.PFC Under voltage Protection 
  */ 
  @ApiModelProperty("PFC欠压保护") 
@@ -189,11 +189,11 @@ public static final String SOLAR_PFC_UNDER_VOLTAGE_PROTECTION = "solar_pfc_under
  @ApiModelProperty("输入欠压保护") 
  private Long solarInputUnderVoltageProtection;
 public static final String SOLAR_INPUT_UNDER_VOLTAGE_PROTECTION = "solar_input_under_voltage_protection";/** 
- * 输入过电压保护.Input Over Voltage Protection 
+ * 输入过电压保护.Input Overvoltage Protection 
  */ 
  @ApiModelProperty("输入过电压保护") 
- private Long solarInputOverVoltageProtection;
-public static final String SOLAR_INPUT_OVER_VOLTAGE_PROTECTION = "solar_input_over_voltage_protection";/** 
+ private Double solarInputOvervoltageProtection;
+public static final String SOLAR_INPUT_OVERVOLTAGE_PROTECTION = "solar_input_overvoltage_protection";/** 
  * 内部电路短路.Internal Circuit Short 
  */ 
  @ApiModelProperty("内部电路短路") 
@@ -204,16 +204,16 @@ public static final String SOLAR_INTERNAL_CIRCUIT_SHORT = "solar_internal_circui
  @ApiModelProperty("太阳环境温度过高") 
  private Long solarSolarAmbientOverTemperature;
 public static final String SOLAR_SOLAR_AMBIENT_OVER_TEMPERATURE = "solar_solar_ambient_over_temperature";/** 
- * 外部过压保护.External Over Voltage Protection 
+ * 外部过压保护.External Overvoltage Protection 
  */ 
  @ApiModelProperty("外部过压保护") 
- private Long solarExternalOverVoltageProtection;
-public static final String SOLAR_EXTERNAL_OVER_VOLTAGE_PROTECTION = "solar_external_over_voltage_protection";/** 
- * 内部过电压保护.Internal Over Voltage Protection 
+ private Double solarExternalOvervoltageProtection;
+public static final String SOLAR_EXTERNAL_OVERVOLTAGE_PROTECTION = "solar_external_overvoltage_protection";/** 
+ * 内部过电压保护.Internal Overvoltage Protection 
  */ 
  @ApiModelProperty("内部过电压保护") 
- private Long solarInternalOverVoltageProtection;
-public static final String SOLAR_INTERNAL_OVER_VOLTAGE_PROTECTION = "solar_internal_over_voltage_protection";/** 
+ private Double solarInternalOvervoltageProtection;
+public static final String SOLAR_INTERNAL_OVERVOLTAGE_PROTECTION = "solar_internal_overvoltage_protection";/** 
  * 光伏缺电.PV Power Lack 
  */ 
  @ApiModelProperty("光伏缺电") 

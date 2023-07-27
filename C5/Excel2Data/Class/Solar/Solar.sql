@@ -38,17 +38,17 @@ solar_no_position float8,
 solar_output_over_current float8,
 solar_e2prom_fault float8,
 solar_can_communication_fault float8,
-solar_second_side_commmunication_fault float8,
-solar_primary_side_commmunication_fault float8,
+solar_second_side_communication_fault float8,
+solar_primary_side_communication_fault float8,
 solar_fan_fault float8,
-solar_pfc_over_voltage_protection float8,
+solar_pfc_overvoltage_protection float8,
 solar_pfc_under_voltage_protection float8,
 solar_input_under_voltage_protection float8,
-solar_input_over_voltage_protection float8,
+solar_input_overvoltage_protection float8,
 solar_internal_circuit_short float8,
 solar_solar_ambient_over_temperature float8,
-solar_external_over_voltage_protection float8,
-solar_internal_over_voltage_protection float8,
+solar_external_overvoltage_protection float8,
+solar_internal_overvoltage_protection float8,
 solar_pv_power_lack float8,
 solar_module_lost float8,
 solar_secondary_hot_point_over_temperature float8); 
@@ -89,17 +89,17 @@ COMMENT ON COLUMN "public"."iot_solar_15m"."solar_no_position" IS '没有位置';
 COMMENT ON COLUMN "public"."iot_solar_15m"."solar_output_over_current" IS '输出过电流'; 
 COMMENT ON COLUMN "public"."iot_solar_15m"."solar_e2prom_fault" IS 'E2PROM故障'; 
 COMMENT ON COLUMN "public"."iot_solar_15m"."solar_can_communication_fault" IS 'CAN通信故障'; 
-COMMENT ON COLUMN "public"."iot_solar_15m"."solar_second_side_commmunication_fault" IS '第二端通信故障'; 
-COMMENT ON COLUMN "public"."iot_solar_15m"."solar_primary_side_commmunication_fault" IS '主侧通信故障'; 
+COMMENT ON COLUMN "public"."iot_solar_15m"."solar_second_side_communication_fault" IS '第二端通信故障'; 
+COMMENT ON COLUMN "public"."iot_solar_15m"."solar_primary_side_communication_fault" IS '主侧通信故障'; 
 COMMENT ON COLUMN "public"."iot_solar_15m"."solar_fan_fault" IS '风扇故障'; 
-COMMENT ON COLUMN "public"."iot_solar_15m"."solar_pfc_over_voltage_protection" IS 'PFC过电压保护'; 
+COMMENT ON COLUMN "public"."iot_solar_15m"."solar_pfc_overvoltage_protection" IS 'PFC过电压保护'; 
 COMMENT ON COLUMN "public"."iot_solar_15m"."solar_pfc_under_voltage_protection" IS 'PFC欠压保护'; 
 COMMENT ON COLUMN "public"."iot_solar_15m"."solar_input_under_voltage_protection" IS '输入欠压保护'; 
-COMMENT ON COLUMN "public"."iot_solar_15m"."solar_input_over_voltage_protection" IS '输入过电压保护'; 
+COMMENT ON COLUMN "public"."iot_solar_15m"."solar_input_overvoltage_protection" IS '输入过电压保护'; 
 COMMENT ON COLUMN "public"."iot_solar_15m"."solar_internal_circuit_short" IS '内部电路短路'; 
 COMMENT ON COLUMN "public"."iot_solar_15m"."solar_solar_ambient_over_temperature" IS '太阳环境温度过高'; 
-COMMENT ON COLUMN "public"."iot_solar_15m"."solar_external_over_voltage_protection" IS '外部过压保护'; 
-COMMENT ON COLUMN "public"."iot_solar_15m"."solar_internal_over_voltage_protection" IS '内部过电压保护'; 
+COMMENT ON COLUMN "public"."iot_solar_15m"."solar_external_overvoltage_protection" IS '外部过压保护'; 
+COMMENT ON COLUMN "public"."iot_solar_15m"."solar_internal_overvoltage_protection" IS '内部过电压保护'; 
 COMMENT ON COLUMN "public"."iot_solar_15m"."solar_pv_power_lack" IS '光伏缺电'; 
 COMMENT ON COLUMN "public"."iot_solar_15m"."solar_module_lost" IS '太阳能模块缺失'; 
 COMMENT ON COLUMN "public"."iot_solar_15m"."solar_secondary_hot_point_over_temperature" IS '二次热点过温'; 
@@ -143,17 +143,17 @@ solar_no_position float8,
 solar_output_over_current float8,
 solar_e2prom_fault float8,
 solar_can_communication_fault float8,
-solar_second_side_commmunication_fault float8,
-solar_primary_side_commmunication_fault float8,
+solar_second_side_communication_fault float8,
+solar_primary_side_communication_fault float8,
 solar_fan_fault float8,
-solar_pfc_over_voltage_protection float8,
+solar_pfc_overvoltage_protection float8,
 solar_pfc_under_voltage_protection float8,
 solar_input_under_voltage_protection float8,
-solar_input_over_voltage_protection float8,
+solar_input_overvoltage_protection float8,
 solar_internal_circuit_short float8,
 solar_solar_ambient_over_temperature float8,
-solar_external_over_voltage_protection float8,
-solar_internal_over_voltage_protection float8,
+solar_external_overvoltage_protection float8,
+solar_internal_overvoltage_protection float8,
 solar_pv_power_lack float8,
 solar_module_lost float8,
 solar_secondary_hot_point_over_temperature float8); 
@@ -194,17 +194,17 @@ COMMENT ON COLUMN "public"."iot_solar_1h"."solar_no_position" IS '没有位置';
 COMMENT ON COLUMN "public"."iot_solar_1h"."solar_output_over_current" IS '输出过电流'; 
 COMMENT ON COLUMN "public"."iot_solar_1h"."solar_e2prom_fault" IS 'E2PROM故障'; 
 COMMENT ON COLUMN "public"."iot_solar_1h"."solar_can_communication_fault" IS 'CAN通信故障'; 
-COMMENT ON COLUMN "public"."iot_solar_1h"."solar_second_side_commmunication_fault" IS '第二端通信故障'; 
-COMMENT ON COLUMN "public"."iot_solar_1h"."solar_primary_side_commmunication_fault" IS '主侧通信故障'; 
+COMMENT ON COLUMN "public"."iot_solar_1h"."solar_second_side_communication_fault" IS '第二端通信故障'; 
+COMMENT ON COLUMN "public"."iot_solar_1h"."solar_primary_side_communication_fault" IS '主侧通信故障'; 
 COMMENT ON COLUMN "public"."iot_solar_1h"."solar_fan_fault" IS '风扇故障'; 
-COMMENT ON COLUMN "public"."iot_solar_1h"."solar_pfc_over_voltage_protection" IS 'PFC过电压保护'; 
+COMMENT ON COLUMN "public"."iot_solar_1h"."solar_pfc_overvoltage_protection" IS 'PFC过电压保护'; 
 COMMENT ON COLUMN "public"."iot_solar_1h"."solar_pfc_under_voltage_protection" IS 'PFC欠压保护'; 
 COMMENT ON COLUMN "public"."iot_solar_1h"."solar_input_under_voltage_protection" IS '输入欠压保护'; 
-COMMENT ON COLUMN "public"."iot_solar_1h"."solar_input_over_voltage_protection" IS '输入过电压保护'; 
+COMMENT ON COLUMN "public"."iot_solar_1h"."solar_input_overvoltage_protection" IS '输入过电压保护'; 
 COMMENT ON COLUMN "public"."iot_solar_1h"."solar_internal_circuit_short" IS '内部电路短路'; 
 COMMENT ON COLUMN "public"."iot_solar_1h"."solar_solar_ambient_over_temperature" IS '太阳环境温度过高'; 
-COMMENT ON COLUMN "public"."iot_solar_1h"."solar_external_over_voltage_protection" IS '外部过压保护'; 
-COMMENT ON COLUMN "public"."iot_solar_1h"."solar_internal_over_voltage_protection" IS '内部过电压保护'; 
+COMMENT ON COLUMN "public"."iot_solar_1h"."solar_external_overvoltage_protection" IS '外部过压保护'; 
+COMMENT ON COLUMN "public"."iot_solar_1h"."solar_internal_overvoltage_protection" IS '内部过电压保护'; 
 COMMENT ON COLUMN "public"."iot_solar_1h"."solar_pv_power_lack" IS '光伏缺电'; 
 COMMENT ON COLUMN "public"."iot_solar_1h"."solar_module_lost" IS '太阳能模块缺失'; 
 COMMENT ON COLUMN "public"."iot_solar_1h"."solar_secondary_hot_point_over_temperature" IS '二次热点过温'; 
