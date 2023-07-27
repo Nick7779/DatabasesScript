@@ -1,0 +1,231 @@
+/** 
+ * 太阳能丢失状态.Solar Lost state 
+ */ 
+ @ApiModelProperty("太阳能丢失状态") 
+ private Long solarLostState;
+public static final String SOLAR_LOST_STATE = "solar_lost_state";/** 
+ * 太阳能输出电压.Solar Output voltage 
+ */ 
+ @ApiModelProperty("太阳能输出电压") 
+ private Double solarOutputVoltage;
+public static final String SOLAR_OUTPUT_VOLTAGE = "solar_output_voltage";/** 
+ * 太阳能输出电流.Solar Output current 
+ */ 
+ @ApiModelProperty("太阳能输出电流") 
+ private Double solarOutputCurrent;
+public static final String SOLAR_OUTPUT_CURRENT = "solar_output_current";/** 
+ * 太阳能环境温度.Solar Ambient temperature 
+ */ 
+ @ApiModelProperty("太阳能环境温度") 
+ private Double solarAmbientTemperature;
+public static final String SOLAR_AMBIENT_TEMPERATURE = "solar_ambient_temperature";/** 
+ * 太阳能电流限制状态.Solar Current limiting state 
+ */ 
+ @ApiModelProperty("太阳能电流限制状态") 
+ private Long solarCurrentLimitingState;
+public static final String SOLAR_CURRENT_LIMITING_STATE = "solar_current_limiting_state";/** 
+ * 太阳能功率.Solar Power 
+ */ 
+ @ApiModelProperty("太阳能功率") 
+ private Double solarPower;
+public static final String SOLAR_POWER = "solar_power";/** 
+ * 太阳能组件开关.Solar Module  switch 
+ */ 
+ @ApiModelProperty("太阳能组件开关") 
+ private Long solarModuleSwitch;
+public static final String SOLAR_MODULE_SWITCH = "solar_module_switch";/** 
+ * 太阳能模块数量.Solar Number of modules 
+ */ 
+ @ApiModelProperty("太阳能模块数量") 
+ private Long solarModulesCount;
+public static final String SOLAR_MODULES_COUNT = "solar_modules_count";/** 
+ * 太阳能工作模块数量.Solar Number of working modules 
+ */ 
+ @ApiModelProperty("太阳能工作模块数量") 
+ private Long solarWorkingModulesCount;
+public static final String SOLAR_WORKING_MODULES_COUNT = "solar_working_modules_count";/** 
+ * 太阳能负载率.Solar Load rate 
+ */ 
+ @ApiModelProperty("太阳能负载率") 
+ private Double solarLoadRate;
+public static final String SOLAR_LOAD_RATE = "solar_load_rate";/** 
+ * 太阳能输入电压.Solar Input voltage 
+ */ 
+ @ApiModelProperty("太阳能输入电压") 
+ private Double solarInputVoltage;
+public static final String SOLAR_INPUT_VOLTAGE = "solar_input_voltage";/** 
+ * 太阳能当前能量.Solar Current energy 
+ */ 
+ @ApiModelProperty("太阳能当前能量") 
+ private Double solarCurrentEnergy;
+public static final String SOLAR_CURRENT_ENERGY = "solar_current_energy";/** 
+ * 太阳能发热温度.Solar Heating temperature 
+ */ 
+ @ApiModelProperty("太阳能发热温度") 
+ private Double solarHeatingTemperature;
+public static final String SOLAR_HEATING_TEMPERATURE = "solar_heating_temperature";/** 
+ * 太阳能电流限制值.Solar Current limit value 
+ */ 
+ @ApiModelProperty("太阳能电流限制值") 
+ private Double solarCurrentLimitValue;
+public static final String SOLAR_CURRENT_LIMIT_VALUE = "solar_current_limit_value";/** 
+ * 太阳能PV回路故障.Solar PV loop fault 
+ */ 
+ @ApiModelProperty("太阳能PV回路故障") 
+ private Long solarPvLoopFault;
+public static final String SOLAR_PV_LOOP_FAULT = "solar_pv_loop_fault";/** 
+ * 太阳能安全码错误.Solar Security code error 
+ */ 
+ @ApiModelProperty("太阳能安全码错误") 
+ private Long solarSecurityCodeError;
+public static final String SOLAR_SECURITY_CODE_ERROR = "solar_security_code_error";/** 
+ * 单块太阳能累积能量.Single solar energy 
+ */ 
+ @ApiModelProperty("单块太阳能累积能量") 
+ private Double solarSingleEnergy;
+public static final String SOLAR_SINGLE_ENERGY = "solar_single_energy";/** 
+ * 所有太阳能模块累计总能量.Solar total energy all modules 
+ */ 
+ @ApiModelProperty("所有太阳能模块累计总能量") 
+ private Double solarTotalEnergyAllModules;
+public static final String SOLAR_TOTAL_ENERGY_ALL_MODULES = "solar_total_energy_all_modules";/** 
+ * 太阳能模块总电压(SC501).Solar total output voltage 
+ */ 
+ @ApiModelProperty("太阳能模块总电压(SC501)") 
+ private Double solarTotalOutputVoltage;
+public static final String SOLAR_TOTAL_OUTPUT_VOLTAGE = "solar_total_output_voltage";/** 
+ * 太阳能模块总电流(SC501).Solar total output current 
+ */ 
+ @ApiModelProperty("太阳能模块总电流(SC501)") 
+ private Double solarTotalOutputCurrent;
+public static final String SOLAR_TOTAL_OUTPUT_CURRENT = "solar_total_output_current";/** 
+ * 太阳能总告警状态.Solar Total Alarm State 
+ */ 
+ @ApiModelProperty("太阳能总告警状态") 
+ private Long solarSolarTotalAlarmState;
+public static final String SOLAR_SOLAR_TOTAL_ALARM_STATE = "solar_solar_total_alarm_state";/** 
+ * 单个太阳能模块告警. single solar module alarm 
+ */ 
+ @ApiModelProperty("单个太阳能模块告警") 
+ private Long solarSingleSolarModuleAlarm;
+public static final String SOLAR_SINGLE_SOLAR_MODULE_ALARM = "solar_single_solar_module_alarm";/** 
+ * 多个太阳能模块告警.multiple solar module alarm 
+ */ 
+ @ApiModelProperty("多个太阳能模块告警") 
+ private Long solarMultipleSolarModuleAlarm;
+public static final String SOLAR_MULTIPLE_SOLAR_MODULE_ALARM = "solar_multiple_solar_module_alarm";/** 
+ * 太阳能告警选择.Solar Alarm Selection 
+ */ 
+ @ApiModelProperty("太阳能告警选择") 
+ private Long solarSolarAlarmSelection;
+public static final String SOLAR_SOLAR_ALARM_SELECTION = "solar_solar_alarm_selection";/** 
+ * 太阳能模块告警状态.Solar Module Alarm State 
+ */ 
+ @ApiModelProperty("太阳能模块告警状态") 
+ private Long solarModuleAlarmState;
+public static final String SOLAR_MODULE_ALARM_STATE = "solar_module_alarm_state";/** 
+ * 初级校准故障.Primary Calibrate Fault 
+ */ 
+ @ApiModelProperty("初级校准故障") 
+ private Long solarPrimaryCalibrateFault;
+public static final String SOLAR_PRIMARY_CALIBRATE_FAULT = "solar_primary_calibrate_fault";/** 
+ * 太阳能控制器-单点无输出.Solar Controller-Single No output 
+ */ 
+ @ApiModelProperty("太阳能控制器-单点无输出") 
+ private Long solarSolarControllerSingleNoOutput;
+public static final String SOLAR_SOLAR_CONTROLLER_SINGLE_NO_OUTPUT = "solar_solar_controller_single_no_output";/** 
+ * 太阳能控制器-外部电路短路.Solar Controller-Outside Circuit Short 
+ */ 
+ @ApiModelProperty("太阳能控制器-外部电路短路") 
+ private Long solarSolarControllerOutsideCircuitShort;
+public static final String SOLAR_SOLAR_CONTROLLER_OUTSIDE_CIRCUIT_SHORT = "solar_solar_controller_outside_circuit_short";/** 
+ * 没有位置.No Position 
+ */ 
+ @ApiModelProperty("没有位置") 
+ private Long solarNoPosition;
+public static final String SOLAR_NO_POSITION = "solar_no_position";/** 
+ * 输出过电流.Output Over Current 
+ */ 
+ @ApiModelProperty("输出过电流") 
+ private Long solarOutputOverCurrent;
+public static final String SOLAR_OUTPUT_OVER_CURRENT = "solar_output_over_current";/** 
+ * E2PROM故障.E2PROM Fault 
+ */ 
+ @ApiModelProperty("E2PROM故障") 
+ private Long solarE2promFault;
+public static final String SOLAR_E2PROM_FAULT = "solar_e2prom_fault";/** 
+ * CAN通信故障.CAN Communication Fault 
+ */ 
+ @ApiModelProperty("CAN通信故障") 
+ private Long solarCanCommunicationFault;
+public static final String SOLAR_CAN_COMMUNICATION_FAULT = "solar_can_communication_fault";/** 
+ * 第二端通信故障.Second Side Commmunication Fault 
+ */ 
+ @ApiModelProperty("第二端通信故障") 
+ private Long solarSecondSideCommmunicationFault;
+public static final String SOLAR_SECOND_SIDE_COMMMUNICATION_FAULT = "solar_second_side_commmunication_fault";/** 
+ * 主侧通信故障.Primary Side Commmunication Fault 
+ */ 
+ @ApiModelProperty("主侧通信故障") 
+ private Long solarPrimarySideCommmunicationFault;
+public static final String SOLAR_PRIMARY_SIDE_COMMMUNICATION_FAULT = "solar_primary_side_commmunication_fault";/** 
+ * 风扇故障.Fan Fault 
+ */ 
+ @ApiModelProperty("风扇故障") 
+ private Long solarFanFault;
+public static final String SOLAR_FAN_FAULT = "solar_fan_fault";/** 
+ * PFC过电压保护.PFC Over voltage Protection 
+ */ 
+ @ApiModelProperty("PFC过电压保护") 
+ private Long solarPfcOverVoltageProtection;
+public static final String SOLAR_PFC_OVER_VOLTAGE_PROTECTION = "solar_pfc_over_voltage_protection";/** 
+ * PFC欠压保护.PFC Under voltage Protection 
+ */ 
+ @ApiModelProperty("PFC欠压保护") 
+ private Long solarPfcUnderVoltageProtection;
+public static final String SOLAR_PFC_UNDER_VOLTAGE_PROTECTION = "solar_pfc_under_voltage_protection";/** 
+ * 输入欠压保护.Input Under Voltage Protection 
+ */ 
+ @ApiModelProperty("输入欠压保护") 
+ private Long solarInputUnderVoltageProtection;
+public static final String SOLAR_INPUT_UNDER_VOLTAGE_PROTECTION = "solar_input_under_voltage_protection";/** 
+ * 输入过电压保护.Input Over Voltage Protection 
+ */ 
+ @ApiModelProperty("输入过电压保护") 
+ private Long solarInputOverVoltageProtection;
+public static final String SOLAR_INPUT_OVER_VOLTAGE_PROTECTION = "solar_input_over_voltage_protection";/** 
+ * 内部电路短路.Internal Circuit Short 
+ */ 
+ @ApiModelProperty("内部电路短路") 
+ private Long solarInternalCircuitShort;
+public static final String SOLAR_INTERNAL_CIRCUIT_SHORT = "solar_internal_circuit_short";/** 
+ * 太阳环境温度过高.Solar Ambient Over Temperature 
+ */ 
+ @ApiModelProperty("太阳环境温度过高") 
+ private Long solarSolarAmbientOverTemperature;
+public static final String SOLAR_SOLAR_AMBIENT_OVER_TEMPERATURE = "solar_solar_ambient_over_temperature";/** 
+ * 外部过压保护.External Over Voltage Protection 
+ */ 
+ @ApiModelProperty("外部过压保护") 
+ private Long solarExternalOverVoltageProtection;
+public static final String SOLAR_EXTERNAL_OVER_VOLTAGE_PROTECTION = "solar_external_over_voltage_protection";/** 
+ * 内部过电压保护.Internal Over Voltage Protection 
+ */ 
+ @ApiModelProperty("内部过电压保护") 
+ private Long solarInternalOverVoltageProtection;
+public static final String SOLAR_INTERNAL_OVER_VOLTAGE_PROTECTION = "solar_internal_over_voltage_protection";/** 
+ * 光伏缺电.PV Power Lack 
+ */ 
+ @ApiModelProperty("光伏缺电") 
+ private Long solarPvPowerLack;
+public static final String SOLAR_PV_POWER_LACK = "solar_pv_power_lack";/** 
+ * 太阳能模块缺失.Solar Module Lost 
+ */ 
+ @ApiModelProperty("太阳能模块缺失") 
+ private Double solarModuleLost;
+public static final String SOLAR_MODULE_LOST = "solar_module_lost";/** 
+ * 二次热点过温.Secondary Hot Point Over Temperature 
+ */ 
+ @ApiModelProperty("二次热点过温") 
+ private String solarSecondaryHotPointOverTemperature;
+public static final String SOLAR_SECONDARY_HOT_POINT_OVER_TEMPERATURE = "solar_secondary_hot_point_over_temperature";private static final long serialVersionUID = 1L;

@@ -1,4 +1,5 @@
 import datetime
+import os
 import sys
 
 import case_convert
@@ -13,7 +14,8 @@ def asset_class():
 
 
 def get_asset_point_list(cid):
-    asset_point_sql = "select * from aiot_asset_point aap where aap.asset_class_id={class_id} order by id".format(class_id=cid)
+    asset_point_sql = "select * from aiot_asset_point aap where aap.asset_class_id={class_id} order by create_time".format(
+        class_id=cid)
     curses.execute(asset_point_sql)
     point_list = curses.fetchall()
     return point_list
@@ -128,7 +130,7 @@ import java.util.Date;
  * @date {datetime.datetime.now().strftime('%Y-%m-%d')}
  */
 @Data
-@Measurement(name = "{case_convert.camel_case(asset_class_list[0][1])}")
+@Measurement(name = "{case_convert.snake_case(asset_class_list[0][1])}")
 public class {case_convert.pascal_case(asset_class_list[0][1]) + "Table"} {'{'}
 
     /**
@@ -168,7 +170,8 @@ if __name__ == '__main__':
     # 获取资产类
     # asset_class_list = asset_class()
     # asset_class_list = [(1003, 'Gel Battery', 3, 'gel_battery', None, '胶体电池', 'vrla_')]
-    asset_class_list = [(1004, 'Grid', 4, 'grid', None, '市电', 'grid_')]
+    # asset_class_list = [(1004, 'Grid', 4, 'grid', None, '市电', 'grid_')]
+    asset_class_list = [(1001, 'Solar', 1, 'solar', None, '太阳能', 'solar_')]
     # asset_class_list = [(1005, 'Ac Generator', 5, 'ac_generator', None, '交流发电机', 'genset_')]
     print(asset_class_list)
     # 依次生成所有资产类
@@ -188,17 +191,20 @@ if __name__ == '__main__':
         print(asset_point_list[0])
         # 创建表 字段集合
 
+        if not os.path.exists("../Excel2Data/Class/" + tnp):
+            os.makedirs("../Excel2Data/Class/" + tnp)
+
         # java表实体类
-        JavaClassTableFile = open("../Excel2Data/JavaClassTable/" + table_name + ".txt", 'w+')
+        JavaClassTableFile = open("../Excel2Data/Class/" + tnp + "/" + table_name + ".txt", 'w+')
         # 写默认头部方法
         write_java_class_head()
         # 字段常量
-        FieldConstantsFile = open("../Excel2Data/JavaClassTable/FieldConstants" + table_name + ".txt", 'w+')
+        FieldConstantsFile = open("../Excel2Data/Class/" + tnp + "/FieldConstants" + table_name + ".txt", 'w+')
         # 15分钟表数据备份
-        Backups15mFile = open("../Excel2Data/TablesFile/15m/" + table_name + "15m.txt", 'w+')
+        Backups15mFile = open("../Excel2Data/Class/" + tnp + "/" + table_name + "15m.txt", 'w+')
         # 1小时表数据备份
-        Backups1hFile = open("../Excel2Data/TablesFile/1h/" + table_name + "1h.txt", 'w+')
-        SqlCreateFile = open("../Excel2Data/SqlScript/CreateTable/" + table_name + ".sql", 'w+')
+        Backups1hFile = open("../Excel2Data/Class/" + tnp + "/" + table_name + "1h.txt", 'w+')
+        SqlCreateFile = open("../Excel2Data/Class/" + tnp + "/" + table_name + ".sql", 'w+')
         # 创建表结构SQL
         write_create15m_sql()
         write_create1h_sql()

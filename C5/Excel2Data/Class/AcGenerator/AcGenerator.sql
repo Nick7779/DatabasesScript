@@ -23,7 +23,7 @@ genset_l1_current float8,
 genset_l2_current float8,
 genset_l3_current float8,
 genset_engine_speed float8,
-genset_num_of_estop float8,
+genset_num_of_stops float8,
 genset_num_of_starts float8,
 genset_total_power float8,
 genset_runtime float8,
@@ -46,9 +46,9 @@ genset_fuel_level float8,
 genset_total_fuel_consumption float8,
 genset_breaker_state float8,
 genset_fuel_tank_volume float8,
-genset_test_led_status_dse float8,
 genset_manual_led_status_dse float8,
 genset_auto_led_status_dse float8,
+genset_test_led_status_dse float8,
 genset_stop_led_status_dse float8,
 genset_runtime_minutes_zz float8,
 genset_emergency_stop_level1 float8,
@@ -67,10 +67,10 @@ genset_fuel_level_level2 float8,
 genset_fuel_level_sensor_failure float8,
 genset_sd_underspeed_level2 float8,
 genset_sd_start_fail_level1 float8,
-genset_generator_voltage_l1l2_level1 float8,
-genset_generator_voltage_l2l3_level1 float8,
-genset_generator_voltage_l3l1_level1 float8,
-genset_generator_voltage_l3l1_level2 float8,
+genset_voltage_l1l2_level1 float8,
+genset_voltage_l2l3_level1 float8,
+genset_voltage_l3l1_level1 float8,
+genset_voltage_l3l1_level2 float8,
 genset_boc_gen_voltage_unbalance_phph_level1 float8,
 genset_boc_gen_voltage_unbalance_phph_level2 float8,
 genset_boc_gen_voltage_unbalance_phn_level1 float8,
@@ -162,11 +162,11 @@ genset_mains_breaker_led_status float8,
 genset_cooling_time_setting float8,
 genset_battery_low_voltage float8,
 genset_battery_high_voltage float8,
-genset_over_voltage_shut_down float8,
-genset_over_voltage_warning float8,
-genset_under_voltage_warning float8,
-genset_under_voltage_shut_off_cooling float8,
-genset_over_frequency_warning float8,
+genset_overvoltage_shut_down float8,
+genset_overvoltage_warning float8,
+genset_undervoltage_warning float8,
+genset_undervoltage_shut_off_cooling float8,
+genset_overfrequency_warning float8,
 genset_mains_l1_voltage_n float8,
 genset_mains_l2_voltage_n float8,
 genset_mains_l3_voltage_n float8,
@@ -196,7 +196,7 @@ COMMENT ON COLUMN "public"."iot_ac_generator_15m"."genset_l1_current" IS '发电机
 COMMENT ON COLUMN "public"."iot_ac_generator_15m"."genset_l2_current" IS '发电机L2电流'; 
 COMMENT ON COLUMN "public"."iot_ac_generator_15m"."genset_l3_current" IS '发电机L3电流'; 
 COMMENT ON COLUMN "public"."iot_ac_generator_15m"."genset_engine_speed" IS '发电机电机转速'; 
-COMMENT ON COLUMN "public"."iot_ac_generator_15m"."genset_num_of_estop" IS '发电机紧急停止次数'; 
+COMMENT ON COLUMN "public"."iot_ac_generator_15m"."genset_num_of_stops" IS '发电机紧急停止次数'; 
 COMMENT ON COLUMN "public"."iot_ac_generator_15m"."genset_num_of_starts" IS '发电机启动次数'; 
 COMMENT ON COLUMN "public"."iot_ac_generator_15m"."genset_total_power" IS '发电机总功率'; 
 COMMENT ON COLUMN "public"."iot_ac_generator_15m"."genset_runtime" IS '发电机运行时间'; 
@@ -219,9 +219,9 @@ COMMENT ON COLUMN "public"."iot_ac_generator_15m"."genset_fuel_level" IS '油位';
 COMMENT ON COLUMN "public"."iot_ac_generator_15m"."genset_total_fuel_consumption" IS '总油耗'; 
 COMMENT ON COLUMN "public"."iot_ac_generator_15m"."genset_breaker_state" IS '开关状态'; 
 COMMENT ON COLUMN "public"."iot_ac_generator_15m"."genset_fuel_tank_volume" IS '油箱总容量'; 
-COMMENT ON COLUMN "public"."iot_ac_generator_15m"."genset_test_led_status_dse" IS '深海发电机测试模式状态'; 
 COMMENT ON COLUMN "public"."iot_ac_generator_15m"."genset_manual_led_status_dse" IS '深海发电机手动模式状态'; 
 COMMENT ON COLUMN "public"."iot_ac_generator_15m"."genset_auto_led_status_dse" IS '深海发电机自动模式状态'; 
+COMMENT ON COLUMN "public"."iot_ac_generator_15m"."genset_test_led_status_dse" IS '深海发电机测试模式状态'; 
 COMMENT ON COLUMN "public"."iot_ac_generator_15m"."genset_stop_led_status_dse" IS '深海发电机停止模式状态'; 
 COMMENT ON COLUMN "public"."iot_ac_generator_15m"."genset_runtime_minutes_zz" IS '众智机组的分钟时间'; 
 COMMENT ON COLUMN "public"."iot_ac_generator_15m"."genset_emergency_stop_level1" IS '紧急停机告警'; 
@@ -240,10 +240,10 @@ COMMENT ON COLUMN "public"."iot_ac_generator_15m"."genset_fuel_level_level2" IS 
 COMMENT ON COLUMN "public"."iot_ac_generator_15m"."genset_fuel_level_sensor_failure" IS '油位传感器故障'; 
 COMMENT ON COLUMN "public"."iot_ac_generator_15m"."genset_sd_underspeed_level2" IS '转速过低停机'; 
 COMMENT ON COLUMN "public"."iot_ac_generator_15m"."genset_sd_start_fail_level1" IS '启动失败'; 
-COMMENT ON COLUMN "public"."iot_ac_generator_15m"."genset_generator_voltage_l1l2_level1" IS 'L1L2发电电压告警'; 
-COMMENT ON COLUMN "public"."iot_ac_generator_15m"."genset_generator_voltage_l2l3_level1" IS 'L2L3发电电压告警'; 
-COMMENT ON COLUMN "public"."iot_ac_generator_15m"."genset_generator_voltage_l3l1_level1" IS 'L3L1发电电压告警'; 
-COMMENT ON COLUMN "public"."iot_ac_generator_15m"."genset_generator_voltage_l3l1_level2" IS 'L3L1发电电压停机'; 
+COMMENT ON COLUMN "public"."iot_ac_generator_15m"."genset_voltage_l1l2_level1" IS 'L1L2发电电压告警'; 
+COMMENT ON COLUMN "public"."iot_ac_generator_15m"."genset_voltage_l2l3_level1" IS 'L2L3发电电压告警'; 
+COMMENT ON COLUMN "public"."iot_ac_generator_15m"."genset_voltage_l3l1_level1" IS 'L3L1发电电压告警'; 
+COMMENT ON COLUMN "public"."iot_ac_generator_15m"."genset_voltage_l3l1_level2" IS 'L3L1发电电压停机'; 
 COMMENT ON COLUMN "public"."iot_ac_generator_15m"."genset_boc_gen_voltage_unbalance_phph_level1" IS 'BOC发电电压不平衡ph-ph告警'; 
 COMMENT ON COLUMN "public"."iot_ac_generator_15m"."genset_boc_gen_voltage_unbalance_phph_level2" IS 'BOC发电电压不平衡ph-ph Level 2停机告警'; 
 COMMENT ON COLUMN "public"."iot_ac_generator_15m"."genset_boc_gen_voltage_unbalance_phn_level1" IS 'BOC发电电压不平衡ph-n告警'; 
@@ -335,11 +335,11 @@ COMMENT ON COLUMN "public"."iot_ac_generator_15m"."genset_mains_breaker_led_stat
 COMMENT ON COLUMN "public"."iot_ac_generator_15m"."genset_cooling_time_setting" IS 'Cooling Time Setting'; 
 COMMENT ON COLUMN "public"."iot_ac_generator_15m"."genset_battery_low_voltage" IS 'Battery Low Voltage'; 
 COMMENT ON COLUMN "public"."iot_ac_generator_15m"."genset_battery_high_voltage" IS 'Battery High Voltage'; 
-COMMENT ON COLUMN "public"."iot_ac_generator_15m"."genset_over_voltage_shut_down" IS '发电机过压关闭'; 
-COMMENT ON COLUMN "public"."iot_ac_generator_15m"."genset_over_voltage_warning" IS '发电机过压警告 '; 
-COMMENT ON COLUMN "public"."iot_ac_generator_15m"."genset_under_voltage_warning" IS '发电机欠压警告 '; 
-COMMENT ON COLUMN "public"."iot_ac_generator_15m"."genset_under_voltage_shut_off_cooling" IS '发电机欠压关闭冷却'; 
-COMMENT ON COLUMN "public"."iot_ac_generator_15m"."genset_over_frequency_warning" IS '发电机频率过高警告'; 
+COMMENT ON COLUMN "public"."iot_ac_generator_15m"."genset_overvoltage_shut_down" IS '发电机过压关闭'; 
+COMMENT ON COLUMN "public"."iot_ac_generator_15m"."genset_overvoltage_warning" IS '发电机过压警告 '; 
+COMMENT ON COLUMN "public"."iot_ac_generator_15m"."genset_undervoltage_warning" IS '发电机欠压警告 '; 
+COMMENT ON COLUMN "public"."iot_ac_generator_15m"."genset_undervoltage_shut_off_cooling" IS '发电机欠压关闭冷却'; 
+COMMENT ON COLUMN "public"."iot_ac_generator_15m"."genset_overfrequency_warning" IS '发电机频率过高警告'; 
 COMMENT ON COLUMN "public"."iot_ac_generator_15m"."genset_mains_l1_voltage_n" IS '市电L1-N相电压'; 
 COMMENT ON COLUMN "public"."iot_ac_generator_15m"."genset_mains_l2_voltage_n" IS '市电L2-N相电压'; 
 COMMENT ON COLUMN "public"."iot_ac_generator_15m"."genset_mains_l3_voltage_n" IS '市电L3-N相电压'; 
@@ -372,7 +372,7 @@ genset_l1_current float8,
 genset_l2_current float8,
 genset_l3_current float8,
 genset_engine_speed float8,
-genset_num_of_estop float8,
+genset_num_of_stops float8,
 genset_num_of_starts float8,
 genset_total_power float8,
 genset_runtime float8,
@@ -395,9 +395,9 @@ genset_fuel_level float8,
 genset_total_fuel_consumption float8,
 genset_breaker_state float8,
 genset_fuel_tank_volume float8,
-genset_test_led_status_dse float8,
 genset_manual_led_status_dse float8,
 genset_auto_led_status_dse float8,
+genset_test_led_status_dse float8,
 genset_stop_led_status_dse float8,
 genset_runtime_minutes_zz float8,
 genset_emergency_stop_level1 float8,
@@ -416,10 +416,10 @@ genset_fuel_level_level2 float8,
 genset_fuel_level_sensor_failure float8,
 genset_sd_underspeed_level2 float8,
 genset_sd_start_fail_level1 float8,
-genset_generator_voltage_l1l2_level1 float8,
-genset_generator_voltage_l2l3_level1 float8,
-genset_generator_voltage_l3l1_level1 float8,
-genset_generator_voltage_l3l1_level2 float8,
+genset_voltage_l1l2_level1 float8,
+genset_voltage_l2l3_level1 float8,
+genset_voltage_l3l1_level1 float8,
+genset_voltage_l3l1_level2 float8,
 genset_boc_gen_voltage_unbalance_phph_level1 float8,
 genset_boc_gen_voltage_unbalance_phph_level2 float8,
 genset_boc_gen_voltage_unbalance_phn_level1 float8,
@@ -511,11 +511,11 @@ genset_mains_breaker_led_status float8,
 genset_cooling_time_setting float8,
 genset_battery_low_voltage float8,
 genset_battery_high_voltage float8,
-genset_over_voltage_shut_down float8,
-genset_over_voltage_warning float8,
-genset_under_voltage_warning float8,
-genset_under_voltage_shut_off_cooling float8,
-genset_over_frequency_warning float8,
+genset_overvoltage_shut_down float8,
+genset_overvoltage_warning float8,
+genset_undervoltage_warning float8,
+genset_undervoltage_shut_off_cooling float8,
+genset_overfrequency_warning float8,
 genset_mains_l1_voltage_n float8,
 genset_mains_l2_voltage_n float8,
 genset_mains_l3_voltage_n float8,
@@ -545,7 +545,7 @@ COMMENT ON COLUMN "public"."iot_ac_generator_1h"."genset_l1_current" IS '发电机L
 COMMENT ON COLUMN "public"."iot_ac_generator_1h"."genset_l2_current" IS '发电机L2电流'; 
 COMMENT ON COLUMN "public"."iot_ac_generator_1h"."genset_l3_current" IS '发电机L3电流'; 
 COMMENT ON COLUMN "public"."iot_ac_generator_1h"."genset_engine_speed" IS '发电机电机转速'; 
-COMMENT ON COLUMN "public"."iot_ac_generator_1h"."genset_num_of_estop" IS '发电机紧急停止次数'; 
+COMMENT ON COLUMN "public"."iot_ac_generator_1h"."genset_num_of_stops" IS '发电机紧急停止次数'; 
 COMMENT ON COLUMN "public"."iot_ac_generator_1h"."genset_num_of_starts" IS '发电机启动次数'; 
 COMMENT ON COLUMN "public"."iot_ac_generator_1h"."genset_total_power" IS '发电机总功率'; 
 COMMENT ON COLUMN "public"."iot_ac_generator_1h"."genset_runtime" IS '发电机运行时间'; 
@@ -568,9 +568,9 @@ COMMENT ON COLUMN "public"."iot_ac_generator_1h"."genset_fuel_level" IS '油位';
 COMMENT ON COLUMN "public"."iot_ac_generator_1h"."genset_total_fuel_consumption" IS '总油耗'; 
 COMMENT ON COLUMN "public"."iot_ac_generator_1h"."genset_breaker_state" IS '开关状态'; 
 COMMENT ON COLUMN "public"."iot_ac_generator_1h"."genset_fuel_tank_volume" IS '油箱总容量'; 
-COMMENT ON COLUMN "public"."iot_ac_generator_1h"."genset_test_led_status_dse" IS '深海发电机测试模式状态'; 
 COMMENT ON COLUMN "public"."iot_ac_generator_1h"."genset_manual_led_status_dse" IS '深海发电机手动模式状态'; 
 COMMENT ON COLUMN "public"."iot_ac_generator_1h"."genset_auto_led_status_dse" IS '深海发电机自动模式状态'; 
+COMMENT ON COLUMN "public"."iot_ac_generator_1h"."genset_test_led_status_dse" IS '深海发电机测试模式状态'; 
 COMMENT ON COLUMN "public"."iot_ac_generator_1h"."genset_stop_led_status_dse" IS '深海发电机停止模式状态'; 
 COMMENT ON COLUMN "public"."iot_ac_generator_1h"."genset_runtime_minutes_zz" IS '众智机组的分钟时间'; 
 COMMENT ON COLUMN "public"."iot_ac_generator_1h"."genset_emergency_stop_level1" IS '紧急停机告警'; 
@@ -589,10 +589,10 @@ COMMENT ON COLUMN "public"."iot_ac_generator_1h"."genset_fuel_level_level2" IS '
 COMMENT ON COLUMN "public"."iot_ac_generator_1h"."genset_fuel_level_sensor_failure" IS '油位传感器故障'; 
 COMMENT ON COLUMN "public"."iot_ac_generator_1h"."genset_sd_underspeed_level2" IS '转速过低停机'; 
 COMMENT ON COLUMN "public"."iot_ac_generator_1h"."genset_sd_start_fail_level1" IS '启动失败'; 
-COMMENT ON COLUMN "public"."iot_ac_generator_1h"."genset_generator_voltage_l1l2_level1" IS 'L1L2发电电压告警'; 
-COMMENT ON COLUMN "public"."iot_ac_generator_1h"."genset_generator_voltage_l2l3_level1" IS 'L2L3发电电压告警'; 
-COMMENT ON COLUMN "public"."iot_ac_generator_1h"."genset_generator_voltage_l3l1_level1" IS 'L3L1发电电压告警'; 
-COMMENT ON COLUMN "public"."iot_ac_generator_1h"."genset_generator_voltage_l3l1_level2" IS 'L3L1发电电压停机'; 
+COMMENT ON COLUMN "public"."iot_ac_generator_1h"."genset_voltage_l1l2_level1" IS 'L1L2发电电压告警'; 
+COMMENT ON COLUMN "public"."iot_ac_generator_1h"."genset_voltage_l2l3_level1" IS 'L2L3发电电压告警'; 
+COMMENT ON COLUMN "public"."iot_ac_generator_1h"."genset_voltage_l3l1_level1" IS 'L3L1发电电压告警'; 
+COMMENT ON COLUMN "public"."iot_ac_generator_1h"."genset_voltage_l3l1_level2" IS 'L3L1发电电压停机'; 
 COMMENT ON COLUMN "public"."iot_ac_generator_1h"."genset_boc_gen_voltage_unbalance_phph_level1" IS 'BOC发电电压不平衡ph-ph告警'; 
 COMMENT ON COLUMN "public"."iot_ac_generator_1h"."genset_boc_gen_voltage_unbalance_phph_level2" IS 'BOC发电电压不平衡ph-ph Level 2停机告警'; 
 COMMENT ON COLUMN "public"."iot_ac_generator_1h"."genset_boc_gen_voltage_unbalance_phn_level1" IS 'BOC发电电压不平衡ph-n告警'; 
@@ -684,11 +684,11 @@ COMMENT ON COLUMN "public"."iot_ac_generator_1h"."genset_mains_breaker_led_statu
 COMMENT ON COLUMN "public"."iot_ac_generator_1h"."genset_cooling_time_setting" IS 'Cooling Time Setting'; 
 COMMENT ON COLUMN "public"."iot_ac_generator_1h"."genset_battery_low_voltage" IS 'Battery Low Voltage'; 
 COMMENT ON COLUMN "public"."iot_ac_generator_1h"."genset_battery_high_voltage" IS 'Battery High Voltage'; 
-COMMENT ON COLUMN "public"."iot_ac_generator_1h"."genset_over_voltage_shut_down" IS '发电机过压关闭'; 
-COMMENT ON COLUMN "public"."iot_ac_generator_1h"."genset_over_voltage_warning" IS '发电机过压警告 '; 
-COMMENT ON COLUMN "public"."iot_ac_generator_1h"."genset_under_voltage_warning" IS '发电机欠压警告 '; 
-COMMENT ON COLUMN "public"."iot_ac_generator_1h"."genset_under_voltage_shut_off_cooling" IS '发电机欠压关闭冷却'; 
-COMMENT ON COLUMN "public"."iot_ac_generator_1h"."genset_over_frequency_warning" IS '发电机频率过高警告'; 
+COMMENT ON COLUMN "public"."iot_ac_generator_1h"."genset_overvoltage_shut_down" IS '发电机过压关闭'; 
+COMMENT ON COLUMN "public"."iot_ac_generator_1h"."genset_overvoltage_warning" IS '发电机过压警告 '; 
+COMMENT ON COLUMN "public"."iot_ac_generator_1h"."genset_undervoltage_warning" IS '发电机欠压警告 '; 
+COMMENT ON COLUMN "public"."iot_ac_generator_1h"."genset_undervoltage_shut_off_cooling" IS '发电机欠压关闭冷却'; 
+COMMENT ON COLUMN "public"."iot_ac_generator_1h"."genset_overfrequency_warning" IS '发电机频率过高警告'; 
 COMMENT ON COLUMN "public"."iot_ac_generator_1h"."genset_mains_l1_voltage_n" IS '市电L1-N相电压'; 
 COMMENT ON COLUMN "public"."iot_ac_generator_1h"."genset_mains_l2_voltage_n" IS '市电L2-N相电压'; 
 COMMENT ON COLUMN "public"."iot_ac_generator_1h"."genset_mains_l3_voltage_n" IS '市电L3-N相电压'; 

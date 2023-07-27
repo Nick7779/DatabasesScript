@@ -52,7 +52,9 @@ grid_source_negative_terminal_phase_a float8,
 grid_source_negative_terminal_phase_b float8,
 grid_source_negative_terminal_phase_c float8,
 grid_current_timing_error float8,
-grid_voltage_sequence_error float8); 
+grid_voltage_sequence_error float8,
+grid_ac1_mains_failure float8,
+grid_ac_alarm_state float8); 
 COMMENT ON COLUMN "public"."iot_grid_15m"."id" IS '主键';
 COMMENT ON COLUMN "public"."iot_grid_15m"."create_time" IS '创建时间';
 COMMENT ON COLUMN "public"."iot_grid_15m"."customer_id" IS '公司ID';
@@ -105,6 +107,8 @@ COMMENT ON COLUMN "public"."iot_grid_15m"."grid_source_negative_terminal_phase_b
 COMMENT ON COLUMN "public"."iot_grid_15m"."grid_source_negative_terminal_phase_c" IS 'C相电源负极'; 
 COMMENT ON COLUMN "public"."iot_grid_15m"."grid_current_timing_error" IS '电流时序错误'; 
 COMMENT ON COLUMN "public"."iot_grid_15m"."grid_voltage_sequence_error" IS '电压序列错误'; 
+COMMENT ON COLUMN "public"."iot_grid_15m"."grid_ac1_mains_failure" IS '市电异常'; 
+COMMENT ON COLUMN "public"."iot_grid_15m"."grid_ac_alarm_state" IS '交流告警状态'; 
 DROP TABLE IF EXISTS "public"."iot_grid_1h";
                             CREATE TABLE "public"."iot_grid_1h" (
                           "id" int8,
@@ -159,7 +163,9 @@ grid_source_negative_terminal_phase_a float8,
 grid_source_negative_terminal_phase_b float8,
 grid_source_negative_terminal_phase_c float8,
 grid_current_timing_error float8,
-grid_voltage_sequence_error float8); 
+grid_voltage_sequence_error float8,
+grid_ac1_mains_failure float8,
+grid_ac_alarm_state float8); 
 COMMENT ON COLUMN "public"."iot_grid_1h"."id" IS '主键';
     COMMENT ON COLUMN "public"."iot_grid_1h"."create_time" IS '创建时间';
     COMMENT ON COLUMN "public"."iot_grid_1h"."customer_id" IS '公司ID';
@@ -212,3 +218,5 @@ COMMENT ON COLUMN "public"."iot_grid_1h"."grid_source_negative_terminal_phase_b"
 COMMENT ON COLUMN "public"."iot_grid_1h"."grid_source_negative_terminal_phase_c" IS 'C相电源负极'; 
 COMMENT ON COLUMN "public"."iot_grid_1h"."grid_current_timing_error" IS '电流时序错误'; 
 COMMENT ON COLUMN "public"."iot_grid_1h"."grid_voltage_sequence_error" IS '电压序列错误'; 
+COMMENT ON COLUMN "public"."iot_grid_1h"."grid_ac1_mains_failure" IS '市电异常'; 
+COMMENT ON COLUMN "public"."iot_grid_1h"."grid_ac_alarm_state" IS '交流告警状态'; 

@@ -12,7 +12,7 @@ import java.util.Date;
  * @date 2023-07-27
  */
 @Data
-@Measurement(name = "acGenerator")
+@Measurement(name = "ac_generator")
 public class AcGeneratorTable {
 
     /**
@@ -118,8 +118,8 @@ public class AcGeneratorTable {
  /** 
  * 发电机紧急停止次数.Number of generator emergency stops 
  */ 
- @Column(name = "genset_num_of_estop") 
- private Long gensetNumOfEstop;
+ @Column(name = "genset_num_of_stops") 
+ private Double gensetNumOfStops;
  /** 
  * 发电机启动次数.Generator start-up times 
  */ 
@@ -231,11 +231,6 @@ public class AcGeneratorTable {
  @Column(name = "genset_fuel_tank_volume") 
  private Long gensetFuelTankVolume;
  /** 
- * 深海发电机测试模式状态.Deepsea generator test mode status 
- */ 
- @Column(name = "genset_test_led_status_dse") 
- private Double gensetTestLedStatusDse;
- /** 
  * 深海发电机手动模式状态.Deepsea generator manual mode status 
  */ 
  @Column(name = "genset_manual_led_status_dse") 
@@ -245,6 +240,11 @@ public class AcGeneratorTable {
  */ 
  @Column(name = "genset_auto_led_status_dse") 
  private Double gensetAutoLedStatusDse;
+ /** 
+ * 深海发电机测试模式状态.Deepsea generator test mode status 
+ */ 
+ @Column(name = "genset_test_led_status_dse") 
+ private Double gensetTestLedStatusDse;
  /** 
  * 深海发电机停止模式状态.Deepsea generator stop mode state 
  */ 
@@ -338,23 +338,23 @@ public class AcGeneratorTable {
  /** 
  * L1L2发电电压告警.Generator Voltage L1-L2 Level 1 
  */ 
- @Column(name = "genset_generator_voltage_l1l2_level1") 
- private Double gensetGeneratorVoltageL1l2Level1;
+ @Column(name = "genset_voltage_l1l2_level1") 
+ private Double gensetVoltageL1l2Level1;
  /** 
  * L2L3发电电压告警.Generator Voltage L2-L3 Level 1 
  */ 
- @Column(name = "genset_generator_voltage_l2l3_level1") 
- private Double gensetGeneratorVoltageL2l3Level1;
+ @Column(name = "genset_voltage_l2l3_level1") 
+ private Double gensetVoltageL2l3Level1;
  /** 
  * L3L1发电电压告警.Generator Voltage L3-L1 Level 1 
  */ 
- @Column(name = "genset_generator_voltage_l3l1_level1") 
- private Double gensetGeneratorVoltageL3l1Level1;
+ @Column(name = "genset_voltage_l3l1_level1") 
+ private Double gensetVoltageL3l1Level1;
  /** 
  * L3L1发电电压停机.Generator Voltage L3-L1 Level 2 
  */ 
- @Column(name = "genset_generator_voltage_l3l1_level2") 
- private Double gensetGeneratorVoltageL3l1Level2;
+ @Column(name = "genset_voltage_l3l1_level2") 
+ private Double gensetVoltageL3l1Level2;
  /** 
  * BOC发电电压不平衡ph-ph告警.BOC发电电压 Unbalance ph-ph Level 1 
  */ 
@@ -811,30 +811,30 @@ public class AcGeneratorTable {
  @Column(name = "genset_battery_high_voltage") 
  private Double gensetBatteryHighVoltage;
  /** 
- * 发电机过压关闭.Generator Over Voltage Shut Down 
+ * 发电机过压关闭.Generator Overvoltage Shut Down 
  */ 
- @Column(name = "genset_over_voltage_shut_down") 
- private Double gensetOverVoltageShutDown;
+ @Column(name = "genset_overvoltage_shut_down") 
+ private Double gensetOvervoltageShutDown;
  /** 
- * 发电机过压警告 .Generator Over Voltage Warning 
+ * 发电机过压警告 .Generator Overvoltage Warning 
  */ 
- @Column(name = "genset_over_voltage_warning") 
- private Double gensetOverVoltageWarning;
+ @Column(name = "genset_overvoltage_warning") 
+ private Double gensetOvervoltageWarning;
  /** 
- * 发电机欠压警告 .Generator Under Voltage Warning 
+ * 发电机欠压警告 .Generator Undervoltage Warning 
  */ 
- @Column(name = "genset_under_voltage_warning") 
- private Double gensetUnderVoltageWarning;
+ @Column(name = "genset_undervoltage_warning") 
+ private Double gensetUndervoltageWarning;
  /** 
- * 发电机欠压关闭冷却.Generator Under VolTage Shut Off Cooling 
+ * 发电机欠压关闭冷却.Generator UndervolTage Shut Off Cooling 
  */ 
- @Column(name = "genset_under_voltage_shut_off_cooling") 
- private Double gensetUnderVoltageShutOffCooling;
+ @Column(name = "genset_undervoltage_shut_off_cooling") 
+ private Double gensetUndervoltageShutOffCooling;
  /** 
- * 发电机频率过高警告.Generator Over Frequency Warning 
+ * 发电机频率过高警告.Generator Overfrequency Warning 
  */ 
- @Column(name = "genset_over_frequency_warning") 
- private Double gensetOverFrequencyWarning;
+ @Column(name = "genset_overfrequency_warning") 
+ private Double gensetOverfrequencyWarning;
  /** 
  * 市电L1-N相电压.Mains L1-N voltage 
  */ 

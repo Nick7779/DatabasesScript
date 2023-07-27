@@ -1,8 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/C5/Excel2Data/Class/AcGenerator/AcGenerator.sql" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/C5/Excel2Data/Class/AcGenerator/AcGenerator.txt" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/C5/Excel2Data/Class/AcGenerator/AcGenerator15m.txt" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/C5/Excel2Data/Class/AcGenerator/AcGenerator1h.txt" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/C5/Excel2Data/Class/AcGenerator/FieldConstantsAcGenerator.txt" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/C5/Excel2Data/Class/Solar/FieldConstantsSolar.txt" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/C5/Excel2Data/Class/Solar/Solar.sql" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/C5/Excel2Data/Class/Solar/Solar.txt" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/C5/Excel2Data/Class/Solar/Solar15m.txt" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/C5/Excel2Data/Class/Solar/Solar1h.txt" charset="GBK" />
     <file url="file://$PROJECT_DIR$/C5/Excel2Data/JavaClassTable/AcGenerator.txt" charset="GBK" />
     <file url="file://$PROJECT_DIR$/C5/Excel2Data/JavaClassTable/FieldConstants.txt" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/C5/Excel2Data/JavaClassTable/FieldConstantsAcGenerator.txt" charset="GBK" />
     <file url="file://$PROJECT_DIR$/C5/Excel2Data/JavaClassTable/FieldConstantsGrid.txt" charset="GBK" />
     <file url="file://$PROJECT_DIR$/C5/Excel2Data/JavaClassTable/GelBattery.txt" charset="GBK" />
     <file url="file://$PROJECT_DIR$/C5/Excel2Data/JavaClassTable/Grid.txt" charset="GBK" />

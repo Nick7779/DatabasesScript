@@ -9,7 +9,7 @@ import java.util.Date;
  * Grid influxdb实体类
  *
  * @author Nick
- * @date 2023-07-11
+ * @date 2023-07-24
  */
 @Data
 @Measurement(name = "grid")
@@ -265,6 +265,16 @@ public class GridTable {
  */ 
  @Column(name = "grid_voltage_sequence_error") 
  private Double gridVoltageSequenceError;
+ /** 
+ * 市电异常.AC1 Mains Failure 
+ */ 
+ @Column(name = "grid_ac1_mains_failure") 
+ private Long gridAc1MainsFailure;
+ /** 
+ * 交流告警状态.AC alarm state 
+ */ 
+ @Column(name = "grid_ac_alarm_state") 
+ private Long gridAcAlarmState;
 
     public Date getTime() {
         return Date.from(time);

@@ -186,3 +186,11 @@
  * 电压序列错误. 
  */ 
  String GRID_VOLTAGE_SEQUENCE_ERROR = "grid_voltage_sequence_error";
+ /** 
+ * 市电异常. 
+ */ 
+ String GRID_AC1_MAINS_FAILURE = "grid_ac1_mains_failure";
+ /** 
+ * 交流告警状态. 
+ */ 
+ String GRID_AC_ALARM_STATE = "grid_ac_alarm_state";

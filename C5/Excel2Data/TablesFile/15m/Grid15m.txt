@@ -233,4 +233,14 @@ public static final String GRID_CURRENT_TIMING_ERROR = "grid_current_timing_erro
  */ 
  @ApiModelProperty("电压序列错误") 
  private Double gridVoltageSequenceError;
-public static final String GRID_VOLTAGE_SEQUENCE_ERROR = "grid_voltage_sequence_error";private static final long serialVersionUID = 1L;
+public static final String GRID_VOLTAGE_SEQUENCE_ERROR = "grid_voltage_sequence_error";/** 
+ * 市电异常.AC1 Mains Failure 
+ */ 
+ @ApiModelProperty("市电异常") 
+ private Long gridAc1MainsFailure;
+public static final String GRID_AC1_MAINS_FAILURE = "grid_ac1_mains_failure";/** 
+ * 交流告警状态.AC alarm state 
+ */ 
+ @ApiModelProperty("交流告警状态") 
+ private Long gridAcAlarmState;
+public static final String GRID_AC_ALARM_STATE = "grid_ac_alarm_state";private static final long serialVersionUID = 1L;
