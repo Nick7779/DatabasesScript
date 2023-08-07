@@ -54,8 +54,8 @@ genset_runtime_minutes_zz float8,
 genset_emergency_stop_level1 float8,
 genset_emergency_stop_level2 float8,
 genset_emergency_stop_sensor_failure float8,
-genset_remote_startstop float8,
-genset_remote_startstop_sensor_failure float8,
+genset_remote_start_stop float8,
+genset_remote_start_stop_sensor_failure float8,
 genset_low_oil_pressure_warning float8,
 genset_low_oil_pressure_shutdown float8,
 genset_oil_pressure_sensor_failure float8,
@@ -227,8 +227,8 @@ COMMENT ON COLUMN "public"."iot_ac_generator_15m"."genset_runtime_minutes_zz" IS
 COMMENT ON COLUMN "public"."iot_ac_generator_15m"."genset_emergency_stop_level1" IS '紧急停机告警'; 
 COMMENT ON COLUMN "public"."iot_ac_generator_15m"."genset_emergency_stop_level2" IS '紧急停机关机'; 
 COMMENT ON COLUMN "public"."iot_ac_generator_15m"."genset_emergency_stop_sensor_failure" IS '紧急停机传感器故障'; 
-COMMENT ON COLUMN "public"."iot_ac_generator_15m"."genset_remote_startstop" IS '远程启动关机告警'; 
-COMMENT ON COLUMN "public"."iot_ac_generator_15m"."genset_remote_startstop_sensor_failure" IS '远程开关机传感器故障'; 
+COMMENT ON COLUMN "public"."iot_ac_generator_15m"."genset_remote_start_stop" IS '远程启动关机告警'; 
+COMMENT ON COLUMN "public"."iot_ac_generator_15m"."genset_remote_start_stop_sensor_failure" IS '远程开关机传感器故障'; 
 COMMENT ON COLUMN "public"."iot_ac_generator_15m"."genset_low_oil_pressure_warning" IS '低油位告警'; 
 COMMENT ON COLUMN "public"."iot_ac_generator_15m"."genset_low_oil_pressure_shutdown" IS '低油位停机告警'; 
 COMMENT ON COLUMN "public"."iot_ac_generator_15m"."genset_oil_pressure_sensor_failure" IS '油位传感器故障'; 
@@ -403,8 +403,8 @@ genset_runtime_minutes_zz float8,
 genset_emergency_stop_level1 float8,
 genset_emergency_stop_level2 float8,
 genset_emergency_stop_sensor_failure float8,
-genset_remote_startstop float8,
-genset_remote_startstop_sensor_failure float8,
+genset_remote_start_stop float8,
+genset_remote_start_stop_sensor_failure float8,
 genset_low_oil_pressure_warning float8,
 genset_low_oil_pressure_shutdown float8,
 genset_oil_pressure_sensor_failure float8,
@@ -576,8 +576,8 @@ COMMENT ON COLUMN "public"."iot_ac_generator_1h"."genset_runtime_minutes_zz" IS 
 COMMENT ON COLUMN "public"."iot_ac_generator_1h"."genset_emergency_stop_level1" IS '紧急停机告警'; 
 COMMENT ON COLUMN "public"."iot_ac_generator_1h"."genset_emergency_stop_level2" IS '紧急停机关机'; 
 COMMENT ON COLUMN "public"."iot_ac_generator_1h"."genset_emergency_stop_sensor_failure" IS '紧急停机传感器故障'; 
-COMMENT ON COLUMN "public"."iot_ac_generator_1h"."genset_remote_startstop" IS '远程启动关机告警'; 
-COMMENT ON COLUMN "public"."iot_ac_generator_1h"."genset_remote_startstop_sensor_failure" IS '远程开关机传感器故障'; 
+COMMENT ON COLUMN "public"."iot_ac_generator_1h"."genset_remote_start_stop" IS '远程启动关机告警'; 
+COMMENT ON COLUMN "public"."iot_ac_generator_1h"."genset_remote_start_stop_sensor_failure" IS '远程开关机传感器故障'; 
 COMMENT ON COLUMN "public"."iot_ac_generator_1h"."genset_low_oil_pressure_warning" IS '低油位告警'; 
 COMMENT ON COLUMN "public"."iot_ac_generator_1h"."genset_low_oil_pressure_shutdown" IS '低油位停机告警'; 
 COMMENT ON COLUMN "public"."iot_ac_generator_1h"."genset_oil_pressure_sensor_failure" IS '油位传感器故障'; 

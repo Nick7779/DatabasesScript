@@ -193,11 +193,11 @@
  /** 
  * 远程启动关机告警. 
  */ 
- String GENSET_REMOTE_STARTSTOP = "genset_remote_startstop";
+ String GENSET_REMOTE_START_STOP = "genset_remote_start_stop";
  /** 
  * 远程开关机传感器故障. 
  */ 
- String GENSET_REMOTE_STARTSTOP_SENSOR_FAILURE = "genset_remote_startstop_sensor_failure";
+ String GENSET_REMOTE_START_STOP_SENSOR_FAILURE = "genset_remote_start_stop_sensor_failure";
  /** 
  * 低油位告警. 
  */ 
