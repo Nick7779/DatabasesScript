@@ -81,7 +81,7 @@
  /** 
  * 太阳能总告警状态. 
  */ 
- String SOLAR_SOLAR_TOTAL_ALARM_STATE = "solar_solar_total_alarm_state";
+ String SOLAR_TOTAL_ALARM_STATE = "solar_total_alarm_state";
  /** 
  * 单个太阳能模块告警. 
  */ 
@@ -93,7 +93,7 @@
  /** 
  * 太阳能告警选择. 
  */ 
- String SOLAR_SOLAR_ALARM_SELECTION = "solar_solar_alarm_selection";
+ String SOLAR_ALARM_SELECTION = "solar_alarm_selection";
  /** 
  * 太阳能模块告警状态. 
  */ 
@@ -105,11 +105,11 @@
  /** 
  * 太阳能控制器-单点无输出. 
  */ 
- String SOLAR_SOLAR_CONTROLLER_SINGLE_NO_OUTPUT = "solar_solar_controller_single_no_output";
+ String SOLAR_CONTROLLER_SINGLE_NO_OUTPUT = "solar_controller_single_no_output";
  /** 
  * 太阳能控制器-外部电路短路. 
  */ 
- String SOLAR_SOLAR_CONTROLLER_OUTSIDE_CIRCUIT_SHORT = "solar_solar_controller_outside_circuit_short";
+ String SOLAR_CONTROLLER_OUTSIDE_CIRCUIT_SHORT = "solar_controller_outside_circuit_short";
  /** 
  * 没有位置. 
  */ 
@@ -161,7 +161,7 @@
  /** 
  * 太阳环境温度过高. 
  */ 
- String SOLAR_SOLAR_AMBIENT_OVER_TEMPERATURE = "solar_solar_ambient_over_temperature";
+ String SOLAR_AMBIENT_OVER_TEMPERATURE = "solar_ambient_over_temperature";
  /** 
  * 外部过压保护. 
  */ 
@@ -182,3 +182,7 @@
  * 二次热点过温. 
  */ 
  String SOLAR_SECONDARY_HOT_POINT_OVER_TEMPERATURE = "solar_secondary_hot_point_over_temperature";
+ /** 
+ * 光伏模块运行状态. 
+ */ 
+ String SOLAR_MODULE_OPERATION_STATUS = "solar_module_operation_status";

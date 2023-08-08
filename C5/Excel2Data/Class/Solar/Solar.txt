@@ -117,8 +117,8 @@
  /** 
  * 太阳能总告警状态.Solar Total Alarm State 
  */ 
- @Column(name = "solar_solar_total_alarm_state") 
- private Long solarSolarTotalAlarmState;
+ @Column(name = "solar_total_alarm_state") 
+ private Long solarTotalAlarmState;
  /** 
  * 单个太阳能模块告警. single solar module alarm 
  */ 
@@ -132,8 +132,8 @@
  /** 
  * 太阳能告警选择.Solar Alarm Selection 
  */ 
- @Column(name = "solar_solar_alarm_selection") 
- private Long solarSolarAlarmSelection;
+ @Column(name = "solar_alarm_selection") 
+ private Long solarAlarmSelection;
  /** 
  * 太阳能模块告警状态.Solar Module Alarm State 
  */ 
@@ -147,13 +147,13 @@
  /** 
  * 太阳能控制器-单点无输出.Solar Controller-Single No output 
  */ 
- @Column(name = "solar_solar_controller_single_no_output") 
- private Long solarSolarControllerSingleNoOutput;
+ @Column(name = "solar_controller_single_no_output") 
+ private Long solarControllerSingleNoOutput;
  /** 
  * 太阳能控制器-外部电路短路.Solar Controller-Outside Circuit Short 
  */ 
- @Column(name = "solar_solar_controller_outside_circuit_short") 
- private Long solarSolarControllerOutsideCircuitShort;
+ @Column(name = "solar_controller_outside_circuit_short") 
+ private Long solarControllerOutsideCircuitShort;
  /** 
  * 没有位置.No Position 
  */ 
@@ -178,12 +178,12 @@
  * 第二端通信故障.Second Side Communication Fault 
  */ 
  @Column(name = "solar_second_side_communication_fault") 
- private Double solarSecondSideCommunicationFault;
+ private Long solarSecondSideCommunicationFault;
  /** 
  * 主侧通信故障.Primary Side Communication Fault 
  */ 
  @Column(name = "solar_primary_side_communication_fault") 
- private Double solarPrimarySideCommunicationFault;
+ private Long solarPrimarySideCommunicationFault;
  /** 
  * 风扇故障.Fan Fault 
  */ 
@@ -193,7 +193,7 @@
  * PFC过电压保护.PFC Overvoltage Protection 
  */ 
  @Column(name = "solar_pfc_overvoltage_protection") 
- private Double solarPfcOvervoltageProtection;
+ private Long solarPfcOvervoltageProtection;
  /** 
  * PFC欠压保护.PFC Under voltage Protection 
  */ 
@@ -208,7 +208,7 @@
  * 输入过电压保护.Input Overvoltage Protection 
  */ 
  @Column(name = "solar_input_overvoltage_protection") 
- private Double solarInputOvervoltageProtection;
+ private Long solarInputOvervoltageProtection;
  /** 
  * 内部电路短路.Internal Circuit Short 
  */ 
@@ -217,18 +217,18 @@
  /** 
  * 太阳环境温度过高.Solar Ambient Over Temperature 
  */ 
- @Column(name = "solar_solar_ambient_over_temperature") 
- private Long solarSolarAmbientOverTemperature;
+ @Column(name = "solar_ambient_over_temperature") 
+ private Long solarAmbientOverTemperature;
  /** 
  * 外部过压保护.External Overvoltage Protection 
  */ 
  @Column(name = "solar_external_overvoltage_protection") 
- private Double solarExternalOvervoltageProtection;
+ private Long solarExternalOvervoltageProtection;
  /** 
  * 内部过电压保护.Internal Overvoltage Protection 
  */ 
  @Column(name = "solar_internal_overvoltage_protection") 
- private Double solarInternalOvervoltageProtection;
+ private Long solarInternalOvervoltageProtection;
  /** 
  * 光伏缺电.PV Power Lack 
  */ 
@@ -238,12 +238,17 @@
  * 太阳能模块缺失.Solar Module Lost 
  */ 
  @Column(name = "solar_module_lost") 
- private Double solarModuleLost;
+ private Long solarModuleLost;
  /** 
  * 二次热点过温.Secondary Hot Point Over Temperature 
  */ 
  @Column(name = "solar_secondary_hot_point_over_temperature") 
- private String solarSecondaryHotPointOverTemperature;
+ private Long solarSecondaryHotPointOverTemperature;
+ /** 
+ * 光伏模块运行状态.solar module operation status 
+ */ 
+ @Column(name = "solar_module_operation_status") 
+ private Long solarModuleOperationStatus;
 
     public Date getTime() {
         return Date.from(time);

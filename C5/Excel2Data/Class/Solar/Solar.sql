@@ -26,14 +26,14 @@ solar_single_energy float8,
 solar_total_energy_all_modules float8,
 solar_total_output_voltage float8,
 solar_total_output_current float8,
-solar_solar_total_alarm_state float8,
+solar_total_alarm_state float8,
 solar_single_solar_module_alarm float8,
 solar_multiple_solar_module_alarm float8,
-solar_solar_alarm_selection float8,
+solar_alarm_selection float8,
 solar_module_alarm_state float8,
 solar_primary_calibrate_fault float8,
-solar_solar_controller_single_no_output float8,
-solar_solar_controller_outside_circuit_short float8,
+solar_controller_single_no_output float8,
+solar_controller_outside_circuit_short float8,
 solar_no_position float8,
 solar_output_over_current float8,
 solar_e2prom_fault float8,
@@ -46,12 +46,13 @@ solar_pfc_under_voltage_protection float8,
 solar_input_under_voltage_protection float8,
 solar_input_overvoltage_protection float8,
 solar_internal_circuit_short float8,
-solar_solar_ambient_over_temperature float8,
+solar_ambient_over_temperature float8,
 solar_external_overvoltage_protection float8,
 solar_internal_overvoltage_protection float8,
 solar_pv_power_lack float8,
 solar_module_lost float8,
-solar_secondary_hot_point_over_temperature float8); 
+solar_secondary_hot_point_over_temperature float8,
+solar_module_operation_status float8); 
 COMMENT ON COLUMN "public"."iot_solar_15m"."id" IS 'Ö÷¼ü';
 COMMENT ON COLUMN "public"."iot_solar_15m"."create_time" IS '´´½¨Ê±¼ä';
 COMMENT ON COLUMN "public"."iot_solar_15m"."customer_id" IS '¹«Ë¾ID';
@@ -77,14 +78,14 @@ COMMENT ON COLUMN "public"."iot_solar_15m"."solar_single_energy" IS 'µ¥¿éÌ«ÑôÄÜÀ
 COMMENT ON COLUMN "public"."iot_solar_15m"."solar_total_energy_all_modules" IS 'ËùÓĞÌ«ÑôÄÜÄ£¿éÀÛ¼Æ×ÜÄÜÁ¿'; 
 COMMENT ON COLUMN "public"."iot_solar_15m"."solar_total_output_voltage" IS 'Ì«ÑôÄÜÄ£¿é×ÜµçÑ¹(SC501)'; 
 COMMENT ON COLUMN "public"."iot_solar_15m"."solar_total_output_current" IS 'Ì«ÑôÄÜÄ£¿é×ÜµçÁ÷(SC501)'; 
-COMMENT ON COLUMN "public"."iot_solar_15m"."solar_solar_total_alarm_state" IS 'Ì«ÑôÄÜ×Ü¸æ¾¯×´Ì¬'; 
+COMMENT ON COLUMN "public"."iot_solar_15m"."solar_total_alarm_state" IS 'Ì«ÑôÄÜ×Ü¸æ¾¯×´Ì¬'; 
 COMMENT ON COLUMN "public"."iot_solar_15m"."solar_single_solar_module_alarm" IS 'µ¥¸öÌ«ÑôÄÜÄ£¿é¸æ¾¯'; 
 COMMENT ON COLUMN "public"."iot_solar_15m"."solar_multiple_solar_module_alarm" IS '¶à¸öÌ«ÑôÄÜÄ£¿é¸æ¾¯'; 
-COMMENT ON COLUMN "public"."iot_solar_15m"."solar_solar_alarm_selection" IS 'Ì«ÑôÄÜ¸æ¾¯Ñ¡Ôñ'; 
+COMMENT ON COLUMN "public"."iot_solar_15m"."solar_alarm_selection" IS 'Ì«ÑôÄÜ¸æ¾¯Ñ¡Ôñ'; 
 COMMENT ON COLUMN "public"."iot_solar_15m"."solar_module_alarm_state" IS 'Ì«ÑôÄÜÄ£¿é¸æ¾¯×´Ì¬'; 
 COMMENT ON COLUMN "public"."iot_solar_15m"."solar_primary_calibrate_fault" IS '³õ¼¶Ğ£×¼¹ÊÕÏ'; 
-COMMENT ON COLUMN "public"."iot_solar_15m"."solar_solar_controller_single_no_output" IS 'Ì«ÑôÄÜ¿ØÖÆÆ÷-µ¥µãÎŞÊä³ö'; 
-COMMENT ON COLUMN "public"."iot_solar_15m"."solar_solar_controller_outside_circuit_short" IS 'Ì«ÑôÄÜ¿ØÖÆÆ÷-Íâ²¿µçÂ·¶ÌÂ·'; 
+COMMENT ON COLUMN "public"."iot_solar_15m"."solar_controller_single_no_output" IS 'Ì«ÑôÄÜ¿ØÖÆÆ÷-µ¥µãÎŞÊä³ö'; 
+COMMENT ON COLUMN "public"."iot_solar_15m"."solar_controller_outside_circuit_short" IS 'Ì«ÑôÄÜ¿ØÖÆÆ÷-Íâ²¿µçÂ·¶ÌÂ·'; 
 COMMENT ON COLUMN "public"."iot_solar_15m"."solar_no_position" IS 'Ã»ÓĞÎ»ÖÃ'; 
 COMMENT ON COLUMN "public"."iot_solar_15m"."solar_output_over_current" IS 'Êä³ö¹ıµçÁ÷'; 
 COMMENT ON COLUMN "public"."iot_solar_15m"."solar_e2prom_fault" IS 'E2PROM¹ÊÕÏ'; 
@@ -97,12 +98,13 @@ COMMENT ON COLUMN "public"."iot_solar_15m"."solar_pfc_under_voltage_protection" 
 COMMENT ON COLUMN "public"."iot_solar_15m"."solar_input_under_voltage_protection" IS 'ÊäÈëÇ·Ñ¹±£»¤'; 
 COMMENT ON COLUMN "public"."iot_solar_15m"."solar_input_overvoltage_protection" IS 'ÊäÈë¹ıµçÑ¹±£»¤'; 
 COMMENT ON COLUMN "public"."iot_solar_15m"."solar_internal_circuit_short" IS 'ÄÚ²¿µçÂ·¶ÌÂ·'; 
-COMMENT ON COLUMN "public"."iot_solar_15m"."solar_solar_ambient_over_temperature" IS 'Ì«Ñô»·¾³ÎÂ¶È¹ı¸ß'; 
+COMMENT ON COLUMN "public"."iot_solar_15m"."solar_ambient_over_temperature" IS 'Ì«Ñô»·¾³ÎÂ¶È¹ı¸ß'; 
 COMMENT ON COLUMN "public"."iot_solar_15m"."solar_external_overvoltage_protection" IS 'Íâ²¿¹ıÑ¹±£»¤'; 
 COMMENT ON COLUMN "public"."iot_solar_15m"."solar_internal_overvoltage_protection" IS 'ÄÚ²¿¹ıµçÑ¹±£»¤'; 
 COMMENT ON COLUMN "public"."iot_solar_15m"."solar_pv_power_lack" IS '¹â·üÈ±µç'; 
 COMMENT ON COLUMN "public"."iot_solar_15m"."solar_module_lost" IS 'Ì«ÑôÄÜÄ£¿éÈ±Ê§'; 
 COMMENT ON COLUMN "public"."iot_solar_15m"."solar_secondary_hot_point_over_temperature" IS '¶ş´ÎÈÈµã¹ıÎÂ'; 
+COMMENT ON COLUMN "public"."iot_solar_15m"."solar_module_operation_status" IS '¹â·üÄ£¿éÔËĞĞ×´Ì¬'; 
 DROP TABLE IF EXISTS "public"."iot_solar_1h";
                             CREATE TABLE "public"."iot_solar_1h" (
                           "id" int8,
@@ -131,14 +133,14 @@ solar_single_energy float8,
 solar_total_energy_all_modules float8,
 solar_total_output_voltage float8,
 solar_total_output_current float8,
-solar_solar_total_alarm_state float8,
+solar_total_alarm_state float8,
 solar_single_solar_module_alarm float8,
 solar_multiple_solar_module_alarm float8,
-solar_solar_alarm_selection float8,
+solar_alarm_selection float8,
 solar_module_alarm_state float8,
 solar_primary_calibrate_fault float8,
-solar_solar_controller_single_no_output float8,
-solar_solar_controller_outside_circuit_short float8,
+solar_controller_single_no_output float8,
+solar_controller_outside_circuit_short float8,
 solar_no_position float8,
 solar_output_over_current float8,
 solar_e2prom_fault float8,
@@ -151,12 +153,13 @@ solar_pfc_under_voltage_protection float8,
 solar_input_under_voltage_protection float8,
 solar_input_overvoltage_protection float8,
 solar_internal_circuit_short float8,
-solar_solar_ambient_over_temperature float8,
+solar_ambient_over_temperature float8,
 solar_external_overvoltage_protection float8,
 solar_internal_overvoltage_protection float8,
 solar_pv_power_lack float8,
 solar_module_lost float8,
-solar_secondary_hot_point_over_temperature float8); 
+solar_secondary_hot_point_over_temperature float8,
+solar_module_operation_status float8); 
 COMMENT ON COLUMN "public"."iot_solar_1h"."id" IS 'Ö÷¼ü';
     COMMENT ON COLUMN "public"."iot_solar_1h"."create_time" IS '´´½¨Ê±¼ä';
     COMMENT ON COLUMN "public"."iot_solar_1h"."customer_id" IS '¹«Ë¾ID';
@@ -182,14 +185,14 @@ COMMENT ON COLUMN "public"."iot_solar_1h"."solar_single_energy" IS 'µ¥¿éÌ«ÑôÄÜÀÛ
 COMMENT ON COLUMN "public"."iot_solar_1h"."solar_total_energy_all_modules" IS 'ËùÓĞÌ«ÑôÄÜÄ£¿éÀÛ¼Æ×ÜÄÜÁ¿'; 
 COMMENT ON COLUMN "public"."iot_solar_1h"."solar_total_output_voltage" IS 'Ì«ÑôÄÜÄ£¿é×ÜµçÑ¹(SC501)'; 
 COMMENT ON COLUMN "public"."iot_solar_1h"."solar_total_output_current" IS 'Ì«ÑôÄÜÄ£¿é×ÜµçÁ÷(SC501)'; 
-COMMENT ON COLUMN "public"."iot_solar_1h"."solar_solar_total_alarm_state" IS 'Ì«ÑôÄÜ×Ü¸æ¾¯×´Ì¬'; 
+COMMENT ON COLUMN "public"."iot_solar_1h"."solar_total_alarm_state" IS 'Ì«ÑôÄÜ×Ü¸æ¾¯×´Ì¬'; 
 COMMENT ON COLUMN "public"."iot_solar_1h"."solar_single_solar_module_alarm" IS 'µ¥¸öÌ«ÑôÄÜÄ£¿é¸æ¾¯'; 
 COMMENT ON COLUMN "public"."iot_solar_1h"."solar_multiple_solar_module_alarm" IS '¶à¸öÌ«ÑôÄÜÄ£¿é¸æ¾¯'; 
-COMMENT ON COLUMN "public"."iot_solar_1h"."solar_solar_alarm_selection" IS 'Ì«ÑôÄÜ¸æ¾¯Ñ¡Ôñ'; 
+COMMENT ON COLUMN "public"."iot_solar_1h"."solar_alarm_selection" IS 'Ì«ÑôÄÜ¸æ¾¯Ñ¡Ôñ'; 
 COMMENT ON COLUMN "public"."iot_solar_1h"."solar_module_alarm_state" IS 'Ì«ÑôÄÜÄ£¿é¸æ¾¯×´Ì¬'; 
 COMMENT ON COLUMN "public"."iot_solar_1h"."solar_primary_calibrate_fault" IS '³õ¼¶Ğ£×¼¹ÊÕÏ'; 
-COMMENT ON COLUMN "public"."iot_solar_1h"."solar_solar_controller_single_no_output" IS 'Ì«ÑôÄÜ¿ØÖÆÆ÷-µ¥µãÎŞÊä³ö'; 
-COMMENT ON COLUMN "public"."iot_solar_1h"."solar_solar_controller_outside_circuit_short" IS 'Ì«ÑôÄÜ¿ØÖÆÆ÷-Íâ²¿µçÂ·¶ÌÂ·'; 
+COMMENT ON COLUMN "public"."iot_solar_1h"."solar_controller_single_no_output" IS 'Ì«ÑôÄÜ¿ØÖÆÆ÷-µ¥µãÎŞÊä³ö'; 
+COMMENT ON COLUMN "public"."iot_solar_1h"."solar_controller_outside_circuit_short" IS 'Ì«ÑôÄÜ¿ØÖÆÆ÷-Íâ²¿µçÂ·¶ÌÂ·'; 
 COMMENT ON COLUMN "public"."iot_solar_1h"."solar_no_position" IS 'Ã»ÓĞÎ»ÖÃ'; 
 COMMENT ON COLUMN "public"."iot_solar_1h"."solar_output_over_current" IS 'Êä³ö¹ıµçÁ÷'; 
 COMMENT ON COLUMN "public"."iot_solar_1h"."solar_e2prom_fault" IS 'E2PROM¹ÊÕÏ'; 
@@ -202,9 +205,10 @@ COMMENT ON COLUMN "public"."iot_solar_1h"."solar_pfc_under_voltage_protection" I
 COMMENT ON COLUMN "public"."iot_solar_1h"."solar_input_under_voltage_protection" IS 'ÊäÈëÇ·Ñ¹±£»¤'; 
 COMMENT ON COLUMN "public"."iot_solar_1h"."solar_input_overvoltage_protection" IS 'ÊäÈë¹ıµçÑ¹±£»¤'; 
 COMMENT ON COLUMN "public"."iot_solar_1h"."solar_internal_circuit_short" IS 'ÄÚ²¿µçÂ·¶ÌÂ·'; 
-COMMENT ON COLUMN "public"."iot_solar_1h"."solar_solar_ambient_over_temperature" IS 'Ì«Ñô»·¾³ÎÂ¶È¹ı¸ß'; 
+COMMENT ON COLUMN "public"."iot_solar_1h"."solar_ambient_over_temperature" IS 'Ì«Ñô»·¾³ÎÂ¶È¹ı¸ß'; 
 COMMENT ON COLUMN "public"."iot_solar_1h"."solar_external_overvoltage_protection" IS 'Íâ²¿¹ıÑ¹±£»¤'; 
 COMMENT ON COLUMN "public"."iot_solar_1h"."solar_internal_overvoltage_protection" IS 'ÄÚ²¿¹ıµçÑ¹±£»¤'; 
 COMMENT ON COLUMN "public"."iot_solar_1h"."solar_pv_power_lack" IS '¹â·üÈ±µç'; 
 COMMENT ON COLUMN "public"."iot_solar_1h"."solar_module_lost" IS 'Ì«ÑôÄÜÄ£¿éÈ±Ê§'; 
 COMMENT ON COLUMN "public"."iot_solar_1h"."solar_secondary_hot_point_over_temperature" IS '¶ş´ÎÈÈµã¹ıÎÂ'; 
+COMMENT ON COLUMN "public"."iot_solar_1h"."solar_module_operation_status" IS '¹â·üÄ£¿éÔËĞĞ×´Ì¬'; 
