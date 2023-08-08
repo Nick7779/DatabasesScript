@@ -46,53 +46,53 @@ genset_fuel_level float8,
 genset_total_fuel_consumption float8,
 genset_breaker_state float8,
 genset_fuel_tank_volume float8,
+genset_stop_led_status_dse float8,
 genset_manual_led_status_dse float8,
 genset_auto_led_status_dse float8,
 genset_test_led_status_dse float8,
-genset_stop_led_status_dse float8,
 genset_runtime_minutes_zz float8,
 genset_emergency_stop_level1 float8,
-genset_emergency_stop_level2 float8,
+genset_emergency_stop float8,
 genset_emergency_stop_sensor_failure float8,
 genset_remote_start_stop float8,
 genset_remote_start_stop_sensor_failure float8,
 genset_low_oil_pressure_warning float8,
 genset_low_oil_pressure_shutdown float8,
 genset_oil_pressure_sensor_failure float8,
-genset_coolant_temp_level1 float8,
-genset_coolant_temp_level2 float8,
+genset_coolant_temp_warning float8,
+genset_coolant_temp_shutdown float8,
 genset_coolant_temp_sensor_failure float8,
-genset_fuel_level_level1 float8,
-genset_fuel_level_level2 float8,
+genset_low_fuel_level_warning float8,
+genset_low_fuel_level_shutdown float8,
 genset_fuel_level_sensor_failure float8,
-genset_sd_underspeed_level2 float8,
-genset_sd_start_fail_level1 float8,
-genset_voltage_l1l2_level1 float8,
-genset_voltage_l2l3_level1 float8,
-genset_voltage_l3l1_level1 float8,
-genset_voltage_l3l1_level2 float8,
-genset_boc_gen_voltage_unbalance_phph_level1 float8,
-genset_boc_gen_voltage_unbalance_phph_level2 float8,
-genset_boc_gen_voltage_unbalance_phn_level1 float8,
-genset_boc_gen_voltage_unbalance_phn_level2 float8,
-genset_freq_level1 float8,
-genset_freq_level2 float8,
-genset_l1l2_overvoltage_level1 float8,
-genset_l1l2_overvoltage_level2 float8,
-genset_l2l3_overvoltage_level1 float8,
-genset_l2l3_overvoltage_level2 float8,
-genset_l1_undervoltage_level1 float8,
-genset_l1_undervoltage_level2 float8,
-genset_l2_undervoltage_level1 float8,
-genset_l2_undervoltage_level2 float8,
-genset_wrn_battery_undervoltage_level1 float8,
-genset_wrn_battery_undervoltage_level2 float8,
-genset_wrn_battery_overvoltage_level1 float8,
-genset_wrn_battery_overvoltage_level2 float8,
-genset_rem_sta_zz float8,
-genset_rem_sto_zz float8,
-genset_rem_aut_zz float8,
-genset_rem_man_zz float8,
+genset_underspeed_sd float8,
+genset_sd_start_fail float8,
+genset_voltage_l1l2_warning float8,
+genset_voltage_l2l3_warning float8,
+genset_voltage_l3l1_warning float8,
+genset_voltage_l3l1_sd float8,
+genset_boc_voltage_unbalance_phph_warning float8,
+genset_boc_voltage_unbalance_phph_sd float8,
+genset_boc_voltage_unbalance_phn_warning float8,
+genset_boc_voltage_unbalance_phn_sd float8,
+genset_freq_warning float8,
+genset_freq_sd float8,
+genset_l1l2_ov_warning float8,
+genset_l1l2_ov_sd float8,
+genset_l2l3_ov_warning float8,
+genset_l2l3_ov_sd float8,
+genset_l1_uv_warning float8,
+genset_l1_uv_sd float8,
+genset_l2_uv_warning float8,
+genset_l2_uv_sd float8,
+genset_starter_battery_uv_warning float8,
+genset_starter_battery_uv_sd float8,
+genset_starter_battery_ov_warning float8,
+genset_starter_battery_ov_sd float8,
+genset_remote_start_zz float8,
+genset_remote_stop_zz float8,
+genset_remote_auto_zz float8,
+genset_remote_manual_zz float8,
 genset_wrn_charging_alternator_fail float8,
 genset_sd_charging_alternator_fail float8,
 genset_wrn_stop_fail float8,
@@ -110,11 +110,11 @@ genset_high_current_dse float8,
 genset_can_ecu_warning_dse float8,
 genset_can_ecu_shutdown_dse float8,
 genset_can_ecu_data_fail_dse float8,
-genset_low_oil_level_switch_dse float8,
-genset_high_temp_switch_dse float8,
-genset_low_fuel_level_switch_dse float8,
+genset_low_oil_level_di_input_dse float8,
+genset_high_temp_di_input_dse float8,
+genset_low_fuel_level_di_input_dse float8,
 genset_expansion_unit_watchdog_alarm_dse float8,
-genset_kw_overload_alarm_dse float8,
+genset_overload_alarm_dse float8,
 genset_negative_phase_sequence_current_alarm_dse float8,
 genset_earth_fault_trip_alarm_dse float8,
 genset_phase_rotation_alarm_dse float8,
@@ -124,13 +124,13 @@ genset_loading_voltage_alarm_dse float8,
 genset_short_circuit_dse float8,
 genset_mains_high_current_dse float8,
 genset_mains_earth_fault_dse float8,
-genset_mains_short_circuit_zz float8,
-genset_ecu_protect_zz float8,
+genset_mains_short_circuit_dse float8,
+genset_ecu_protect_dse float8,
 genset_overspeed_alarm_shutdown_zz float8,
 genset_loss_of_speed_signal_alarm_zz float8,
 genset_over_freq_sd_alarm_zz float8,
 genset_under_freq_sd_zz float8,
-genset_gen_over_current_shutdown_zz float8,
+genset_over_current_shutdown_zz float8,
 genset_reverse_power_alarm_shutdown_zz float8,
 genset_over_power_alarm_shutdown_zz float8,
 genset_high_temp_input_alarm_shutdown_zz float8,
@@ -141,18 +141,18 @@ genset_mains_l1_current float8,
 genset_mains_l2_current float8,
 genset_mains_l3_current float8,
 genset_mains_earth_current float8,
-genset_mains_l1_watts float8,
-genset_mains_l2_watts float8,
-genset_mains_l3_watts float8,
-genset_mains_total_watts float8,
-genset_mains_l1_va float8,
-genset_mains_l2_va float8,
-genset_mains_l3_va float8,
-genset_mains_total_va float8,
-genset_mains_l1_var float8,
-genset_mains_l2_var float8,
-genset_mains_l3_var float8,
-genset_mains_total_var float8,
+genset_mains_l1_active_power float8,
+genset_mains_l2_active_power float8,
+genset_mains_l3_active_power float8,
+genset_mains_total_active_power float8,
+genset_mains_l1_apparent_power float8,
+genset_mains_l2_apparent_power float8,
+genset_mains_l3_apparent_power float8,
+genset_mains_total_apparent_power float8,
+genset_mains_l1_reactive_power float8,
+genset_mains_l2_reactive_power float8,
+genset_mains_l3_reactive_power float8,
+genset_mains_total_reactive_power float8,
 genset_mains_power_factor_l1 float8,
 genset_mains_power_factor_l2 float8,
 genset_mains_power_factor_l3 float8,
@@ -160,13 +160,13 @@ genset_mains_average_power_factor float8,
 genset_mains_led_status float8,
 genset_mains_breaker_led_status float8,
 genset_cooling_time_setting float8,
-genset_battery_low_voltage float8,
-genset_battery_high_voltage float8,
-genset_overvoltage_shut_down float8,
-genset_overvoltage_warning float8,
-genset_undervoltage_warning float8,
-genset_undervoltage_shut_off_cooling float8,
-genset_overfrequency_warning float8,
+genset_starter_battery_low_voltage_setting float8,
+genset_starter_battery_high_voltage_setting float8,
+genset_ov_shut_down_setting float8,
+genset_ov_warning_setting float8,
+genset_uv_warning_setting float8,
+genset_uv_breaker_off_cooling_setting float8,
+genset_overfreq_warning_setting float8,
 genset_mains_l1_voltage_n float8,
 genset_mains_l2_voltage_n float8,
 genset_mains_l3_voltage_n float8,
@@ -217,93 +217,93 @@ COMMENT ON COLUMN "public"."iot_ac_generator_15m"."genset_l3_voltage_n" IS '·¢µç
 COMMENT ON COLUMN "public"."iot_ac_generator_15m"."genset_remote_reset" IS 'Ô¶³Ì¸´Î»'; 
 COMMENT ON COLUMN "public"."iot_ac_generator_15m"."genset_fuel_level" IS 'ÓÍÎ»'; 
 COMMENT ON COLUMN "public"."iot_ac_generator_15m"."genset_total_fuel_consumption" IS '×ÜÓÍºÄ'; 
-COMMENT ON COLUMN "public"."iot_ac_generator_15m"."genset_breaker_state" IS '¿ª¹Ø×´Ì¬'; 
+COMMENT ON COLUMN "public"."iot_ac_generator_15m"."genset_breaker_state" IS 'ºÏ·ÖÕ¢×´Ì¬'; 
 COMMENT ON COLUMN "public"."iot_ac_generator_15m"."genset_fuel_tank_volume" IS 'ÓÍÏä×ÜÈİÁ¿'; 
+COMMENT ON COLUMN "public"."iot_ac_generator_15m"."genset_stop_led_status_dse" IS 'Éîº£·¢µç»úÍ£Ö¹Ä£Ê½×´Ì¬'; 
 COMMENT ON COLUMN "public"."iot_ac_generator_15m"."genset_manual_led_status_dse" IS 'Éîº£·¢µç»úÊÖ¶¯Ä£Ê½×´Ì¬'; 
 COMMENT ON COLUMN "public"."iot_ac_generator_15m"."genset_auto_led_status_dse" IS 'Éîº£·¢µç»ú×Ô¶¯Ä£Ê½×´Ì¬'; 
 COMMENT ON COLUMN "public"."iot_ac_generator_15m"."genset_test_led_status_dse" IS 'Éîº£·¢µç»ú²âÊÔÄ£Ê½×´Ì¬'; 
-COMMENT ON COLUMN "public"."iot_ac_generator_15m"."genset_stop_led_status_dse" IS 'Éîº£·¢µç»úÍ£Ö¹Ä£Ê½×´Ì¬'; 
 COMMENT ON COLUMN "public"."iot_ac_generator_15m"."genset_runtime_minutes_zz" IS 'ÖÚÖÇ»ú×éµÄ·ÖÖÓÊ±¼ä'; 
 COMMENT ON COLUMN "public"."iot_ac_generator_15m"."genset_emergency_stop_level1" IS '½ô¼±Í£»ú¸æ¾¯'; 
-COMMENT ON COLUMN "public"."iot_ac_generator_15m"."genset_emergency_stop_level2" IS '½ô¼±Í£»ú¹Ø»ú'; 
+COMMENT ON COLUMN "public"."iot_ac_generator_15m"."genset_emergency_stop" IS '½ô¼±Í£»ú¹Ø»ú'; 
 COMMENT ON COLUMN "public"."iot_ac_generator_15m"."genset_emergency_stop_sensor_failure" IS '½ô¼±Í£»ú´«¸ĞÆ÷¹ÊÕÏ'; 
 COMMENT ON COLUMN "public"."iot_ac_generator_15m"."genset_remote_start_stop" IS 'Ô¶³ÌÆô¶¯¹Ø»ú¸æ¾¯'; 
 COMMENT ON COLUMN "public"."iot_ac_generator_15m"."genset_remote_start_stop_sensor_failure" IS 'Ô¶³Ì¿ª¹Ø»ú´«¸ĞÆ÷¹ÊÕÏ'; 
-COMMENT ON COLUMN "public"."iot_ac_generator_15m"."genset_low_oil_pressure_warning" IS 'µÍÓÍÎ»¸æ¾¯'; 
-COMMENT ON COLUMN "public"."iot_ac_generator_15m"."genset_low_oil_pressure_shutdown" IS 'µÍÓÍÎ»Í£»ú¸æ¾¯'; 
+COMMENT ON COLUMN "public"."iot_ac_generator_15m"."genset_low_oil_pressure_warning" IS 'µÍÓÍÑ¹¸æ¾¯'; 
+COMMENT ON COLUMN "public"."iot_ac_generator_15m"."genset_low_oil_pressure_shutdown" IS 'µÍÓÍÑ¹Í£»ú¸æ¾¯'; 
 COMMENT ON COLUMN "public"."iot_ac_generator_15m"."genset_oil_pressure_sensor_failure" IS 'ÓÍÎ»´«¸ĞÆ÷¹ÊÕÏ'; 
-COMMENT ON COLUMN "public"."iot_ac_generator_15m"."genset_coolant_temp_level1" IS 'ÀäÈ´ÒºÎÂ¶È¸æ¾¯'; 
-COMMENT ON COLUMN "public"."iot_ac_generator_15m"."genset_coolant_temp_level2" IS 'ÀäÈ´ÒºÎÂ¶ÈÍ£»ú¸æ¾¯'; 
+COMMENT ON COLUMN "public"."iot_ac_generator_15m"."genset_coolant_temp_warning" IS 'ÀäÈ´ÒºÎÂ¶È¸æ¾¯'; 
+COMMENT ON COLUMN "public"."iot_ac_generator_15m"."genset_coolant_temp_shutdown" IS 'ÀäÈ´ÒºÎÂ¶ÈÍ£»ú¸æ¾¯'; 
 COMMENT ON COLUMN "public"."iot_ac_generator_15m"."genset_coolant_temp_sensor_failure" IS 'ÀäÈ´ÒºÎÂµÙ´«¸ĞÆ÷¹ÊÕÏ'; 
-COMMENT ON COLUMN "public"."iot_ac_generator_15m"."genset_fuel_level_level1" IS 'ÓÍÎ»¸æ¾¯'; 
-COMMENT ON COLUMN "public"."iot_ac_generator_15m"."genset_fuel_level_level2" IS 'ÓÍÎ»Í£»ú'; 
+COMMENT ON COLUMN "public"."iot_ac_generator_15m"."genset_low_fuel_level_warning" IS 'ÓÍÎ»¸æ¾¯'; 
+COMMENT ON COLUMN "public"."iot_ac_generator_15m"."genset_low_fuel_level_shutdown" IS 'ÓÍÎ»Í£»ú'; 
 COMMENT ON COLUMN "public"."iot_ac_generator_15m"."genset_fuel_level_sensor_failure" IS 'ÓÍÎ»´«¸ĞÆ÷¹ÊÕÏ'; 
-COMMENT ON COLUMN "public"."iot_ac_generator_15m"."genset_sd_underspeed_level2" IS '×ªËÙ¹ıµÍÍ£»ú'; 
-COMMENT ON COLUMN "public"."iot_ac_generator_15m"."genset_sd_start_fail_level1" IS 'Æô¶¯Ê§°Ü'; 
-COMMENT ON COLUMN "public"."iot_ac_generator_15m"."genset_voltage_l1l2_level1" IS 'L1L2·¢µçµçÑ¹¸æ¾¯'; 
-COMMENT ON COLUMN "public"."iot_ac_generator_15m"."genset_voltage_l2l3_level1" IS 'L2L3·¢µçµçÑ¹¸æ¾¯'; 
-COMMENT ON COLUMN "public"."iot_ac_generator_15m"."genset_voltage_l3l1_level1" IS 'L3L1·¢µçµçÑ¹¸æ¾¯'; 
-COMMENT ON COLUMN "public"."iot_ac_generator_15m"."genset_voltage_l3l1_level2" IS 'L3L1·¢µçµçÑ¹Í£»ú'; 
-COMMENT ON COLUMN "public"."iot_ac_generator_15m"."genset_boc_gen_voltage_unbalance_phph_level1" IS 'BOC·¢µçµçÑ¹²»Æ½ºâph-ph¸æ¾¯'; 
-COMMENT ON COLUMN "public"."iot_ac_generator_15m"."genset_boc_gen_voltage_unbalance_phph_level2" IS 'BOC·¢µçµçÑ¹²»Æ½ºâph-ph Level 2Í£»ú¸æ¾¯'; 
-COMMENT ON COLUMN "public"."iot_ac_generator_15m"."genset_boc_gen_voltage_unbalance_phn_level1" IS 'BOC·¢µçµçÑ¹²»Æ½ºâph-n¸æ¾¯'; 
-COMMENT ON COLUMN "public"."iot_ac_generator_15m"."genset_boc_gen_voltage_unbalance_phn_level2" IS 'BOC·¢µçµçÑ¹²»Æ½ºâph-n Level 2Í£»ú¸æ¾¯'; 
-COMMENT ON COLUMN "public"."iot_ac_generator_15m"."genset_freq_level1" IS '·¢µçÆµÂÊ¸æ¾¯'; 
-COMMENT ON COLUMN "public"."iot_ac_generator_15m"."genset_freq_level2" IS '·¢µçÆµÂÊÍ£»ú'; 
-COMMENT ON COLUMN "public"."iot_ac_generator_15m"."genset_l1l2_overvoltage_level1" IS 'L1L2·¢µç¹ıÑ¹¸æ¾¯'; 
-COMMENT ON COLUMN "public"."iot_ac_generator_15m"."genset_l1l2_overvoltage_level2" IS 'L1L2·¢µç¹ıÑ¹Í£»ú'; 
-COMMENT ON COLUMN "public"."iot_ac_generator_15m"."genset_l2l3_overvoltage_level1" IS 'L2L3·¢µç¹ıÑ¹¸æ¾¯'; 
-COMMENT ON COLUMN "public"."iot_ac_generator_15m"."genset_l2l3_overvoltage_level2" IS 'L2L3·¢µç¹ıÑ¹Í£»ú'; 
-COMMENT ON COLUMN "public"."iot_ac_generator_15m"."genset_l1_undervoltage_level1" IS 'L1·¢µçÇ·Ñ¹¸æ¾¯'; 
-COMMENT ON COLUMN "public"."iot_ac_generator_15m"."genset_l1_undervoltage_level2" IS 'L1·¢µçÇ·Ñ¹Í£»ú'; 
-COMMENT ON COLUMN "public"."iot_ac_generator_15m"."genset_l2_undervoltage_level1" IS 'L2·¢µçÇ·Ñ¹¸æ¾¯'; 
-COMMENT ON COLUMN "public"."iot_ac_generator_15m"."genset_l2_undervoltage_level2" IS 'L2·¢µçÇ·Ñ¹Í£»ú'; 
-COMMENT ON COLUMN "public"."iot_ac_generator_15m"."genset_wrn_battery_undervoltage_level1" IS 'µç³ØÇ·Ñ¹¸æ¾¯'; 
-COMMENT ON COLUMN "public"."iot_ac_generator_15m"."genset_wrn_battery_undervoltage_level2" IS 'µç³ØÇ·Ñ¹Í£»ú'; 
-COMMENT ON COLUMN "public"."iot_ac_generator_15m"."genset_wrn_battery_overvoltage_level1" IS 'µç³Ø¹ıÑ¹¸æ¾¯'; 
-COMMENT ON COLUMN "public"."iot_ac_generator_15m"."genset_wrn_battery_overvoltage_level2" IS 'µç³Ø¹ıÑ¹Í£»ú'; 
-COMMENT ON COLUMN "public"."iot_ac_generator_15m"."genset_rem_sta_zz" IS 'zzÔ¶³ÌÆô¶¯'; 
-COMMENT ON COLUMN "public"."iot_ac_generator_15m"."genset_rem_sto_zz" IS 'zzÔ¶³ÌÍ£Ö¹'; 
-COMMENT ON COLUMN "public"."iot_ac_generator_15m"."genset_rem_aut_zz" IS 'zzÔ¶³Ì×Ô¶¯'; 
-COMMENT ON COLUMN "public"."iot_ac_generator_15m"."genset_rem_man_zz" IS 'zzÔ¶³ÌÊÖ¶¯'; 
+COMMENT ON COLUMN "public"."iot_ac_generator_15m"."genset_underspeed_sd" IS '×ªËÙ¹ıµÍÍ£»ú'; 
+COMMENT ON COLUMN "public"."iot_ac_generator_15m"."genset_sd_start_fail" IS 'Æô¶¯Ê§°Ü'; 
+COMMENT ON COLUMN "public"."iot_ac_generator_15m"."genset_voltage_l1l2_warning" IS 'L1L2·¢µçµçÑ¹¸æ¾¯'; 
+COMMENT ON COLUMN "public"."iot_ac_generator_15m"."genset_voltage_l2l3_warning" IS 'L2L3·¢µçµçÑ¹¸æ¾¯'; 
+COMMENT ON COLUMN "public"."iot_ac_generator_15m"."genset_voltage_l3l1_warning" IS 'L3L1·¢µçµçÑ¹¸æ¾¯'; 
+COMMENT ON COLUMN "public"."iot_ac_generator_15m"."genset_voltage_l3l1_sd" IS 'L3L1·¢µçµçÑ¹Í£»ú'; 
+COMMENT ON COLUMN "public"."iot_ac_generator_15m"."genset_boc_voltage_unbalance_phph_warning" IS 'BOC·¢µçµçÑ¹²»Æ½ºâph-ph¸æ¾¯'; 
+COMMENT ON COLUMN "public"."iot_ac_generator_15m"."genset_boc_voltage_unbalance_phph_sd" IS 'BOC·¢µçµçÑ¹²»Æ½ºâph-ph Level 2Í£»ú¸æ¾¯'; 
+COMMENT ON COLUMN "public"."iot_ac_generator_15m"."genset_boc_voltage_unbalance_phn_warning" IS 'BOC·¢µçµçÑ¹²»Æ½ºâph-n¸æ¾¯'; 
+COMMENT ON COLUMN "public"."iot_ac_generator_15m"."genset_boc_voltage_unbalance_phn_sd" IS 'BOC·¢µçµçÑ¹²»Æ½ºâph-n Level 2Í£»ú¸æ¾¯'; 
+COMMENT ON COLUMN "public"."iot_ac_generator_15m"."genset_freq_warning" IS '·¢µçÆµÂÊ¸æ¾¯'; 
+COMMENT ON COLUMN "public"."iot_ac_generator_15m"."genset_freq_sd" IS '·¢µçÆµÂÊÍ£»ú'; 
+COMMENT ON COLUMN "public"."iot_ac_generator_15m"."genset_l1l2_ov_warning" IS 'L1L2·¢µç¹ıÑ¹¸æ¾¯'; 
+COMMENT ON COLUMN "public"."iot_ac_generator_15m"."genset_l1l2_ov_sd" IS 'L1L2·¢µç¹ıÑ¹Í£»ú'; 
+COMMENT ON COLUMN "public"."iot_ac_generator_15m"."genset_l2l3_ov_warning" IS 'L2L3·¢µç¹ıÑ¹¸æ¾¯'; 
+COMMENT ON COLUMN "public"."iot_ac_generator_15m"."genset_l2l3_ov_sd" IS 'L2L3·¢µç¹ıÑ¹Í£»ú'; 
+COMMENT ON COLUMN "public"."iot_ac_generator_15m"."genset_l1_uv_warning" IS 'L1·¢µçÇ·Ñ¹¸æ¾¯'; 
+COMMENT ON COLUMN "public"."iot_ac_generator_15m"."genset_l1_uv_sd" IS 'L1·¢µçÇ·Ñ¹Í£»ú'; 
+COMMENT ON COLUMN "public"."iot_ac_generator_15m"."genset_l2_uv_warning" IS 'L2·¢µçÇ·Ñ¹¸æ¾¯'; 
+COMMENT ON COLUMN "public"."iot_ac_generator_15m"."genset_l2_uv_sd" IS 'L2·¢µçÇ·Ñ¹Í£»ú'; 
+COMMENT ON COLUMN "public"."iot_ac_generator_15m"."genset_starter_battery_uv_warning" IS 'µç³ØÇ·Ñ¹¸æ¾¯'; 
+COMMENT ON COLUMN "public"."iot_ac_generator_15m"."genset_starter_battery_uv_sd" IS 'µç³ØÇ·Ñ¹Í£»ú'; 
+COMMENT ON COLUMN "public"."iot_ac_generator_15m"."genset_starter_battery_ov_warning" IS 'µç³Ø¹ıÑ¹¸æ¾¯'; 
+COMMENT ON COLUMN "public"."iot_ac_generator_15m"."genset_starter_battery_ov_sd" IS 'µç³Ø¹ıÑ¹Í£»ú'; 
+COMMENT ON COLUMN "public"."iot_ac_generator_15m"."genset_remote_start_zz" IS 'zzÔ¶³ÌÆô¶¯'; 
+COMMENT ON COLUMN "public"."iot_ac_generator_15m"."genset_remote_stop_zz" IS 'zzÔ¶³ÌÍ£»ú'; 
+COMMENT ON COLUMN "public"."iot_ac_generator_15m"."genset_remote_auto_zz" IS 'zzÔ¶³Ì×Ô¶¯'; 
+COMMENT ON COLUMN "public"."iot_ac_generator_15m"."genset_remote_manual_zz" IS 'zzÔ¶³ÌÊÖ¶¯'; 
 COMMENT ON COLUMN "public"."iot_ac_generator_15m"."genset_wrn_charging_alternator_fail" IS 'Wrn³äµç·¢µç»ú¹ÊÕÏ'; 
 COMMENT ON COLUMN "public"."iot_ac_generator_15m"."genset_sd_charging_alternator_fail" IS 'Sd³äµç·¢µç»ú¹ÊÕÏ'; 
 COMMENT ON COLUMN "public"."iot_ac_generator_15m"."genset_wrn_stop_fail" IS 'WrnÍ£Ö¹Ê§°Ü'; 
-COMMENT ON COLUMN "public"."iot_ac_generator_15m"."genset_sd_overspeed" IS 'Sd³¬ËÙ'; 
-COMMENT ON COLUMN "public"."iot_ac_generator_15m"."genset_sd_rpm_measurement_fail" IS 'Sd RPM²âÁ¿Ê§°Ü'; 
-COMMENT ON COLUMN "public"."iot_ac_generator_15m"."genset_sd_battery_flat" IS 'Sdµç³Ø'; 
+COMMENT ON COLUMN "public"."iot_ac_generator_15m"."genset_sd_overspeed" IS '³¬ËÙÍ£»ú'; 
+COMMENT ON COLUMN "public"."iot_ac_generator_15m"."genset_sd_rpm_measurement_fail" IS '×ªËÙ²âÁ¿¹ÊÕÏÍ£»ú'; 
+COMMENT ON COLUMN "public"."iot_ac_generator_15m"."genset_sd_battery_flat" IS 'µç³ØºÄ¾¡Í£»ú '; 
 COMMENT ON COLUMN "public"."iot_ac_generator_15m"."genset_charge_alternator_failure_dse" IS '³äµç·¢µç»ú¹ÊÕÏ'; 
 COMMENT ON COLUMN "public"."iot_ac_generator_15m"."genset_fail_to_stop_dse" IS 'Í£»úÊ§°Ü'; 
-COMMENT ON COLUMN "public"."iot_ac_generator_15m"."genset_fail_to_close_dse" IS 'Í£Ö¹·¢µçÊ§°Ü'; 
-COMMENT ON COLUMN "public"."iot_ac_generator_15m"."genset_mains_fail_to_close_dse" IS 'ÊĞµç¹Ø±ÕÊ§°Ü'; 
-COMMENT ON COLUMN "public"."iot_ac_generator_15m"."genset_oil_pressure_sender_fault_dse" IS 'ÓÍÑ¹·¢ËÍÆ÷¹ÊÕÏ'; 
+COMMENT ON COLUMN "public"."iot_ac_generator_15m"."genset_fail_to_close_dse" IS '·¢µçºÏÕ¢Ê§°Ü'; 
+COMMENT ON COLUMN "public"."iot_ac_generator_15m"."genset_mains_fail_to_close_dse" IS 'ÊĞµçºÏÕ¢Ê§°Ü'; 
+COMMENT ON COLUMN "public"."iot_ac_generator_15m"."genset_oil_pressure_sender_fault_dse" IS 'ÓÍÑ¹´«¸ĞÆ÷¹ÊÕÏ'; 
 COMMENT ON COLUMN "public"."iot_ac_generator_15m"."genset_loss_of_magnetic_pick_up_dse" IS '´Å¸ĞÓ¦¶ªÊ§'; 
 COMMENT ON COLUMN "public"."iot_ac_generator_15m"."genset_magnetic_pick_up_open_circuit_dse" IS '´Å¸ĞÓ¦¿ªÂ·'; 
-COMMENT ON COLUMN "public"."iot_ac_generator_15m"."genset_high_current_dse" IS '·¢µç»úµçÁ÷´ò'; 
+COMMENT ON COLUMN "public"."iot_ac_generator_15m"."genset_high_current_dse" IS '·¢µç»ú¹ıÁ÷'; 
 COMMENT ON COLUMN "public"."iot_ac_generator_15m"."genset_can_ecu_warning_dse" IS 'CAN ECU¾¯¸æ'; 
 COMMENT ON COLUMN "public"."iot_ac_generator_15m"."genset_can_ecu_shutdown_dse" IS 'CAN ECU¹Ø»ú'; 
-COMMENT ON COLUMN "public"."iot_ac_generator_15m"."genset_can_ecu_data_fail_dse" IS 'CAN ECUÊı¾İÊ§°Ü'; 
-COMMENT ON COLUMN "public"."iot_ac_generator_15m"."genset_low_oil_level_switch_dse" IS 'µÍÓÍÎ»¿ª¹Ø'; 
-COMMENT ON COLUMN "public"."iot_ac_generator_15m"."genset_high_temp_switch_dse" IS '¸ßÎÂ¿ª¹Ø'; 
-COMMENT ON COLUMN "public"."iot_ac_generator_15m"."genset_low_fuel_level_switch_dse" IS 'µÍÈ¼ÓÍÎ»¿ª¹Ø'; 
+COMMENT ON COLUMN "public"."iot_ac_generator_15m"."genset_can_ecu_data_fail_dse" IS 'CAN ECUÊı¾İÍ¨Ñ¶Ê§°Ü'; 
+COMMENT ON COLUMN "public"."iot_ac_generator_15m"."genset_low_oil_level_di_input_dse" IS 'µÍÓÍÎ»¿ª¹Ø'; 
+COMMENT ON COLUMN "public"."iot_ac_generator_15m"."genset_high_temp_di_input_dse" IS '¸ßÎÂ¿ª¹Ø'; 
+COMMENT ON COLUMN "public"."iot_ac_generator_15m"."genset_low_fuel_level_di_input_dse" IS 'µÍÈ¼ÓÍÎ»¿ª¹ØÁ¿'; 
 COMMENT ON COLUMN "public"."iot_ac_generator_15m"."genset_expansion_unit_watchdog_alarm_dse" IS 'À©Õ¹µ¥Ôª¿´ÃÅ¹·±¨¾¯'; 
-COMMENT ON COLUMN "public"."iot_ac_generator_15m"."genset_kw_overload_alarm_dse" IS 'kW¹ıÔØ±¨¾¯Æ÷'; 
-COMMENT ON COLUMN "public"."iot_ac_generator_15m"."genset_negative_phase_sequence_current_alarm_dse" IS '¸ºÏàĞòµçÁ÷±¨¾¯'; 
+COMMENT ON COLUMN "public"."iot_ac_generator_15m"."genset_overload_alarm_dse" IS '³¬ÔØ±¨¾¯'; 
+COMMENT ON COLUMN "public"."iot_ac_generator_15m"."genset_negative_phase_sequence_current_alarm_dse" IS 'ÈıÏàµçÁ÷²»Æ½ºâ±¨¾¯'; 
 COMMENT ON COLUMN "public"."iot_ac_generator_15m"."genset_earth_fault_trip_alarm_dse" IS '½ÓµØ¹ÊÕÏÌøÕ¢±¨¾¯Æ÷'; 
 COMMENT ON COLUMN "public"."iot_ac_generator_15m"."genset_phase_rotation_alarm_dse" IS '·¢µç»úÏàÎ»Ğı×ª±¨¾¯Æ÷'; 
 COMMENT ON COLUMN "public"."iot_ac_generator_15m"."genset_auto_voltage_sense_fail_dse" IS '×Ô¶¯µçÑ¹¼ì²â¹ÊÕÏ'; 
-COMMENT ON COLUMN "public"."iot_ac_generator_15m"."genset_loading_freq_alarm_dse" IS '¼ÓÔØÆµÂÊ±¨¾¯'; 
-COMMENT ON COLUMN "public"."iot_ac_generator_15m"."genset_loading_voltage_alarm_dse" IS '¸ºÔØµçÑ¹±¨¾¯'; 
+COMMENT ON COLUMN "public"."iot_ac_generator_15m"."genset_loading_freq_alarm_dse" IS '´øÔØÆµÂÊ±¨¾¯'; 
+COMMENT ON COLUMN "public"."iot_ac_generator_15m"."genset_loading_voltage_alarm_dse" IS '´øÔØµçÑ¹±¨¾¯'; 
 COMMENT ON COLUMN "public"."iot_ac_generator_15m"."genset_short_circuit_dse" IS '·¢µç»ú¶ÌÂ·'; 
-COMMENT ON COLUMN "public"."iot_ac_generator_15m"."genset_mains_high_current_dse" IS 'ÊĞµç´óµçÁ÷'; 
+COMMENT ON COLUMN "public"."iot_ac_generator_15m"."genset_mains_high_current_dse" IS 'ÊĞµç¹ıÁ÷'; 
 COMMENT ON COLUMN "public"."iot_ac_generator_15m"."genset_mains_earth_fault_dse" IS 'ÊĞµç½ÓµØ¹ÊÕÏ'; 
-COMMENT ON COLUMN "public"."iot_ac_generator_15m"."genset_mains_short_circuit_zz" IS 'ÊĞµç¶ÌÂ·'; 
-COMMENT ON COLUMN "public"."iot_ac_generator_15m"."genset_ecu_protect_zz" IS 'ECU±£»¤'; 
+COMMENT ON COLUMN "public"."iot_ac_generator_15m"."genset_mains_short_circuit_dse" IS 'ÊĞµç¶ÌÂ·'; 
+COMMENT ON COLUMN "public"."iot_ac_generator_15m"."genset_ecu_protect_dse" IS 'ECU±£»¤'; 
 COMMENT ON COLUMN "public"."iot_ac_generator_15m"."genset_overspeed_alarm_shutdown_zz" IS '³¬ËÙ±¨¾¯Í£»ú'; 
 COMMENT ON COLUMN "public"."iot_ac_generator_15m"."genset_loss_of_speed_signal_alarm_zz" IS 'ËÙ¶ÈĞÅºÅ¶ªÊ§±¨¾¯'; 
 COMMENT ON COLUMN "public"."iot_ac_generator_15m"."genset_over_freq_sd_alarm_zz" IS '·¢µç¹ıÆµÍ£»ú±¨¾¯'; 
 COMMENT ON COLUMN "public"."iot_ac_generator_15m"."genset_under_freq_sd_zz" IS '·¢µçÇ·ÆµÍ£»ú¸æ¾¯'; 
-COMMENT ON COLUMN "public"."iot_ac_generator_15m"."genset_gen_over_current_shutdown_zz" IS '·¢µç¹ıÁ÷Í£»ú¸æ¾¯'; 
+COMMENT ON COLUMN "public"."iot_ac_generator_15m"."genset_over_current_shutdown_zz" IS '·¢µç¹ıÁ÷Í£»ú¸æ¾¯'; 
 COMMENT ON COLUMN "public"."iot_ac_generator_15m"."genset_reverse_power_alarm_shutdown_zz" IS 'Äæ¹¦ÂÊÍ£»ú¸æ¾¯'; 
 COMMENT ON COLUMN "public"."iot_ac_generator_15m"."genset_over_power_alarm_shutdown_zz" IS '¹ı¹¦ÂÊÍ£»ú¸æ¾¯'; 
 COMMENT ON COLUMN "public"."iot_ac_generator_15m"."genset_high_temp_input_alarm_shutdown_zz" IS '¸ßÎÂÊäÈëÍ£»ú¸æ¾¯'; 
@@ -314,32 +314,32 @@ COMMENT ON COLUMN "public"."iot_ac_generator_15m"."genset_mains_l1_current" IS '
 COMMENT ON COLUMN "public"."iot_ac_generator_15m"."genset_mains_l2_current" IS 'ÊĞµçL2ÏàµçÁ÷'; 
 COMMENT ON COLUMN "public"."iot_ac_generator_15m"."genset_mains_l3_current" IS 'ÊĞµçL3ÏàµçÁ÷'; 
 COMMENT ON COLUMN "public"."iot_ac_generator_15m"."genset_mains_earth_current" IS 'ÊĞµç½ÓµØµçÁ÷'; 
-COMMENT ON COLUMN "public"."iot_ac_generator_15m"."genset_mains_l1_watts" IS 'ÊĞµçL1ÏàÓĞ¹¦¹¦ÂÊ'; 
-COMMENT ON COLUMN "public"."iot_ac_generator_15m"."genset_mains_l2_watts" IS 'ÊĞµçL2ÏàÓĞ¹¦¹¦ÂÊ'; 
-COMMENT ON COLUMN "public"."iot_ac_generator_15m"."genset_mains_l3_watts" IS 'ÊĞµçL3ÏàÓĞ¹¦¹¦ÂÊ'; 
-COMMENT ON COLUMN "public"."iot_ac_generator_15m"."genset_mains_total_watts" IS 'ÊĞµç×ÜÓĞ¹¦¹¦ÂÊ'; 
-COMMENT ON COLUMN "public"."iot_ac_generator_15m"."genset_mains_l1_va" IS 'ÊĞµçL1ÏàÊÓÔÚ¹¦ÂÊ'; 
-COMMENT ON COLUMN "public"."iot_ac_generator_15m"."genset_mains_l2_va" IS 'ÊĞµçL2ÏàÊÓÔÚ¹¦ÂÊ'; 
-COMMENT ON COLUMN "public"."iot_ac_generator_15m"."genset_mains_l3_va" IS 'ÊĞµçL3ÏàÊÓÔÚ¹¦ÂÊ'; 
-COMMENT ON COLUMN "public"."iot_ac_generator_15m"."genset_mains_total_va" IS 'ÊĞµç×ÜÊÓÔÚ¹¦ÂÊ'; 
-COMMENT ON COLUMN "public"."iot_ac_generator_15m"."genset_mains_l1_var" IS 'ÊĞµçL1ÏàÎŞ¹¦¹¦ÂÊ'; 
-COMMENT ON COLUMN "public"."iot_ac_generator_15m"."genset_mains_l2_var" IS 'ÊĞµçL2ÏàÎŞ¹¦¹¦ÂÊ'; 
-COMMENT ON COLUMN "public"."iot_ac_generator_15m"."genset_mains_l3_var" IS 'ÊĞµçL3ÏàÎŞ¹¦¹¦ÂÊ'; 
-COMMENT ON COLUMN "public"."iot_ac_generator_15m"."genset_mains_total_var" IS 'ÊĞµç×ÜÎŞ¹¦¹¦ÂÊ'; 
+COMMENT ON COLUMN "public"."iot_ac_generator_15m"."genset_mains_l1_active_power" IS 'ÊĞµçL1ÏàÓĞ¹¦¹¦ÂÊ'; 
+COMMENT ON COLUMN "public"."iot_ac_generator_15m"."genset_mains_l2_active_power" IS 'ÊĞµçL2ÏàÓĞ¹¦¹¦ÂÊ'; 
+COMMENT ON COLUMN "public"."iot_ac_generator_15m"."genset_mains_l3_active_power" IS 'ÊĞµçL3ÏàÓĞ¹¦¹¦ÂÊ'; 
+COMMENT ON COLUMN "public"."iot_ac_generator_15m"."genset_mains_total_active_power" IS 'ÊĞµç×ÜÓĞ¹¦¹¦ÂÊ'; 
+COMMENT ON COLUMN "public"."iot_ac_generator_15m"."genset_mains_l1_apparent_power" IS 'ÊĞµçL1ÏàÊÓÔÚ¹¦ÂÊ'; 
+COMMENT ON COLUMN "public"."iot_ac_generator_15m"."genset_mains_l2_apparent_power" IS 'ÊĞµçL2ÏàÊÓÔÚ¹¦ÂÊ'; 
+COMMENT ON COLUMN "public"."iot_ac_generator_15m"."genset_mains_l3_apparent_power" IS 'ÊĞµçL3ÏàÊÓÔÚ¹¦ÂÊ'; 
+COMMENT ON COLUMN "public"."iot_ac_generator_15m"."genset_mains_total_apparent_power" IS 'ÊĞµç×ÜÊÓÔÚ¹¦ÂÊ'; 
+COMMENT ON COLUMN "public"."iot_ac_generator_15m"."genset_mains_l1_reactive_power" IS 'ÊĞµçL1ÏàÎŞ¹¦¹¦ÂÊ'; 
+COMMENT ON COLUMN "public"."iot_ac_generator_15m"."genset_mains_l2_reactive_power" IS 'ÊĞµçL2ÏàÎŞ¹¦¹¦ÂÊ'; 
+COMMENT ON COLUMN "public"."iot_ac_generator_15m"."genset_mains_l3_reactive_power" IS 'ÊĞµçL3ÏàÎŞ¹¦¹¦ÂÊ'; 
+COMMENT ON COLUMN "public"."iot_ac_generator_15m"."genset_mains_total_reactive_power" IS 'ÊĞµç×ÜÎŞ¹¦¹¦ÂÊ'; 
 COMMENT ON COLUMN "public"."iot_ac_generator_15m"."genset_mains_power_factor_l1" IS 'ÊĞµçL1Ïà¹¦ÂÊÒòËØ'; 
 COMMENT ON COLUMN "public"."iot_ac_generator_15m"."genset_mains_power_factor_l2" IS 'ÊĞµçL2Ïà¹¦ÂÊÒòËØ'; 
 COMMENT ON COLUMN "public"."iot_ac_generator_15m"."genset_mains_power_factor_l3" IS 'ÊĞµçL3Ïà¹¦ÂÊÒòËØ'; 
 COMMENT ON COLUMN "public"."iot_ac_generator_15m"."genset_mains_average_power_factor" IS 'ÊĞµçÆ½¾ù¹¦ÂÊÒòËØ'; 
 COMMENT ON COLUMN "public"."iot_ac_generator_15m"."genset_mains_led_status" IS 'ÊĞµçµÆ×´Ì¬'; 
 COMMENT ON COLUMN "public"."iot_ac_generator_15m"."genset_mains_breaker_led_status" IS 'ÊĞµç¶ÏÂ·Æ÷µÆ×´Ì¬'; 
-COMMENT ON COLUMN "public"."iot_ac_generator_15m"."genset_cooling_time_setting" IS 'Cooling Time Setting'; 
-COMMENT ON COLUMN "public"."iot_ac_generator_15m"."genset_battery_low_voltage" IS 'Battery Low Voltage'; 
-COMMENT ON COLUMN "public"."iot_ac_generator_15m"."genset_battery_high_voltage" IS 'Battery High Voltage'; 
-COMMENT ON COLUMN "public"."iot_ac_generator_15m"."genset_overvoltage_shut_down" IS '·¢µç»ú¹ıÑ¹¹Ø±Õ'; 
-COMMENT ON COLUMN "public"."iot_ac_generator_15m"."genset_overvoltage_warning" IS '·¢µç»ú¹ıÑ¹¾¯¸æ '; 
-COMMENT ON COLUMN "public"."iot_ac_generator_15m"."genset_undervoltage_warning" IS '·¢µç»úÇ·Ñ¹¾¯¸æ '; 
-COMMENT ON COLUMN "public"."iot_ac_generator_15m"."genset_undervoltage_shut_off_cooling" IS '·¢µç»úÇ·Ñ¹¹Ø±ÕÀäÈ´'; 
-COMMENT ON COLUMN "public"."iot_ac_generator_15m"."genset_overfrequency_warning" IS '·¢µç»úÆµÂÊ¹ı¸ß¾¯¸æ'; 
+COMMENT ON COLUMN "public"."iot_ac_generator_15m"."genset_cooling_time_setting" IS 'ÀäÈ´Ê±¼äÉè¶¨Öµ'; 
+COMMENT ON COLUMN "public"."iot_ac_generator_15m"."genset_starter_battery_low_voltage_setting" IS 'µç³ØµçÑ¹µÍÉè¶¨Öµ'; 
+COMMENT ON COLUMN "public"."iot_ac_generator_15m"."genset_starter_battery_high_voltage_setting" IS 'µç³ØµçÑ¹¸ßÉè¶¨Öµ'; 
+COMMENT ON COLUMN "public"."iot_ac_generator_15m"."genset_ov_shut_down_setting" IS '·¢µç»ú¹ıÑ¹Í£»úÉè¶¨Öµ'; 
+COMMENT ON COLUMN "public"."iot_ac_generator_15m"."genset_ov_warning_setting" IS '·¢µç»ú¹ıÑ¹¾¯¸æÉè¶¨Öµ'; 
+COMMENT ON COLUMN "public"."iot_ac_generator_15m"."genset_uv_warning_setting" IS '·¢µç»úÇ·Ñ¹¾¯¸æÉè¶¨Öµ'; 
+COMMENT ON COLUMN "public"."iot_ac_generator_15m"."genset_uv_breaker_off_cooling_setting" IS '·¢µç»úÇ·Ñ¹·ÖÕ¢ÀäÈ´Éè¶¨Öµ'; 
+COMMENT ON COLUMN "public"."iot_ac_generator_15m"."genset_overfreq_warning_setting" IS '·¢µç»úÆµÂÊ¹ı¸ß¾¯¸æÉè¶¨Öµ'; 
 COMMENT ON COLUMN "public"."iot_ac_generator_15m"."genset_mains_l1_voltage_n" IS 'ÊĞµçL1-NÏàµçÑ¹'; 
 COMMENT ON COLUMN "public"."iot_ac_generator_15m"."genset_mains_l2_voltage_n" IS 'ÊĞµçL2-NÏàµçÑ¹'; 
 COMMENT ON COLUMN "public"."iot_ac_generator_15m"."genset_mains_l3_voltage_n" IS 'ÊĞµçL3-NÏàµçÑ¹'; 
@@ -395,53 +395,53 @@ genset_fuel_level float8,
 genset_total_fuel_consumption float8,
 genset_breaker_state float8,
 genset_fuel_tank_volume float8,
+genset_stop_led_status_dse float8,
 genset_manual_led_status_dse float8,
 genset_auto_led_status_dse float8,
 genset_test_led_status_dse float8,
-genset_stop_led_status_dse float8,
 genset_runtime_minutes_zz float8,
 genset_emergency_stop_level1 float8,
-genset_emergency_stop_level2 float8,
+genset_emergency_stop float8,
 genset_emergency_stop_sensor_failure float8,
 genset_remote_start_stop float8,
 genset_remote_start_stop_sensor_failure float8,
 genset_low_oil_pressure_warning float8,
 genset_low_oil_pressure_shutdown float8,
 genset_oil_pressure_sensor_failure float8,
-genset_coolant_temp_level1 float8,
-genset_coolant_temp_level2 float8,
+genset_coolant_temp_warning float8,
+genset_coolant_temp_shutdown float8,
 genset_coolant_temp_sensor_failure float8,
-genset_fuel_level_level1 float8,
-genset_fuel_level_level2 float8,
+genset_low_fuel_level_warning float8,
+genset_low_fuel_level_shutdown float8,
 genset_fuel_level_sensor_failure float8,
-genset_sd_underspeed_level2 float8,
-genset_sd_start_fail_level1 float8,
-genset_voltage_l1l2_level1 float8,
-genset_voltage_l2l3_level1 float8,
-genset_voltage_l3l1_level1 float8,
-genset_voltage_l3l1_level2 float8,
-genset_boc_gen_voltage_unbalance_phph_level1 float8,
-genset_boc_gen_voltage_unbalance_phph_level2 float8,
-genset_boc_gen_voltage_unbalance_phn_level1 float8,
-genset_boc_gen_voltage_unbalance_phn_level2 float8,
-genset_freq_level1 float8,
-genset_freq_level2 float8,
-genset_l1l2_overvoltage_level1 float8,
-genset_l1l2_overvoltage_level2 float8,
-genset_l2l3_overvoltage_level1 float8,
-genset_l2l3_overvoltage_level2 float8,
-genset_l1_undervoltage_level1 float8,
-genset_l1_undervoltage_level2 float8,
-genset_l2_undervoltage_level1 float8,
-genset_l2_undervoltage_level2 float8,
-genset_wrn_battery_undervoltage_level1 float8,
-genset_wrn_battery_undervoltage_level2 float8,
-genset_wrn_battery_overvoltage_level1 float8,
-genset_wrn_battery_overvoltage_level2 float8,
-genset_rem_sta_zz float8,
-genset_rem_sto_zz float8,
-genset_rem_aut_zz float8,
-genset_rem_man_zz float8,
+genset_underspeed_sd float8,
+genset_sd_start_fail float8,
+genset_voltage_l1l2_warning float8,
+genset_voltage_l2l3_warning float8,
+genset_voltage_l3l1_warning float8,
+genset_voltage_l3l1_sd float8,
+genset_boc_voltage_unbalance_phph_warning float8,
+genset_boc_voltage_unbalance_phph_sd float8,
+genset_boc_voltage_unbalance_phn_warning float8,
+genset_boc_voltage_unbalance_phn_sd float8,
+genset_freq_warning float8,
+genset_freq_sd float8,
+genset_l1l2_ov_warning float8,
+genset_l1l2_ov_sd float8,
+genset_l2l3_ov_warning float8,
+genset_l2l3_ov_sd float8,
+genset_l1_uv_warning float8,
+genset_l1_uv_sd float8,
+genset_l2_uv_warning float8,
+genset_l2_uv_sd float8,
+genset_starter_battery_uv_warning float8,
+genset_starter_battery_uv_sd float8,
+genset_starter_battery_ov_warning float8,
+genset_starter_battery_ov_sd float8,
+genset_remote_start_zz float8,
+genset_remote_stop_zz float8,
+genset_remote_auto_zz float8,
+genset_remote_manual_zz float8,
 genset_wrn_charging_alternator_fail float8,
 genset_sd_charging_alternator_fail float8,
 genset_wrn_stop_fail float8,
@@ -459,11 +459,11 @@ genset_high_current_dse float8,
 genset_can_ecu_warning_dse float8,
 genset_can_ecu_shutdown_dse float8,
 genset_can_ecu_data_fail_dse float8,
-genset_low_oil_level_switch_dse float8,
-genset_high_temp_switch_dse float8,
-genset_low_fuel_level_switch_dse float8,
+genset_low_oil_level_di_input_dse float8,
+genset_high_temp_di_input_dse float8,
+genset_low_fuel_level_di_input_dse float8,
 genset_expansion_unit_watchdog_alarm_dse float8,
-genset_kw_overload_alarm_dse float8,
+genset_overload_alarm_dse float8,
 genset_negative_phase_sequence_current_alarm_dse float8,
 genset_earth_fault_trip_alarm_dse float8,
 genset_phase_rotation_alarm_dse float8,
@@ -473,13 +473,13 @@ genset_loading_voltage_alarm_dse float8,
 genset_short_circuit_dse float8,
 genset_mains_high_current_dse float8,
 genset_mains_earth_fault_dse float8,
-genset_mains_short_circuit_zz float8,
-genset_ecu_protect_zz float8,
+genset_mains_short_circuit_dse float8,
+genset_ecu_protect_dse float8,
 genset_overspeed_alarm_shutdown_zz float8,
 genset_loss_of_speed_signal_alarm_zz float8,
 genset_over_freq_sd_alarm_zz float8,
 genset_under_freq_sd_zz float8,
-genset_gen_over_current_shutdown_zz float8,
+genset_over_current_shutdown_zz float8,
 genset_reverse_power_alarm_shutdown_zz float8,
 genset_over_power_alarm_shutdown_zz float8,
 genset_high_temp_input_alarm_shutdown_zz float8,
@@ -490,18 +490,18 @@ genset_mains_l1_current float8,
 genset_mains_l2_current float8,
 genset_mains_l3_current float8,
 genset_mains_earth_current float8,
-genset_mains_l1_watts float8,
-genset_mains_l2_watts float8,
-genset_mains_l3_watts float8,
-genset_mains_total_watts float8,
-genset_mains_l1_va float8,
-genset_mains_l2_va float8,
-genset_mains_l3_va float8,
-genset_mains_total_va float8,
-genset_mains_l1_var float8,
-genset_mains_l2_var float8,
-genset_mains_l3_var float8,
-genset_mains_total_var float8,
+genset_mains_l1_active_power float8,
+genset_mains_l2_active_power float8,
+genset_mains_l3_active_power float8,
+genset_mains_total_active_power float8,
+genset_mains_l1_apparent_power float8,
+genset_mains_l2_apparent_power float8,
+genset_mains_l3_apparent_power float8,
+genset_mains_total_apparent_power float8,
+genset_mains_l1_reactive_power float8,
+genset_mains_l2_reactive_power float8,
+genset_mains_l3_reactive_power float8,
+genset_mains_total_reactive_power float8,
 genset_mains_power_factor_l1 float8,
 genset_mains_power_factor_l2 float8,
 genset_mains_power_factor_l3 float8,
@@ -509,13 +509,13 @@ genset_mains_average_power_factor float8,
 genset_mains_led_status float8,
 genset_mains_breaker_led_status float8,
 genset_cooling_time_setting float8,
-genset_battery_low_voltage float8,
-genset_battery_high_voltage float8,
-genset_overvoltage_shut_down float8,
-genset_overvoltage_warning float8,
-genset_undervoltage_warning float8,
-genset_undervoltage_shut_off_cooling float8,
-genset_overfrequency_warning float8,
+genset_starter_battery_low_voltage_setting float8,
+genset_starter_battery_high_voltage_setting float8,
+genset_ov_shut_down_setting float8,
+genset_ov_warning_setting float8,
+genset_uv_warning_setting float8,
+genset_uv_breaker_off_cooling_setting float8,
+genset_overfreq_warning_setting float8,
 genset_mains_l1_voltage_n float8,
 genset_mains_l2_voltage_n float8,
 genset_mains_l3_voltage_n float8,
@@ -566,93 +566,93 @@ COMMENT ON COLUMN "public"."iot_ac_generator_1h"."genset_l3_voltage_n" IS '·¢µç»
 COMMENT ON COLUMN "public"."iot_ac_generator_1h"."genset_remote_reset" IS 'Ô¶³Ì¸´Î»'; 
 COMMENT ON COLUMN "public"."iot_ac_generator_1h"."genset_fuel_level" IS 'ÓÍÎ»'; 
 COMMENT ON COLUMN "public"."iot_ac_generator_1h"."genset_total_fuel_consumption" IS '×ÜÓÍºÄ'; 
-COMMENT ON COLUMN "public"."iot_ac_generator_1h"."genset_breaker_state" IS '¿ª¹Ø×´Ì¬'; 
+COMMENT ON COLUMN "public"."iot_ac_generator_1h"."genset_breaker_state" IS 'ºÏ·ÖÕ¢×´Ì¬'; 
 COMMENT ON COLUMN "public"."iot_ac_generator_1h"."genset_fuel_tank_volume" IS 'ÓÍÏä×ÜÈİÁ¿'; 
+COMMENT ON COLUMN "public"."iot_ac_generator_1h"."genset_stop_led_status_dse" IS 'Éîº£·¢µç»úÍ£Ö¹Ä£Ê½×´Ì¬'; 
 COMMENT ON COLUMN "public"."iot_ac_generator_1h"."genset_manual_led_status_dse" IS 'Éîº£·¢µç»úÊÖ¶¯Ä£Ê½×´Ì¬'; 
 COMMENT ON COLUMN "public"."iot_ac_generator_1h"."genset_auto_led_status_dse" IS 'Éîº£·¢µç»ú×Ô¶¯Ä£Ê½×´Ì¬'; 
 COMMENT ON COLUMN "public"."iot_ac_generator_1h"."genset_test_led_status_dse" IS 'Éîº£·¢µç»ú²âÊÔÄ£Ê½×´Ì¬'; 
-COMMENT ON COLUMN "public"."iot_ac_generator_1h"."genset_stop_led_status_dse" IS 'Éîº£·¢µç»úÍ£Ö¹Ä£Ê½×´Ì¬'; 
 COMMENT ON COLUMN "public"."iot_ac_generator_1h"."genset_runtime_minutes_zz" IS 'ÖÚÖÇ»ú×éµÄ·ÖÖÓÊ±¼ä'; 
 COMMENT ON COLUMN "public"."iot_ac_generator_1h"."genset_emergency_stop_level1" IS '½ô¼±Í£»ú¸æ¾¯'; 
-COMMENT ON COLUMN "public"."iot_ac_generator_1h"."genset_emergency_stop_level2" IS '½ô¼±Í£»ú¹Ø»ú'; 
+COMMENT ON COLUMN "public"."iot_ac_generator_1h"."genset_emergency_stop" IS '½ô¼±Í£»ú¹Ø»ú'; 
 COMMENT ON COLUMN "public"."iot_ac_generator_1h"."genset_emergency_stop_sensor_failure" IS '½ô¼±Í£»ú´«¸ĞÆ÷¹ÊÕÏ'; 
 COMMENT ON COLUMN "public"."iot_ac_generator_1h"."genset_remote_start_stop" IS 'Ô¶³ÌÆô¶¯¹Ø»ú¸æ¾¯'; 
 COMMENT ON COLUMN "public"."iot_ac_generator_1h"."genset_remote_start_stop_sensor_failure" IS 'Ô¶³Ì¿ª¹Ø»ú´«¸ĞÆ÷¹ÊÕÏ'; 
-COMMENT ON COLUMN "public"."iot_ac_generator_1h"."genset_low_oil_pressure_warning" IS 'µÍÓÍÎ»¸æ¾¯'; 
-COMMENT ON COLUMN "public"."iot_ac_generator_1h"."genset_low_oil_pressure_shutdown" IS 'µÍÓÍÎ»Í£»ú¸æ¾¯'; 
+COMMENT ON COLUMN "public"."iot_ac_generator_1h"."genset_low_oil_pressure_warning" IS 'µÍÓÍÑ¹¸æ¾¯'; 
+COMMENT ON COLUMN "public"."iot_ac_generator_1h"."genset_low_oil_pressure_shutdown" IS 'µÍÓÍÑ¹Í£»ú¸æ¾¯'; 
 COMMENT ON COLUMN "public"."iot_ac_generator_1h"."genset_oil_pressure_sensor_failure" IS 'ÓÍÎ»´«¸ĞÆ÷¹ÊÕÏ'; 
-COMMENT ON COLUMN "public"."iot_ac_generator_1h"."genset_coolant_temp_level1" IS 'ÀäÈ´ÒºÎÂ¶È¸æ¾¯'; 
-COMMENT ON COLUMN "public"."iot_ac_generator_1h"."genset_coolant_temp_level2" IS 'ÀäÈ´ÒºÎÂ¶ÈÍ£»ú¸æ¾¯'; 
+COMMENT ON COLUMN "public"."iot_ac_generator_1h"."genset_coolant_temp_warning" IS 'ÀäÈ´ÒºÎÂ¶È¸æ¾¯'; 
+COMMENT ON COLUMN "public"."iot_ac_generator_1h"."genset_coolant_temp_shutdown" IS 'ÀäÈ´ÒºÎÂ¶ÈÍ£»ú¸æ¾¯'; 
 COMMENT ON COLUMN "public"."iot_ac_generator_1h"."genset_coolant_temp_sensor_failure" IS 'ÀäÈ´ÒºÎÂµÙ´«¸ĞÆ÷¹ÊÕÏ'; 
-COMMENT ON COLUMN "public"."iot_ac_generator_1h"."genset_fuel_level_level1" IS 'ÓÍÎ»¸æ¾¯'; 
-COMMENT ON COLUMN "public"."iot_ac_generator_1h"."genset_fuel_level_level2" IS 'ÓÍÎ»Í£»ú'; 
+COMMENT ON COLUMN "public"."iot_ac_generator_1h"."genset_low_fuel_level_warning" IS 'ÓÍÎ»¸æ¾¯'; 
+COMMENT ON COLUMN "public"."iot_ac_generator_1h"."genset_low_fuel_level_shutdown" IS 'ÓÍÎ»Í£»ú'; 
 COMMENT ON COLUMN "public"."iot_ac_generator_1h"."genset_fuel_level_sensor_failure" IS 'ÓÍÎ»´«¸ĞÆ÷¹ÊÕÏ'; 
-COMMENT ON COLUMN "public"."iot_ac_generator_1h"."genset_sd_underspeed_level2" IS '×ªËÙ¹ıµÍÍ£»ú'; 
-COMMENT ON COLUMN "public"."iot_ac_generator_1h"."genset_sd_start_fail_level1" IS 'Æô¶¯Ê§°Ü'; 
-COMMENT ON COLUMN "public"."iot_ac_generator_1h"."genset_voltage_l1l2_level1" IS 'L1L2·¢µçµçÑ¹¸æ¾¯'; 
-COMMENT ON COLUMN "public"."iot_ac_generator_1h"."genset_voltage_l2l3_level1" IS 'L2L3·¢µçµçÑ¹¸æ¾¯'; 
-COMMENT ON COLUMN "public"."iot_ac_generator_1h"."genset_voltage_l3l1_level1" IS 'L3L1·¢µçµçÑ¹¸æ¾¯'; 
-COMMENT ON COLUMN "public"."iot_ac_generator_1h"."genset_voltage_l3l1_level2" IS 'L3L1·¢µçµçÑ¹Í£»ú'; 
-COMMENT ON COLUMN "public"."iot_ac_generator_1h"."genset_boc_gen_voltage_unbalance_phph_level1" IS 'BOC·¢µçµçÑ¹²»Æ½ºâph-ph¸æ¾¯'; 
-COMMENT ON COLUMN "public"."iot_ac_generator_1h"."genset_boc_gen_voltage_unbalance_phph_level2" IS 'BOC·¢µçµçÑ¹²»Æ½ºâph-ph Level 2Í£»ú¸æ¾¯'; 
-COMMENT ON COLUMN "public"."iot_ac_generator_1h"."genset_boc_gen_voltage_unbalance_phn_level1" IS 'BOC·¢µçµçÑ¹²»Æ½ºâph-n¸æ¾¯'; 
-COMMENT ON COLUMN "public"."iot_ac_generator_1h"."genset_boc_gen_voltage_unbalance_phn_level2" IS 'BOC·¢µçµçÑ¹²»Æ½ºâph-n Level 2Í£»ú¸æ¾¯'; 
-COMMENT ON COLUMN "public"."iot_ac_generator_1h"."genset_freq_level1" IS '·¢µçÆµÂÊ¸æ¾¯'; 
-COMMENT ON COLUMN "public"."iot_ac_generator_1h"."genset_freq_level2" IS '·¢µçÆµÂÊÍ£»ú'; 
-COMMENT ON COLUMN "public"."iot_ac_generator_1h"."genset_l1l2_overvoltage_level1" IS 'L1L2·¢µç¹ıÑ¹¸æ¾¯'; 
-COMMENT ON COLUMN "public"."iot_ac_generator_1h"."genset_l1l2_overvoltage_level2" IS 'L1L2·¢µç¹ıÑ¹Í£»ú'; 
-COMMENT ON COLUMN "public"."iot_ac_generator_1h"."genset_l2l3_overvoltage_level1" IS 'L2L3·¢µç¹ıÑ¹¸æ¾¯'; 
-COMMENT ON COLUMN "public"."iot_ac_generator_1h"."genset_l2l3_overvoltage_level2" IS 'L2L3·¢µç¹ıÑ¹Í£»ú'; 
-COMMENT ON COLUMN "public"."iot_ac_generator_1h"."genset_l1_undervoltage_level1" IS 'L1·¢µçÇ·Ñ¹¸æ¾¯'; 
-COMMENT ON COLUMN "public"."iot_ac_generator_1h"."genset_l1_undervoltage_level2" IS 'L1·¢µçÇ·Ñ¹Í£»ú'; 
-COMMENT ON COLUMN "public"."iot_ac_generator_1h"."genset_l2_undervoltage_level1" IS 'L2·¢µçÇ·Ñ¹¸æ¾¯'; 
-COMMENT ON COLUMN "public"."iot_ac_generator_1h"."genset_l2_undervoltage_level2" IS 'L2·¢µçÇ·Ñ¹Í£»ú'; 
-COMMENT ON COLUMN "public"."iot_ac_generator_1h"."genset_wrn_battery_undervoltage_level1" IS 'µç³ØÇ·Ñ¹¸æ¾¯'; 
-COMMENT ON COLUMN "public"."iot_ac_generator_1h"."genset_wrn_battery_undervoltage_level2" IS 'µç³ØÇ·Ñ¹Í£»ú'; 
-COMMENT ON COLUMN "public"."iot_ac_generator_1h"."genset_wrn_battery_overvoltage_level1" IS 'µç³Ø¹ıÑ¹¸æ¾¯'; 
-COMMENT ON COLUMN "public"."iot_ac_generator_1h"."genset_wrn_battery_overvoltage_level2" IS 'µç³Ø¹ıÑ¹Í£»ú'; 
-COMMENT ON COLUMN "public"."iot_ac_generator_1h"."genset_rem_sta_zz" IS 'zzÔ¶³ÌÆô¶¯'; 
-COMMENT ON COLUMN "public"."iot_ac_generator_1h"."genset_rem_sto_zz" IS 'zzÔ¶³ÌÍ£Ö¹'; 
-COMMENT ON COLUMN "public"."iot_ac_generator_1h"."genset_rem_aut_zz" IS 'zzÔ¶³Ì×Ô¶¯'; 
-COMMENT ON COLUMN "public"."iot_ac_generator_1h"."genset_rem_man_zz" IS 'zzÔ¶³ÌÊÖ¶¯'; 
+COMMENT ON COLUMN "public"."iot_ac_generator_1h"."genset_underspeed_sd" IS '×ªËÙ¹ıµÍÍ£»ú'; 
+COMMENT ON COLUMN "public"."iot_ac_generator_1h"."genset_sd_start_fail" IS 'Æô¶¯Ê§°Ü'; 
+COMMENT ON COLUMN "public"."iot_ac_generator_1h"."genset_voltage_l1l2_warning" IS 'L1L2·¢µçµçÑ¹¸æ¾¯'; 
+COMMENT ON COLUMN "public"."iot_ac_generator_1h"."genset_voltage_l2l3_warning" IS 'L2L3·¢µçµçÑ¹¸æ¾¯'; 
+COMMENT ON COLUMN "public"."iot_ac_generator_1h"."genset_voltage_l3l1_warning" IS 'L3L1·¢µçµçÑ¹¸æ¾¯'; 
+COMMENT ON COLUMN "public"."iot_ac_generator_1h"."genset_voltage_l3l1_sd" IS 'L3L1·¢µçµçÑ¹Í£»ú'; 
+COMMENT ON COLUMN "public"."iot_ac_generator_1h"."genset_boc_voltage_unbalance_phph_warning" IS 'BOC·¢µçµçÑ¹²»Æ½ºâph-ph¸æ¾¯'; 
+COMMENT ON COLUMN "public"."iot_ac_generator_1h"."genset_boc_voltage_unbalance_phph_sd" IS 'BOC·¢µçµçÑ¹²»Æ½ºâph-ph Level 2Í£»ú¸æ¾¯'; 
+COMMENT ON COLUMN "public"."iot_ac_generator_1h"."genset_boc_voltage_unbalance_phn_warning" IS 'BOC·¢µçµçÑ¹²»Æ½ºâph-n¸æ¾¯'; 
+COMMENT ON COLUMN "public"."iot_ac_generator_1h"."genset_boc_voltage_unbalance_phn_sd" IS 'BOC·¢µçµçÑ¹²»Æ½ºâph-n Level 2Í£»ú¸æ¾¯'; 
+COMMENT ON COLUMN "public"."iot_ac_generator_1h"."genset_freq_warning" IS '·¢µçÆµÂÊ¸æ¾¯'; 
+COMMENT ON COLUMN "public"."iot_ac_generator_1h"."genset_freq_sd" IS '·¢µçÆµÂÊÍ£»ú'; 
+COMMENT ON COLUMN "public"."iot_ac_generator_1h"."genset_l1l2_ov_warning" IS 'L1L2·¢µç¹ıÑ¹¸æ¾¯'; 
+COMMENT ON COLUMN "public"."iot_ac_generator_1h"."genset_l1l2_ov_sd" IS 'L1L2·¢µç¹ıÑ¹Í£»ú'; 
+COMMENT ON COLUMN "public"."iot_ac_generator_1h"."genset_l2l3_ov_warning" IS 'L2L3·¢µç¹ıÑ¹¸æ¾¯'; 
+COMMENT ON COLUMN "public"."iot_ac_generator_1h"."genset_l2l3_ov_sd" IS 'L2L3·¢µç¹ıÑ¹Í£»ú'; 
+COMMENT ON COLUMN "public"."iot_ac_generator_1h"."genset_l1_uv_warning" IS 'L1·¢µçÇ·Ñ¹¸æ¾¯'; 
+COMMENT ON COLUMN "public"."iot_ac_generator_1h"."genset_l1_uv_sd" IS 'L1·¢µçÇ·Ñ¹Í£»ú'; 
+COMMENT ON COLUMN "public"."iot_ac_generator_1h"."genset_l2_uv_warning" IS 'L2·¢µçÇ·Ñ¹¸æ¾¯'; 
+COMMENT ON COLUMN "public"."iot_ac_generator_1h"."genset_l2_uv_sd" IS 'L2·¢µçÇ·Ñ¹Í£»ú'; 
+COMMENT ON COLUMN "public"."iot_ac_generator_1h"."genset_starter_battery_uv_warning" IS 'µç³ØÇ·Ñ¹¸æ¾¯'; 
+COMMENT ON COLUMN "public"."iot_ac_generator_1h"."genset_starter_battery_uv_sd" IS 'µç³ØÇ·Ñ¹Í£»ú'; 
+COMMENT ON COLUMN "public"."iot_ac_generator_1h"."genset_starter_battery_ov_warning" IS 'µç³Ø¹ıÑ¹¸æ¾¯'; 
+COMMENT ON COLUMN "public"."iot_ac_generator_1h"."genset_starter_battery_ov_sd" IS 'µç³Ø¹ıÑ¹Í£»ú'; 
+COMMENT ON COLUMN "public"."iot_ac_generator_1h"."genset_remote_start_zz" IS 'zzÔ¶³ÌÆô¶¯'; 
+COMMENT ON COLUMN "public"."iot_ac_generator_1h"."genset_remote_stop_zz" IS 'zzÔ¶³ÌÍ£»ú'; 
+COMMENT ON COLUMN "public"."iot_ac_generator_1h"."genset_remote_auto_zz" IS 'zzÔ¶³Ì×Ô¶¯'; 
+COMMENT ON COLUMN "public"."iot_ac_generator_1h"."genset_remote_manual_zz" IS 'zzÔ¶³ÌÊÖ¶¯'; 
 COMMENT ON COLUMN "public"."iot_ac_generator_1h"."genset_wrn_charging_alternator_fail" IS 'Wrn³äµç·¢µç»ú¹ÊÕÏ'; 
 COMMENT ON COLUMN "public"."iot_ac_generator_1h"."genset_sd_charging_alternator_fail" IS 'Sd³äµç·¢µç»ú¹ÊÕÏ'; 
 COMMENT ON COLUMN "public"."iot_ac_generator_1h"."genset_wrn_stop_fail" IS 'WrnÍ£Ö¹Ê§°Ü'; 
-COMMENT ON COLUMN "public"."iot_ac_generator_1h"."genset_sd_overspeed" IS 'Sd³¬ËÙ'; 
-COMMENT ON COLUMN "public"."iot_ac_generator_1h"."genset_sd_rpm_measurement_fail" IS 'Sd RPM²âÁ¿Ê§°Ü'; 
-COMMENT ON COLUMN "public"."iot_ac_generator_1h"."genset_sd_battery_flat" IS 'Sdµç³Ø'; 
+COMMENT ON COLUMN "public"."iot_ac_generator_1h"."genset_sd_overspeed" IS '³¬ËÙÍ£»ú'; 
+COMMENT ON COLUMN "public"."iot_ac_generator_1h"."genset_sd_rpm_measurement_fail" IS '×ªËÙ²âÁ¿¹ÊÕÏÍ£»ú'; 
+COMMENT ON COLUMN "public"."iot_ac_generator_1h"."genset_sd_battery_flat" IS 'µç³ØºÄ¾¡Í£»ú '; 
 COMMENT ON COLUMN "public"."iot_ac_generator_1h"."genset_charge_alternator_failure_dse" IS '³äµç·¢µç»ú¹ÊÕÏ'; 
 COMMENT ON COLUMN "public"."iot_ac_generator_1h"."genset_fail_to_stop_dse" IS 'Í£»úÊ§°Ü'; 
-COMMENT ON COLUMN "public"."iot_ac_generator_1h"."genset_fail_to_close_dse" IS 'Í£Ö¹·¢µçÊ§°Ü'; 
-COMMENT ON COLUMN "public"."iot_ac_generator_1h"."genset_mains_fail_to_close_dse" IS 'ÊĞµç¹Ø±ÕÊ§°Ü'; 
-COMMENT ON COLUMN "public"."iot_ac_generator_1h"."genset_oil_pressure_sender_fault_dse" IS 'ÓÍÑ¹·¢ËÍÆ÷¹ÊÕÏ'; 
+COMMENT ON COLUMN "public"."iot_ac_generator_1h"."genset_fail_to_close_dse" IS '·¢µçºÏÕ¢Ê§°Ü'; 
+COMMENT ON COLUMN "public"."iot_ac_generator_1h"."genset_mains_fail_to_close_dse" IS 'ÊĞµçºÏÕ¢Ê§°Ü'; 
+COMMENT ON COLUMN "public"."iot_ac_generator_1h"."genset_oil_pressure_sender_fault_dse" IS 'ÓÍÑ¹´«¸ĞÆ÷¹ÊÕÏ'; 
 COMMENT ON COLUMN "public"."iot_ac_generator_1h"."genset_loss_of_magnetic_pick_up_dse" IS '´Å¸ĞÓ¦¶ªÊ§'; 
 COMMENT ON COLUMN "public"."iot_ac_generator_1h"."genset_magnetic_pick_up_open_circuit_dse" IS '´Å¸ĞÓ¦¿ªÂ·'; 
-COMMENT ON COLUMN "public"."iot_ac_generator_1h"."genset_high_current_dse" IS '·¢µç»úµçÁ÷´ò'; 
+COMMENT ON COLUMN "public"."iot_ac_generator_1h"."genset_high_current_dse" IS '·¢µç»ú¹ıÁ÷'; 
 COMMENT ON COLUMN "public"."iot_ac_generator_1h"."genset_can_ecu_warning_dse" IS 'CAN ECU¾¯¸æ'; 
 COMMENT ON COLUMN "public"."iot_ac_generator_1h"."genset_can_ecu_shutdown_dse" IS 'CAN ECU¹Ø»ú'; 
-COMMENT ON COLUMN "public"."iot_ac_generator_1h"."genset_can_ecu_data_fail_dse" IS 'CAN ECUÊı¾İÊ§°Ü'; 
-COMMENT ON COLUMN "public"."iot_ac_generator_1h"."genset_low_oil_level_switch_dse" IS 'µÍÓÍÎ»¿ª¹Ø'; 
-COMMENT ON COLUMN "public"."iot_ac_generator_1h"."genset_high_temp_switch_dse" IS '¸ßÎÂ¿ª¹Ø'; 
-COMMENT ON COLUMN "public"."iot_ac_generator_1h"."genset_low_fuel_level_switch_dse" IS 'µÍÈ¼ÓÍÎ»¿ª¹Ø'; 
+COMMENT ON COLUMN "public"."iot_ac_generator_1h"."genset_can_ecu_data_fail_dse" IS 'CAN ECUÊı¾İÍ¨Ñ¶Ê§°Ü'; 
+COMMENT ON COLUMN "public"."iot_ac_generator_1h"."genset_low_oil_level_di_input_dse" IS 'µÍÓÍÎ»¿ª¹Ø'; 
+COMMENT ON COLUMN "public"."iot_ac_generator_1h"."genset_high_temp_di_input_dse" IS '¸ßÎÂ¿ª¹Ø'; 
+COMMENT ON COLUMN "public"."iot_ac_generator_1h"."genset_low_fuel_level_di_input_dse" IS 'µÍÈ¼ÓÍÎ»¿ª¹ØÁ¿'; 
 COMMENT ON COLUMN "public"."iot_ac_generator_1h"."genset_expansion_unit_watchdog_alarm_dse" IS 'À©Õ¹µ¥Ôª¿´ÃÅ¹·±¨¾¯'; 
-COMMENT ON COLUMN "public"."iot_ac_generator_1h"."genset_kw_overload_alarm_dse" IS 'kW¹ıÔØ±¨¾¯Æ÷'; 
-COMMENT ON COLUMN "public"."iot_ac_generator_1h"."genset_negative_phase_sequence_current_alarm_dse" IS '¸ºÏàĞòµçÁ÷±¨¾¯'; 
+COMMENT ON COLUMN "public"."iot_ac_generator_1h"."genset_overload_alarm_dse" IS '³¬ÔØ±¨¾¯'; 
+COMMENT ON COLUMN "public"."iot_ac_generator_1h"."genset_negative_phase_sequence_current_alarm_dse" IS 'ÈıÏàµçÁ÷²»Æ½ºâ±¨¾¯'; 
 COMMENT ON COLUMN "public"."iot_ac_generator_1h"."genset_earth_fault_trip_alarm_dse" IS '½ÓµØ¹ÊÕÏÌøÕ¢±¨¾¯Æ÷'; 
 COMMENT ON COLUMN "public"."iot_ac_generator_1h"."genset_phase_rotation_alarm_dse" IS '·¢µç»úÏàÎ»Ğı×ª±¨¾¯Æ÷'; 
 COMMENT ON COLUMN "public"."iot_ac_generator_1h"."genset_auto_voltage_sense_fail_dse" IS '×Ô¶¯µçÑ¹¼ì²â¹ÊÕÏ'; 
-COMMENT ON COLUMN "public"."iot_ac_generator_1h"."genset_loading_freq_alarm_dse" IS '¼ÓÔØÆµÂÊ±¨¾¯'; 
-COMMENT ON COLUMN "public"."iot_ac_generator_1h"."genset_loading_voltage_alarm_dse" IS '¸ºÔØµçÑ¹±¨¾¯'; 
+COMMENT ON COLUMN "public"."iot_ac_generator_1h"."genset_loading_freq_alarm_dse" IS '´øÔØÆµÂÊ±¨¾¯'; 
+COMMENT ON COLUMN "public"."iot_ac_generator_1h"."genset_loading_voltage_alarm_dse" IS '´øÔØµçÑ¹±¨¾¯'; 
 COMMENT ON COLUMN "public"."iot_ac_generator_1h"."genset_short_circuit_dse" IS '·¢µç»ú¶ÌÂ·'; 
-COMMENT ON COLUMN "public"."iot_ac_generator_1h"."genset_mains_high_current_dse" IS 'ÊĞµç´óµçÁ÷'; 
+COMMENT ON COLUMN "public"."iot_ac_generator_1h"."genset_mains_high_current_dse" IS 'ÊĞµç¹ıÁ÷'; 
 COMMENT ON COLUMN "public"."iot_ac_generator_1h"."genset_mains_earth_fault_dse" IS 'ÊĞµç½ÓµØ¹ÊÕÏ'; 
-COMMENT ON COLUMN "public"."iot_ac_generator_1h"."genset_mains_short_circuit_zz" IS 'ÊĞµç¶ÌÂ·'; 
-COMMENT ON COLUMN "public"."iot_ac_generator_1h"."genset_ecu_protect_zz" IS 'ECU±£»¤'; 
+COMMENT ON COLUMN "public"."iot_ac_generator_1h"."genset_mains_short_circuit_dse" IS 'ÊĞµç¶ÌÂ·'; 
+COMMENT ON COLUMN "public"."iot_ac_generator_1h"."genset_ecu_protect_dse" IS 'ECU±£»¤'; 
 COMMENT ON COLUMN "public"."iot_ac_generator_1h"."genset_overspeed_alarm_shutdown_zz" IS '³¬ËÙ±¨¾¯Í£»ú'; 
 COMMENT ON COLUMN "public"."iot_ac_generator_1h"."genset_loss_of_speed_signal_alarm_zz" IS 'ËÙ¶ÈĞÅºÅ¶ªÊ§±¨¾¯'; 
 COMMENT ON COLUMN "public"."iot_ac_generator_1h"."genset_over_freq_sd_alarm_zz" IS '·¢µç¹ıÆµÍ£»ú±¨¾¯'; 
 COMMENT ON COLUMN "public"."iot_ac_generator_1h"."genset_under_freq_sd_zz" IS '·¢µçÇ·ÆµÍ£»ú¸æ¾¯'; 
-COMMENT ON COLUMN "public"."iot_ac_generator_1h"."genset_gen_over_current_shutdown_zz" IS '·¢µç¹ıÁ÷Í£»ú¸æ¾¯'; 
+COMMENT ON COLUMN "public"."iot_ac_generator_1h"."genset_over_current_shutdown_zz" IS '·¢µç¹ıÁ÷Í£»ú¸æ¾¯'; 
 COMMENT ON COLUMN "public"."iot_ac_generator_1h"."genset_reverse_power_alarm_shutdown_zz" IS 'Äæ¹¦ÂÊÍ£»ú¸æ¾¯'; 
 COMMENT ON COLUMN "public"."iot_ac_generator_1h"."genset_over_power_alarm_shutdown_zz" IS '¹ı¹¦ÂÊÍ£»ú¸æ¾¯'; 
 COMMENT ON COLUMN "public"."iot_ac_generator_1h"."genset_high_temp_input_alarm_shutdown_zz" IS '¸ßÎÂÊäÈëÍ£»ú¸æ¾¯'; 
@@ -663,32 +663,32 @@ COMMENT ON COLUMN "public"."iot_ac_generator_1h"."genset_mains_l1_current" IS 'Ê
 COMMENT ON COLUMN "public"."iot_ac_generator_1h"."genset_mains_l2_current" IS 'ÊĞµçL2ÏàµçÁ÷'; 
 COMMENT ON COLUMN "public"."iot_ac_generator_1h"."genset_mains_l3_current" IS 'ÊĞµçL3ÏàµçÁ÷'; 
 COMMENT ON COLUMN "public"."iot_ac_generator_1h"."genset_mains_earth_current" IS 'ÊĞµç½ÓµØµçÁ÷'; 
-COMMENT ON COLUMN "public"."iot_ac_generator_1h"."genset_mains_l1_watts" IS 'ÊĞµçL1ÏàÓĞ¹¦¹¦ÂÊ'; 
-COMMENT ON COLUMN "public"."iot_ac_generator_1h"."genset_mains_l2_watts" IS 'ÊĞµçL2ÏàÓĞ¹¦¹¦ÂÊ'; 
-COMMENT ON COLUMN "public"."iot_ac_generator_1h"."genset_mains_l3_watts" IS 'ÊĞµçL3ÏàÓĞ¹¦¹¦ÂÊ'; 
-COMMENT ON COLUMN "public"."iot_ac_generator_1h"."genset_mains_total_watts" IS 'ÊĞµç×ÜÓĞ¹¦¹¦ÂÊ'; 
-COMMENT ON COLUMN "public"."iot_ac_generator_1h"."genset_mains_l1_va" IS 'ÊĞµçL1ÏàÊÓÔÚ¹¦ÂÊ'; 
-COMMENT ON COLUMN "public"."iot_ac_generator_1h"."genset_mains_l2_va" IS 'ÊĞµçL2ÏàÊÓÔÚ¹¦ÂÊ'; 
-COMMENT ON COLUMN "public"."iot_ac_generator_1h"."genset_mains_l3_va" IS 'ÊĞµçL3ÏàÊÓÔÚ¹¦ÂÊ'; 
-COMMENT ON COLUMN "public"."iot_ac_generator_1h"."genset_mains_total_va" IS 'ÊĞµç×ÜÊÓÔÚ¹¦ÂÊ'; 
-COMMENT ON COLUMN "public"."iot_ac_generator_1h"."genset_mains_l1_var" IS 'ÊĞµçL1ÏàÎŞ¹¦¹¦ÂÊ'; 
-COMMENT ON COLUMN "public"."iot_ac_generator_1h"."genset_mains_l2_var" IS 'ÊĞµçL2ÏàÎŞ¹¦¹¦ÂÊ'; 
-COMMENT ON COLUMN "public"."iot_ac_generator_1h"."genset_mains_l3_var" IS 'ÊĞµçL3ÏàÎŞ¹¦¹¦ÂÊ'; 
-COMMENT ON COLUMN "public"."iot_ac_generator_1h"."genset_mains_total_var" IS 'ÊĞµç×ÜÎŞ¹¦¹¦ÂÊ'; 
+COMMENT ON COLUMN "public"."iot_ac_generator_1h"."genset_mains_l1_active_power" IS 'ÊĞµçL1ÏàÓĞ¹¦¹¦ÂÊ'; 
+COMMENT ON COLUMN "public"."iot_ac_generator_1h"."genset_mains_l2_active_power" IS 'ÊĞµçL2ÏàÓĞ¹¦¹¦ÂÊ'; 
+COMMENT ON COLUMN "public"."iot_ac_generator_1h"."genset_mains_l3_active_power" IS 'ÊĞµçL3ÏàÓĞ¹¦¹¦ÂÊ'; 
+COMMENT ON COLUMN "public"."iot_ac_generator_1h"."genset_mains_total_active_power" IS 'ÊĞµç×ÜÓĞ¹¦¹¦ÂÊ'; 
+COMMENT ON COLUMN "public"."iot_ac_generator_1h"."genset_mains_l1_apparent_power" IS 'ÊĞµçL1ÏàÊÓÔÚ¹¦ÂÊ'; 
+COMMENT ON COLUMN "public"."iot_ac_generator_1h"."genset_mains_l2_apparent_power" IS 'ÊĞµçL2ÏàÊÓÔÚ¹¦ÂÊ'; 
+COMMENT ON COLUMN "public"."iot_ac_generator_1h"."genset_mains_l3_apparent_power" IS 'ÊĞµçL3ÏàÊÓÔÚ¹¦ÂÊ'; 
+COMMENT ON COLUMN "public"."iot_ac_generator_1h"."genset_mains_total_apparent_power" IS 'ÊĞµç×ÜÊÓÔÚ¹¦ÂÊ'; 
+COMMENT ON COLUMN "public"."iot_ac_generator_1h"."genset_mains_l1_reactive_power" IS 'ÊĞµçL1ÏàÎŞ¹¦¹¦ÂÊ'; 
+COMMENT ON COLUMN "public"."iot_ac_generator_1h"."genset_mains_l2_reactive_power" IS 'ÊĞµçL2ÏàÎŞ¹¦¹¦ÂÊ'; 
+COMMENT ON COLUMN "public"."iot_ac_generator_1h"."genset_mains_l3_reactive_power" IS 'ÊĞµçL3ÏàÎŞ¹¦¹¦ÂÊ'; 
+COMMENT ON COLUMN "public"."iot_ac_generator_1h"."genset_mains_total_reactive_power" IS 'ÊĞµç×ÜÎŞ¹¦¹¦ÂÊ'; 
 COMMENT ON COLUMN "public"."iot_ac_generator_1h"."genset_mains_power_factor_l1" IS 'ÊĞµçL1Ïà¹¦ÂÊÒòËØ'; 
 COMMENT ON COLUMN "public"."iot_ac_generator_1h"."genset_mains_power_factor_l2" IS 'ÊĞµçL2Ïà¹¦ÂÊÒòËØ'; 
 COMMENT ON COLUMN "public"."iot_ac_generator_1h"."genset_mains_power_factor_l3" IS 'ÊĞµçL3Ïà¹¦ÂÊÒòËØ'; 
 COMMENT ON COLUMN "public"."iot_ac_generator_1h"."genset_mains_average_power_factor" IS 'ÊĞµçÆ½¾ù¹¦ÂÊÒòËØ'; 
 COMMENT ON COLUMN "public"."iot_ac_generator_1h"."genset_mains_led_status" IS 'ÊĞµçµÆ×´Ì¬'; 
 COMMENT ON COLUMN "public"."iot_ac_generator_1h"."genset_mains_breaker_led_status" IS 'ÊĞµç¶ÏÂ·Æ÷µÆ×´Ì¬'; 
-COMMENT ON COLUMN "public"."iot_ac_generator_1h"."genset_cooling_time_setting" IS 'Cooling Time Setting'; 
-COMMENT ON COLUMN "public"."iot_ac_generator_1h"."genset_battery_low_voltage" IS 'Battery Low Voltage'; 
-COMMENT ON COLUMN "public"."iot_ac_generator_1h"."genset_battery_high_voltage" IS 'Battery High Voltage'; 
-COMMENT ON COLUMN "public"."iot_ac_generator_1h"."genset_overvoltage_shut_down" IS '·¢µç»ú¹ıÑ¹¹Ø±Õ'; 
-COMMENT ON COLUMN "public"."iot_ac_generator_1h"."genset_overvoltage_warning" IS '·¢µç»ú¹ıÑ¹¾¯¸æ '; 
-COMMENT ON COLUMN "public"."iot_ac_generator_1h"."genset_undervoltage_warning" IS '·¢µç»úÇ·Ñ¹¾¯¸æ '; 
-COMMENT ON COLUMN "public"."iot_ac_generator_1h"."genset_undervoltage_shut_off_cooling" IS '·¢µç»úÇ·Ñ¹¹Ø±ÕÀäÈ´'; 
-COMMENT ON COLUMN "public"."iot_ac_generator_1h"."genset_overfrequency_warning" IS '·¢µç»úÆµÂÊ¹ı¸ß¾¯¸æ'; 
+COMMENT ON COLUMN "public"."iot_ac_generator_1h"."genset_cooling_time_setting" IS 'ÀäÈ´Ê±¼äÉè¶¨Öµ'; 
+COMMENT ON COLUMN "public"."iot_ac_generator_1h"."genset_starter_battery_low_voltage_setting" IS 'µç³ØµçÑ¹µÍÉè¶¨Öµ'; 
+COMMENT ON COLUMN "public"."iot_ac_generator_1h"."genset_starter_battery_high_voltage_setting" IS 'µç³ØµçÑ¹¸ßÉè¶¨Öµ'; 
+COMMENT ON COLUMN "public"."iot_ac_generator_1h"."genset_ov_shut_down_setting" IS '·¢µç»ú¹ıÑ¹Í£»úÉè¶¨Öµ'; 
+COMMENT ON COLUMN "public"."iot_ac_generator_1h"."genset_ov_warning_setting" IS '·¢µç»ú¹ıÑ¹¾¯¸æÉè¶¨Öµ'; 
+COMMENT ON COLUMN "public"."iot_ac_generator_1h"."genset_uv_warning_setting" IS '·¢µç»úÇ·Ñ¹¾¯¸æÉè¶¨Öµ'; 
+COMMENT ON COLUMN "public"."iot_ac_generator_1h"."genset_uv_breaker_off_cooling_setting" IS '·¢µç»úÇ·Ñ¹·ÖÕ¢ÀäÈ´Éè¶¨Öµ'; 
+COMMENT ON COLUMN "public"."iot_ac_generator_1h"."genset_overfreq_warning_setting" IS '·¢µç»úÆµÂÊ¹ı¸ß¾¯¸æÉè¶¨Öµ'; 
 COMMENT ON COLUMN "public"."iot_ac_generator_1h"."genset_mains_l1_voltage_n" IS 'ÊĞµçL1-NÏàµçÑ¹'; 
 COMMENT ON COLUMN "public"."iot_ac_generator_1h"."genset_mains_l2_voltage_n" IS 'ÊĞµçL2-NÏàµçÑ¹'; 
 COMMENT ON COLUMN "public"."iot_ac_generator_1h"."genset_mains_l3_voltage_n" IS 'ÊĞµçL3-NÏàµçÑ¹'; 

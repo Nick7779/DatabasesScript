@@ -151,13 +151,17 @@
  */ 
  String GENSET_TOTAL_FUEL_CONSUMPTION = "genset_total_fuel_consumption";
  /** 
- * 开关状态. 
+ * 合分闸状态. 
  */ 
  String GENSET_BREAKER_STATE = "genset_breaker_state";
  /** 
  * 油箱总容量. 
  */ 
  String GENSET_FUEL_TANK_VOLUME = "genset_fuel_tank_volume";
+ /** 
+ * 深海发电机停止模式状态. 
+ */ 
+ String GENSET_STOP_LED_STATUS_DSE = "genset_stop_led_status_dse";
  /** 
  * 深海发电机手动模式状态. 
  */ 
@@ -171,10 +175,6 @@
  */ 
  String GENSET_TEST_LED_STATUS_DSE = "genset_test_led_status_dse";
  /** 
- * 深海发电机停止模式状态. 
- */ 
- String GENSET_STOP_LED_STATUS_DSE = "genset_stop_led_status_dse";
- /** 
  * 众智机组的分钟时间. 
  */ 
  String GENSET_RUNTIME_MINUTES_ZZ = "genset_runtime_minutes_zz";
@@ -185,7 +185,7 @@
  /** 
  * 紧急停机关机. 
  */ 
- String GENSET_EMERGENCY_STOP_LEVEL2 = "genset_emergency_stop_level2";
+ String GENSET_EMERGENCY_STOP = "genset_emergency_stop";
  /** 
  * 紧急停机传感器故障. 
  */ 
@@ -199,11 +199,11 @@
  */ 
  String GENSET_REMOTE_START_STOP_SENSOR_FAILURE = "genset_remote_start_stop_sensor_failure";
  /** 
- * 低油位告警. 
+ * 低油压告警. 
  */ 
  String GENSET_LOW_OIL_PRESSURE_WARNING = "genset_low_oil_pressure_warning";
  /** 
- * 低油位停机告警. 
+ * 低油压停机告警. 
  */ 
  String GENSET_LOW_OIL_PRESSURE_SHUTDOWN = "genset_low_oil_pressure_shutdown";
  /** 
@@ -213,11 +213,11 @@
  /** 
  * 冷却液温度告警. 
  */ 
- String GENSET_COOLANT_TEMP_LEVEL1 = "genset_coolant_temp_level1";
+ String GENSET_COOLANT_TEMP_WARNING = "genset_coolant_temp_warning";
  /** 
  * 冷却液温度停机告警. 
  */ 
- String GENSET_COOLANT_TEMP_LEVEL2 = "genset_coolant_temp_level2";
+ String GENSET_COOLANT_TEMP_SHUTDOWN = "genset_coolant_temp_shutdown";
  /** 
  * 冷却液温蒂传感器故障. 
  */ 
@@ -225,11 +225,11 @@
  /** 
  * 油位告警. 
  */ 
- String GENSET_FUEL_LEVEL_LEVEL1 = "genset_fuel_level_level1";
+ String GENSET_LOW_FUEL_LEVEL_WARNING = "genset_low_fuel_level_warning";
  /** 
  * 油位停机. 
  */ 
- String GENSET_FUEL_LEVEL_LEVEL2 = "genset_fuel_level_level2";
+ String GENSET_LOW_FUEL_LEVEL_SHUTDOWN = "genset_low_fuel_level_shutdown";
  /** 
  * 油位传感器故障. 
  */ 
@@ -237,115 +237,115 @@
  /** 
  * 转速过低停机. 
  */ 
- String GENSET_SD_UNDERSPEED_LEVEL2 = "genset_sd_underspeed_level2";
+ String GENSET_UNDERSPEED_SD = "genset_underspeed_sd";
  /** 
  * 启动失败. 
  */ 
- String GENSET_SD_START_FAIL_LEVEL1 = "genset_sd_start_fail_level1";
+ String GENSET_SD_START_FAIL = "genset_sd_start_fail";
  /** 
  * L1L2发电电压告警. 
  */ 
- String GENSET_VOLTAGE_L1L2_LEVEL1 = "genset_voltage_l1l2_level1";
+ String GENSET_VOLTAGE_L1L2_WARNING = "genset_voltage_l1l2_warning";
  /** 
  * L2L3发电电压告警. 
  */ 
- String GENSET_VOLTAGE_L2L3_LEVEL1 = "genset_voltage_l2l3_level1";
+ String GENSET_VOLTAGE_L2L3_WARNING = "genset_voltage_l2l3_warning";
  /** 
  * L3L1发电电压告警. 
  */ 
- String GENSET_VOLTAGE_L3L1_LEVEL1 = "genset_voltage_l3l1_level1";
+ String GENSET_VOLTAGE_L3L1_WARNING = "genset_voltage_l3l1_warning";
  /** 
  * L3L1发电电压停机. 
  */ 
- String GENSET_VOLTAGE_L3L1_LEVEL2 = "genset_voltage_l3l1_level2";
+ String GENSET_VOLTAGE_L3L1_SD = "genset_voltage_l3l1_sd";
  /** 
  * BOC发电电压不平衡ph-ph告警. 
  */ 
- String GENSET_BOC_GEN_VOLTAGE_UNBALANCE_PHPH_LEVEL1 = "genset_boc_gen_voltage_unbalance_phph_level1";
+ String GENSET_BOC_VOLTAGE_UNBALANCE_PHPH_WARNING = "genset_boc_voltage_unbalance_phph_warning";
  /** 
  * BOC发电电压不平衡ph-ph Level 2停机告警. 
  */ 
- String GENSET_BOC_GEN_VOLTAGE_UNBALANCE_PHPH_LEVEL2 = "genset_boc_gen_voltage_unbalance_phph_level2";
+ String GENSET_BOC_VOLTAGE_UNBALANCE_PHPH_SD = "genset_boc_voltage_unbalance_phph_sd";
  /** 
  * BOC发电电压不平衡ph-n告警. 
  */ 
- String GENSET_BOC_GEN_VOLTAGE_UNBALANCE_PHN_LEVEL1 = "genset_boc_gen_voltage_unbalance_phn_level1";
+ String GENSET_BOC_VOLTAGE_UNBALANCE_PHN_WARNING = "genset_boc_voltage_unbalance_phn_warning";
  /** 
  * BOC发电电压不平衡ph-n Level 2停机告警. 
  */ 
- String GENSET_BOC_GEN_VOLTAGE_UNBALANCE_PHN_LEVEL2 = "genset_boc_gen_voltage_unbalance_phn_level2";
+ String GENSET_BOC_VOLTAGE_UNBALANCE_PHN_SD = "genset_boc_voltage_unbalance_phn_sd";
  /** 
  * 发电频率告警. 
  */ 
- String GENSET_FREQ_LEVEL1 = "genset_freq_level1";
+ String GENSET_FREQ_WARNING = "genset_freq_warning";
  /** 
  * 发电频率停机. 
  */ 
- String GENSET_FREQ_LEVEL2 = "genset_freq_level2";
+ String GENSET_FREQ_SD = "genset_freq_sd";
  /** 
  * L1L2发电过压告警. 
  */ 
- String GENSET_L1L2_OVERVOLTAGE_LEVEL1 = "genset_l1l2_overvoltage_level1";
+ String GENSET_L1L2_OV_WARNING = "genset_l1l2_ov_warning";
  /** 
  * L1L2发电过压停机. 
  */ 
- String GENSET_L1L2_OVERVOLTAGE_LEVEL2 = "genset_l1l2_overvoltage_level2";
+ String GENSET_L1L2_OV_SD = "genset_l1l2_ov_sd";
  /** 
  * L2L3发电过压告警. 
  */ 
- String GENSET_L2L3_OVERVOLTAGE_LEVEL1 = "genset_l2l3_overvoltage_level1";
+ String GENSET_L2L3_OV_WARNING = "genset_l2l3_ov_warning";
  /** 
  * L2L3发电过压停机. 
  */ 
- String GENSET_L2L3_OVERVOLTAGE_LEVEL2 = "genset_l2l3_overvoltage_level2";
+ String GENSET_L2L3_OV_SD = "genset_l2l3_ov_sd";
  /** 
  * L1发电欠压告警. 
  */ 
- String GENSET_L1_UNDERVOLTAGE_LEVEL1 = "genset_l1_undervoltage_level1";
+ String GENSET_L1_UV_WARNING = "genset_l1_uv_warning";
  /** 
  * L1发电欠压停机. 
  */ 
- String GENSET_L1_UNDERVOLTAGE_LEVEL2 = "genset_l1_undervoltage_level2";
+ String GENSET_L1_UV_SD = "genset_l1_uv_sd";
  /** 
  * L2发电欠压告警. 
  */ 
- String GENSET_L2_UNDERVOLTAGE_LEVEL1 = "genset_l2_undervoltage_level1";
+ String GENSET_L2_UV_WARNING = "genset_l2_uv_warning";
  /** 
  * L2发电欠压停机. 
  */ 
- String GENSET_L2_UNDERVOLTAGE_LEVEL2 = "genset_l2_undervoltage_level2";
+ String GENSET_L2_UV_SD = "genset_l2_uv_sd";
  /** 
  * 电池欠压告警. 
  */ 
- String GENSET_WRN_BATTERY_UNDERVOLTAGE_LEVEL1 = "genset_wrn_battery_undervoltage_level1";
+ String GENSET_STARTER_BATTERY_UV_WARNING = "genset_starter_battery_uv_warning";
  /** 
  * 电池欠压停机. 
  */ 
- String GENSET_WRN_BATTERY_UNDERVOLTAGE_LEVEL2 = "genset_wrn_battery_undervoltage_level2";
+ String GENSET_STARTER_BATTERY_UV_SD = "genset_starter_battery_uv_sd";
  /** 
  * 电池过压告警. 
  */ 
- String GENSET_WRN_BATTERY_OVERVOLTAGE_LEVEL1 = "genset_wrn_battery_overvoltage_level1";
+ String GENSET_STARTER_BATTERY_OV_WARNING = "genset_starter_battery_ov_warning";
  /** 
  * 电池过压停机. 
  */ 
- String GENSET_WRN_BATTERY_OVERVOLTAGE_LEVEL2 = "genset_wrn_battery_overvoltage_level2";
+ String GENSET_STARTER_BATTERY_OV_SD = "genset_starter_battery_ov_sd";
  /** 
  * zz远程启动. 
  */ 
- String GENSET_REM_STA_ZZ = "genset_rem_sta_zz";
+ String GENSET_REMOTE_START_ZZ = "genset_remote_start_zz";
  /** 
- * zz远程停止. 
+ * zz远程停机. 
  */ 
- String GENSET_REM_STO_ZZ = "genset_rem_sto_zz";
+ String GENSET_REMOTE_STOP_ZZ = "genset_remote_stop_zz";
  /** 
  * zz远程自动. 
  */ 
- String GENSET_REM_AUT_ZZ = "genset_rem_aut_zz";
+ String GENSET_REMOTE_AUTO_ZZ = "genset_remote_auto_zz";
  /** 
  * zz远程手动. 
  */ 
- String GENSET_REM_MAN_ZZ = "genset_rem_man_zz";
+ String GENSET_REMOTE_MANUAL_ZZ = "genset_remote_manual_zz";
  /** 
  * Wrn充电发电机故障. 
  */ 
@@ -359,15 +359,15 @@
  */ 
  String GENSET_WRN_STOP_FAIL = "genset_wrn_stop_fail";
  /** 
- * Sd超速. 
+ * 超速停机. 
  */ 
  String GENSET_SD_OVERSPEED = "genset_sd_overspeed";
  /** 
- * Sd RPM测量失败. 
+ * 转速测量故障停机. 
  */ 
  String GENSET_SD_RPM_MEASUREMENT_FAIL = "genset_sd_rpm_measurement_fail";
  /** 
- * Sd电池. 
+ * 电池耗尽停机 . 
  */ 
  String GENSET_SD_BATTERY_FLAT = "genset_sd_battery_flat";
  /** 
@@ -379,15 +379,15 @@
  */ 
  String GENSET_FAIL_TO_STOP_DSE = "genset_fail_to_stop_dse";
  /** 
- * 停止发电失败. 
+ * 发电合闸失败. 
  */ 
  String GENSET_FAIL_TO_CLOSE_DSE = "genset_fail_to_close_dse";
  /** 
- * 市电关闭失败. 
+ * 市电合闸失败. 
  */ 
  String GENSET_MAINS_FAIL_TO_CLOSE_DSE = "genset_mains_fail_to_close_dse";
  /** 
- * 油压发送器故障. 
+ * 油压传感器故障. 
  */ 
  String GENSET_OIL_PRESSURE_SENDER_FAULT_DSE = "genset_oil_pressure_sender_fault_dse";
  /** 
@@ -399,7 +399,7 @@
  */ 
  String GENSET_MAGNETIC_PICK_UP_OPEN_CIRCUIT_DSE = "genset_magnetic_pick_up_open_circuit_dse";
  /** 
- * 发电机电流打. 
+ * 发电机过流. 
  */ 
  String GENSET_HIGH_CURRENT_DSE = "genset_high_current_dse";
  /** 
@@ -411,31 +411,31 @@
  */ 
  String GENSET_CAN_ECU_SHUTDOWN_DSE = "genset_can_ecu_shutdown_dse";
  /** 
- * CAN ECU数据失败. 
+ * CAN ECU数据通讯失败. 
  */ 
  String GENSET_CAN_ECU_DATA_FAIL_DSE = "genset_can_ecu_data_fail_dse";
  /** 
  * 低油位开关. 
  */ 
- String GENSET_LOW_OIL_LEVEL_SWITCH_DSE = "genset_low_oil_level_switch_dse";
+ String GENSET_LOW_OIL_LEVEL_DI_INPUT_DSE = "genset_low_oil_level_di_input_dse";
  /** 
  * 高温开关. 
  */ 
- String GENSET_HIGH_TEMP_SWITCH_DSE = "genset_high_temp_switch_dse";
+ String GENSET_HIGH_TEMP_DI_INPUT_DSE = "genset_high_temp_di_input_dse";
  /** 
- * 低燃油位开关. 
+ * 低燃油位开关量. 
  */ 
- String GENSET_LOW_FUEL_LEVEL_SWITCH_DSE = "genset_low_fuel_level_switch_dse";
+ String GENSET_LOW_FUEL_LEVEL_DI_INPUT_DSE = "genset_low_fuel_level_di_input_dse";
  /** 
  * 扩展单元看门狗报警. 
  */ 
  String GENSET_EXPANSION_UNIT_WATCHDOG_ALARM_DSE = "genset_expansion_unit_watchdog_alarm_dse";
  /** 
- * kW过载报警器. 
+ * 超载报警. 
  */ 
- String GENSET_KW_OVERLOAD_ALARM_DSE = "genset_kw_overload_alarm_dse";
+ String GENSET_OVERLOAD_ALARM_DSE = "genset_overload_alarm_dse";
  /** 
- * 负相序电流报警. 
+ * 三相电流不平衡报警. 
  */ 
  String GENSET_NEGATIVE_PHASE_SEQUENCE_CURRENT_ALARM_DSE = "genset_negative_phase_sequence_current_alarm_dse";
  /** 
@@ -451,11 +451,11 @@
  */ 
  String GENSET_AUTO_VOLTAGE_SENSE_FAIL_DSE = "genset_auto_voltage_sense_fail_dse";
  /** 
- * 加载频率报警. 
+ * 带载频率报警. 
  */ 
  String GENSET_LOADING_FREQ_ALARM_DSE = "genset_loading_freq_alarm_dse";
  /** 
- * 负载电压报警. 
+ * 带载电压报警. 
  */ 
  String GENSET_LOADING_VOLTAGE_ALARM_DSE = "genset_loading_voltage_alarm_dse";
  /** 
@@ -463,7 +463,7 @@
  */ 
  String GENSET_SHORT_CIRCUIT_DSE = "genset_short_circuit_dse";
  /** 
- * 市电大电流. 
+ * 市电过流. 
  */ 
  String GENSET_MAINS_HIGH_CURRENT_DSE = "genset_mains_high_current_dse";
  /** 
@@ -473,11 +473,11 @@
  /** 
  * 市电短路. 
  */ 
- String GENSET_MAINS_SHORT_CIRCUIT_ZZ = "genset_mains_short_circuit_zz";
+ String GENSET_MAINS_SHORT_CIRCUIT_DSE = "genset_mains_short_circuit_dse";
  /** 
  * ECU保护. 
  */ 
- String GENSET_ECU_PROTECT_ZZ = "genset_ecu_protect_zz";
+ String GENSET_ECU_PROTECT_DSE = "genset_ecu_protect_dse";
  /** 
  * 超速报警停机. 
  */ 
@@ -497,7 +497,7 @@
  /** 
  * 发电过流停机告警. 
  */ 
- String GENSET_GEN_OVER_CURRENT_SHUTDOWN_ZZ = "genset_gen_over_current_shutdown_zz";
+ String GENSET_OVER_CURRENT_SHUTDOWN_ZZ = "genset_over_current_shutdown_zz";
  /** 
  * 逆功率停机告警. 
  */ 
@@ -541,51 +541,51 @@
  /** 
  * 市电L1相有功功率. 
  */ 
- String GENSET_MAINS_L1_WATTS = "genset_mains_l1_watts";
+ String GENSET_MAINS_L1_ACTIVE_POWER = "genset_mains_l1_active_power";
  /** 
  * 市电L2相有功功率. 
  */ 
- String GENSET_MAINS_L2_WATTS = "genset_mains_l2_watts";
+ String GENSET_MAINS_L2_ACTIVE_POWER = "genset_mains_l2_active_power";
  /** 
  * 市电L3相有功功率. 
  */ 
- String GENSET_MAINS_L3_WATTS = "genset_mains_l3_watts";
+ String GENSET_MAINS_L3_ACTIVE_POWER = "genset_mains_l3_active_power";
  /** 
  * 市电总有功功率. 
  */ 
- String GENSET_MAINS_TOTAL_WATTS = "genset_mains_total_watts";
+ String GENSET_MAINS_TOTAL_ACTIVE_POWER = "genset_mains_total_active_power";
  /** 
  * 市电L1相视在功率. 
  */ 
- String GENSET_MAINS_L1_VA = "genset_mains_l1_va";
+ String GENSET_MAINS_L1_APPARENT_POWER = "genset_mains_l1_apparent_power";
  /** 
  * 市电L2相视在功率. 
  */ 
- String GENSET_MAINS_L2_VA = "genset_mains_l2_va";
+ String GENSET_MAINS_L2_APPARENT_POWER = "genset_mains_l2_apparent_power";
  /** 
  * 市电L3相视在功率. 
  */ 
- String GENSET_MAINS_L3_VA = "genset_mains_l3_va";
+ String GENSET_MAINS_L3_APPARENT_POWER = "genset_mains_l3_apparent_power";
  /** 
  * 市电总视在功率. 
  */ 
- String GENSET_MAINS_TOTAL_VA = "genset_mains_total_va";
+ String GENSET_MAINS_TOTAL_APPARENT_POWER = "genset_mains_total_apparent_power";
  /** 
  * 市电L1相无功功率. 
  */ 
- String GENSET_MAINS_L1_VAR = "genset_mains_l1_var";
+ String GENSET_MAINS_L1_REACTIVE_POWER = "genset_mains_l1_reactive_power";
  /** 
  * 市电L2相无功功率. 
  */ 
- String GENSET_MAINS_L2_VAR = "genset_mains_l2_var";
+ String GENSET_MAINS_L2_REACTIVE_POWER = "genset_mains_l2_reactive_power";
  /** 
  * 市电L3相无功功率. 
  */ 
- String GENSET_MAINS_L3_VAR = "genset_mains_l3_var";
+ String GENSET_MAINS_L3_REACTIVE_POWER = "genset_mains_l3_reactive_power";
  /** 
  * 市电总无功功率. 
  */ 
- String GENSET_MAINS_TOTAL_VAR = "genset_mains_total_var";
+ String GENSET_MAINS_TOTAL_REACTIVE_POWER = "genset_mains_total_reactive_power";
  /** 
  * 市电L1相功率因素. 
  */ 
@@ -611,37 +611,37 @@
  */ 
  String GENSET_MAINS_BREAKER_LED_STATUS = "genset_mains_breaker_led_status";
  /** 
- * Cooling Time Setting. 
+ * 冷却时间设定值. 
  */ 
  String GENSET_COOLING_TIME_SETTING = "genset_cooling_time_setting";
  /** 
- * Battery Low Voltage. 
+ * 电池电压低设定值. 
  */ 
- String GENSET_BATTERY_LOW_VOLTAGE = "genset_battery_low_voltage";
+ String GENSET_STARTER_BATTERY_LOW_VOLTAGE_SETTING = "genset_starter_battery_low_voltage_setting";
  /** 
- * Battery High Voltage. 
+ * 电池电压高设定值. 
  */ 
- String GENSET_BATTERY_HIGH_VOLTAGE = "genset_battery_high_voltage";
+ String GENSET_STARTER_BATTERY_HIGH_VOLTAGE_SETTING = "genset_starter_battery_high_voltage_setting";
  /** 
- * 发电机过压关闭. 
+ * 发电机过压停机设定值. 
  */ 
- String GENSET_OVERVOLTAGE_SHUT_DOWN = "genset_overvoltage_shut_down";
+ String GENSET_OV_SHUT_DOWN_SETTING = "genset_ov_shut_down_setting";
  /** 
- * 发电机过压警告 . 
+ * 发电机过压警告设定值. 
  */ 
- String GENSET_OVERVOLTAGE_WARNING = "genset_overvoltage_warning";
+ String GENSET_OV_WARNING_SETTING = "genset_ov_warning_setting";
  /** 
- * 发电机欠压警告 . 
+ * 发电机欠压警告设定值. 
  */ 
- String GENSET_UNDERVOLTAGE_WARNING = "genset_undervoltage_warning";
+ String GENSET_UV_WARNING_SETTING = "genset_uv_warning_setting";
  /** 
- * 发电机欠压关闭冷却. 
+ * 发电机欠压分闸冷却设定值. 
  */ 
- String GENSET_UNDERVOLTAGE_SHUT_OFF_COOLING = "genset_undervoltage_shut_off_cooling";
+ String GENSET_UV_BREAKER_OFF_COOLING_SETTING = "genset_uv_breaker_off_cooling_setting";
  /** 
- * 发电机频率过高警告. 
+ * 发电机频率过高警告设定值. 
  */ 
- String GENSET_OVERFREQUENCY_WARNING = "genset_overfrequency_warning";
+ String GENSET_OVERFREQ_WARNING_SETTING = "genset_overfreq_warning_setting";
  /** 
  * 市电L1-N相电压. 
  */ 
