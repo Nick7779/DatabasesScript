@@ -199,16 +199,6 @@
  @ApiModelProperty("油箱总容量") 
  private Long gensetFuelTankVolume;
 /** 
- * 深海发电机停止模式状态.Deepsea generator stop mode state 
- */ 
- @ApiModelProperty("深海发电机停止模式状态") 
- private Long gensetStopLedStatusDse;
-/** 
- * 深海发电机手动模式状态.Deepsea generator manual mode status 
- */ 
- @ApiModelProperty("深海发电机手动模式状态") 
- private Long gensetManualLedStatusDse;
-/** 
  * 深海发电机自动模式状态.Deepsea generator automatic mode status 
  */ 
  @ApiModelProperty("深海发电机自动模式状态") 
@@ -218,6 +208,16 @@
  */ 
  @ApiModelProperty("深海发电机测试模式状态") 
  private Long gensetTestLedStatusDse;
+/** 
+ * 深海发电机停止模式状态.Deepsea generator stop mode state 
+ */ 
+ @ApiModelProperty("深海发电机停止模式状态") 
+ private Long gensetStopLedStatusDse;
+/** 
+ * 深海发电机手动模式状态.Deepsea generator manual mode status 
+ */ 
+ @ApiModelProperty("深海发电机手动模式状态") 
+ private Long gensetManualLedStatusDse;
 /** 
  * 众智机组的分钟时间.Crowd Wise Generator Minutes 
  */ 

@@ -1,0 +1,39 @@
+{
+  "append": {},
+  "data": {
+    "keys": [
+      "2023-08-17",
+      "2023-08-18",
+      "2023-08-19"
+    ],
+    "valueList": [
+      {
+        "name": "Solar Energy",
+        "type": null,
+        "values": [
+          4.33,
+          1.0,
+          1.0
+        ]
+      },
+      {
+        "name": "Mains Energy",
+        "type": null,
+        "values": [
+          2.07,
+          2.0,
+          2.0
+        ]
+      },
+      {
+        "name": "Generator Energy",
+        "type": null,
+        "values": [
+          3.0,
+          3.0,
+          3.0
+        ]
+      }
+    ]
+  }
+}

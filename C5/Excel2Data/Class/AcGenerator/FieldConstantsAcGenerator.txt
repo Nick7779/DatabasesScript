@@ -159,14 +159,6 @@
  */ 
  String GENSET_FUEL_TANK_VOLUME = "genset_fuel_tank_volume";
  /** 
- * 深海发电机停止模式状态. 
- */ 
- String GENSET_STOP_LED_STATUS_DSE = "genset_stop_led_status_dse";
- /** 
- * 深海发电机手动模式状态. 
- */ 
- String GENSET_MANUAL_LED_STATUS_DSE = "genset_manual_led_status_dse";
- /** 
  * 深海发电机自动模式状态. 
  */ 
  String GENSET_AUTO_LED_STATUS_DSE = "genset_auto_led_status_dse";
@@ -174,6 +166,14 @@
  * 深海发电机测试模式状态. 
  */ 
  String GENSET_TEST_LED_STATUS_DSE = "genset_test_led_status_dse";
+ /** 
+ * 深海发电机停止模式状态. 
+ */ 
+ String GENSET_STOP_LED_STATUS_DSE = "genset_stop_led_status_dse";
+ /** 
+ * 深海发电机手动模式状态. 
+ */ 
+ String GENSET_MANUAL_LED_STATUS_DSE = "genset_manual_led_status_dse";
  /** 
  * 众智机组的分钟时间. 
  */ 

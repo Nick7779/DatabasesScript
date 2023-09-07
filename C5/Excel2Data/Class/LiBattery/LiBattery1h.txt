@@ -1,0 +1,881 @@
+/** 
+ * 锂电池电压.Lithium battery voltage 
+ */ 
+ @ApiModelProperty("锂电池电压") 
+ private Double liBaVoltage;
+/** 
+ * 锂电池电流.Lithium battery current 
+ */ 
+ @ApiModelProperty("锂电池电流") 
+ private Double liBaCurrent;
+/** 
+ * 锂电池循环次数.Lithium battery cycles number 
+ */ 
+ @ApiModelProperty("锂电池循环次数") 
+ private Long liBaCyclesNumber;
+/** 
+ * 锂电池总容量.Lithium battery total capacity 
+ */ 
+ @ApiModelProperty("锂电池总容量") 
+ private Double liBaTotalCapacity;
+/** 
+ * 锂电池soc.Lithium battery soc 
+ */ 
+ @ApiModelProperty("锂电池soc") 
+ private Double liBaSoc;
+/** 
+ * 锂电池soh.Lithium battery soh 
+ */ 
+ @ApiModelProperty("锂电池soh") 
+ private Double liBaSoh;
+/** 
+ * 锂电池周围环境温度.Lithium battery ambient temperature 
+ */ 
+ @ApiModelProperty("锂电池周围环境温度") 
+ private Double liBaAmbientTemperature;
+/** 
+ * 锂电池最大电压.Lithium cells maximum voltage 
+ */ 
+ @ApiModelProperty("锂电池最大电压") 
+ private Double liBaCellsMaximumVoltage;
+/** 
+ * 锂电池最低电压.Lithium cells minimum voltage 
+ */ 
+ @ApiModelProperty("锂电池最低电压") 
+ private Double liBaCellsMinimumVoltage;
+/** 
+ * 锂电池平均电压.Lithium cells average voltage 
+ */ 
+ @ApiModelProperty("锂电池平均电压") 
+ private Double liBaCellsAverageVoltage;
+/** 
+ * 锂电池内部温度1.Lithium battery internal temperature1 
+ */ 
+ @ApiModelProperty("锂电池内部温度1") 
+ private Double liBaInternalTemperature1;
+/** 
+ * 锂电池内部温度2.Lithium battery internal temperature2 
+ */ 
+ @ApiModelProperty("锂电池内部温度2") 
+ private Double liBaInternalTemperature2;
+/** 
+ * 锂电池内部温度3.Lithium battery internal temperature3 
+ */ 
+ @ApiModelProperty("锂电池内部温度3") 
+ private Double liBaInternalTemperature3;
+/** 
+ * 锂电池内部温度4.Lithium battery internal temperature4 
+ */ 
+ @ApiModelProperty("锂电池内部温度4") 
+ private Double liBaInternalTemperature4;
+/** 
+ * 锂电池内部温度5.Lithium battery internal temperature5 
+ */ 
+ @ApiModelProperty("锂电池内部温度5") 
+ private Double liBaInternalTemperature5;
+/** 
+ * 锂电池内部温度6.Lithium battery internal temperature6 
+ */ 
+ @ApiModelProperty("锂电池内部温度6") 
+ private Double liBaInternalTemperature6;
+/** 
+ * 锂电池芯数.Lithium battery cores number 
+ */ 
+ @ApiModelProperty("锂电池芯数") 
+ private Long liBaCoresNumber;
+/** 
+ * 锂电池轻度放电时间.Lithium battery mild discharge time 
+ */ 
+ @ApiModelProperty("锂电池轻度放电时间") 
+ private Double liBaMildDischargeTime;
+/** 
+ * 锂电池深度放电时间.Lithium battery deep discharge time 
+ */ 
+ @ApiModelProperty("锂电池深度放电时间") 
+ private Double liBaDeepDischargeTime;
+/** 
+ * 锂电池过度放电时间.Lithium battery excessive discharge time 
+ */ 
+ @ApiModelProperty("锂电池过度放电时间") 
+ private Double liBaExcessiveDischargeTime;
+/** 
+ * 锂电池浅放电高16比特位.Lithium battery shallow discharge high16 bit 
+ */ 
+ @ApiModelProperty("锂电池浅放电高16比特位") 
+ private Double liBaShallowDischargeHigh16Bit;
+/** 
+ * 锂电池深放电高16比特位.Lithium battery deep discharge high16 bit 
+ */ 
+ @ApiModelProperty("锂电池深放电高16比特位") 
+ private Double liBaDeepDischargeHigh16Bit;
+/** 
+ * 锂电池过放电高16比特位.Lithium battery overdischarge high16 bit 
+ */ 
+ @ApiModelProperty("锂电池过放电高16比特位") 
+ private Double liBaOverDischargeHigh16Bit;
+/** 
+ * 锂电池浅放电低16比特位.Lithium battery shallow discharge low 16 bit 
+ */ 
+ @ApiModelProperty("锂电池浅放电低16比特位") 
+ private Double liBaShallowDischargeLow16Bit;
+/** 
+ * 锂电池深放电低16比特位.Lithium battery deep discharge low16 bit 
+ */ 
+ @ApiModelProperty("锂电池深放电低16比特位") 
+ private Double liBaDeepDischargeLow16Bit;
+/** 
+ * 锂电池过放电低16比特位.Lithium battery overdischarge low 16 bit 
+ */ 
+ @ApiModelProperty("锂电池过放电低16比特位") 
+ private Double liBaOverdischargeLow16Bit;
+/** 
+ * 锂电池电芯1电压.Lithium battery cell 1 voltage 
+ */ 
+ @ApiModelProperty("锂电池电芯1电压") 
+ private Double liBaCell1Voltage;
+/** 
+ * 锂电池电芯2电压.Lithium battery cell 2 voltage 
+ */ 
+ @ApiModelProperty("锂电池电芯2电压") 
+ private Double liBaCell2Voltage;
+/** 
+ * 锂电池电芯3电压.Lithium battery cell 3 voltage 
+ */ 
+ @ApiModelProperty("锂电池电芯3电压") 
+ private Double liBaCell3Voltage;
+/** 
+ * 锂电池电芯4电压.Lithium battery cell 4 voltage 
+ */ 
+ @ApiModelProperty("锂电池电芯4电压") 
+ private Double liBaCell4Voltage;
+/** 
+ * 锂电池电芯5电压.Lithium battery cell 5 voltage 
+ */ 
+ @ApiModelProperty("锂电池电芯5电压") 
+ private Double liBaCell5Voltage;
+/** 
+ * 锂电池电芯6电压.Lithium battery cell 6 voltage 
+ */ 
+ @ApiModelProperty("锂电池电芯6电压") 
+ private Double liBaCell6Voltage;
+/** 
+ * 锂电池电芯7电压.Lithium battery cell 7 voltage 
+ */ 
+ @ApiModelProperty("锂电池电芯7电压") 
+ private Double liBaCell7Voltage;
+/** 
+ * 锂电池电芯8电压.Lithium battery cell 8 voltage 
+ */ 
+ @ApiModelProperty("锂电池电芯8电压") 
+ private Double liBaCell8Voltage;
+/** 
+ * 锂电池电芯9电压.Lithium battery cell 9 voltage 
+ */ 
+ @ApiModelProperty("锂电池电芯9电压") 
+ private Double liBaCell9Voltage;
+/** 
+ * 锂电池电芯10电压.Lithium battery cell 10 voltage 
+ */ 
+ @ApiModelProperty("锂电池电芯10电压") 
+ private Double liBaCell10Voltage;
+/** 
+ * 锂电池电芯11电压.Lithium battery cell 11 voltage 
+ */ 
+ @ApiModelProperty("锂电池电芯11电压") 
+ private Double liBaCell11Voltage;
+/** 
+ * 锂电池电芯12电压.Lithium battery cell 12 voltage 
+ */ 
+ @ApiModelProperty("锂电池电芯12电压") 
+ private Double liBaCell12Voltage;
+/** 
+ * 锂电池电芯13电压.Lithium battery cell 13 voltage 
+ */ 
+ @ApiModelProperty("锂电池电芯13电压") 
+ private Double liBaCell13Voltage;
+/** 
+ * 锂电池电芯14电压.Lithium battery cell 14 voltage 
+ */ 
+ @ApiModelProperty("锂电池电芯14电压") 
+ private Double liBaCell14Voltage;
+/** 
+ * 锂电池电芯15电压.Lithium battery cell 15 voltage 
+ */ 
+ @ApiModelProperty("锂电池电芯15电压") 
+ private Double liBaCell15Voltage;
+/** 
+ * 锂电池电芯16电压.Lithium battery cell 16 voltage 
+ */ 
+ @ApiModelProperty("锂电池电芯16电压") 
+ private Double liBaCell16Voltage;
+/** 
+ * 锂电池电芯17电压.Lithium battery cell 17 voltage 
+ */ 
+ @ApiModelProperty("锂电池电芯17电压") 
+ private Double liBaCell17Voltage;
+/** 
+ * 锂电池电芯18电压.Lithium battery cell 18 voltage 
+ */ 
+ @ApiModelProperty("锂电池电芯18电压") 
+ private Double liBaCell18Voltage;
+/** 
+ * 锂电池电芯19电压.Lithium battery cell 19 voltage 
+ */ 
+ @ApiModelProperty("锂电池电芯19电压") 
+ private Double liBaCell19Voltage;
+/** 
+ * 锂电池电芯20电压.Lithium battery cell 20 voltage 
+ */ 
+ @ApiModelProperty("锂电池电芯20电压") 
+ private Double liBaCell20Voltage;
+/** 
+ * 锂电池电芯21电压.Lithium battery cell 21 voltage 
+ */ 
+ @ApiModelProperty("锂电池电芯21电压") 
+ private Double liBaCell21Voltage;
+/** 
+ * 锂电池电芯22电压.Lithium battery cell 22 voltage 
+ */ 
+ @ApiModelProperty("锂电池电芯22电压") 
+ private Double liBaCell22Voltage;
+/** 
+ * 锂电池电芯23电压.Lithium battery cell 23 voltage 
+ */ 
+ @ApiModelProperty("锂电池电芯23电压") 
+ private Double liBaCell23Voltage;
+/** 
+ * 锂电池电芯24电压.Lithium battery cell 24 voltage 
+ */ 
+ @ApiModelProperty("锂电池电芯24电压") 
+ private Double liBaCell24Voltage;
+/** 
+ * 锂电池电芯25电压.Lithium battery cell 25 voltage 
+ */ 
+ @ApiModelProperty("锂电池电芯25电压") 
+ private Double liBaCell25Voltage;
+/** 
+ * 锂电池电芯26电压.Lithium battery cell 26 voltage 
+ */ 
+ @ApiModelProperty("锂电池电芯26电压") 
+ private Double liBaCell26Voltage;
+/** 
+ * 锂电池电芯27电压.Lithium battery cell 27 voltage 
+ */ 
+ @ApiModelProperty("锂电池电芯27电压") 
+ private Double liBaCell27Voltage;
+/** 
+ * 锂电池电芯28电压.Lithium battery cell 28 voltage 
+ */ 
+ @ApiModelProperty("锂电池电芯28电压") 
+ private Double liBaCell28Voltage;
+/** 
+ * 锂电池电芯29电压.Lithium battery cell 29 voltage 
+ */ 
+ @ApiModelProperty("锂电池电芯29电压") 
+ private Double liBaCell29Voltage;
+/** 
+ * 锂电池电芯30电压.Lithium battery cell 30 voltage 
+ */ 
+ @ApiModelProperty("锂电池电芯30电压") 
+ private Double liBaCell30Voltage;
+/** 
+ * 锂电池放电能量.Lithium battery Discharge energy 
+ */ 
+ @ApiModelProperty("锂电池放电能量") 
+ private Long liBaDischargeEnergy;
+/** 
+ * 锂电池功率温度.Lithium battery power temperature 
+ */ 
+ @ApiModelProperty("锂电池功率温度") 
+ private Double liBaPowerTemperature;
+/** 
+ * 锂电池状态.Lithium battery status 
+ */ 
+ @ApiModelProperty("锂电池状态") 
+ private Long liBaStatus;
+/** 
+ * 锂电池FET状态.Lithium battery FET status 
+ */ 
+ @ApiModelProperty("锂电池FET状态") 
+ private Double liBaFetStatus;
+/** 
+ * 锂电池电芯温度最高.Lithium battery cells have the highest temperature 
+ */ 
+ @ApiModelProperty("锂电池电芯温度最高") 
+ private Double liBaCellTempTallest;
+/** 
+ * 锂电池电芯温度最低.Lithium battery cell temperature is the lowest 
+ */ 
+ @ApiModelProperty("锂电池电芯温度最低") 
+ private Double liBaCellTempLowest;
+/** 
+ * 锂电池电池电平.Lithium battery level 
+ */ 
+ @ApiModelProperty("锂电池电池电平") 
+ private Double liBaVbus;
+/** 
+ * 锂电池BMS保护状态.Lithium battery BMS protection status 
+ */ 
+ @ApiModelProperty("锂电池BMS保护状态") 
+ private Double liBaBmsProtectionStatus;
+/** 
+ * 锂电池并机在线数量.Lithium battery parallel online Number 
+ */ 
+ @ApiModelProperty("锂电池并机在线数量") 
+ private Long liBaBmsParallelOnlineUnits;
+/** 
+ * 锂电池总充Wh.Lithium battery total charge Wh 
+ */ 
+ @ApiModelProperty("锂电池总充Wh") 
+ private Double liBaTotalChargeCapacity;
+/** 
+ * 锂电池总充时间.Lithium battery Total charge time 
+ */ 
+ @ApiModelProperty("锂电池总充时间") 
+ private Double liBaTotalChargeTime;
+/** 
+ * 锂电池总放时间.Lithium battery Total discharge time 
+ */ 
+ @ApiModelProperty("锂电池总放时间") 
+ private Long liBaTotalDischargeTime;
+/** 
+ * 锂电池剩余容量.Lithium battery Remaining capacity 
+ */ 
+ @ApiModelProperty("锂电池剩余容量") 
+ private Double liBaRemainingCapacity;
+/** 
+ * 锂电池报警状态1.Lithium battery alarm status 1 
+ */ 
+ @ApiModelProperty("锂电池报警状态1") 
+ private Long liBaAlarmStatus1;
+/** 
+ * 锂电池报警状态2.Lithium battery alarm status 2 
+ */ 
+ @ApiModelProperty("锂电池报警状态2") 
+ private Long liBaAlarmStatus2;
+/** 
+ * 锂电池报警状态3.Lithium battery alarm status 3 
+ */ 
+ @ApiModelProperty("锂电池报警状态3") 
+ private Long liBaAlarmStatus3;
+/** 
+ * 锂电池报警状态4.Lithium battery alarm status 4 
+ */ 
+ @ApiModelProperty("锂电池报警状态4") 
+ private Long liBaAlarmStatus4;
+/** 
+ * 锂电池报警状态5.Lithium battery alarm status 5 
+ */ 
+ @ApiModelProperty("锂电池报警状态5") 
+ private Long liBaAlarmStatus5;
+/** 
+ * 锂电池环境温度告警状态.Lithium battery ambient temperature alarm status 
+ */ 
+ @ApiModelProperty("锂电池环境温度告警状态") 
+ private Long liBaAmbientTemperatureAlarmStatus;
+/** 
+ * 锂电池功率温度告警状态.Lithium battery power temperature alarm status 
+ */ 
+ @ApiModelProperty("锂电池功率温度告警状态") 
+ private Long liBaPowerTemperatureAlarmStatus;
+/** 
+ * 锂电池充放电流告警状态.Lithium battery charging and discharging flow alarm status 
+ */ 
+ @ApiModelProperty("锂电池充放电流告警状态") 
+ private Long liBaChargingAndDischargingFlowAlarmStatus;
+/** 
+ * 锂电池电池总压告警状态.Lithium battery voltage alarm status 
+ */ 
+ @ApiModelProperty("锂电池电池总压告警状态") 
+ private Long liBaVoltageAlarmStatus;
+/** 
+ * 锂电池均衡事件代码.Lithium battery balancing event code 
+ */ 
+ @ApiModelProperty("锂电池均衡事件代码") 
+ private Long liBaBalancingEventCode;
+/** 
+ * 锂电池电压事件代码.Lithium battery voltage event code 
+ */ 
+ @ApiModelProperty("锂电池电压事件代码") 
+ private Long liBaVoltageEventCode;
+/** 
+ * 锂电池温度事件代码.Lithium battery temperature event code 
+ */ 
+ @ApiModelProperty("锂电池温度事件代码") 
+ private Long liBaTemperatureEventCode;
+/** 
+ * 锂电池电流事件代码.Lithium battery current event code 
+ */ 
+ @ApiModelProperty("锂电池电流事件代码") 
+ private Long liBaCurrentEventCode;
+/** 
+ * 锂电池剩余容量告警.Lithium battery remaining capacity alarm status 
+ */ 
+ @ApiModelProperty("锂电池剩余容量告警") 
+ private Long liBaRemainingCapacityAlarmStatus;
+/** 
+ * 锂电池静态均衡指示.Lithium battery Static balance indicator 
+ */ 
+ @ApiModelProperty("锂电池静态均衡指示") 
+ private Long liBaStaticEqualizationIndication;
+/** 
+ * 锂电池静态均衡超时.Lithium battery Static balance timeout 
+ */ 
+ @ApiModelProperty("锂电池静态均衡超时") 
+ private Long liBaStaticBalancingTimeout;
+/** 
+ * 锂电池超温禁止均衡.Lithium battery Overtemperature disables balancing 
+ */ 
+ @ApiModelProperty("锂电池超温禁止均衡") 
+ private Long liBaOvertemperatureDisablesBalancing;
+/** 
+ * 锂电池电芯失效告警.Lithium battery failure alarm 
+ */ 
+ @ApiModelProperty("锂电池电芯失效告警") 
+ private Long liBaFailureAlarm;
+/** 
+ * 锂电池单体过压告警.Lithium battery Single overvoltage alarm 
+ */ 
+ @ApiModelProperty("锂电池单体过压告警") 
+ private Long liBaSingleOvervoltageAlarm;
+/** 
+ * 锂电池单体过压保护.Lithium battery Monomer overvoltage protection 
+ */ 
+ @ApiModelProperty("锂电池单体过压保护") 
+ private Long liBaMonomerOvervoltageProtection;
+/** 
+ * 锂电池单体欠压告警.Lithium battery Single undervoltage alarm 
+ */ 
+ @ApiModelProperty("锂电池单体欠压告警") 
+ private Long liBaSingleUndervoltageAlarm;
+/** 
+ * 锂电池单体欠压保护.Lithium battery Monomer undervoltage protection 
+ */ 
+ @ApiModelProperty("锂电池单体欠压保护") 
+ private Long liBaMonomerUndervoltageProtection;
+/** 
+ * 锂电池总压过压告警.Lithium battery Total pressure overvoltage alarm 
+ */ 
+ @ApiModelProperty("锂电池总压过压告警") 
+ private Long liBaTotalPressureOvervoltageAlarm;
+/** 
+ * 锂电池总压过压保护.Lithium battery Total pressure overvoltage protection 
+ */ 
+ @ApiModelProperty("锂电池总压过压保护") 
+ private Long liBaTotalPressureOvervoltageProtection;
+/** 
+ * 锂电池总压欠压告警.Lithium battery Total pressure undervoltage alarm 
+ */ 
+ @ApiModelProperty("锂电池总压欠压告警") 
+ private Long liBaTotalPressureUndervoltageAlarm;
+/** 
+ * 锂电池总压欠压保护.Lithium battery Total pressure undervoltage protection 
+ */ 
+ @ApiModelProperty("锂电池总压欠压保护") 
+ private Long liBaTotalPressureUndervoltageProtection;
+/** 
+ * 锂电池充电高温告警.Lithium battery Charging high temperature warning 
+ */ 
+ @ApiModelProperty("锂电池充电高温告警") 
+ private Long liBaChargingHighTemperatureWarning;
+/** 
+ * 锂电池充电过温保护.Lithium battery Charging over temperature protection 
+ */ 
+ @ApiModelProperty("锂电池充电过温保护") 
+ private Long liBaChargingOverTemperatureProtection;
+/** 
+ * 锂电池充电低温告警.Lithium battery Charging low temperature warning 
+ */ 
+ @ApiModelProperty("锂电池充电低温告警") 
+ private Long liBaChargingLowTemperatureWarning;
+/** 
+ * 锂电池充电欠温保护.Lithium battery Charging under-temperature protection 
+ */ 
+ @ApiModelProperty("锂电池充电欠温保护") 
+ private Long liBaChargingUnderTemperatureProtection;
+/** 
+ * 锂电池放电高温告警.Lithium battery Discharge high temperature warning 
+ */ 
+ @ApiModelProperty("锂电池放电高温告警") 
+ private Long liBaDischargeHighTemperatureWarning;
+/** 
+ * 锂电池放电过温保护.Lithium battery Discharge over temperature protection 
+ */ 
+ @ApiModelProperty("锂电池放电过温保护") 
+ private Long liBaDischargeOverTemperatureProtection;
+/** 
+ * 锂电池放电低温告警.Lithium battery Discharge low temperature warning 
+ */ 
+ @ApiModelProperty("锂电池放电低温告警") 
+ private Long liBaDischargeLowTemperatureWarning;
+/** 
+ * 锂电池放电欠温保护.Lithium battery Discharge under-temperature protection 
+ */ 
+ @ApiModelProperty("锂电池放电欠温保护") 
+ private Long liBaDischargeUnderTemperatureProtection;
+/** 
+ * 锂电池环境高温告警.Lithium battery High temperature warning 
+ */ 
+ @ApiModelProperty("锂电池环境高温告警") 
+ private Long liBaHighTemperatureWarning;
+/** 
+ * 锂电池环境过温保护.Lithium battery Environmental over-temperature protection 
+ */ 
+ @ApiModelProperty("锂电池环境过温保护") 
+ private Long liBaEnvironmentalOverTemperatureProtection;
+/** 
+ * 锂电池环境低温告警.Lithium battery Environmental low temperature warning 
+ */ 
+ @ApiModelProperty("锂电池环境低温告警") 
+ private Long liBaEnvironmentalLowTemperatureWarning;
+/** 
+ * 锂电池环境欠温保护.Lithium battery Environmental under-temperature protection 
+ */ 
+ @ApiModelProperty("锂电池环境欠温保护") 
+ private Long liBaEnvironmentalUnderTemperatureProtection;
+/** 
+ * 锂电池功率过温保护.Lithium battery Power over temperature protection 
+ */ 
+ @ApiModelProperty("锂电池功率过温保护") 
+ private Long liBaPowerOverTemperatureProtection;
+/** 
+ * 锂电池充电电流告警.Lithium battery Charging current alarm 
+ */ 
+ @ApiModelProperty("锂电池充电电流告警") 
+ private Long liBaChargingCurrentAlarm;
+/** 
+ * 锂电池充电过流保护.Lithium battery Charging overcurrent protection 
+ */ 
+ @ApiModelProperty("锂电池充电过流保护") 
+ private Long liBaChargingOvercurrentProtection;
+/** 
+ * 锂电池放电电流告警.Lithium battery Discharge current alarm 
+ */ 
+ @ApiModelProperty("锂电池放电电流告警") 
+ private Long liBaDischargeCurrentAlarm;
+/** 
+ * 锂电池放电过流保护.Lithium battery Discharge overcurrent protection 
+ */ 
+ @ApiModelProperty("锂电池放电过流保护") 
+ private Long liBaDischargeOvercurrentProtection;
+/** 
+ * 锂电池二级过流保护.Lithium battery Secondary overcurrent protection 
+ */ 
+ @ApiModelProperty("锂电池二级过流保护") 
+ private Long liBaSecondaryOvercurrentProtection;
+/** 
+ * 锂电池输出短路保护.Lithium battery Output short circuit protection 
+ */ 
+ @ApiModelProperty("锂电池输出短路保护") 
+ private Long liBaOutputShortCircuitProtection;
+/** 
+ * 锂电池二级过流锁定.Lithium battery Secondary overcurrent lock 
+ */ 
+ @ApiModelProperty("锂电池二级过流锁定") 
+ private Long liBaSecondaryOvercurrentLock;
+/** 
+ * 锂电池输出短路锁定.Lithium battery Output short circuit lock 
+ */ 
+ @ApiModelProperty("锂电池输出短路锁定") 
+ private Long liBaOutputShortCircuitLock;
+/** 
+ * 锂电池剩余容量告警.Lithium battery Remaining capacity alarm 
+ */ 
+ @ApiModelProperty("锂电池剩余容量告警") 
+ private Long liBaRemainingCapacityAlarm;
+/** 
+ * 锂电池放电开关开启.Lithium battery Discharge switch on 
+ */ 
+ @ApiModelProperty("锂电池放电开关开启") 
+ private Long liBaDischargeSwitchOn;
+/** 
+ * 锂电池充电开关开启.Lithium battery Charging switch on 
+ */ 
+ @ApiModelProperty("锂电池充电开关开启") 
+ private Long liBaChargingSwitchOn;
+/** 
+ * 锂电池限流开关开启.Lithium battery Current limit switch on 
+ */ 
+ @ApiModelProperty("锂电池限流开关开启") 
+ private Long liBaCurrentLimitSwitchOn;
+/** 
+ * 锂电池加热开关开启.Lithium battery Heating switch on 
+ */ 
+ @ApiModelProperty("锂电池加热开关开启") 
+ private Long liBaHeatingSwitchOn;
+/** 
+ * 锂电池放电.Lithium battery Discharge 
+ */ 
+ @ApiModelProperty("锂电池放电") 
+ private Long liBaDischarge;
+/** 
+ * 锂电池充电.Lithium battery Charge 
+ */ 
+ @ApiModelProperty("锂电池充电") 
+ private Long liBaCharge;
+/** 
+ * 锂电池浮充.Lithium battery Float 
+ */ 
+ @ApiModelProperty("锂电池浮充") 
+ private Long liBaFloat;
+/** 
+ * 锂电池NTC断线.Lithium battery NTC disconnect 
+ */ 
+ @ApiModelProperty("锂电池NTC断线") 
+ private Long liBaNtcDisconnect;
+/** 
+ * 锂电池ADC损坏.Lithium battery ADC damage 
+ */ 
+ @ApiModelProperty("锂电池ADC损坏") 
+ private Long liBaAdcDamage;
+/** 
+ * 锂电池电池反接.Lithium battery reversed 
+ */ 
+ @ApiModelProperty("锂电池电池反接") 
+ private Long liBaReversed;
+/** 
+ * 锂电池风扇开启故障.Lithium battery Fan on failure 
+ */ 
+ @ApiModelProperty("锂电池风扇开启故障") 
+ private Long liBaFanOnFailure;
+/** 
+ * 锂电池电池锁定.Lithium battery lock 
+ */ 
+ @ApiModelProperty("锂电池电池锁定") 
+ private Long liBaLock;
+/** 
+ * 锂电池单体电压过低故障.Lithium battery low cell voltage fault 
+ */ 
+ @ApiModelProperty("锂电池单体电压过低故障") 
+ private Long liBaLowCellVoltageFault;
+/** 
+ * 锂电池电压采样断线.Lithium battery Voltage sampling disconnect 
+ */ 
+ @ApiModelProperty("锂电池电压采样断线") 
+ private Long liBaVoltageSamplingDisconnect;
+/** 
+ * 锂电池充电MOS损坏.Lithium battery Damaged charging MOS 
+ */ 
+ @ApiModelProperty("锂电池充电MOS损坏") 
+ private Long liBaDamagedChargingMos;
+/** 
+ * 锂电池放电MOS损坏.Lithium battery Discharge MOS damage 
+ */ 
+ @ApiModelProperty("锂电池放电MOS损坏") 
+ private Long liBaDischargeMosDamage;
+/** 
+ * 锂电池电压采样元件损坏.Lithium battery The voltage sampling element damaged 
+ */ 
+ @ApiModelProperty("锂电池电压采样元件损坏") 
+ private Long liBaVoltageSamplingElementDamaged;
+/** 
+ * 锂电池充电状态.Lithium battery charging state 
+ */ 
+ @ApiModelProperty("锂电池充电状态") 
+ private Long liBaChargingState;
+/** 
+ * 锂电池放电状态.Lithium battery discharge state 
+ */ 
+ @ApiModelProperty("锂电池放电状态") 
+ private Long liBaDischargeState;
+/** 
+ * 锂电池短路保护.Lithium battery Short circuit protection 
+ */ 
+ @ApiModelProperty("锂电池短路保护") 
+ private Long liBaShortCircuitProtection;
+/** 
+ * 锂电池过压保护(不解析).Lithium battery Overvoltage protection (not resolved) 
+ */ 
+ @ApiModelProperty("锂电池过压保护(不解析)") 
+ private Long liBaOvervoltageProtection;
+/** 
+ * 锂电池欠压保护(不解析).Lithium battery Undervoltage protection (not resolved) 
+ */ 
+ @ApiModelProperty("锂电池欠压保护(不解析)") 
+ private Long liBaUndervoltageProtection;
+/** 
+ * 锂电池总体过压保护.Lithium battery Overall overvoltage protection 
+ */ 
+ @ApiModelProperty("锂电池总体过压保护") 
+ private Long liBaOverallOvervoltageProtection;
+/** 
+ * 锂电池启动失败.Lithium battery failed to activate 
+ */ 
+ @ApiModelProperty("锂电池启动失败") 
+ private Long liBaFailedToActivate;
+/** 
+ * 锂电池充电MOS导通状态(0导通，1关断).Lithium battery Charge MOS on state 
+ */ 
+ @ApiModelProperty("锂电池充电MOS导通状态(0导通，1关断)") 
+ private Long liBaChargeMosOnState;
+/** 
+ * 锂电池放电MOS导通状态(0导通，1关断).Lithium battery Discharge MOS state 
+ */ 
+ @ApiModelProperty("锂电池放电MOS导通状态(0导通，1关断)") 
+ private Long liBaDischargeMosState;
+/** 
+ * 锂电池强制充电MOS开启.Lithium battery Force charging MOS on 
+ */ 
+ @ApiModelProperty("锂电池强制充电MOS开启") 
+ private Long liBaForceChargingMosOn;
+/** 
+ * 锂电池强制充电MOS关闭.Lithium battery Force charge MOS off 
+ */ 
+ @ApiModelProperty("锂电池强制充电MOS关闭") 
+ private Long liBaForceChargeMosOff;
+/** 
+ * 锂电池强制放电MOS开启.Lithium battery Forced discharge MOS on 
+ */ 
+ @ApiModelProperty("锂电池强制放电MOS开启") 
+ private Long liBaForcedDischargeMosOn;
+/** 
+ * 锂电池强制放电MOS关闭.Lithium battery Forced discharge MOS off 
+ */ 
+ @ApiModelProperty("锂电池强制放电MOS关闭") 
+ private Long liBaForcedDischargeMosOff;
+/** 
+ * 锂电池加热垫开启.Lithium battery heating pad on 
+ */ 
+ @ApiModelProperty("锂电池加热垫开启") 
+ private Long liBaHeatingPadOn;
+/** 
+ * 锂电池MOSFET过温保护.Lithium battery MOSFET over temperature protection 
+ */ 
+ @ApiModelProperty("锂电池MOSFET过温保护") 
+ private Long liBaMosfetOverTemperatureProtection;
+/** 
+ * 锂电池MOSFET低温保护.Lithium battery MOSFET low temp protection 
+ */ 
+ @ApiModelProperty("锂电池MOSFET低温保护") 
+ private Long liBaMosfetLowTempProtection;
+/** 
+ * 锂电池充电开启温度过低.Lithium battery begin charging temp low 
+ */ 
+ @ApiModelProperty("锂电池充电开启温度过低") 
+ private Long liBaBeginChargingTempLow;
+/** 
+ * 锂电池环境低温保护.Lithium battery  low environmental temp protection 
+ */ 
+ @ApiModelProperty("锂电池环境低温保护") 
+ private Long liBaLowEnvironmentalTempProtection;
+/** 
+ * 锂电池环境高温保护.Lithium battery high environmental temp protection 
+ */ 
+ @ApiModelProperty("锂电池环境高温保护") 
+ private Long liBaHighEnvironmentalTempProtection;
+/** 
+ * 锂电池风扇开启.Lithium battery fan on 
+ */ 
+ @ApiModelProperty("锂电池风扇开启") 
+ private Long liBaFanOn;
+/** 
+ * 锂电池震动告警.Lithium battery Vibration alarm 
+ */ 
+ @ApiModelProperty("锂电池震动告警") 
+ private Long liBaVibrationAlarm;
+/** 
+ * 锂电池干接点1.Lithium battery dry contact 1 
+ */ 
+ @ApiModelProperty("锂电池干接点1") 
+ private Long liBaDryContact1;
+/** 
+ * 锂电池干接点2.Lithium battery dry contact 2 
+ */ 
+ @ApiModelProperty("锂电池干接点2") 
+ private Long liBaDryContact2;
+/** 
+ * 锂电池BMS模块SN重复(BMS模块并机).Lithium battery BMS module SN repetition (BMS module parallel) 
+ */ 
+ @ApiModelProperty("锂电池BMS模块SN重复(BMS模块并机)") 
+ private Long liBaBmsModuleSnRepetition;
+/** 
+ * 锂电池单体过压告警.Lithium battery Cell overvoltage alarm 
+ */ 
+ @ApiModelProperty("锂电池单体过压告警") 
+ private Long liBaCellOvervoltageAlarm;
+/** 
+ * 锂电池单体欠压告警.Lithium battery Cell undervoltage alarm 
+ */ 
+ @ApiModelProperty("锂电池单体欠压告警") 
+ private Long liBaCellUndervoltageAlarm;
+/** 
+ * 锂电池总体过压告警.Lithium battery Overall overvoltage warning 
+ */ 
+ @ApiModelProperty("锂电池总体过压告警") 
+ private Long liBaOverallOvervoltageWarning;
+/** 
+ * 锂电池总体欠压告警.Lithium battery Overall undervoltage alarm 
+ */ 
+ @ApiModelProperty("锂电池总体欠压告警") 
+ private Long liBaOverallUndervoltageAlarm;
+/** 
+ * 锂电池充过流告警.Lithium battery Overcharge alarm 
+ */ 
+ @ApiModelProperty("锂电池充过流告警") 
+ private Long liBaOverchargeAlarm;
+/** 
+ * 锂电池放过流告警.Lithium battery Ignore the flow alarm 
+ */ 
+ @ApiModelProperty("锂电池放过流告警") 
+ private Long liBaIgnoreTheFlowAlarm;
+/** 
+ * 锂电池电池充电过温告警.Lithium battery charging over temp alarm 
+ */ 
+ @ApiModelProperty("锂电池电池充电过温告警") 
+ private Long liBaChargingOverTempAlarm;
+/** 
+ * 锂电池电池充电欠温告警.Lithium battery charge under temp alarm 
+ */ 
+ @ApiModelProperty("锂电池电池充电欠温告警") 
+ private Long liBaChargeUnderTempAlarm;
+/** 
+ * 锂电池环境过温告警.Lithium battery Ambient over temp alarm 
+ */ 
+ @ApiModelProperty("锂电池环境过温告警") 
+ private Long liBaAmbientOverTempAlarm;
+/** 
+ * 锂电池环境欠温告警.Lithium battery Environment under temp alarm 
+ */ 
+ @ApiModelProperty("锂电池环境欠温告警") 
+ private Long liBaEnvironmentUnderTempAlarm;
+/** 
+ * 锂电池MOS过温告警.Lithium battery MOS over temp alarm 
+ */ 
+ @ApiModelProperty("锂电池MOS过温告警") 
+ private Long liBaMosOverTempAlarm;
+/** 
+ * 锂电池SOC过低告警.Lithium battery SOC too low alarm 
+ */ 
+ @ApiModelProperty("锂电池SOC过低告警") 
+ private Long liBaSocTooLowAlarm;
+/** 
+ * 锂电池压差过大告警.Lithium battery Overpressure alarm 
+ */ 
+ @ApiModelProperty("锂电池压差过大告警") 
+ private Long liBaOverpressureAlarm;
+/** 
+ * 锂电池电池放电过温告警.Lithium battery overheating alarm 
+ */ 
+ @ApiModelProperty("锂电池电池放电过温告警") 
+ private Long liBaOverheatingAlarm;
+/** 
+ * 锂电池电池放电欠温告警.Lithium battery discharge under temp alarm 
+ */ 
+ @ApiModelProperty("锂电池电池放电欠温告警") 
+ private Long liBaDischargeUnderTempAlarm;
+/** 
+ * 直流发电机锂电池 SOB (FC).Lithium Battery SOB (FC) 
+ */ 
+ @ApiModelProperty("直流发电机锂电池 SOB (FC)") 
+ private Double liBatterySobFc;
+/** 
+ * 锂电池组电压.battery bank voltage 
+ */ 
+ @ApiModelProperty("锂电池组电压") 
+ private Double liBaBankVoltage;
+/** 
+ * 锂电池组电流.battery bank current 
+ */ 
+ @ApiModelProperty("锂电池组电流") 
+ private Double liBaBankCurrent;
+private static final long serialVersionUID = 1L;

@@ -1,0 +1,71 @@
+{
+  "data": [
+    {
+      "Generator Energy": 3.0,
+      "Mains Energy": 2.07,
+      "Region Name": "Nick-Region-1-1",
+      "Solar Energy": 4.33,
+      "Time": "2023-08-17"
+    },
+    {
+      "Generator Energy": 3.0,
+      "Mains Energy": 2.0,
+      "Name": "Nick-Region-1-2",
+      "Solar Energy": 1.0,
+      "Time": "2023-08-17"
+    },
+    {
+      "Generator Energy": 3.0,
+      "Mains Energy": 2.0,
+      "Name": "Nick-Region-1-3",
+      "Solar Energy": 1.0,
+      "Time": "2023-08-17"
+    },
+
+
+    {
+      "Generator Energy": 3.0,
+      "Mains Energy": 2.0,
+      "Region Name": "Nick-Region-1-1",
+      "Solar Energy": 1.0,
+      "Time": "2023-08-18"
+    },
+    {
+      "Generator Energy": 3.0,
+      "Mains Energy": 2.0,
+      "Region Name": "Nick-Region-1-2",
+      "Solar Energy": 1.0,
+      "Time": "2023-08-18"
+    },
+    {
+      "Generator Energy": 3.0,
+      "Mains Energy": 2.0,
+      "Region Name": "Nick-Region-1-3",
+      "Solar Energy": 1.0,
+      "Time": "2023-08-18"
+    },
+
+
+    {
+      "Generator Energy": 3.0,
+      "Mains Energy": 2.0,
+      "Region Name": "Nick-Region-1-1",
+      "Solar Energy": 1.0,
+      "Time": "2023-08-19"
+    },
+    {
+      "Generator Energy": 3.0,
+      "Mains Energy": 2.0,
+      "Region Name": "Nick-Region-1-2",
+      "Solar Energy": 1.0,
+      "Time": "2023-08-19"
+    },
+    {
+      "Generator Energy": 3.0,
+      "Mains Energy": 2.0,
+      "Region Name": "Nick-Region-1-3",
+      "Solar Energy": 1.0,
+      "Time": "2023-08-19"
+    }
+  ]
+}

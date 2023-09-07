@@ -1,0 +1,704 @@
+ /** 
+ * 锂电池电压. 
+ */ 
+ String LI_BA_VOLTAGE = "li_ba_voltage";
+ /** 
+ * 锂电池电流. 
+ */ 
+ String LI_BA_CURRENT = "li_ba_current";
+ /** 
+ * 锂电池循环次数. 
+ */ 
+ String LI_BA_CYCLES_NUMBER = "li_ba_cycles_number";
+ /** 
+ * 锂电池总容量. 
+ */ 
+ String LI_BA_TOTAL_CAPACITY = "li_ba_total_capacity";
+ /** 
+ * 锂电池soc. 
+ */ 
+ String LI_BA_SOC = "li_ba_soc";
+ /** 
+ * 锂电池soh. 
+ */ 
+ String LI_BA_SOH = "li_ba_soh";
+ /** 
+ * 锂电池周围环境温度. 
+ */ 
+ String LI_BA_AMBIENT_TEMPERATURE = "li_ba_ambient_temperature";
+ /** 
+ * 锂电池最大电压. 
+ */ 
+ String LI_BA_CELLS_MAXIMUM_VOLTAGE = "li_ba_cells_maximum_voltage";
+ /** 
+ * 锂电池最低电压. 
+ */ 
+ String LI_BA_CELLS_MINIMUM_VOLTAGE = "li_ba_cells_minimum_voltage";
+ /** 
+ * 锂电池平均电压. 
+ */ 
+ String LI_BA_CELLS_AVERAGE_VOLTAGE = "li_ba_cells_average_voltage";
+ /** 
+ * 锂电池内部温度1. 
+ */ 
+ String LI_BA_INTERNAL_TEMPERATURE1 = "li_ba_internal_temperature1";
+ /** 
+ * 锂电池内部温度2. 
+ */ 
+ String LI_BA_INTERNAL_TEMPERATURE2 = "li_ba_internal_temperature2";
+ /** 
+ * 锂电池内部温度3. 
+ */ 
+ String LI_BA_INTERNAL_TEMPERATURE3 = "li_ba_internal_temperature3";
+ /** 
+ * 锂电池内部温度4. 
+ */ 
+ String LI_BA_INTERNAL_TEMPERATURE4 = "li_ba_internal_temperature4";
+ /** 
+ * 锂电池内部温度5. 
+ */ 
+ String LI_BA_INTERNAL_TEMPERATURE5 = "li_ba_internal_temperature5";
+ /** 
+ * 锂电池内部温度6. 
+ */ 
+ String LI_BA_INTERNAL_TEMPERATURE6 = "li_ba_internal_temperature6";
+ /** 
+ * 锂电池芯数. 
+ */ 
+ String LI_BA_CORES_NUMBER = "li_ba_cores_number";
+ /** 
+ * 锂电池轻度放电时间. 
+ */ 
+ String LI_BA_MILD_DISCHARGE_TIME = "li_ba_mild_discharge_time";
+ /** 
+ * 锂电池深度放电时间. 
+ */ 
+ String LI_BA_DEEP_DISCHARGE_TIME = "li_ba_deep_discharge_time";
+ /** 
+ * 锂电池过度放电时间. 
+ */ 
+ String LI_BA_EXCESSIVE_DISCHARGE_TIME = "li_ba_excessive_discharge_time";
+ /** 
+ * 锂电池浅放电高16比特位. 
+ */ 
+ String LI_BA_SHALLOW_DISCHARGE_HIGH16_BIT = "li_ba_shallow_discharge_high16_bit";
+ /** 
+ * 锂电池深放电高16比特位. 
+ */ 
+ String LI_BA_DEEP_DISCHARGE_HIGH16_BIT = "li_ba_deep_discharge_high16_bit";
+ /** 
+ * 锂电池过放电高16比特位. 
+ */ 
+ String LI_BA_OVER_DISCHARGE_HIGH16_BIT = "li_ba_over_discharge_high16_bit";
+ /** 
+ * 锂电池浅放电低16比特位. 
+ */ 
+ String LI_BA_SHALLOW_DISCHARGE_LOW16_BIT = "li_ba_shallow_discharge_low16_bit";
+ /** 
+ * 锂电池深放电低16比特位. 
+ */ 
+ String LI_BA_DEEP_DISCHARGE_LOW16_BIT = "li_ba_deep_discharge_low16_bit";
+ /** 
+ * 锂电池过放电低16比特位. 
+ */ 
+ String LI_BA_OVERDISCHARGE_LOW16_BIT = "li_ba_overdischarge_low16_bit";
+ /** 
+ * 锂电池电芯1电压. 
+ */ 
+ String LI_BA_CELL1_VOLTAGE = "li_ba_cell1_voltage";
+ /** 
+ * 锂电池电芯2电压. 
+ */ 
+ String LI_BA_CELL2_VOLTAGE = "li_ba_cell2_voltage";
+ /** 
+ * 锂电池电芯3电压. 
+ */ 
+ String LI_BA_CELL3_VOLTAGE = "li_ba_cell3_voltage";
+ /** 
+ * 锂电池电芯4电压. 
+ */ 
+ String LI_BA_CELL4_VOLTAGE = "li_ba_cell4_voltage";
+ /** 
+ * 锂电池电芯5电压. 
+ */ 
+ String LI_BA_CELL5_VOLTAGE = "li_ba_cell5_voltage";
+ /** 
+ * 锂电池电芯6电压. 
+ */ 
+ String LI_BA_CELL6_VOLTAGE = "li_ba_cell6_voltage";
+ /** 
+ * 锂电池电芯7电压. 
+ */ 
+ String LI_BA_CELL7_VOLTAGE = "li_ba_cell7_voltage";
+ /** 
+ * 锂电池电芯8电压. 
+ */ 
+ String LI_BA_CELL8_VOLTAGE = "li_ba_cell8_voltage";
+ /** 
+ * 锂电池电芯9电压. 
+ */ 
+ String LI_BA_CELL9_VOLTAGE = "li_ba_cell9_voltage";
+ /** 
+ * 锂电池电芯10电压. 
+ */ 
+ String LI_BA_CELL10_VOLTAGE = "li_ba_cell10_voltage";
+ /** 
+ * 锂电池电芯11电压. 
+ */ 
+ String LI_BA_CELL11_VOLTAGE = "li_ba_cell11_voltage";
+ /** 
+ * 锂电池电芯12电压. 
+ */ 
+ String LI_BA_CELL12_VOLTAGE = "li_ba_cell12_voltage";
+ /** 
+ * 锂电池电芯13电压. 
+ */ 
+ String LI_BA_CELL13_VOLTAGE = "li_ba_cell13_voltage";
+ /** 
+ * 锂电池电芯14电压. 
+ */ 
+ String LI_BA_CELL14_VOLTAGE = "li_ba_cell14_voltage";
+ /** 
+ * 锂电池电芯15电压. 
+ */ 
+ String LI_BA_CELL15_VOLTAGE = "li_ba_cell15_voltage";
+ /** 
+ * 锂电池电芯16电压. 
+ */ 
+ String LI_BA_CELL16_VOLTAGE = "li_ba_cell16_voltage";
+ /** 
+ * 锂电池电芯17电压. 
+ */ 
+ String LI_BA_CELL17_VOLTAGE = "li_ba_cell17_voltage";
+ /** 
+ * 锂电池电芯18电压. 
+ */ 
+ String LI_BA_CELL18_VOLTAGE = "li_ba_cell18_voltage";
+ /** 
+ * 锂电池电芯19电压. 
+ */ 
+ String LI_BA_CELL19_VOLTAGE = "li_ba_cell19_voltage";
+ /** 
+ * 锂电池电芯20电压. 
+ */ 
+ String LI_BA_CELL20_VOLTAGE = "li_ba_cell20_voltage";
+ /** 
+ * 锂电池电芯21电压. 
+ */ 
+ String LI_BA_CELL21_VOLTAGE = "li_ba_cell21_voltage";
+ /** 
+ * 锂电池电芯22电压. 
+ */ 
+ String LI_BA_CELL22_VOLTAGE = "li_ba_cell22_voltage";
+ /** 
+ * 锂电池电芯23电压. 
+ */ 
+ String LI_BA_CELL23_VOLTAGE = "li_ba_cell23_voltage";
+ /** 
+ * 锂电池电芯24电压. 
+ */ 
+ String LI_BA_CELL24_VOLTAGE = "li_ba_cell24_voltage";
+ /** 
+ * 锂电池电芯25电压. 
+ */ 
+ String LI_BA_CELL25_VOLTAGE = "li_ba_cell25_voltage";
+ /** 
+ * 锂电池电芯26电压. 
+ */ 
+ String LI_BA_CELL26_VOLTAGE = "li_ba_cell26_voltage";
+ /** 
+ * 锂电池电芯27电压. 
+ */ 
+ String LI_BA_CELL27_VOLTAGE = "li_ba_cell27_voltage";
+ /** 
+ * 锂电池电芯28电压. 
+ */ 
+ String LI_BA_CELL28_VOLTAGE = "li_ba_cell28_voltage";
+ /** 
+ * 锂电池电芯29电压. 
+ */ 
+ String LI_BA_CELL29_VOLTAGE = "li_ba_cell29_voltage";
+ /** 
+ * 锂电池电芯30电压. 
+ */ 
+ String LI_BA_CELL30_VOLTAGE = "li_ba_cell30_voltage";
+ /** 
+ * 锂电池放电能量. 
+ */ 
+ String LI_BA_DISCHARGE_ENERGY = "li_ba_discharge_energy";
+ /** 
+ * 锂电池功率温度. 
+ */ 
+ String LI_BA_POWER_TEMPERATURE = "li_ba_power_temperature";
+ /** 
+ * 锂电池状态. 
+ */ 
+ String LI_BA_STATUS = "li_ba_status";
+ /** 
+ * 锂电池FET状态. 
+ */ 
+ String LI_BA_FET_STATUS = "li_ba_fet_status";
+ /** 
+ * 锂电池电芯温度最高. 
+ */ 
+ String LI_BA_CELL_TEMP_TALLEST = "li_ba_cell_temp_tallest";
+ /** 
+ * 锂电池电芯温度最低. 
+ */ 
+ String LI_BA_CELL_TEMP_LOWEST = "li_ba_cell_temp_lowest";
+ /** 
+ * 锂电池电池电平. 
+ */ 
+ String LI_BA_VBUS = "li_ba_vbus";
+ /** 
+ * 锂电池BMS保护状态. 
+ */ 
+ String LI_BA_BMS_PROTECTION_STATUS = "li_ba_bms_protection_status";
+ /** 
+ * 锂电池并机在线数量. 
+ */ 
+ String LI_BA_BMS_PARALLEL_ONLINE_UNITS = "li_ba_bms_parallel_online_units";
+ /** 
+ * 锂电池总充Wh. 
+ */ 
+ String LI_BA_TOTAL_CHARGE_CAPACITY = "li_ba_total_charge_capacity";
+ /** 
+ * 锂电池总充时间. 
+ */ 
+ String LI_BA_TOTAL_CHARGE_TIME = "li_ba_total_charge_time";
+ /** 
+ * 锂电池总放时间. 
+ */ 
+ String LI_BA_TOTAL_DISCHARGE_TIME = "li_ba_total_discharge_time";
+ /** 
+ * 锂电池剩余容量. 
+ */ 
+ String LI_BA_REMAINING_CAPACITY = "li_ba_remaining_capacity";
+ /** 
+ * 锂电池报警状态1. 
+ */ 
+ String LI_BA_ALARM_STATUS1 = "li_ba_alarm_status1";
+ /** 
+ * 锂电池报警状态2. 
+ */ 
+ String LI_BA_ALARM_STATUS2 = "li_ba_alarm_status2";
+ /** 
+ * 锂电池报警状态3. 
+ */ 
+ String LI_BA_ALARM_STATUS3 = "li_ba_alarm_status3";
+ /** 
+ * 锂电池报警状态4. 
+ */ 
+ String LI_BA_ALARM_STATUS4 = "li_ba_alarm_status4";
+ /** 
+ * 锂电池报警状态5. 
+ */ 
+ String LI_BA_ALARM_STATUS5 = "li_ba_alarm_status5";
+ /** 
+ * 锂电池环境温度告警状态. 
+ */ 
+ String LI_BA_AMBIENT_TEMPERATURE_ALARM_STATUS = "li_ba_ambient_temperature_alarm_status";
+ /** 
+ * 锂电池功率温度告警状态. 
+ */ 
+ String LI_BA_POWER_TEMPERATURE_ALARM_STATUS = "li_ba_power_temperature_alarm_status";
+ /** 
+ * 锂电池充放电流告警状态. 
+ */ 
+ String LI_BA_CHARGING_AND_DISCHARGING_FLOW_ALARM_STATUS = "li_ba_charging_and_discharging_flow_alarm_status";
+ /** 
+ * 锂电池电池总压告警状态. 
+ */ 
+ String LI_BA_VOLTAGE_ALARM_STATUS = "li_ba_voltage_alarm_status";
+ /** 
+ * 锂电池均衡事件代码. 
+ */ 
+ String LI_BA_BALANCING_EVENT_CODE = "li_ba_balancing_event_code";
+ /** 
+ * 锂电池电压事件代码. 
+ */ 
+ String LI_BA_VOLTAGE_EVENT_CODE = "li_ba_voltage_event_code";
+ /** 
+ * 锂电池温度事件代码. 
+ */ 
+ String LI_BA_TEMPERATURE_EVENT_CODE = "li_ba_temperature_event_code";
+ /** 
+ * 锂电池电流事件代码. 
+ */ 
+ String LI_BA_CURRENT_EVENT_CODE = "li_ba_current_event_code";
+ /** 
+ * 锂电池剩余容量告警. 
+ */ 
+ String LI_BA_REMAINING_CAPACITY_ALARM_STATUS = "li_ba_remaining_capacity_alarm_status";
+ /** 
+ * 锂电池静态均衡指示. 
+ */ 
+ String LI_BA_STATIC_EQUALIZATION_INDICATION = "li_ba_static_equalization_indication";
+ /** 
+ * 锂电池静态均衡超时. 
+ */ 
+ String LI_BA_STATIC_BALANCING_TIMEOUT = "li_ba_static_balancing_timeout";
+ /** 
+ * 锂电池超温禁止均衡. 
+ */ 
+ String LI_BA_OVERTEMPERATURE_DISABLES_BALANCING = "li_ba_overtemperature_disables_balancing";
+ /** 
+ * 锂电池电芯失效告警. 
+ */ 
+ String LI_BA_FAILURE_ALARM = "li_ba_failure_alarm";
+ /** 
+ * 锂电池单体过压告警. 
+ */ 
+ String LI_BA_SINGLE_OVERVOLTAGE_ALARM = "li_ba_single_overvoltage_alarm";
+ /** 
+ * 锂电池单体过压保护. 
+ */ 
+ String LI_BA_MONOMER_OVERVOLTAGE_PROTECTION = "li_ba_monomer_overvoltage_protection";
+ /** 
+ * 锂电池单体欠压告警. 
+ */ 
+ String LI_BA_SINGLE_UNDERVOLTAGE_ALARM = "li_ba_single_undervoltage_alarm";
+ /** 
+ * 锂电池单体欠压保护. 
+ */ 
+ String LI_BA_MONOMER_UNDERVOLTAGE_PROTECTION = "li_ba_monomer_undervoltage_protection";
+ /** 
+ * 锂电池总压过压告警. 
+ */ 
+ String LI_BA_TOTAL_PRESSURE_OVERVOLTAGE_ALARM = "li_ba_total_pressure_overvoltage_alarm";
+ /** 
+ * 锂电池总压过压保护. 
+ */ 
+ String LI_BA_TOTAL_PRESSURE_OVERVOLTAGE_PROTECTION = "li_ba_total_pressure_overvoltage_protection";
+ /** 
+ * 锂电池总压欠压告警. 
+ */ 
+ String LI_BA_TOTAL_PRESSURE_UNDERVOLTAGE_ALARM = "li_ba_total_pressure_undervoltage_alarm";
+ /** 
+ * 锂电池总压欠压保护. 
+ */ 
+ String LI_BA_TOTAL_PRESSURE_UNDERVOLTAGE_PROTECTION = "li_ba_total_pressure_undervoltage_protection";
+ /** 
+ * 锂电池充电高温告警. 
+ */ 
+ String LI_BA_CHARGING_HIGH_TEMPERATURE_WARNING = "li_ba_charging_high_temperature_warning";
+ /** 
+ * 锂电池充电过温保护. 
+ */ 
+ String LI_BA_CHARGING_OVER_TEMPERATURE_PROTECTION = "li_ba_charging_over_temperature_protection";
+ /** 
+ * 锂电池充电低温告警. 
+ */ 
+ String LI_BA_CHARGING_LOW_TEMPERATURE_WARNING = "li_ba_charging_low_temperature_warning";
+ /** 
+ * 锂电池充电欠温保护. 
+ */ 
+ String LI_BA_CHARGING_UNDER_TEMPERATURE_PROTECTION = "li_ba_charging_under-temperature_protection";
+ /** 
+ * 锂电池放电高温告警. 
+ */ 
+ String LI_BA_DISCHARGE_HIGH_TEMPERATURE_WARNING = "li_ba_discharge_high_temperature_warning";
+ /** 
+ * 锂电池放电过温保护. 
+ */ 
+ String LI_BA_DISCHARGE_OVER_TEMPERATURE_PROTECTION = "li_ba_discharge_over_temperature_protection";
+ /** 
+ * 锂电池放电低温告警. 
+ */ 
+ String LI_BA_DISCHARGE_LOW_TEMPERATURE_WARNING = "li_ba_discharge_low_temperature_warning";
+ /** 
+ * 锂电池放电欠温保护. 
+ */ 
+ String LI_BA_DISCHARGE_UNDER_TEMPERATURE_PROTECTION = "li_ba_discharge_under-temperature_protection";
+ /** 
+ * 锂电池环境高温告警. 
+ */ 
+ String LI_BA_HIGH_TEMPERATURE_WARNING = "li_ba_high_temperature_warning";
+ /** 
+ * 锂电池环境过温保护. 
+ */ 
+ String LI_BA_ENVIRONMENTAL_OVER_TEMPERATURE_PROTECTION = "li_ba_environmental_over-temperature_protection";
+ /** 
+ * 锂电池环境低温告警. 
+ */ 
+ String LI_BA_ENVIRONMENTAL_LOW_TEMPERATURE_WARNING = "li_ba_environmental_low_temperature_warning";
+ /** 
+ * 锂电池环境欠温保护. 
+ */ 
+ String LI_BA_ENVIRONMENTAL_UNDER_TEMPERATURE_PROTECTION = "li_ba_environmental_under-temperature_protection";
+ /** 
+ * 锂电池功率过温保护. 
+ */ 
+ String LI_BA_POWER_OVER_TEMPERATURE_PROTECTION = "li_ba_power_over_temperature_protection";
+ /** 
+ * 锂电池充电电流告警. 
+ */ 
+ String LI_BA_CHARGING_CURRENT_ALARM = "li_ba_charging_current_alarm";
+ /** 
+ * 锂电池充电过流保护. 
+ */ 
+ String LI_BA_CHARGING_OVERCURRENT_PROTECTION = "li_ba_charging_overcurrent_protection";
+ /** 
+ * 锂电池放电电流告警. 
+ */ 
+ String LI_BA_DISCHARGE_CURRENT_ALARM = "li_ba_discharge_current_alarm";
+ /** 
+ * 锂电池放电过流保护. 
+ */ 
+ String LI_BA_DISCHARGE_OVERCURRENT_PROTECTION = "li_ba_discharge_overcurrent_protection";
+ /** 
+ * 锂电池二级过流保护. 
+ */ 
+ String LI_BA_SECONDARY_OVERCURRENT_PROTECTION = "li_ba_secondary_overcurrent_protection";
+ /** 
+ * 锂电池输出短路保护. 
+ */ 
+ String LI_BA_OUTPUT_SHORT_CIRCUIT_PROTECTION = "li_ba_output_short_circuit_protection";
+ /** 
+ * 锂电池二级过流锁定. 
+ */ 
+ String LI_BA_SECONDARY_OVERCURRENT_LOCK = "li_ba_secondary_overcurrent_lock";
+ /** 
+ * 锂电池输出短路锁定. 
+ */ 
+ String LI_BA_OUTPUT_SHORT_CIRCUIT_LOCK = "li_ba_output_short_circuit_lock";
+ /** 
+ * 锂电池剩余容量告警. 
+ */ 
+ String LI_BA_REMAINING_CAPACITY_ALARM = "li_ba_remaining_capacity_alarm";
+ /** 
+ * 锂电池放电开关开启. 
+ */ 
+ String LI_BA_DISCHARGE_SWITCH_ON = "li_ba_discharge_switch_on";
+ /** 
+ * 锂电池充电开关开启. 
+ */ 
+ String LI_BA_CHARGING_SWITCH_ON = "li_ba_charging_switch_on";
+ /** 
+ * 锂电池限流开关开启. 
+ */ 
+ String LI_BA_CURRENT_LIMIT_SWITCH_ON = "li_ba_current_limit_switch_on";
+ /** 
+ * 锂电池加热开关开启. 
+ */ 
+ String LI_BA_HEATING_SWITCH_ON = "li_ba_heating_switch_on";
+ /** 
+ * 锂电池放电. 
+ */ 
+ String LI_BA_DISCHARGE = "li_ba_discharge";
+ /** 
+ * 锂电池充电. 
+ */ 
+ String LI_BA_CHARGE = "li_ba_charge";
+ /** 
+ * 锂电池浮充. 
+ */ 
+ String LI_BA_FLOAT = "li_ba_float";
+ /** 
+ * 锂电池NTC断线. 
+ */ 
+ String LI_BA_NTC_DISCONNECT = "li_ba_ntc_disconnect";
+ /** 
+ * 锂电池ADC损坏. 
+ */ 
+ String LI_BA_ADC_DAMAGE = "li_ba_adc_damage";
+ /** 
+ * 锂电池电池反接. 
+ */ 
+ String LI_BA_REVERSED = "li_ba_reversed";
+ /** 
+ * 锂电池风扇开启故障. 
+ */ 
+ String LI_BA_FAN_ON_FAILURE = "li_ba_fan_on_failure";
+ /** 
+ * 锂电池电池锁定. 
+ */ 
+ String LI_BA_LOCK = "li_ba_lock";
+ /** 
+ * 锂电池单体电压过低故障. 
+ */ 
+ String LI_BA_LOW_CELL_VOLTAGE_FAULT = "li_ba_low_cell_voltage_fault";
+ /** 
+ * 锂电池电压采样断线. 
+ */ 
+ String LI_BA_VOLTAGE_SAMPLING_DISCONNECT = "li_ba_voltage_sampling_disconnect";
+ /** 
+ * 锂电池充电MOS损坏. 
+ */ 
+ String LI_BA_DAMAGED_CHARGING_MOS = "li_ba_damaged_charging_mos";
+ /** 
+ * 锂电池放电MOS损坏. 
+ */ 
+ String LI_BA_DISCHARGE_MOS_DAMAGE = "li_ba_discharge_mos_damage";
+ /** 
+ * 锂电池电压采样元件损坏. 
+ */ 
+ String LI_BA_VOLTAGE_SAMPLING_ELEMENT_DAMAGED = "li_ba_voltage_sampling_element_damaged";
+ /** 
+ * 锂电池充电状态. 
+ */ 
+ String LI_BA_CHARGING_STATE = "li_ba_charging_state";
+ /** 
+ * 锂电池放电状态. 
+ */ 
+ String LI_BA_DISCHARGE_STATE = "li_ba_discharge_state";
+ /** 
+ * 锂电池短路保护. 
+ */ 
+ String LI_BA_SHORT_CIRCUIT_PROTECTION = "li_ba_short_circuit_protection";
+ /** 
+ * 锂电池过压保护(不解析). 
+ */ 
+ String LI_BA_OVERVOLTAGE_PROTECTION = "li_ba_overvoltage_protection";
+ /** 
+ * 锂电池欠压保护(不解析). 
+ */ 
+ String LI_BA_UNDERVOLTAGE_PROTECTION = "li_ba_undervoltage_protection";
+ /** 
+ * 锂电池总体过压保护. 
+ */ 
+ String LI_BA_OVERALL_OVERVOLTAGE_PROTECTION = "li_ba_overall_overvoltage_protection";
+ /** 
+ * 锂电池启动失败. 
+ */ 
+ String LI_BA_FAILED_TO_ACTIVATE = "li_ba_failed_to_activate";
+ /** 
+ * 锂电池充电MOS导通状态(0导通，1关断). 
+ */ 
+ String LI_BA_CHARGE_MOS_ON_STATE = "li_ba_charge_mos_on_state";
+ /** 
+ * 锂电池放电MOS导通状态(0导通，1关断). 
+ */ 
+ String LI_BA_DISCHARGE_MOS_STATE = "li_ba_discharge_mos_state";
+ /** 
+ * 锂电池强制充电MOS开启. 
+ */ 
+ String LI_BA_FORCE_CHARGING_MOS_ON = "li_ba_force_charging_mos_on";
+ /** 
+ * 锂电池强制充电MOS关闭. 
+ */ 
+ String LI_BA_FORCE_CHARGE_MOS_OFF = "li_ba_force_charge_mos_off";
+ /** 
+ * 锂电池强制放电MOS开启. 
+ */ 
+ String LI_BA_FORCED_DISCHARGE_MOS_ON = "li_ba_forced_discharge_mos_on";
+ /** 
+ * 锂电池强制放电MOS关闭. 
+ */ 
+ String LI_BA_FORCED_DISCHARGE_MOS_OFF = "li_ba_forced_discharge_mos_off";
+ /** 
+ * 锂电池加热垫开启. 
+ */ 
+ String LI_BA_HEATING_PAD_ON = "li_ba_heating_pad_on";
+ /** 
+ * 锂电池MOSFET过温保护. 
+ */ 
+ String LI_BA_MOSFET_OVER_TEMPERATURE_PROTECTION = "li_ba_mosfet_over_temperature_protection";
+ /** 
+ * 锂电池MOSFET低温保护. 
+ */ 
+ String LI_BA_MOSFET_LOW_TEMP_PROTECTION = "li_ba_mosfet_low_temp_protection";
+ /** 
+ * 锂电池充电开启温度过低. 
+ */ 
+ String LI_BA_BEGIN_CHARGING_TEMP_LOW = "li_ba_begin_charging_temp_low";
+ /** 
+ * 锂电池环境低温保护. 
+ */ 
+ String LI_BA_LOW_ENVIRONMENTAL_TEMP_PROTECTION = "li_ba_low_environmental_temp_protection";
+ /** 
+ * 锂电池环境高温保护. 
+ */ 
+ String LI_BA_HIGH_ENVIRONMENTAL_TEMP_PROTECTION = "li_ba_high_environmental_temp_protection";
+ /** 
+ * 锂电池风扇开启. 
+ */ 
+ String LI_BA_FAN_ON = "li_ba_fan_on";
+ /** 
+ * 锂电池震动告警. 
+ */ 
+ String LI_BA_VIBRATION_ALARM = "li_ba_vibration_alarm";
+ /** 
+ * 锂电池干接点1. 
+ */ 
+ String LI_BA_DRY_CONTACT1 = "li_ba_dry_contact1";
+ /** 
+ * 锂电池干接点2. 
+ */ 
+ String LI_BA_DRY_CONTACT2 = "li_ba_dry_contact2";
+ /** 
+ * 锂电池BMS模块SN重复(BMS模块并机). 
+ */ 
+ String LI_BA_BMS_MODULE_SN_REPETITION = "li_ba_bms_module_sn_repetition";
+ /** 
+ * 锂电池单体过压告警. 
+ */ 
+ String LI_BA_CELL_OVERVOLTAGE_ALARM = "li_ba_cell_overvoltage_alarm";
+ /** 
+ * 锂电池单体欠压告警. 
+ */ 
+ String LI_BA_CELL_UNDERVOLTAGE_ALARM = "li_ba_cell_undervoltage_alarm";
+ /** 
+ * 锂电池总体过压告警. 
+ */ 
+ String LI_BA_OVERALL_OVERVOLTAGE_WARNING = "li_ba_overall_overvoltage_warning";
+ /** 
+ * 锂电池总体欠压告警. 
+ */ 
+ String LI_BA_OVERALL_UNDERVOLTAGE_ALARM = "li_ba_overall_undervoltage_alarm";
+ /** 
+ * 锂电池充过流告警. 
+ */ 
+ String LI_BA_OVERCHARGE_ALARM = "li_ba_overcharge_alarm";
+ /** 
+ * 锂电池放过流告警. 
+ */ 
+ String LI_BA_IGNORE_THE_FLOW_ALARM = "li_ba_ignore_the_flow_alarm";
+ /** 
+ * 锂电池电池充电过温告警. 
+ */ 
+ String LI_BA_CHARGING_OVER_TEMP_ALARM = "li_ba_charging_over_temp_alarm";
+ /** 
+ * 锂电池电池充电欠温告警. 
+ */ 
+ String LI_BA_CHARGE_UNDER_TEMP_ALARM = "li_ba_charge_under_temp_alarm";
+ /** 
+ * 锂电池环境过温告警. 
+ */ 
+ String LI_BA_AMBIENT_OVER_TEMP_ALARM = "li_ba_ambient_over_temp_alarm";
+ /** 
+ * 锂电池环境欠温告警. 
+ */ 
+ String LI_BA_ENVIRONMENT_UNDER_TEMP_ALARM = "li_ba_environment_under_temp_alarm";
+ /** 
+ * 锂电池MOS过温告警. 
+ */ 
+ String LI_BA_MOS_OVER_TEMP_ALARM = "li_ba_mos_over_temp_alarm";
+ /** 
+ * 锂电池SOC过低告警. 
+ */ 
+ String LI_BA_SOC_TOO_LOW_ALARM = "li_ba_soc_too_low_alarm";
+ /** 
+ * 锂电池压差过大告警. 
+ */ 
+ String LI_BA_OVERPRESSURE_ALARM = "li_ba_overpressure_alarm";
+ /** 
+ * 锂电池电池放电过温告警. 
+ */ 
+ String LI_BA_OVERHEATING_ALARM = "li_ba_overheating_alarm";
+ /** 
+ * 锂电池电池放电欠温告警. 
+ */ 
+ String LI_BA_DISCHARGE_UNDER_TEMP_ALARM = "li_ba_discharge_under_temp_alarm";
+ /** 
+ * 直流发电机锂电池 SOB (FC). 
+ */ 
+ String LI_BATTERY_SOB_FC = "li_battery_sob_fc";
+ /** 
+ * 锂电池组电压. 
+ */ 
+ String LI_BA_BANK_VOLTAGE = "li_ba_bank_voltage";
+ /** 
+ * 锂电池组电流. 
+ */ 
+ String LI_BA_BANK_CURRENT = "li_ba_bank_current";
