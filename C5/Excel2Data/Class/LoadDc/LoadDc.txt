@@ -35,55 +35,35 @@
  @Column(name = "load_dc_busbar_voltage") 
  private Double loadDcBusbarVoltage;
  /** 
- * 负载电流1.Load 1 current 
+ * 1号负载电流.Load 1 current 
  */ 
- @Column(name = "load_dc_current1") 
- private Double loadDcCurrent1;
+ @Column(name = "load_dc_load1_current") 
+ private Double loadDcLoad1Current;
  /** 
- * 负载负载率1.Load 1 rate 
+ * 1号负载能量.Load 1 energy 
  */ 
- @Column(name = "load_dc_rate1") 
- private Double loadDcRate1;
+ @Column(name = "load_dc_load1_energy") 
+ private Double loadDcLoad1Energy;
  /** 
- * 负载能量1.Load 1 energy 
+ * 1号负载本月电量.Load1 current month energy 
  */ 
- @Column(name = "load_dc_energy1") 
- private Double loadDcEnergy1;
- /** 
- * 负载电流2.Load 2 current 
- */ 
- @Column(name = "load_dc_current2") 
- private Double loadDcCurrent2;
- /** 
- * 负载负载率2.load 2 rate 
- */ 
- @Column(name = "load_dc_rate2") 
- private Double loadDcRate2;
- /** 
- * 负载能量2.Load 2 energy 
- */ 
- @Column(name = "load_dc_energy2") 
- private Double loadDcEnergy2;
- /** 
- * 负载本月电量.Current month energy 
- */ 
- @Column(name = "load_dc_current_month_energy") 
- private Double loadDcCurrentMonthEnergy;
+ @Column(name = "load_dc_load1_current_month_energy") 
+ private Double loadDcLoad1CurrentMonthEnergy;
  /** 
  * 负载直流能量.Energy Consumption 
  */ 
  @Column(name = "load_dc_energy_consumption") 
  private Double loadDcEnergyConsumption;
  /** 
- * 负载率.Rate 
+ * 1号负载带载率.Load1 rate 
  */ 
- @Column(name = "load_dc_rate") 
- private Double loadDcRate;
+ @Column(name = "load_dc_load1_rate") 
+ private Double loadDcLoad1Rate;
  /** 
- * 负载上月电量.Last month energy 
+ * 1号负载上月电量.Load 1 last month energy 
  */ 
- @Column(name = "load_dc_last_month_energy") 
- private Double loadDcLastMonthEnergy;
+ @Column(name = "load_dc_load1_last_month_energy") 
+ private Double loadDcLoad1LastMonthEnergy;
  /** 
  * 负载支路数量.Number of Branches 
  */ 
@@ -94,16 +74,6 @@
  */ 
  @Column(name = "load_dc_branch_break_alarm_state1") 
  private Long loadDcBranchBreakAlarmState1;
- /** 
- * 负载轻微过流.Branch slight over current 
- */ 
- @Column(name = "load_dc_branch_slight_over_current") 
- private Double loadDcBranchSlightOverCurrent;
- /** 
- * 负载严重过流.Branch severe over current 
- */ 
- @Column(name = "load_dc_branch_severe_over_current") 
- private Double loadDcBranchSevereOverCurrent;
  /** 
  * 负载直流低压报警值.Low voltage alarm value 
  */ 
@@ -199,6 +169,56 @@
  */ 
  @Column(name = "load_dc_branch2_slight_over_current") 
  private Long loadDcBranch2SlightOverCurrent;
+ /** 
+ * 直流耗电量.DC Energy 
+ */ 
+ @Column(name = "load_dc_energy") 
+ private Double loadDcEnergy;
+ /** 
+ * 2号负载电流.Load 2 current 
+ */ 
+ @Column(name = "load_dc_load2_current") 
+ private Double loadDcLoad2Current;
+ /** 
+ * 2号负载带载率.Load 2 rate 
+ */ 
+ @Column(name = "load_dc_load2_rate") 
+ private Double loadDcLoad2Rate;
+ /** 
+ * 2号负载能量.Load 2 energy 
+ */ 
+ @Column(name = "load_dc_load2_energy") 
+ private Double loadDcLoad2Energy;
+ /** 
+ * 2号负载当月能量.Load 2 current month energy 
+ */ 
+ @Column(name = "load_dc_load2_current_month_energy") 
+ private Double loadDcLoad2CurrentMonthEnergy;
+ /** 
+ * 2号负载上月能量.Load 2 last month energy 
+ */ 
+ @Column(name = "load_dc_load2_last_month_energy") 
+ private Double loadDcLoad2LastMonthEnergy;
+ /** 
+ * 负载支路绝缘故障.Load branch Insulation fault 
+ */ 
+ @Column(name = "load_dc_load_branch_insulation_fault") 
+ private Long loadDcLoadBranchInsulationFault;
+ /** 
+ *  直流总负载略超.DC Total Load Slight Over 
+ */ 
+ @Column(name = "load_dc_dc_total_load_slight_over") 
+ private Long loadDcDcTotalLoadSlightOver;
+ /** 
+ * 直流总负载严重超过.DC Total Load Severe Over 
+ */ 
+ @Column(name = "load_dc_dc_total_load_severe_over") 
+ private Long loadDcDcTotalLoadSevereOver;
+ /** 
+ * 直流告警状态.DC alarm state 
+ */ 
+ @Column(name = "load_dc_dc_alarm_state") 
+ private Long loadDcDcAlarmState;
 
     public Date getTime() {
         return Date.from(time);

@@ -10,20 +10,14 @@ load_dc_branch_severe_over_current_alarm_state1 int8,
 load_dc_branch_slight_over_current_alarm_state1 int8,
 load_dc_total_current float8,
 load_dc_busbar_voltage float8,
-load_dc_current1 float8,
-load_dc_rate1 float8,
-load_dc_energy1 float8,
-load_dc_current2 float8,
-load_dc_rate2 float8,
-load_dc_energy2 float8,
-load_dc_current_month_energy float8,
+load_dc_load1_current float8,
+load_dc_load1_energy float8,
+load_dc_load1_current_month_energy float8,
 load_dc_energy_consumption float8,
-load_dc_rate float8,
-load_dc_last_month_energy float8,
+load_dc_load1_rate float8,
+load_dc_load1_last_month_energy float8,
 load_dc_number_of_branches int8,
 load_dc_branch_break_alarm_state1 int8,
-load_dc_branch_slight_over_current float8,
-load_dc_branch_severe_over_current float8,
 load_dc_low_voltage_alarm_value float8,
 load_dc_high_voltage_alarm_value float8,
 load_dc_over_voltage_alarm_value float8,
@@ -42,7 +36,17 @@ load_dc_break_alarm11 int8,
 load_dc_branch1_severe_over_current int8,
 load_dc_branch1_slight_over_current int8,
 load_dc_branch2_severe_over_current int8,
-load_dc_branch2_slight_over_current int8); 
+load_dc_branch2_slight_over_current int8,
+load_dc_energy float8,
+load_dc_load2_current float8,
+load_dc_load2_rate float8,
+load_dc_load2_energy float8,
+load_dc_load2_current_month_energy float8,
+load_dc_load2_last_month_energy float8,
+load_dc_load_branch_insulation_fault int8,
+load_dc_dc_total_load_slight_over int8,
+load_dc_dc_total_load_severe_over int8,
+load_dc_dc_alarm_state int8); 
 COMMENT ON COLUMN "public"."bak_load_dc_15m"."id" IS '主键';
 COMMENT ON COLUMN "public"."bak_load_dc_15m"."create_time" IS '创建时间';
 COMMENT ON COLUMN "public"."bak_load_dc_15m"."customer_id" IS '公司ID';
@@ -52,20 +56,14 @@ COMMENT ON COLUMN "public"."bak_load_dc_15m"."time" IS 'influxdb时间';COMMENT ON
 COMMENT ON COLUMN "public"."bak_load_dc_15m"."load_dc_branch_slight_over_current_alarm_state1" IS '负载直流支路轻微过流告警状态'; 
 COMMENT ON COLUMN "public"."bak_load_dc_15m"."load_dc_total_current" IS '负载总电流'; 
 COMMENT ON COLUMN "public"."bak_load_dc_15m"."load_dc_busbar_voltage" IS '负载直流母线电压'; 
-COMMENT ON COLUMN "public"."bak_load_dc_15m"."load_dc_current1" IS '负载电流1'; 
-COMMENT ON COLUMN "public"."bak_load_dc_15m"."load_dc_rate1" IS '负载负载率1'; 
-COMMENT ON COLUMN "public"."bak_load_dc_15m"."load_dc_energy1" IS '负载能量1'; 
-COMMENT ON COLUMN "public"."bak_load_dc_15m"."load_dc_current2" IS '负载电流2'; 
-COMMENT ON COLUMN "public"."bak_load_dc_15m"."load_dc_rate2" IS '负载负载率2'; 
-COMMENT ON COLUMN "public"."bak_load_dc_15m"."load_dc_energy2" IS '负载能量2'; 
-COMMENT ON COLUMN "public"."bak_load_dc_15m"."load_dc_current_month_energy" IS '负载本月电量'; 
+COMMENT ON COLUMN "public"."bak_load_dc_15m"."load_dc_load1_current" IS '1号负载电流'; 
+COMMENT ON COLUMN "public"."bak_load_dc_15m"."load_dc_load1_energy" IS '1号负载能量'; 
+COMMENT ON COLUMN "public"."bak_load_dc_15m"."load_dc_load1_current_month_energy" IS '1号负载本月电量'; 
 COMMENT ON COLUMN "public"."bak_load_dc_15m"."load_dc_energy_consumption" IS '负载直流能量'; 
-COMMENT ON COLUMN "public"."bak_load_dc_15m"."load_dc_rate" IS '负载率'; 
-COMMENT ON COLUMN "public"."bak_load_dc_15m"."load_dc_last_month_energy" IS '负载上月电量'; 
+COMMENT ON COLUMN "public"."bak_load_dc_15m"."load_dc_load1_rate" IS '1号负载带载率'; 
+COMMENT ON COLUMN "public"."bak_load_dc_15m"."load_dc_load1_last_month_energy" IS '1号负载上月电量'; 
 COMMENT ON COLUMN "public"."bak_load_dc_15m"."load_dc_number_of_branches" IS '负载支路数量'; 
 COMMENT ON COLUMN "public"."bak_load_dc_15m"."load_dc_branch_break_alarm_state1" IS '负载中断告警详情'; 
-COMMENT ON COLUMN "public"."bak_load_dc_15m"."load_dc_branch_slight_over_current" IS '负载轻微过流'; 
-COMMENT ON COLUMN "public"."bak_load_dc_15m"."load_dc_branch_severe_over_current" IS '负载严重过流'; 
 COMMENT ON COLUMN "public"."bak_load_dc_15m"."load_dc_low_voltage_alarm_value" IS '负载直流低压报警值'; 
 COMMENT ON COLUMN "public"."bak_load_dc_15m"."load_dc_high_voltage_alarm_value" IS '负载直流高压报警值'; 
 COMMENT ON COLUMN "public"."bak_load_dc_15m"."load_dc_over_voltage_alarm_value" IS '负载直流过压报警值'; 
@@ -85,6 +83,16 @@ COMMENT ON COLUMN "public"."bak_load_dc_15m"."load_dc_branch1_severe_over_curren
 COMMENT ON COLUMN "public"."bak_load_dc_15m"."load_dc_branch1_slight_over_current" IS '负载直流支路1轻微过流'; 
 COMMENT ON COLUMN "public"."bak_load_dc_15m"."load_dc_branch2_severe_over_current" IS '负载直流支路2严重过流'; 
 COMMENT ON COLUMN "public"."bak_load_dc_15m"."load_dc_branch2_slight_over_current" IS '负载直流支路2轻微过流'; 
+COMMENT ON COLUMN "public"."bak_load_dc_15m"."load_dc_energy" IS '直流耗电量'; 
+COMMENT ON COLUMN "public"."bak_load_dc_15m"."load_dc_load2_current" IS '2号负载电流'; 
+COMMENT ON COLUMN "public"."bak_load_dc_15m"."load_dc_load2_rate" IS '2号负载带载率'; 
+COMMENT ON COLUMN "public"."bak_load_dc_15m"."load_dc_load2_energy" IS '2号负载能量'; 
+COMMENT ON COLUMN "public"."bak_load_dc_15m"."load_dc_load2_current_month_energy" IS '2号负载当月能量'; 
+COMMENT ON COLUMN "public"."bak_load_dc_15m"."load_dc_load2_last_month_energy" IS '2号负载上月能量'; 
+COMMENT ON COLUMN "public"."bak_load_dc_15m"."load_dc_load_branch_insulation_fault" IS '负载支路绝缘故障'; 
+COMMENT ON COLUMN "public"."bak_load_dc_15m"."load_dc_dc_total_load_slight_over" IS ' 直流总负载略超'; 
+COMMENT ON COLUMN "public"."bak_load_dc_15m"."load_dc_dc_total_load_severe_over" IS '直流总负载严重超过'; 
+COMMENT ON COLUMN "public"."bak_load_dc_15m"."load_dc_dc_alarm_state" IS '直流告警状态'; 
 DROP TABLE IF EXISTS "public"."bak_load_dc_1h";
                             CREATE TABLE "public"."bak_load_dc_1h" (
                           "id" int8,
@@ -97,20 +105,14 @@ load_dc_branch_severe_over_current_alarm_state1 int8,
 load_dc_branch_slight_over_current_alarm_state1 int8,
 load_dc_total_current float8,
 load_dc_busbar_voltage float8,
-load_dc_current1 float8,
-load_dc_rate1 float8,
-load_dc_energy1 float8,
-load_dc_current2 float8,
-load_dc_rate2 float8,
-load_dc_energy2 float8,
-load_dc_current_month_energy float8,
+load_dc_load1_current float8,
+load_dc_load1_energy float8,
+load_dc_load1_current_month_energy float8,
 load_dc_energy_consumption float8,
-load_dc_rate float8,
-load_dc_last_month_energy float8,
+load_dc_load1_rate float8,
+load_dc_load1_last_month_energy float8,
 load_dc_number_of_branches int8,
 load_dc_branch_break_alarm_state1 int8,
-load_dc_branch_slight_over_current float8,
-load_dc_branch_severe_over_current float8,
 load_dc_low_voltage_alarm_value float8,
 load_dc_high_voltage_alarm_value float8,
 load_dc_over_voltage_alarm_value float8,
@@ -129,7 +131,17 @@ load_dc_break_alarm11 int8,
 load_dc_branch1_severe_over_current int8,
 load_dc_branch1_slight_over_current int8,
 load_dc_branch2_severe_over_current int8,
-load_dc_branch2_slight_over_current int8); 
+load_dc_branch2_slight_over_current int8,
+load_dc_energy float8,
+load_dc_load2_current float8,
+load_dc_load2_rate float8,
+load_dc_load2_energy float8,
+load_dc_load2_current_month_energy float8,
+load_dc_load2_last_month_energy float8,
+load_dc_load_branch_insulation_fault int8,
+load_dc_dc_total_load_slight_over int8,
+load_dc_dc_total_load_severe_over int8,
+load_dc_dc_alarm_state int8); 
 COMMENT ON COLUMN "public"."bak_load_dc_1h"."id" IS '主键';
     COMMENT ON COLUMN "public"."bak_load_dc_1h"."create_time" IS '创建时间';
     COMMENT ON COLUMN "public"."bak_load_dc_1h"."customer_id" IS '公司ID';
@@ -139,20 +151,14 @@ COMMENT ON COLUMN "public"."bak_load_dc_1h"."id" IS '主键';
 COMMENT ON COLUMN "public"."bak_load_dc_1h"."load_dc_branch_slight_over_current_alarm_state1" IS '负载直流支路轻微过流告警状态'; 
 COMMENT ON COLUMN "public"."bak_load_dc_1h"."load_dc_total_current" IS '负载总电流'; 
 COMMENT ON COLUMN "public"."bak_load_dc_1h"."load_dc_busbar_voltage" IS '负载直流母线电压'; 
-COMMENT ON COLUMN "public"."bak_load_dc_1h"."load_dc_current1" IS '负载电流1'; 
-COMMENT ON COLUMN "public"."bak_load_dc_1h"."load_dc_rate1" IS '负载负载率1'; 
-COMMENT ON COLUMN "public"."bak_load_dc_1h"."load_dc_energy1" IS '负载能量1'; 
-COMMENT ON COLUMN "public"."bak_load_dc_1h"."load_dc_current2" IS '负载电流2'; 
-COMMENT ON COLUMN "public"."bak_load_dc_1h"."load_dc_rate2" IS '负载负载率2'; 
-COMMENT ON COLUMN "public"."bak_load_dc_1h"."load_dc_energy2" IS '负载能量2'; 
-COMMENT ON COLUMN "public"."bak_load_dc_1h"."load_dc_current_month_energy" IS '负载本月电量'; 
+COMMENT ON COLUMN "public"."bak_load_dc_1h"."load_dc_load1_current" IS '1号负载电流'; 
+COMMENT ON COLUMN "public"."bak_load_dc_1h"."load_dc_load1_energy" IS '1号负载能量'; 
+COMMENT ON COLUMN "public"."bak_load_dc_1h"."load_dc_load1_current_month_energy" IS '1号负载本月电量'; 
 COMMENT ON COLUMN "public"."bak_load_dc_1h"."load_dc_energy_consumption" IS '负载直流能量'; 
-COMMENT ON COLUMN "public"."bak_load_dc_1h"."load_dc_rate" IS '负载率'; 
-COMMENT ON COLUMN "public"."bak_load_dc_1h"."load_dc_last_month_energy" IS '负载上月电量'; 
+COMMENT ON COLUMN "public"."bak_load_dc_1h"."load_dc_load1_rate" IS '1号负载带载率'; 
+COMMENT ON COLUMN "public"."bak_load_dc_1h"."load_dc_load1_last_month_energy" IS '1号负载上月电量'; 
 COMMENT ON COLUMN "public"."bak_load_dc_1h"."load_dc_number_of_branches" IS '负载支路数量'; 
 COMMENT ON COLUMN "public"."bak_load_dc_1h"."load_dc_branch_break_alarm_state1" IS '负载中断告警详情'; 
-COMMENT ON COLUMN "public"."bak_load_dc_1h"."load_dc_branch_slight_over_current" IS '负载轻微过流'; 
-COMMENT ON COLUMN "public"."bak_load_dc_1h"."load_dc_branch_severe_over_current" IS '负载严重过流'; 
 COMMENT ON COLUMN "public"."bak_load_dc_1h"."load_dc_low_voltage_alarm_value" IS '负载直流低压报警值'; 
 COMMENT ON COLUMN "public"."bak_load_dc_1h"."load_dc_high_voltage_alarm_value" IS '负载直流高压报警值'; 
 COMMENT ON COLUMN "public"."bak_load_dc_1h"."load_dc_over_voltage_alarm_value" IS '负载直流过压报警值'; 
@@ -172,3 +178,13 @@ COMMENT ON COLUMN "public"."bak_load_dc_1h"."load_dc_branch1_severe_over_current
 COMMENT ON COLUMN "public"."bak_load_dc_1h"."load_dc_branch1_slight_over_current" IS '负载直流支路1轻微过流'; 
 COMMENT ON COLUMN "public"."bak_load_dc_1h"."load_dc_branch2_severe_over_current" IS '负载直流支路2严重过流'; 
 COMMENT ON COLUMN "public"."bak_load_dc_1h"."load_dc_branch2_slight_over_current" IS '负载直流支路2轻微过流'; 
+COMMENT ON COLUMN "public"."bak_load_dc_1h"."load_dc_energy" IS '直流耗电量'; 
+COMMENT ON COLUMN "public"."bak_load_dc_1h"."load_dc_load2_current" IS '2号负载电流'; 
+COMMENT ON COLUMN "public"."bak_load_dc_1h"."load_dc_load2_rate" IS '2号负载带载率'; 
+COMMENT ON COLUMN "public"."bak_load_dc_1h"."load_dc_load2_energy" IS '2号负载能量'; 
+COMMENT ON COLUMN "public"."bak_load_dc_1h"."load_dc_load2_current_month_energy" IS '2号负载当月能量'; 
+COMMENT ON COLUMN "public"."bak_load_dc_1h"."load_dc_load2_last_month_energy" IS '2号负载上月能量'; 
+COMMENT ON COLUMN "public"."bak_load_dc_1h"."load_dc_load_branch_insulation_fault" IS '负载支路绝缘故障'; 
+COMMENT ON COLUMN "public"."bak_load_dc_1h"."load_dc_dc_total_load_slight_over" IS ' 直流总负载略超'; 
+COMMENT ON COLUMN "public"."bak_load_dc_1h"."load_dc_dc_total_load_severe_over" IS '直流总负载严重超过'; 
+COMMENT ON COLUMN "public"."bak_load_dc_1h"."load_dc_dc_alarm_state" IS '直流告警状态'; 
