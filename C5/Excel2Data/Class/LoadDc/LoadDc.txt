@@ -1,0 +1,206 @@
+
+    /**
+     * 站点ID.
+     */
+    @Column(name = "site_id", tag = true)
+    private String siteId;
+    /**
+     * 资产ID.
+     */
+    @Column(name = "asset_id", tag = true)
+    private String assetId;
+    /**
+     * 时间.
+     */
+    @Column(name = "time", tag = true)
+    private Instant time;
+ /** 
+ * 负载直流支路严重过流告警状态.Branch Severe Over Current Alarm State 1 
+ */ 
+ @Column(name = "load_dc_branch_severe_over_current_alarm_state1") 
+ private Long loadDcBranchSevereOverCurrentAlarmState1;
+ /** 
+ * 负载直流支路轻微过流告警状态.Branch Slight Over Current Alarm State 1 
+ */ 
+ @Column(name = "load_dc_branch_slight_over_current_alarm_state1") 
+ private Long loadDcBranchSlightOverCurrentAlarmState1;
+ /** 
+ * 负载总电流.Total current 
+ */ 
+ @Column(name = "load_dc_total_current") 
+ private Double loadDcTotalCurrent;
+ /** 
+ * 负载直流母线电压.Busbar voltage 
+ */ 
+ @Column(name = "load_dc_busbar_voltage") 
+ private Double loadDcBusbarVoltage;
+ /** 
+ * 负载电流1.Load 1 current 
+ */ 
+ @Column(name = "load_dc_current1") 
+ private Double loadDcCurrent1;
+ /** 
+ * 负载负载率1.Load 1 rate 
+ */ 
+ @Column(name = "load_dc_rate1") 
+ private Double loadDcRate1;
+ /** 
+ * 负载能量1.Load 1 energy 
+ */ 
+ @Column(name = "load_dc_energy1") 
+ private Double loadDcEnergy1;
+ /** 
+ * 负载电流2.Load 2 current 
+ */ 
+ @Column(name = "load_dc_current2") 
+ private Double loadDcCurrent2;
+ /** 
+ * 负载负载率2.load 2 rate 
+ */ 
+ @Column(name = "load_dc_rate2") 
+ private Double loadDcRate2;
+ /** 
+ * 负载能量2.Load 2 energy 
+ */ 
+ @Column(name = "load_dc_energy2") 
+ private Double loadDcEnergy2;
+ /** 
+ * 负载本月电量.Current month energy 
+ */ 
+ @Column(name = "load_dc_current_month_energy") 
+ private Double loadDcCurrentMonthEnergy;
+ /** 
+ * 负载直流能量.Energy Consumption 
+ */ 
+ @Column(name = "load_dc_energy_consumption") 
+ private Double loadDcEnergyConsumption;
+ /** 
+ * 负载率.Rate 
+ */ 
+ @Column(name = "load_dc_rate") 
+ private Double loadDcRate;
+ /** 
+ * 负载上月电量.Last month energy 
+ */ 
+ @Column(name = "load_dc_last_month_energy") 
+ private Double loadDcLastMonthEnergy;
+ /** 
+ * 负载支路数量.Number of Branches 
+ */ 
+ @Column(name = "load_dc_number_of_branches") 
+ private Long loadDcNumberOfBranches;
+ /** 
+ * 负载中断告警详情.Branch break alarm state 1 
+ */ 
+ @Column(name = "load_dc_branch_break_alarm_state1") 
+ private Long loadDcBranchBreakAlarmState1;
+ /** 
+ * 负载轻微过流.Branch slight over current 
+ */ 
+ @Column(name = "load_dc_branch_slight_over_current") 
+ private Double loadDcBranchSlightOverCurrent;
+ /** 
+ * 负载严重过流.Branch severe over current 
+ */ 
+ @Column(name = "load_dc_branch_severe_over_current") 
+ private Double loadDcBranchSevereOverCurrent;
+ /** 
+ * 负载直流低压报警值.Low voltage alarm value 
+ */ 
+ @Column(name = "load_dc_low_voltage_alarm_value") 
+ private Double loadDcLowVoltageAlarmValue;
+ /** 
+ * 负载直流高压报警值.High voltage alarm value 
+ */ 
+ @Column(name = "load_dc_high_voltage_alarm_value") 
+ private Double loadDcHighVoltageAlarmValue;
+ /** 
+ * 负载直流过压报警值.Over voltage alarm value 
+ */ 
+ @Column(name = "load_dc_over_voltage_alarm_value") 
+ private Double loadDcOverVoltageAlarmValue;
+ /** 
+ * 负载直流欠压报警值.Under voltage alarm value 
+ */ 
+ @Column(name = "load_dc_under_voltage_alarm_value") 
+ private Double loadDcUnderVoltageAlarmValue;
+ /** 
+ * 负载断路器告警1.Break Alarm 1 
+ */ 
+ @Column(name = "load_dc_break_alarm1") 
+ private Long loadDcBreakAlarm1;
+ /** 
+ * 负载断路器告警2.Break Alarm 2 
+ */ 
+ @Column(name = "load_dc_break_alarm2") 
+ private Long loadDcBreakAlarm2;
+ /** 
+ * 负载断路器告警3.Break Alarm 3 
+ */ 
+ @Column(name = "load_dc_break_alarm3") 
+ private Long loadDcBreakAlarm3;
+ /** 
+ * 负载断路器告警4.Break Alarm 4 
+ */ 
+ @Column(name = "load_dc_break_alarm4") 
+ private Long loadDcBreakAlarm4;
+ /** 
+ * 负载断路器告警5.Break Alarm 5 
+ */ 
+ @Column(name = "load_dc_break_alarm5") 
+ private Long loadDcBreakAlarm5;
+ /** 
+ * 负载断路器告警6.Break Alarm 6 
+ */ 
+ @Column(name = "load_dc_break_alarm6") 
+ private Long loadDcBreakAlarm6;
+ /** 
+ * 负载断路器告警7.Break Alarm 7 
+ */ 
+ @Column(name = "load_dc_break_alarm7") 
+ private Long loadDcBreakAlarm7;
+ /** 
+ * 负载断路器告警8.Break Alarm 8 
+ */ 
+ @Column(name = "load_dc_break_alarm8") 
+ private Long loadDcBreakAlarm8;
+ /** 
+ * 负载断路器告警9.Break Alarm 9 
+ */ 
+ @Column(name = "load_dc_break_alarm9") 
+ private Long loadDcBreakAlarm9;
+ /** 
+ * 负载断路器告警10.Break Alarm 10 
+ */ 
+ @Column(name = "load_dc_break_alarm10") 
+ private Long loadDcBreakAlarm10;
+ /** 
+ * 负载断路器告警11.Break Alarm 11 
+ */ 
+ @Column(name = "load_dc_break_alarm11") 
+ private Long loadDcBreakAlarm11;
+ /** 
+ * 负载直流支路1严重过流.Branch 1 Severe Over Current 
+ */ 
+ @Column(name = "load_dc_branch1_severe_over_current") 
+ private Long loadDcBranch1SevereOverCurrent;
+ /** 
+ * 负载直流支路1轻微过流.Branch 1 Slight Over Current 
+ */ 
+ @Column(name = "load_dc_branch1_slight_over_current") 
+ private Long loadDcBranch1SlightOverCurrent;
+ /** 
+ * 负载直流支路2严重过流.Branch 2 Severe Over Current 
+ */ 
+ @Column(name = "load_dc_branch2_severe_over_current") 
+ private Long loadDcBranch2SevereOverCurrent;
+ /** 
+ * 负载直流支路2轻微过流.Branch 2 Slight Over Current 
+ */ 
+ @Column(name = "load_dc_branch2_slight_over_current") 
+ private Long loadDcBranch2SlightOverCurrent;
+
+    public Date getTime() {
+        return Date.from(time);
+    }
+}

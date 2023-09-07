@@ -1,0 +1,186 @@
+/** 
+ * 负载直流支路严重过流告警状态.Branch Severe Over Current Alarm State 1 
+ */ 
+ @ApiModelProperty("负载直流支路严重过流告警状态") 
+ private Long loadDcBranchSevereOverCurrentAlarmState1;
+/** 
+ * 负载直流支路轻微过流告警状态.Branch Slight Over Current Alarm State 1 
+ */ 
+ @ApiModelProperty("负载直流支路轻微过流告警状态") 
+ private Long loadDcBranchSlightOverCurrentAlarmState1;
+/** 
+ * 负载总电流.Total current 
+ */ 
+ @ApiModelProperty("负载总电流") 
+ private Double loadDcTotalCurrent;
+/** 
+ * 负载直流母线电压.Busbar voltage 
+ */ 
+ @ApiModelProperty("负载直流母线电压") 
+ private Double loadDcBusbarVoltage;
+/** 
+ * 负载电流1.Load 1 current 
+ */ 
+ @ApiModelProperty("负载电流1") 
+ private Double loadDcCurrent1;
+/** 
+ * 负载负载率1.Load 1 rate 
+ */ 
+ @ApiModelProperty("负载负载率1") 
+ private Double loadDcRate1;
+/** 
+ * 负载能量1.Load 1 energy 
+ */ 
+ @ApiModelProperty("负载能量1") 
+ private Double loadDcEnergy1;
+/** 
+ * 负载电流2.Load 2 current 
+ */ 
+ @ApiModelProperty("负载电流2") 
+ private Double loadDcCurrent2;
+/** 
+ * 负载负载率2.load 2 rate 
+ */ 
+ @ApiModelProperty("负载负载率2") 
+ private Double loadDcRate2;
+/** 
+ * 负载能量2.Load 2 energy 
+ */ 
+ @ApiModelProperty("负载能量2") 
+ private Double loadDcEnergy2;
+/** 
+ * 负载本月电量.Current month energy 
+ */ 
+ @ApiModelProperty("负载本月电量") 
+ private Double loadDcCurrentMonthEnergy;
+/** 
+ * 负载直流能量.Energy Consumption 
+ */ 
+ @ApiModelProperty("负载直流能量") 
+ private Double loadDcEnergyConsumption;
+/** 
+ * 负载率.Rate 
+ */ 
+ @ApiModelProperty("负载率") 
+ private Double loadDcRate;
+/** 
+ * 负载上月电量.Last month energy 
+ */ 
+ @ApiModelProperty("负载上月电量") 
+ private Double loadDcLastMonthEnergy;
+/** 
+ * 负载支路数量.Number of Branches 
+ */ 
+ @ApiModelProperty("负载支路数量") 
+ private Long loadDcNumberOfBranches;
+/** 
+ * 负载中断告警详情.Branch break alarm state 1 
+ */ 
+ @ApiModelProperty("负载中断告警详情") 
+ private Long loadDcBranchBreakAlarmState1;
+/** 
+ * 负载轻微过流.Branch slight over current 
+ */ 
+ @ApiModelProperty("负载轻微过流") 
+ private Double loadDcBranchSlightOverCurrent;
+/** 
+ * 负载严重过流.Branch severe over current 
+ */ 
+ @ApiModelProperty("负载严重过流") 
+ private Double loadDcBranchSevereOverCurrent;
+/** 
+ * 负载直流低压报警值.Low voltage alarm value 
+ */ 
+ @ApiModelProperty("负载直流低压报警值") 
+ private Double loadDcLowVoltageAlarmValue;
+/** 
+ * 负载直流高压报警值.High voltage alarm value 
+ */ 
+ @ApiModelProperty("负载直流高压报警值") 
+ private Double loadDcHighVoltageAlarmValue;
+/** 
+ * 负载直流过压报警值.Over voltage alarm value 
+ */ 
+ @ApiModelProperty("负载直流过压报警值") 
+ private Double loadDcOverVoltageAlarmValue;
+/** 
+ * 负载直流欠压报警值.Under voltage alarm value 
+ */ 
+ @ApiModelProperty("负载直流欠压报警值") 
+ private Double loadDcUnderVoltageAlarmValue;
+/** 
+ * 负载断路器告警1.Break Alarm 1 
+ */ 
+ @ApiModelProperty("负载断路器告警1") 
+ private Long loadDcBreakAlarm1;
+/** 
+ * 负载断路器告警2.Break Alarm 2 
+ */ 
+ @ApiModelProperty("负载断路器告警2") 
+ private Long loadDcBreakAlarm2;
+/** 
+ * 负载断路器告警3.Break Alarm 3 
+ */ 
+ @ApiModelProperty("负载断路器告警3") 
+ private Long loadDcBreakAlarm3;
+/** 
+ * 负载断路器告警4.Break Alarm 4 
+ */ 
+ @ApiModelProperty("负载断路器告警4") 
+ private Long loadDcBreakAlarm4;
+/** 
+ * 负载断路器告警5.Break Alarm 5 
+ */ 
+ @ApiModelProperty("负载断路器告警5") 
+ private Long loadDcBreakAlarm5;
+/** 
+ * 负载断路器告警6.Break Alarm 6 
+ */ 
+ @ApiModelProperty("负载断路器告警6") 
+ private Long loadDcBreakAlarm6;
+/** 
+ * 负载断路器告警7.Break Alarm 7 
+ */ 
+ @ApiModelProperty("负载断路器告警7") 
+ private Long loadDcBreakAlarm7;
+/** 
+ * 负载断路器告警8.Break Alarm 8 
+ */ 
+ @ApiModelProperty("负载断路器告警8") 
+ private Long loadDcBreakAlarm8;
+/** 
+ * 负载断路器告警9.Break Alarm 9 
+ */ 
+ @ApiModelProperty("负载断路器告警9") 
+ private Long loadDcBreakAlarm9;
+/** 
+ * 负载断路器告警10.Break Alarm 10 
+ */ 
+ @ApiModelProperty("负载断路器告警10") 
+ private Long loadDcBreakAlarm10;
+/** 
+ * 负载断路器告警11.Break Alarm 11 
+ */ 
+ @ApiModelProperty("负载断路器告警11") 
+ private Long loadDcBreakAlarm11;
+/** 
+ * 负载直流支路1严重过流.Branch 1 Severe Over Current 
+ */ 
+ @ApiModelProperty("负载直流支路1严重过流") 
+ private Long loadDcBranch1SevereOverCurrent;
+/** 
+ * 负载直流支路1轻微过流.Branch 1 Slight Over Current 
+ */ 
+ @ApiModelProperty("负载直流支路1轻微过流") 
+ private Long loadDcBranch1SlightOverCurrent;
+/** 
+ * 负载直流支路2严重过流.Branch 2 Severe Over Current 
+ */ 
+ @ApiModelProperty("负载直流支路2严重过流") 
+ private Long loadDcBranch2SevereOverCurrent;
+/** 
+ * 负载直流支路2轻微过流.Branch 2 Slight Over Current 
+ */ 
+ @ApiModelProperty("负载直流支路2轻微过流") 
+ private Long loadDcBranch2SlightOverCurrent;
+private static final long serialVersionUID = 1L;
