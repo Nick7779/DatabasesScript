@@ -6,6 +6,30 @@
     <file url="file://$PROJECT_DIR$/C5/Excel2Data/Class/AcGenerator/AcGenerator15m.txt" charset="GBK" />
     <file url="file://$PROJECT_DIR$/C5/Excel2Data/Class/AcGenerator/AcGenerator1h.txt" charset="GBK" />
     <file url="file://$PROJECT_DIR$/C5/Excel2Data/Class/AcGenerator/FieldConstantsAcGenerator.txt" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/C5/Excel2Data/Class/Fuel/FieldConstantsFuel.txt" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/C5/Excel2Data/Class/Fuel/Fuel.sql" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/C5/Excel2Data/Class/Fuel/Fuel.txt" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/C5/Excel2Data/Class/Fuel/Fuel15m.txt" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/C5/Excel2Data/Class/Fuel/Fuel1h.txt" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/C5/Excel2Data/Class/Grid/FieldConstantsGrid.txt" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/C5/Excel2Data/Class/Grid/Grid.sql" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/C5/Excel2Data/Class/Grid/Grid.txt" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/C5/Excel2Data/Class/Grid/Grid15m.txt" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/C5/Excel2Data/Class/Grid/Grid1h.txt" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/C5/Excel2Data/Class/LiBattery/FieldConstantsLiBattery.txt" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/C5/Excel2Data/Class/LiBattery/LiBattery.txt" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/C5/Excel2Data/Class/LiBattery/LiBattery15m.txt" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/C5/Excel2Data/Class/LiBattery/LiBattery1h.txt" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/C5/Excel2Data/Class/LoadDc/FieldConstantsLoadDc.txt" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/C5/Excel2Data/Class/LoadDc/LoadDc.sql" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/C5/Excel2Data/Class/LoadDc/LoadDc.txt" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/C5/Excel2Data/Class/LoadDc/LoadDc15m.txt" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/C5/Excel2Data/Class/LoadDc/LoadDc1h.txt" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/C5/Excel2Data/Class/Rectifier/FieldConstantsRectifier.txt" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/C5/Excel2Data/Class/Rectifier/Rectifier.sql" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/C5/Excel2Data/Class/Rectifier/Rectifier.txt" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/C5/Excel2Data/Class/Rectifier/Rectifier15m.txt" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/C5/Excel2Data/Class/Rectifier/Rectifier1h.txt" charset="GBK" />
     <file url="file://$PROJECT_DIR$/C5/Excel2Data/Class/Solar/FieldConstantsSolar.txt" charset="GBK" />
     <file url="file://$PROJECT_DIR$/C5/Excel2Data/Class/Solar/Solar.sql" charset="GBK" />
     <file url="file://$PROJECT_DIR$/C5/Excel2Data/Class/Solar/Solar.txt" charset="GBK" />
