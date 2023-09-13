@@ -8,7 +8,7 @@ DROP TABLE IF EXISTS "public"."bak_rectifier_15m";
                       "time" timestamp(6), 
 rectifier_number_of_modules int8,
 rectifier_voltage float8,
-rectifier_current float8,
+rectifier_output_current float8,
 rectifier_ambient_temp float8,
 rectifier_second_hot_point_temp float8,
 rectifier_output_current_limit float8,
@@ -59,7 +59,8 @@ rectifier_single_module_alarm int8,
 rectifier_multiple_modules_alarm int8,
 rectifier_power float8,
 rectifier_input_voltage float8,
-rectifier_module_alarm_state2 int8); 
+rectifier_module_alarm_state2 int8,
+rectifier_input_current float8); 
 COMMENT ON COLUMN "public"."bak_rectifier_15m"."id" IS '主键';
 COMMENT ON COLUMN "public"."bak_rectifier_15m"."create_time" IS '创建时间';
 COMMENT ON COLUMN "public"."bak_rectifier_15m"."customer_id" IS '公司ID';
@@ -67,7 +68,7 @@ COMMENT ON COLUMN "public"."bak_rectifier_15m"."site_id" IS '站点ID';
 COMMENT ON COLUMN "public"."bak_rectifier_15m"."asset_id" IS '资产ID';
 COMMENT ON COLUMN "public"."bak_rectifier_15m"."time" IS 'influxdb时间';COMMENT ON COLUMN "public"."bak_rectifier_15m"."rectifier_number_of_modules" IS '整流器模块数量'; 
 COMMENT ON COLUMN "public"."bak_rectifier_15m"."rectifier_voltage" IS '整流器电压'; 
-COMMENT ON COLUMN "public"."bak_rectifier_15m"."rectifier_current" IS '整流器电流'; 
+COMMENT ON COLUMN "public"."bak_rectifier_15m"."rectifier_output_current" IS '整流器电流'; 
 COMMENT ON COLUMN "public"."bak_rectifier_15m"."rectifier_ambient_temp" IS '整流器外部温度'; 
 COMMENT ON COLUMN "public"."bak_rectifier_15m"."rectifier_second_hot_point_temp" IS '整流器发热温度'; 
 COMMENT ON COLUMN "public"."bak_rectifier_15m"."rectifier_output_current_limit" IS '整流器电流限制'; 
@@ -119,6 +120,7 @@ COMMENT ON COLUMN "public"."bak_rectifier_15m"."rectifier_multiple_modules_alarm
 COMMENT ON COLUMN "public"."bak_rectifier_15m"."rectifier_power" IS '整流器功率'; 
 COMMENT ON COLUMN "public"."bak_rectifier_15m"."rectifier_input_voltage" IS '整流器输入电压'; 
 COMMENT ON COLUMN "public"."bak_rectifier_15m"."rectifier_module_alarm_state2" IS '整流器模块告警状态2'; 
+COMMENT ON COLUMN "public"."bak_rectifier_15m"."rectifier_input_current" IS '整流器输入电流'; 
 DROP TABLE IF EXISTS "public"."bak_rectifier_1h";
                             CREATE TABLE "public"."bak_rectifier_1h" (
                           "id" int8,
@@ -129,7 +131,7 @@ DROP TABLE IF EXISTS "public"."bak_rectifier_1h";
                           "time" timestamp(6), 
 rectifier_number_of_modules int8,
 rectifier_voltage float8,
-rectifier_current float8,
+rectifier_output_current float8,
 rectifier_ambient_temp float8,
 rectifier_second_hot_point_temp float8,
 rectifier_output_current_limit float8,
@@ -180,7 +182,8 @@ rectifier_single_module_alarm int8,
 rectifier_multiple_modules_alarm int8,
 rectifier_power float8,
 rectifier_input_voltage float8,
-rectifier_module_alarm_state2 int8); 
+rectifier_module_alarm_state2 int8,
+rectifier_input_current float8); 
 COMMENT ON COLUMN "public"."bak_rectifier_1h"."id" IS '主键';
     COMMENT ON COLUMN "public"."bak_rectifier_1h"."create_time" IS '创建时间';
     COMMENT ON COLUMN "public"."bak_rectifier_1h"."customer_id" IS '公司ID';
@@ -188,7 +191,7 @@ COMMENT ON COLUMN "public"."bak_rectifier_1h"."id" IS '主键';
     COMMENT ON COLUMN "public"."bak_rectifier_1h"."asset_id" IS '资产ID';
     COMMENT ON COLUMN "public"."bak_rectifier_1h"."time" IS 'influxdb时间';COMMENT ON COLUMN "public"."bak_rectifier_1h"."rectifier_number_of_modules" IS '整流器模块数量'; 
 COMMENT ON COLUMN "public"."bak_rectifier_1h"."rectifier_voltage" IS '整流器电压'; 
-COMMENT ON COLUMN "public"."bak_rectifier_1h"."rectifier_current" IS '整流器电流'; 
+COMMENT ON COLUMN "public"."bak_rectifier_1h"."rectifier_output_current" IS '整流器电流'; 
 COMMENT ON COLUMN "public"."bak_rectifier_1h"."rectifier_ambient_temp" IS '整流器外部温度'; 
 COMMENT ON COLUMN "public"."bak_rectifier_1h"."rectifier_second_hot_point_temp" IS '整流器发热温度'; 
 COMMENT ON COLUMN "public"."bak_rectifier_1h"."rectifier_output_current_limit" IS '整流器电流限制'; 
@@ -240,3 +243,4 @@ COMMENT ON COLUMN "public"."bak_rectifier_1h"."rectifier_multiple_modules_alarm"
 COMMENT ON COLUMN "public"."bak_rectifier_1h"."rectifier_power" IS '整流器功率'; 
 COMMENT ON COLUMN "public"."bak_rectifier_1h"."rectifier_input_voltage" IS '整流器输入电压'; 
 COMMENT ON COLUMN "public"."bak_rectifier_1h"."rectifier_module_alarm_state2" IS '整流器模块告警状态2'; 
+COMMENT ON COLUMN "public"."bak_rectifier_1h"."rectifier_input_current" IS '整流器输入电流'; 

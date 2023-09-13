@@ -9,7 +9,7 @@
  /** 
  * 整流器电流. 
  */ 
- String RECTIFIER_CURRENT = "rectifier_current";
+ String RECTIFIER_OUTPUT_CURRENT = "rectifier_output_current";
  /** 
  * 整流器外部温度. 
  */ 
@@ -214,3 +214,7 @@
  * 整流器模块告警状态2. 
  */ 
  String RECTIFIER_MODULE_ALARM_STATE2 = "rectifier_module_alarm_state2";
+ /** 
+ * 整流器输入电流. 
+ */ 
+ String RECTIFIER_INPUT_CURRENT = "rectifier_input_current";

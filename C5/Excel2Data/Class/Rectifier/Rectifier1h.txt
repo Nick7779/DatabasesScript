@@ -9,10 +9,10 @@
  @ApiModelProperty("整流器电压") 
  private Double rectifierVoltage;
 /** 
- * 整流器电流.Rectifier current 
+ * 整流器电流.Rectifier output current 
  */ 
  @ApiModelProperty("整流器电流") 
- private Double rectifierCurrent;
+ private Double rectifierOutputCurrent;
 /** 
  * 整流器外部温度.Rectifier ambient temperature 
  */ 
@@ -268,4 +268,9 @@
  */ 
  @ApiModelProperty("整流器模块告警状态2") 
  private Long rectifierModuleAlarmState2;
+/** 
+ * 整流器输入电流.Rectifier Input Current 
+ */ 
+ @ApiModelProperty("整流器输入电流") 
+ private Double rectifierInputCurrent;
 private static final long serialVersionUID = 1L;
