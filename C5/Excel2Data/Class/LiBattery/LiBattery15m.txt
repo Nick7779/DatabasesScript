@@ -29,10 +29,10 @@
  @ApiModelProperty("锂电池soh") 
  private Double liBaSoh;
 /** 
- * 锂电池周围环境温度.Lithium battery ambient temperature 
+ * 锂电池周围环境温度.Lithium battery ambient temp 
  */ 
  @ApiModelProperty("锂电池周围环境温度") 
- private Double liBaAmbientTemperature;
+ private Double liBaAmbientTemp;
 /** 
  * 锂电池最大电压.Lithium cells maximum voltage 
  */ 
@@ -49,55 +49,55 @@
  @ApiModelProperty("锂电池平均电压") 
  private Double liBaCellsAverageVoltage;
 /** 
- * 锂电池内部温度1.Lithium battery internal temperature1 
+ * 锂电池内部温度1.Lithium battery internal temp1 
  */ 
  @ApiModelProperty("锂电池内部温度1") 
- private Double liBaInternalTemperature1;
+ private Double liBaInternalTemp1;
 /** 
- * 锂电池内部温度2.Lithium battery internal temperature2 
+ * 锂电池内部温度2.Lithium battery internal temp2 
  */ 
  @ApiModelProperty("锂电池内部温度2") 
- private Double liBaInternalTemperature2;
+ private Double liBaInternalTemp2;
 /** 
- * 锂电池内部温度3.Lithium battery internal temperature3 
+ * 锂电池内部温度3.Lithium battery internal temp3 
  */ 
  @ApiModelProperty("锂电池内部温度3") 
- private Double liBaInternalTemperature3;
+ private Double liBaInternalTemp3;
 /** 
- * 锂电池内部温度4.Lithium battery internal temperature4 
+ * 锂电池内部温度4.Lithium battery internal temp4 
  */ 
  @ApiModelProperty("锂电池内部温度4") 
- private Double liBaInternalTemperature4;
+ private Double liBaInternalTemp4;
 /** 
- * 锂电池内部温度5.Lithium battery internal temperature5 
+ * 锂电池内部温度5.Lithium battery internal temp5 
  */ 
  @ApiModelProperty("锂电池内部温度5") 
- private Double liBaInternalTemperature5;
+ private Double liBaInternalTemp5;
 /** 
- * 锂电池内部温度6.Lithium battery internal temperature6 
+ * 锂电池内部温度6.Lithium battery internal temp6 
  */ 
  @ApiModelProperty("锂电池内部温度6") 
- private Double liBaInternalTemperature6;
+ private Double liBaInternalTemp6;
 /** 
  * 锂电池芯数.Lithium battery cores number 
  */ 
  @ApiModelProperty("锂电池芯数") 
  private Long liBaCoresNumber;
 /** 
- * 锂电池轻度放电时间.Lithium battery mild discharge time 
+ * 锂电池轻度放电时间.Lithium battery light discharge time 
  */ 
  @ApiModelProperty("锂电池轻度放电时间") 
- private Double liBaMildDischargeTime;
+ private Double liBaLightDischargeTime;
 /** 
  * 锂电池深度放电时间.Lithium battery deep discharge time 
  */ 
  @ApiModelProperty("锂电池深度放电时间") 
  private Double liBaDeepDischargeTime;
 /** 
- * 锂电池过度放电时间.Lithium battery excessive discharge time 
+ * 锂电池过度放电时间.Lithium battery over discharge time 
  */ 
  @ApiModelProperty("锂电池过度放电时间") 
- private Double liBaExcessiveDischargeTime;
+ private Double liBaOverDischargeTime;
 /** 
  * 锂电池浅放电高16比特位.Lithium battery shallow discharge high16 bit 
  */ 
@@ -282,29 +282,29 @@
  * 锂电池放电能量.Lithium battery Discharge energy 
  */ 
  @ApiModelProperty("锂电池放电能量") 
- private Long liBaDischargeEnergy;
+ private Double liBaDischargeEnergy;
 /** 
- * 锂电池功率温度.Lithium battery power temperature 
+ * 锂电池功率温度.Lithium battery power temp 
  */ 
  @ApiModelProperty("锂电池功率温度") 
- private Double liBaPowerTemperature;
+ private Double liBaPowerTemp;
 /** 
- * 锂电池状态.Lithium battery status 
+ * 电总锂电池状态.Lithium battery status dz 
  */ 
- @ApiModelProperty("锂电池状态") 
- private Long liBaStatus;
+ @ApiModelProperty("电总锂电池状态") 
+ private Long liBaStatusDz;
 /** 
  * 锂电池FET状态.Lithium battery FET status 
  */ 
  @ApiModelProperty("锂电池FET状态") 
  private Double liBaFetStatus;
 /** 
- * 锂电池电芯温度最高.Lithium battery cells have the highest temperature 
+ * 锂电池电芯温度最高.Lithium battery cells have the highest temp 
  */ 
  @ApiModelProperty("锂电池电芯温度最高") 
- private Double liBaCellTempTallest;
+ private Double liBaCellTempHighest;
 /** 
- * 锂电池电芯温度最低.Lithium battery cell temperature is the lowest 
+ * 锂电池电芯温度最低.Lithium battery cell temp is the lowest 
  */ 
  @ApiModelProperty("锂电池电芯温度最低") 
  private Double liBaCellTempLowest;
@@ -317,7 +317,7 @@
  * 锂电池BMS保护状态.Lithium battery BMS protection status 
  */ 
  @ApiModelProperty("锂电池BMS保护状态") 
- private Double liBaBmsProtectionStatus;
+ private Long liBaBmsProtectionStatus;
 /** 
  * 锂电池并机在线数量.Lithium battery parallel online Number 
  */ 
@@ -332,7 +332,7 @@
  * 锂电池总充时间.Lithium battery Total charge time 
  */ 
  @ApiModelProperty("锂电池总充时间") 
- private Double liBaTotalChargeTime;
+ private Long liBaTotalChargeTime;
 /** 
  * 锂电池总放时间.Lithium battery Total discharge time 
  */ 
@@ -369,255 +369,230 @@
  @ApiModelProperty("锂电池报警状态5") 
  private Long liBaAlarmStatus5;
 /** 
- * 锂电池环境温度告警状态.Lithium battery ambient temperature alarm status 
+ * 电总锂电池环境温度告警状态.Lithium battery ambient temp alarm status dz 
  */ 
- @ApiModelProperty("锂电池环境温度告警状态") 
- private Long liBaAmbientTemperatureAlarmStatus;
+ @ApiModelProperty("电总锂电池环境温度告警状态") 
+ private Long liBaAmbientTempAlarmStatusDz;
 /** 
- * 锂电池功率温度告警状态.Lithium battery power temperature alarm status 
+ * 电总锂电池功率温度告警状态.Lithium battery power temp alarm status dz 
  */ 
- @ApiModelProperty("锂电池功率温度告警状态") 
- private Long liBaPowerTemperatureAlarmStatus;
+ @ApiModelProperty("电总锂电池功率温度告警状态") 
+ private Long liBaPowerTempAlarmStatusDz;
 /** 
  * 锂电池充放电流告警状态.Lithium battery charging and discharging flow alarm status 
  */ 
  @ApiModelProperty("锂电池充放电流告警状态") 
  private Long liBaChargingAndDischargingFlowAlarmStatus;
 /** 
- * 锂电池电池总压告警状态.Lithium battery voltage alarm status 
+ * 电总锂电池电池总压告警状态.Lithium battery bms voltage alarm status dz 
  */ 
- @ApiModelProperty("锂电池电池总压告警状态") 
- private Long liBaVoltageAlarmStatus;
+ @ApiModelProperty("电总锂电池电池总压告警状态") 
+ private Long liBaBmsVoltageAlarmStatusDz;
 /** 
- * 锂电池均衡事件代码.Lithium battery balancing event code 
- */ 
- @ApiModelProperty("锂电池均衡事件代码") 
- private Long liBaBalancingEventCode;
-/** 
- * 锂电池电压事件代码.Lithium battery voltage event code 
- */ 
- @ApiModelProperty("锂电池电压事件代码") 
- private Long liBaVoltageEventCode;
-/** 
- * 锂电池温度事件代码.Lithium battery temperature event code 
- */ 
- @ApiModelProperty("锂电池温度事件代码") 
- private Long liBaTemperatureEventCode;
-/** 
- * 锂电池电流事件代码.Lithium battery current event code 
- */ 
- @ApiModelProperty("锂电池电流事件代码") 
- private Long liBaCurrentEventCode;
-/** 
- * 锂电池剩余容量告警.Lithium battery remaining capacity alarm status 
+ * 锂电池剩余容量告警.Lithium battery bms remaining capacity alarm status dz 
  */ 
  @ApiModelProperty("锂电池剩余容量告警") 
- private Long liBaRemainingCapacityAlarmStatus;
+ private Long liBaBmsRemainingCapacityAlarmStatusDz;
 /** 
- * 锂电池静态均衡指示.Lithium battery Static balance indicator 
+ * 电总锂电池静态均衡指示.Lithium battery BMS Static balance indicator dz 
  */ 
- @ApiModelProperty("锂电池静态均衡指示") 
- private Long liBaStaticEqualizationIndication;
+ @ApiModelProperty("电总锂电池静态均衡指示") 
+ private Long liBaBmsStaticBalanceIndicationDz;
 /** 
- * 锂电池静态均衡超时.Lithium battery Static balance timeout 
+ * 电总锂电池静态均衡超时.Lithium battery Static balance timeout dz 
  */ 
- @ApiModelProperty("锂电池静态均衡超时") 
- private Long liBaStaticBalancingTimeout;
+ @ApiModelProperty("电总锂电池静态均衡超时") 
+ private Long liBaBmsStaticBalancingTimeoutDz;
 /** 
- * 锂电池超温禁止均衡.Lithium battery Overtemperature disables balancing 
+ * 电总锂电池超温禁止均衡.Lithium battery BMS Overtemp disables balancing dz 
  */ 
- @ApiModelProperty("锂电池超温禁止均衡") 
- private Long liBaOvertemperatureDisablesBalancing;
+ @ApiModelProperty("电总锂电池超温禁止均衡") 
+ private Long liBaBmsOvertempDisablesBalancingDz;
 /** 
- * 锂电池电芯失效告警.Lithium battery failure alarm 
+ * 电总锂电池电芯失效告警.Lithium battery cell failure alarm dz 
  */ 
- @ApiModelProperty("锂电池电芯失效告警") 
- private Long liBaFailureAlarm;
+ @ApiModelProperty("电总锂电池电芯失效告警") 
+ private Long liBaCellFailureAlarmDz;
 /** 
- * 锂电池单体过压告警.Lithium battery Single overvoltage alarm 
+ * 电总锂电池单体过压告警.Lithium battery cell overvoltage alarm dz 
  */ 
- @ApiModelProperty("锂电池单体过压告警") 
- private Long liBaSingleOvervoltageAlarm;
+ @ApiModelProperty("电总锂电池单体过压告警") 
+ private Long liBaCellOvAlarmDz;
 /** 
- * 锂电池单体过压保护.Lithium battery Monomer overvoltage protection 
+ * 电总锂电池单体过压保护.Lithium battery cell overvoltage protection dz 
  */ 
- @ApiModelProperty("锂电池单体过压保护") 
- private Long liBaMonomerOvervoltageProtection;
+ @ApiModelProperty("电总锂电池单体过压保护") 
+ private Long liBaCellOvProtectionDz;
 /** 
- * 锂电池单体欠压告警.Lithium battery Single undervoltage alarm 
+ * 电总锂电池单体欠压告警.Lithium battery cell undervoltage alarm dz 
  */ 
- @ApiModelProperty("锂电池单体欠压告警") 
- private Long liBaSingleUndervoltageAlarm;
+ @ApiModelProperty("电总锂电池单体欠压告警") 
+ private Long liBaCellUvAlarmDz;
 /** 
- * 锂电池单体欠压保护.Lithium battery Monomer undervoltage protection 
+ * 电总锂电池单体欠压保护.Lithium battery cell undervoltage protection dz 
  */ 
- @ApiModelProperty("锂电池单体欠压保护") 
- private Long liBaMonomerUndervoltageProtection;
+ @ApiModelProperty("电总锂电池单体欠压保护") 
+ private Long liBaCellUvProtectionDz;
 /** 
- * 锂电池总压过压告警.Lithium battery Total pressure overvoltage alarm 
+ * 电总锂电池总压过压告警.Lithium battery overall overvoltage alarm dz 
  */ 
- @ApiModelProperty("锂电池总压过压告警") 
- private Long liBaTotalPressureOvervoltageAlarm;
+ @ApiModelProperty("电总锂电池总压过压告警") 
+ private Long liBaOverallOvAlarmDz;
 /** 
- * 锂电池总压过压保护.Lithium battery Total pressure overvoltage protection 
+ * 电总锂电池总压过压保护.Lithium battery overall overvoltage protection dz 
  */ 
- @ApiModelProperty("锂电池总压过压保护") 
- private Long liBaTotalPressureOvervoltageProtection;
+ @ApiModelProperty("电总锂电池总压过压保护") 
+ private Long liBaOverallOvProtectionDz;
 /** 
- * 锂电池总压欠压告警.Lithium battery Total pressure undervoltage alarm 
+ * 电总锂电池总压欠压告警.Lithium battery overall undervoltage alarm dz 
  */ 
- @ApiModelProperty("锂电池总压欠压告警") 
- private Long liBaTotalPressureUndervoltageAlarm;
+ @ApiModelProperty("电总锂电池总压欠压告警") 
+ private Long liBaOverallUvAlarmDz;
 /** 
- * 锂电池总压欠压保护.Lithium battery Total pressure undervoltage protection 
+ * 电总锂电池总压欠压保护.Lithium battery overall undervoltage protection dz 
  */ 
- @ApiModelProperty("锂电池总压欠压保护") 
- private Long liBaTotalPressureUndervoltageProtection;
+ @ApiModelProperty("电总锂电池总压欠压保护") 
+ private Long liBaOverallUvProtectionDz;
 /** 
- * 锂电池充电高温告警.Lithium battery Charging high temperature warning 
+ * 电总锂电池充电高温告警.Lithium battery Charging high temp alarm dz 
  */ 
- @ApiModelProperty("锂电池充电高温告警") 
- private Long liBaChargingHighTemperatureWarning;
+ @ApiModelProperty("电总锂电池充电高温告警") 
+ private Long liBaChargingHighTempAlarmDz;
 /** 
- * 锂电池充电过温保护.Lithium battery Charging over temperature protection 
+ * 电总锂电池充电过温保护.Lithium battery Charging over temp protection dz 
  */ 
- @ApiModelProperty("锂电池充电过温保护") 
- private Long liBaChargingOverTemperatureProtection;
+ @ApiModelProperty("电总锂电池充电过温保护") 
+ private Long liBaChargingOverTempProtectionDz;
 /** 
- * 锂电池充电低温告警.Lithium battery Charging low temperature warning 
+ * 电总锂电池充电低温告警.Lithium battery Charging low temp warning dz 
  */ 
- @ApiModelProperty("锂电池充电低温告警") 
- private Long liBaChargingLowTemperatureWarning;
+ @ApiModelProperty("电总锂电池充电低温告警") 
+ private Long liBaChargingLowTempAlarmDz;
 /** 
- * 锂电池充电欠温保护.Lithium battery Charging under-temperature protection 
+ * 电总锂电池充电欠温保护.Lithium battery Charging undertemp protection dz 
  */ 
- @ApiModelProperty("锂电池充电欠温保护") 
- private Long liBaChargingUnderTemperatureProtection;
+ @ApiModelProperty("电总锂电池充电欠温保护") 
+ private Long liBaChargingUnderTempProtectionDz;
 /** 
- * 锂电池放电高温告警.Lithium battery Discharge high temperature warning 
+ * 电总锂电池放电高温告警.Lithium battery Discharge high temp alarm dz 
  */ 
- @ApiModelProperty("锂电池放电高温告警") 
- private Long liBaDischargeHighTemperatureWarning;
+ @ApiModelProperty("电总锂电池放电高温告警") 
+ private Long liBaDischargeHighTempAlarmDz;
 /** 
- * 锂电池放电过温保护.Lithium battery Discharge over temperature protection 
+ * 电总锂电池放电过温保护.Lithium battery Discharge over temp protection dz 
  */ 
- @ApiModelProperty("锂电池放电过温保护") 
- private Long liBaDischargeOverTemperatureProtection;
+ @ApiModelProperty("电总锂电池放电过温保护") 
+ private Long liBaDischargeOverTempProtectionDz;
 /** 
- * 锂电池放电低温告警.Lithium battery Discharge low temperature warning 
+ * 电总锂电池放电低温告警.Lithium battery Discharge low temp alarm dz 
  */ 
- @ApiModelProperty("锂电池放电低温告警") 
- private Long liBaDischargeLowTemperatureWarning;
+ @ApiModelProperty("电总锂电池放电低温告警") 
+ private Long liBaDischargeLowTempAlarmDz;
 /** 
- * 锂电池放电欠温保护.Lithium battery Discharge under-temperature protection 
+ * 电总锂电池放电欠温保护.Lithium battery Discharge under_temp protection dz 
  */ 
- @ApiModelProperty("锂电池放电欠温保护") 
- private Long liBaDischargeUnderTemperatureProtection;
+ @ApiModelProperty("电总锂电池放电欠温保护") 
+ private Long liBaDischargeUnderTempProtectionDz;
 /** 
- * 锂电池环境高温告警.Lithium battery High temperature warning 
+ * 电总锂电池环境高温告警.Lithium battery ambient high temp alarm dz 
  */ 
- @ApiModelProperty("锂电池环境高温告警") 
- private Long liBaHighTemperatureWarning;
+ @ApiModelProperty("电总锂电池环境高温告警") 
+ private Long liBaAmbientHighTempAlarmDz;
 /** 
- * 锂电池环境过温保护.Lithium battery Environmental over-temperature protection 
+ * 电总锂电池环境过温保护.Lithium battery ambient overtemp protection dz 
  */ 
- @ApiModelProperty("锂电池环境过温保护") 
- private Long liBaEnvironmentalOverTemperatureProtection;
+ @ApiModelProperty("电总锂电池环境过温保护") 
+ private Long liBaAmbientOvertempProtectionDz;
 /** 
- * 锂电池环境低温告警.Lithium battery Environmental low temperature warning 
+ * 电总锂电池环境低温告警.Lithium battery ambient low temp alarm dz 
  */ 
- @ApiModelProperty("锂电池环境低温告警") 
- private Long liBaEnvironmentalLowTemperatureWarning;
+ @ApiModelProperty("电总锂电池环境低温告警") 
+ private Long liBaAmbientLowTempAlarmDz;
 /** 
- * 锂电池环境欠温保护.Lithium battery Environmental under-temperature protection 
+ * 电总锂电池环境欠温保护.Lithium battery ambient undertemp protection dz 
  */ 
- @ApiModelProperty("锂电池环境欠温保护") 
- private Long liBaEnvironmentalUnderTemperatureProtection;
+ @ApiModelProperty("电总锂电池环境欠温保护") 
+ private Long liBaAmbientUnderTempProtectionDz;
 /** 
- * 锂电池功率过温保护.Lithium battery Power over temperature protection 
+ * 电总锂电池功率过温保护.Lithium battery Power over temp protection dz 
  */ 
- @ApiModelProperty("锂电池功率过温保护") 
- private Long liBaPowerOverTemperatureProtection;
+ @ApiModelProperty("电总锂电池功率过温保护") 
+ private Long liBaPowerOverTempProtectionDz;
 /** 
- * 锂电池充电电流告警.Lithium battery Charging current alarm 
+ * 锂电池充电电流告警.Lithium battery Charge current alarm dz 
  */ 
  @ApiModelProperty("锂电池充电电流告警") 
- private Long liBaChargingCurrentAlarm;
+ private Long liBaChargeCurrentAlarmDz;
 /** 
- * 锂电池充电过流保护.Lithium battery Charging overcurrent protection 
+ * 锂电池充电过流保护.Lithium battery Charge overcurrent protection dz 
  */ 
  @ApiModelProperty("锂电池充电过流保护") 
- private Long liBaChargingOvercurrentProtection;
+ private Long liBaChargeOvercurrentProtectionDz;
 /** 
- * 锂电池放电电流告警.Lithium battery Discharge current alarm 
+ * 锂电池放电电流告警.Lithium battery Discharge current alarm dz 
  */ 
  @ApiModelProperty("锂电池放电电流告警") 
- private Long liBaDischargeCurrentAlarm;
+ private Long liBaDischargeCurrentAlarmDz;
 /** 
- * 锂电池放电过流保护.Lithium battery Discharge overcurrent protection 
+ * 锂电池放电过流保护.Lithium battery Discharge overcurrent protection dz 
  */ 
  @ApiModelProperty("锂电池放电过流保护") 
- private Long liBaDischargeOvercurrentProtection;
+ private Long liBaDischargeOvercurrentProtectionDz;
 /** 
- * 锂电池二级过流保护.Lithium battery Secondary overcurrent protection 
+ * 锂电池二级过流保护.Lithium battery Secondary overcurrent protection dz 
  */ 
  @ApiModelProperty("锂电池二级过流保护") 
- private Long liBaSecondaryOvercurrentProtection;
+ private Long liBaSecondaryOvercurrentProtectionDz;
 /** 
- * 锂电池输出短路保护.Lithium battery Output short circuit protection 
- */ 
- @ApiModelProperty("锂电池输出短路保护") 
- private Long liBaOutputShortCircuitProtection;
-/** 
- * 锂电池二级过流锁定.Lithium battery Secondary overcurrent lock 
+ * 锂电池二级过流锁定.Lithium battery Secondary overcurrent lock dz 
  */ 
  @ApiModelProperty("锂电池二级过流锁定") 
- private Long liBaSecondaryOvercurrentLock;
+ private Long liBaSecondaryOvercurrentLockDz;
 /** 
- * 锂电池输出短路锁定.Lithium battery Output short circuit lock 
+ * 锂电池输出短路锁定.Lithium battery Output short circuit lock dz 
  */ 
  @ApiModelProperty("锂电池输出短路锁定") 
- private Long liBaOutputShortCircuitLock;
+ private Long liBaOutputShortCircuitLockDz;
 /** 
- * 锂电池剩余容量告警.Lithium battery Remaining capacity alarm 
+ * 锂电池剩余容量告警.Lithium battery Remaining capacity alarm dz 
  */ 
  @ApiModelProperty("锂电池剩余容量告警") 
- private Long liBaRemainingCapacityAlarm;
+ private Long liBaRemainingCapacityAlarmDz;
 /** 
- * 锂电池放电开关开启.Lithium battery Discharge switch on 
+ * 锂电池放电开关开启.Lithium battery Discharge switch on dz 
  */ 
  @ApiModelProperty("锂电池放电开关开启") 
- private Long liBaDischargeSwitchOn;
+ private Long liBaDischargeSwitchOnDz;
 /** 
- * 锂电池充电开关开启.Lithium battery Charging switch on 
+ * 锂电池充电开关开启.Lithium battery Charging switch on dz 
  */ 
  @ApiModelProperty("锂电池充电开关开启") 
- private Long liBaChargingSwitchOn;
+ private Long liBaChargingSwitchOnDz;
 /** 
- * 锂电池限流开关开启.Lithium battery Current limit switch on 
+ * 锂电池限流开关开启.Lithium battery Current limit switch on dz 
  */ 
  @ApiModelProperty("锂电池限流开关开启") 
- private Long liBaCurrentLimitSwitchOn;
+ private Long liBaCurrentLimitSwitchOnDz;
 /** 
- * 锂电池加热开关开启.Lithium battery Heating switch on 
+ * 锂电池加热开关开启.Lithium battery Heating switch on dz 
  */ 
  @ApiModelProperty("锂电池加热开关开启") 
- private Long liBaHeatingSwitchOn;
+ private Long liBaHeatingSwitchOnDz;
 /** 
- * 锂电池放电.Lithium battery Discharge 
+ * 锂电池放电.Lithium battery Discharge dz 
  */ 
  @ApiModelProperty("锂电池放电") 
- private Long liBaDischarge;
+ private Long liBaDischargeDz;
 /** 
- * 锂电池充电.Lithium battery Charge 
+ * 锂电池充电.Lithium battery Charge dz 
  */ 
  @ApiModelProperty("锂电池充电") 
- private Long liBaCharge;
+ private Long liBaChargeDz;
 /** 
- * 锂电池浮充.Lithium battery Float 
+ * 锂电池浮充.Lithium battery Float dz 
  */ 
  @ApiModelProperty("锂电池浮充") 
- private Long liBaFloat;
+ private Long liBaFloatDz;
 /** 
  * 锂电池NTC断线.Lithium battery NTC disconnect 
  */ 
@@ -632,12 +607,12 @@
  * 锂电池电池反接.Lithium battery reversed 
  */ 
  @ApiModelProperty("锂电池电池反接") 
- private Long liBaReversed;
+ private Long liBaReverseConnect;
 /** 
- * 锂电池风扇开启故障.Lithium battery Fan on failure 
+ * 锂电池风扇开启故障.Lithium battery Fan on fault 
  */ 
  @ApiModelProperty("锂电池风扇开启故障") 
- private Long liBaFanOnFailure;
+ private Long liBaFanOnFault;
 /** 
  * 锂电池电池锁定.Lithium battery lock 
  */ 
@@ -654,10 +629,10 @@
  @ApiModelProperty("锂电池电压采样断线") 
  private Long liBaVoltageSamplingDisconnect;
 /** 
- * 锂电池充电MOS损坏.Lithium battery Damaged charging MOS 
+ * 锂电池充电MOS损坏.Lithium battery Damaged charge MOS 
  */ 
  @ApiModelProperty("锂电池充电MOS损坏") 
- private Long liBaDamagedChargingMos;
+ private Long liBaChargeMosDamage;
 /** 
  * 锂电池放电MOS损坏.Lithium battery Discharge MOS damage 
  */ 
@@ -669,15 +644,15 @@
  @ApiModelProperty("锂电池电压采样元件损坏") 
  private Long liBaVoltageSamplingElementDamaged;
 /** 
- * 锂电池充电状态.Lithium battery charging state 
+ * 锂电池充电状态.Lithium battery charging state for single battery 
  */ 
  @ApiModelProperty("锂电池充电状态") 
- private Long liBaChargingState;
+ private Long liBaChargeStateForSingleBattery;
 /** 
- * 锂电池放电状态.Lithium battery discharge state 
+ * 锂电池放电状态.Lithium battery discharge state for single battery 
  */ 
  @ApiModelProperty("锂电池放电状态") 
- private Long liBaDischargeState;
+ private Long liBaDischargeStateForSingleBattery;
 /** 
  * 锂电池短路保护.Lithium battery Short circuit protection 
  */ 
@@ -687,37 +662,37 @@
  * 锂电池过压保护(不解析).Lithium battery Overvoltage protection (not resolved) 
  */ 
  @ApiModelProperty("锂电池过压保护(不解析)") 
- private Long liBaOvervoltageProtection;
+ private Long liBaOvProtection;
 /** 
  * 锂电池欠压保护(不解析).Lithium battery Undervoltage protection (not resolved) 
  */ 
  @ApiModelProperty("锂电池欠压保护(不解析)") 
- private Long liBaUndervoltageProtection;
+ private Long liBaUvProtection;
 /** 
  * 锂电池总体过压保护.Lithium battery Overall overvoltage protection 
  */ 
  @ApiModelProperty("锂电池总体过压保护") 
- private Long liBaOverallOvervoltageProtection;
+ private Long liBaOverallOvProtection;
 /** 
- * 锂电池启动失败.Lithium battery failed to activate 
+ * 锂电池启动失败.Lithium battery fail to start 
  */ 
  @ApiModelProperty("锂电池启动失败") 
- private Long liBaFailedToActivate;
+ private Long liBaFailToStart;
 /** 
- * 锂电池充电MOS导通状态(0导通，1关断).Lithium battery Charge MOS on state 
+ * 锂电池充电MOS导通状态.Lithium battery Charge MOS conduction state 
  */ 
- @ApiModelProperty("锂电池充电MOS导通状态(0导通，1关断)") 
- private Long liBaChargeMosOnState;
+ @ApiModelProperty("锂电池充电MOS导通状态") 
+ private Long liBaChargeMosConductionState;
 /** 
- * 锂电池放电MOS导通状态(0导通，1关断).Lithium battery Discharge MOS state 
+ * 锂电池放电MOS导通状态.Lithium battery Discharge MOS conduction state 
  */ 
- @ApiModelProperty("锂电池放电MOS导通状态(0导通，1关断)") 
- private Long liBaDischargeMosState;
+ @ApiModelProperty("锂电池放电MOS导通状态") 
+ private Long liBaDischargeMosConductionState;
 /** 
- * 锂电池强制充电MOS开启.Lithium battery Force charging MOS on 
+ * 锂电池强制充电MOS开启.Lithium battery Force charge MOS on 
  */ 
  @ApiModelProperty("锂电池强制充电MOS开启") 
- private Long liBaForceChargingMosOn;
+ private Long liBaForceChargeMosOn;
 /** 
  * 锂电池强制充电MOS关闭.Lithium battery Force charge MOS off 
  */ 
@@ -739,30 +714,30 @@
  @ApiModelProperty("锂电池加热垫开启") 
  private Long liBaHeatingPadOn;
 /** 
- * 锂电池MOSFET过温保护.Lithium battery MOSFET over temperature protection 
+ * 锂电池MOSFET过温保护.Lithium battery MOSFET over temp protection 
  */ 
  @ApiModelProperty("锂电池MOSFET过温保护") 
- private Long liBaMosfetOverTemperatureProtection;
+ private Long liBaMosfetOverTempProtection;
 /** 
  * 锂电池MOSFET低温保护.Lithium battery MOSFET low temp protection 
  */ 
  @ApiModelProperty("锂电池MOSFET低温保护") 
  private Long liBaMosfetLowTempProtection;
 /** 
- * 锂电池充电开启温度过低.Lithium battery begin charging temp low 
+ * 锂电池充电开启温度过低.Lithium battery charging temp too low 
  */ 
  @ApiModelProperty("锂电池充电开启温度过低") 
- private Long liBaBeginChargingTempLow;
+ private Long liBaChargingTempTooLow;
 /** 
- * 锂电池环境低温保护.Lithium battery  low environmental temp protection 
+ * 锂电池环境低温保护.Lithium battery ambient temp low protection 
  */ 
  @ApiModelProperty("锂电池环境低温保护") 
- private Long liBaLowEnvironmentalTempProtection;
+ private Long liBaAmbientTempLowProtection;
 /** 
- * 锂电池环境高温保护.Lithium battery high environmental temp protection 
+ * 锂电池环境高温保护.Lithium battery ambient temp high protection 
  */ 
  @ApiModelProperty("锂电池环境高温保护") 
- private Long liBaHighEnvironmentalTempProtection;
+ private Long liBaAmbientTempHighProtection;
 /** 
  * 锂电池风扇开启.Lithium battery fan on 
  */ 
@@ -784,7 +759,7 @@
  @ApiModelProperty("锂电池干接点2") 
  private Long liBaDryContact2;
 /** 
- * 锂电池BMS模块SN重复(BMS模块并机).Lithium battery BMS module SN repetition (BMS module parallel) 
+ * 锂电池BMS模块SN重复(BMS模块并机).Lithium battery BMS module SN duplicate (BMS module parallel) 
  */ 
  @ApiModelProperty("锂电池BMS模块SN重复(BMS模块并机)") 
  private Long liBaBmsModuleSnRepetition;
@@ -792,32 +767,32 @@
  * 锂电池单体过压告警.Lithium battery Cell overvoltage alarm 
  */ 
  @ApiModelProperty("锂电池单体过压告警") 
- private Long liBaCellOvervoltageAlarm;
+ private Long liBaCellOvAlarm;
 /** 
  * 锂电池单体欠压告警.Lithium battery Cell undervoltage alarm 
  */ 
  @ApiModelProperty("锂电池单体欠压告警") 
- private Long liBaCellUndervoltageAlarm;
+ private Long liBaCellUvAlarm;
 /** 
- * 锂电池总体过压告警.Lithium battery Overall overvoltage warning 
+ * 锂电池总体过压告警.Lithium battery Overall overvoltage alarm 
  */ 
  @ApiModelProperty("锂电池总体过压告警") 
- private Long liBaOverallOvervoltageWarning;
+ private Long liBaOverallOvAlarm;
 /** 
  * 锂电池总体欠压告警.Lithium battery Overall undervoltage alarm 
  */ 
  @ApiModelProperty("锂电池总体欠压告警") 
- private Long liBaOverallUndervoltageAlarm;
+ private Long liBaOverallUvAlarm;
 /** 
- * 锂电池充过流告警.Lithium battery Overcharge alarm 
+ * 锂电池过充告警.Lithium battery Overcharge alarm 
  */ 
- @ApiModelProperty("锂电池充过流告警") 
+ @ApiModelProperty("锂电池过充告警") 
  private Long liBaOverchargeAlarm;
 /** 
- * 锂电池放过流告警.Lithium battery Ignore the flow alarm 
+ * 锂电池放过流告警.Lithium battery discharge overcurrent alarm 
  */ 
  @ApiModelProperty("锂电池放过流告警") 
- private Long liBaIgnoreTheFlowAlarm;
+ private Long liBaDischargeOvercurrentAlarm;
 /** 
  * 锂电池电池充电过温告警.Lithium battery charging over temp alarm 
  */ 
@@ -829,39 +804,29 @@
  @ApiModelProperty("锂电池电池充电欠温告警") 
  private Long liBaChargeUnderTempAlarm;
 /** 
- * 锂电池环境过温告警.Lithium battery Ambient over temp alarm 
+ * 锂电池环境过温告警.Lithium battery Ambient temp high alarm 
  */ 
  @ApiModelProperty("锂电池环境过温告警") 
- private Long liBaAmbientOverTempAlarm;
+ private Long liBaAmbientTempHighAlarm;
 /** 
- * 锂电池环境欠温告警.Lithium battery Environment under temp alarm 
+ * 锂电池环境欠温告警.Lithium battery ambient temperature low alarm 
  */ 
  @ApiModelProperty("锂电池环境欠温告警") 
- private Long liBaEnvironmentUnderTempAlarm;
+ private Long liBaAmbientTempLowAlarm;
 /** 
  * 锂电池MOS过温告警.Lithium battery MOS over temp alarm 
  */ 
  @ApiModelProperty("锂电池MOS过温告警") 
  private Long liBaMosOverTempAlarm;
 /** 
- * 锂电池SOC过低告警.Lithium battery SOC too low alarm 
- */ 
- @ApiModelProperty("锂电池SOC过低告警") 
- private Long liBaSocTooLowAlarm;
-/** 
- * 锂电池压差过大告警.Lithium battery Overpressure alarm 
- */ 
- @ApiModelProperty("锂电池压差过大告警") 
- private Long liBaOverpressureAlarm;
-/** 
  * 锂电池电池放电过温告警.Lithium battery overheating alarm 
  */ 
  @ApiModelProperty("锂电池电池放电过温告警") 
- private Long liBaOverheatingAlarm;
+ private Long liBaDischargeOverheatingAlarm;
 /** 
- * 锂电池电池放电欠温告警.Lithium battery discharge under temp alarm 
+ * 锂电池放电欠温告警.Lithium battery discharge under temp alarm 
  */ 
- @ApiModelProperty("锂电池电池放电欠温告警") 
+ @ApiModelProperty("锂电池放电欠温告警") 
  private Long liBaDischargeUnderTempAlarm;
 /** 
  * 直流发电机锂电池 SOB (FC).Lithium Battery SOB (FC) 
@@ -874,8 +839,503 @@
  @ApiModelProperty("锂电池组电压") 
  private Double liBaBankVoltage;
 /** 
- * 锂电池组电流.battery bank current 
+ * 锂电池组电流.battery total current 
  */ 
  @ApiModelProperty("锂电池组电流") 
- private Double liBaBankCurrent;
+ private Double liBaTotalCurrent;
+/** 
+ * 铁锂电池浅放电次数.light discharge counts 
+ */ 
+ @ApiModelProperty("铁锂电池浅放电次数") 
+ private Long liBaLightDischargeCounts;
+/** 
+ * 铁锂电池深放电次数.deep discharge counts 
+ */ 
+ @ApiModelProperty("铁锂电池深放电次数") 
+ private Long liBaDeepDischargeCounts;
+/** 
+ * 铁锂电池过放电次数.over discharge counts 
+ */ 
+ @ApiModelProperty("铁锂电池过放电次数") 
+ private Long liBaOverDischargeCounts;
+/** 
+ * 锂电池总放kWh	.Lithium battery total discharge for single battery 
+ */ 
+ @ApiModelProperty("锂电池总放kWh	") 
+ private Double liBaTotalDischargeCapacityForSingleBattery;
+/** 
+ * 电流告警状态.current alarm status 
+ */ 
+ @ApiModelProperty("电流告警状态") 
+ private Long liBaCurrentAlarmStatus;
+/** 
+ * 电总平衡事件告警状态.bms balance event alarm status dz 
+ */ 
+ @ApiModelProperty("电总平衡事件告警状态") 
+ private Long liBaBmsBalanceEventAlarmStatusDz;
+/** 
+ * 电总电压事件告警状态.bms voltage event alarm status dz 
+ */ 
+ @ApiModelProperty("电总电压事件告警状态") 
+ private Long liBaBmsVoltageEventAlarmStatusDz;
+/** 
+ * 电总温度事件告警状态.temp event alarm status dz 
+ */ 
+ @ApiModelProperty("电总温度事件告警状态") 
+ private Long liBaTempEventAlarmStatusDz;
+/** 
+ * 电流事件告警状态.current event alarm status 
+ */ 
+ @ApiModelProperty("电流事件告警状态") 
+ private Long liBaCurrentEventAlarmStatus;
+/** 
+ * 电池阳极保险丝告警状态.postive fuse alarm state 
+ */ 
+ @ApiModelProperty("电池阳极保险丝告警状态") 
+ private Long liBaPositiveFuseAlarmState;
+/** 
+ * BMS报警状态.BMS alarm state 
+ */ 
+ @ApiModelProperty("BMS报警状态") 
+ private Long liBaBmsAlarmState;
+/** 
+ * 电池温度报警状态1.temperature alarm state1 
+ */ 
+ @ApiModelProperty("电池温度报警状态1") 
+ private Long liBaTempAlarmState1;
+/** 
+ * 电池温度报警状态2.temperature alarm state2 
+ */ 
+ @ApiModelProperty("电池温度报警状态2") 
+ private Long liBaTempAlarmState2;
+/** 
+ * 电池断路.Break 
+ */ 
+ @ApiModelProperty("电池断路") 
+ private Long liBaBreak;
+/** 
+ * 电池负极断路.Negative Break 
+ */ 
+ @ApiModelProperty("电池负极断路") 
+ private Long liBaNegativeBreak;
+/** 
+ * 电池充电过电流.charge overcurrent 
+ */ 
+ @ApiModelProperty("电池充电过电流") 
+ private Long liBaChargeOvercurrent;
+/** 
+ * 电池中等不平衡.Middle Imbalance 
+ */ 
+ @ApiModelProperty("电池中等不平衡") 
+ private Long liBaMiddleImbalance;
+/** 
+ * 	锂电池无法充电.cant charge 
+ */ 
+ @ApiModelProperty("	锂电池无法充电") 
+ private Long liBaCantCharge;
+/** 
+ * 锂电池BMS总报警.total alarm 
+ */ 
+ @ApiModelProperty("锂电池BMS总报警") 
+ private Long liBaTotalAlarm;
+/** 
+ * BMS电池过电流.over current 
+ */ 
+ @ApiModelProperty("BMS电池过电流") 
+ private Long liBaOvercurrent;
+/** 
+ * BMS电池组过压.BMS battery packs over voltage 
+ */ 
+ @ApiModelProperty("BMS电池组过压") 
+ private Long liBaPackOv;
+/** 
+ * BMS电池欠压.BMS battery Packs Under Voltage 
+ */ 
+ @ApiModelProperty("BMS电池欠压") 
+ private Long liBaPacksUv;
+/** 
+ * BMS电池输出短路.Output Short Circuit 
+ */ 
+ @ApiModelProperty("BMS电池输出短路") 
+ private Long liBaOutputShortCircuit;
+/** 
+ * BMS电池高温.High Tenmperature 
+ */ 
+ @ApiModelProperty("BMS电池高温") 
+ private Long liBaHighTemp;
+/** 
+ * BMS电池低温.Low Tenmperature 
+ */ 
+ @ApiModelProperty("BMS电池低温") 
+ private Long liBaLowTemp;
+/** 
+ * BMS电池低SOC.Low SOC 
+ */ 
+ @ApiModelProperty("BMS电池低SOC") 
+ private Long liBaLowSoc;
+/** 
+ * 电池温度1高温1.Battery temperature 1 high 1 
+ */ 
+ @ApiModelProperty("电池温度1高温1") 
+ private Long liBaBatteryTemp1High1;
+/** 
+ * 电池温度2高温1.Battery temperature 2 high 1 
+ */ 
+ @ApiModelProperty("电池温度2高温1") 
+ private Long liBaBatteryTemp2High1;
+/** 
+ * 电池温度1高温2.Battery temperature 1 high 2 
+ */ 
+ @ApiModelProperty("电池温度1高温2") 
+ private Long liBaBatteryTemp1High2;
+/** 
+ * 电池温度2高温2.Battery temperature 2 high 2 
+ */ 
+ @ApiModelProperty("电池温度2高温2") 
+ private Long liBaBatteryTemp2High2;
+/** 
+ * 电池温度1低温1.Battery temperature 1 low 1 
+ */ 
+ @ApiModelProperty("电池温度1低温1") 
+ private Long liBaBatteryTemp1Low1;
+/** 
+ * 电池温度1低温2.Battery temperature 1 low 2 
+ */ 
+ @ApiModelProperty("电池温度1低温2") 
+ private Long liBaBatteryTemp1Low2;
+/** 
+ * 电池温度2低温1.Battery temperature 2 low 1 
+ */ 
+ @ApiModelProperty("电池温度2低温1") 
+ private Long liBaBatteryTemp2Low1;
+/** 
+ * 电池温度2低温2.Battery temperature 2 low 2 
+ */ 
+ @ApiModelProperty("电池温度2低温2") 
+ private Long liBaBatteryTemp2Low2;
+/** 
+ * BTRM1.BTRM1 
+ */ 
+ @ApiModelProperty("BTRM1") 
+ private Long liBaBtrm1;
+/** 
+ * BTRM2.BTRM2 
+ */ 
+ @ApiModelProperty("BTRM2") 
+ private Long liBaBtrm2;
+/** 
+ * 电池告警状态1.Battery alarm state 1 
+ */ 
+ @ApiModelProperty("电池告警状态1") 
+ private Long liBaAlarmState1;
+/** 
+ * BMS1通讯故障.BMS1 communication fault 
+ */ 
+ @ApiModelProperty("BMS1通讯故障") 
+ private Long liBaBms1CommunicaFault;
+/** 
+ * BMS2通讯故障.BMS2 communication fault 
+ */ 
+ @ApiModelProperty("BMS2通讯故障") 
+ private Long liBaBms2CommunicaFault;
+/** 
+ * BMS3通讯故障.BMS3 communication fault 
+ */ 
+ @ApiModelProperty("BMS3通讯故障") 
+ private Long liBaBms3CommunicaFault;
+/** 
+ * BMS4通讯故障.BMS4 communication fault 
+ */ 
+ @ApiModelProperty("BMS4通讯故障") 
+ private Long liBaBms4CommunicaFault;
+/** 
+ * BMS5通讯故障.BMS5 communication fault 
+ */ 
+ @ApiModelProperty("BMS5通讯故障") 
+ private Long liBaBms5CommunicaFault;
+/** 
+ * BMS6通讯故障.BMS6 communication fault 
+ */ 
+ @ApiModelProperty("BMS6通讯故障") 
+ private Long liBaBms6CommunicaFault;
+/** 
+ * BMS7通讯故障.BMS7 communication fault 
+ */ 
+ @ApiModelProperty("BMS7通讯故障") 
+ private Long liBaBms7CommunicaFault;
+/** 
+ * BMS8通讯故障.BMS8 communication fault 
+ */ 
+ @ApiModelProperty("BMS8通讯故障") 
+ private Long liBaBms8CommunicaFault;
+/** 
+ * BMS9通讯故障.BMS9 communication fault 
+ */ 
+ @ApiModelProperty("BMS9通讯故障") 
+ private Long liBaBms9CommunicaFault;
+/** 
+ * BMS10通讯故障.BMS10 communication fault 
+ */ 
+ @ApiModelProperty("BMS10通讯故障") 
+ private Long liBaBms10CommunicaFault;
+/** 
+ * BMS11通讯故障.BMS11 communication fault 
+ */ 
+ @ApiModelProperty("BMS11通讯故障") 
+ private Long liBaBms11CommunicaFault;
+/** 
+ * BMS12通讯故障.BMS12 communication fault 
+ */ 
+ @ApiModelProperty("BMS12通讯故障") 
+ private Long liBaBms12CommunicaFault;
+/** 
+ * BMS13通讯故障.BMS13 communication fault 
+ */ 
+ @ApiModelProperty("BMS13通讯故障") 
+ private Long liBaBms13CommunicaFault;
+/** 
+ * BMS14通讯故障.BMS14 communication fault 
+ */ 
+ @ApiModelProperty("BMS14通讯故障") 
+ private Long liBaBms14CommunicaFault;
+/** 
+ * BMS15通讯故障.BMS15 communication fault 
+ */ 
+ @ApiModelProperty("BMS15通讯故障") 
+ private Long liBaBms15CommunicaFault;
+/** 
+ * BMS16通讯故障.BMS16 communication fault 
+ */ 
+ @ApiModelProperty("BMS16通讯故障") 
+ private Long liBaBms16CommunicaFault;
+/** 
+ * BMS17通讯故障.BMS17 communication fault 
+ */ 
+ @ApiModelProperty("BMS17通讯故障") 
+ private Long liBaBms17CommunicaFault;
+/** 
+ * BMS18通讯故障.BMS18 communication fault 
+ */ 
+ @ApiModelProperty("BMS18通讯故障") 
+ private Long liBaBms18CommunicaFault;
+/** 
+ * BMS19通讯故障.BMS19 communication fault 
+ */ 
+ @ApiModelProperty("BMS19通讯故障") 
+ private Long liBaBms19CommunicaFault;
+/** 
+ * BMS20通讯故障.BMS20 communication fault 
+ */ 
+ @ApiModelProperty("BMS20通讯故障") 
+ private Long liBaBms20CommunicaFault;
+/** 
+ * 通讯故障告警状态2.Communication alarm state2 
+ */ 
+ @ApiModelProperty("通讯故障告警状态2") 
+ private Long liBaCommunicaAlarmState2;
+/** 
+ * BMS告警状态5.bms alarm status5 
+ */ 
+ @ApiModelProperty("BMS告警状态5") 
+ private Long liBaBmsAlarmStatus5;
+/** 
+ * BMS告警状态4.bms alarm status4 
+ */ 
+ @ApiModelProperty("BMS告警状态4") 
+ private Long liBaBmsAlarmStatus4;
+/** 
+ * BMS告警状态3.bms alarm status3 
+ */ 
+ @ApiModelProperty("BMS告警状态3") 
+ private Long liBaBmsAlarmStatus3;
+/** 
+ * BMS告警状态2.bms alarm status2 
+ */ 
+ @ApiModelProperty("BMS告警状态2") 
+ private Long liBaBmsAlarmStatus2;
+/** 
+ * 充电欠温保护.Charging under temperature protection 
+ */ 
+ @ApiModelProperty("充电欠温保护") 
+ private Long liBaChargeUnderTempProtection;
+/** 
+ * 充电过温保护.Charging over temperature protection 
+ */ 
+ @ApiModelProperty("充电过温保护") 
+ private Long liBaChargeOverTempProtection;
+/** 
+ * BMS告警状态1.bms alarm status1 
+ */ 
+ @ApiModelProperty("BMS告警状态1") 
+ private Long liBaBmsAlarmStatus1;
+/** 
+ * 智能锂电池电芯过压告警.Smart Lithium Battery Cell overvoltage alarm 
+ */ 
+ @ApiModelProperty("智能锂电池电芯过压告警") 
+ private Long liBaCellOvAlarmSmart;
+/** 
+ * 智能锂电池电芯欠压告警.Smart Lithium Battery Cell undervoltage alarm 
+ */ 
+ @ApiModelProperty("智能锂电池电芯欠压告警") 
+ private Long liBaCellUvAlarmSmart;
+/** 
+ * 电池组过压提醒.Overall overvoltage warning 
+ */ 
+ @ApiModelProperty("电池组过压提醒") 
+ private Long liBaOverallOvWarning;
+/** 
+ * 电池低电量告警.Low SOC Smart 
+ */ 
+ @ApiModelProperty("电池低电量告警") 
+ private Long liBaLowSocSmart;
+/** 
+ * 电池压差过大告警.Voltage difference alarm 
+ */ 
+ @ApiModelProperty("电池压差过大告警") 
+ private Long liBaVoltageDifferenceAlarm;
+/** 
+ * 电总BMS系统状态.bms system status dz 
+ */ 
+ @ApiModelProperty("电总BMS系统状态") 
+ private Long liBaBmsSystemStatusDz;
+/** 
+ * 满充.Lithium battery fully charge dz 
+ */ 
+ @ApiModelProperty("满充") 
+ private Long liBaFullyChargeDz;
+/** 
+ * 待机.Lithium battery standby dz 
+ */ 
+ @ApiModelProperty("待机") 
+ private Long liBaStandbyDz;
+/** 
+ * 关机.Lithium battery shutdown dz 
+ */ 
+ @ApiModelProperty("关机") 
+ private Long liBaShutdownDz;
+/** 
+ * 电总BMS均衡状态.bms balance status dz 
+ */ 
+ @ApiModelProperty("电总BMS均衡状态") 
+ private Long liBaBmsBalanceStatusDz;
+/** 
+ * 电芯 1 均衡指示.cell1 balance indication dz 
+ */ 
+ @ApiModelProperty("电芯 1 均衡指示") 
+ private Long liBaCell1BalanceIndicationDz;
+/** 
+ * 电芯 2 均衡指示.cell2 balance indication dz 
+ */ 
+ @ApiModelProperty("电芯 2 均衡指示") 
+ private Long liBaCell2BalanceIndicationDz;
+/** 
+ * 电芯 3 均衡指示.cell3 balance indication dz 
+ */ 
+ @ApiModelProperty("电芯 3 均衡指示") 
+ private Long liBaCell3BalanceIndicationDz;
+/** 
+ * 电芯 4 均衡指示.cell4 balance indication dz 
+ */ 
+ @ApiModelProperty("电芯 4 均衡指示") 
+ private Long liBaCell4BalanceIndicationDz;
+/** 
+ * 电芯 5 均衡指示.cell5 balance indication dz 
+ */ 
+ @ApiModelProperty("电芯 5 均衡指示") 
+ private Long liBaCell5BalanceIndicationDz;
+/** 
+ * 电芯 6 均衡指示.cell6 balance indication dz 
+ */ 
+ @ApiModelProperty("电芯 6 均衡指示") 
+ private Long liBaCell6BalanceIndicationDz;
+/** 
+ * 电芯 7 均衡指示.cell7 balance indication dz 
+ */ 
+ @ApiModelProperty("电芯 7 均衡指示") 
+ private Long liBaCell7BalanceIndicationDz;
+/** 
+ * 电芯 8 均衡指示.cell8 balance indication dz 
+ */ 
+ @ApiModelProperty("电芯 8 均衡指示") 
+ private Long liBaCell8BalanceIndicationDz;
+/** 
+ * 电芯 9 均衡指示.cell9 balance indication dz 
+ */ 
+ @ApiModelProperty("电芯 9 均衡指示") 
+ private Long liBaCell9BalanceIndicationDz;
+/** 
+ * 电芯 10 均衡指示.cell10 balance indication dz 
+ */ 
+ @ApiModelProperty("电芯 10 均衡指示") 
+ private Long liBaCell10BalanceIndicationDz;
+/** 
+ * 电芯 11 均衡指示.cell11 balance indication dz 
+ */ 
+ @ApiModelProperty("电芯 11 均衡指示") 
+ private Long liBaCell11BalanceIndicationDz;
+/** 
+ * 电芯 12 均衡指示.cell12 balance indication dz 
+ */ 
+ @ApiModelProperty("电芯 12 均衡指示") 
+ private Long liBaCell12BalanceIndicationDz;
+/** 
+ * 电芯 13 均衡指示.cell13 balance indication dz 
+ */ 
+ @ApiModelProperty("电芯 13 均衡指示") 
+ private Long liBaCell13BalanceIndicationDz;
+/** 
+ * 电芯 14 均衡指示.cell14 balance indication dz 
+ */ 
+ @ApiModelProperty("电芯 14 均衡指示") 
+ private Long liBaCell14BalanceIndicationDz;
+/** 
+ * 电芯 15 均衡指示.cell15 balance indication dz 
+ */ 
+ @ApiModelProperty("电芯 15 均衡指示") 
+ private Long liBaCell15BalanceIndicationDz;
+/** 
+ * 电芯 16 均衡指示.cell16 balance indication dz 
+ */ 
+ @ApiModelProperty("电芯 16 均衡指示") 
+ private Long liBaCell16BalanceIndicationDz;
+/** 
+ * 电总BMS开关时间告警状态.bms switch event alarm status dz 
+ */ 
+ @ApiModelProperty("电总BMS开关时间告警状态") 
+ private Long liBaBmsSwitchEventAlarmStatusDz;
+/** 
+ * 电总BMS电流告警事件状态.bms current event alarm status dz 
+ */ 
+ @ApiModelProperty("电总BMS电流告警事件状态") 
+ private Long liBaBmsCurrentEventAlarmStatusDz;
+/** 
+ * 电总--输出短路保护.output short circuit protection dz 
+ */ 
+ @ApiModelProperty("电总--输出短路保护") 
+ private Long liBaOutputShortCircuitProtectionDz;
+/** 
+ * 电总均衡模块开启.bms balance module switch on dz 
+ */ 
+ @ApiModelProperty("电总均衡模块开启") 
+ private Long liBaBmsBalanceModuleSwitchOnDz;
+/** 
+ * 整体电池组放电能量.battery bank discharge energy 
+ */ 
+ @ApiModelProperty("整体电池组放电能量") 
+ private Double liBaBankDischargeEnergy;
+/** 
+ * 整体电池组充放电状态.battery state for battery bank 
+ */ 
+ @ApiModelProperty("整体电池组充放电状态") 
+ private Long liBaStateForBatteryBank;
+/** 
+ * 电池mos 温度.battery mos temperature 
+ */ 
+ @ApiModelProperty("电池mos 温度") 
+ private Double liBaMosTemp;
+/** 
+ * 电池BMS运行状态.BMS running status 
+ */ 
+ @ApiModelProperty("电池BMS运行状态") 
+ private Long liBaBmsRunningStatus;
 private static final long serialVersionUID = 1L;

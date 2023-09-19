@@ -1,24 +1,48 @@
 {
   "data": {
-    "Solar Energy": [
-      4.33,
-      1.0,
-      1.0
-    ],
-    "Mains Energy": [
-      2.07,
-      2.0,
-      2.0
-    ],
     "Generator Energy": [
+      3.0,
+      3.0,
+      3.0,
+      3.0,
+      3.0,
+      3.0,
       3.0,
       3.0,
       3.0
     ],
-    "Time": [
-      "2023-08-17",
-      "2023-08-18",
-      "2023-08-19"
+    "Mains Energy": [
+      2.07,
+      2.0,
+      2.0,
+      2.0,
+      2.0,
+      2.0,
+      2.0,
+      2.0,
+      2.0
+    ],
+    "Name": [
+      "Nick-Region-1-1",
+      "Nick-Region-1-2",
+      "Nick-Region-1-3",
+      "Nick-Region-1-1",
+      "Nick-Region-1-2",
+      "Nick-Region-1-3",
+      "Nick-Region-1-1",
+      "Nick-Region-1-2",
+      "Nick-Region-1-3"
+    ],
+    "Solar Energy": [
+      4.33,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0
     ]
   }
 }

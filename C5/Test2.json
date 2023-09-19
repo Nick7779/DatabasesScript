@@ -1,30 +1,18 @@
 {
-  "data": {
-    "keys": [
-      "2023-08-13 ~ 2023-08-19"
-    ],
-    "valueList": [
-      {
-        "name": "Solar Energy",
-        "type": null,
-        "values": [
-          4.33
-        ]
-      },
-      {
-        "name": "Mains Energy",
-        "type": null,
-        "values": [
-          2.07
-        ]
-      },
-      {
-        "name": "Generator Energy",
-        "type": null,
-        "values": [
-          3.0
-        ]
-      }
-    ]
-  }
+  "data": [
+    {
+      "Generator Energy": 3,
+      "Mains Energy": 2.01,
+      "Name": "Nick-Test-Root-1",
+      "Solar Energy": 1.56,
+      "Time": "2023-08-13~2023-08-19"
+    },
+    {
+      "Generator Energy": 3,
+      "Mains Energy": 2,
+      "Name": "Nick-Test-Root-2",
+      "Solar Energy": 1,
+      "Time": "2023-08-13~2023-08-19"
+    }
+  ]
 }
