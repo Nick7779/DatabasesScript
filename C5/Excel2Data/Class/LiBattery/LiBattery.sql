@@ -62,9 +62,8 @@ li_ba_cell27_voltage float8,
 li_ba_cell28_voltage float8,
 li_ba_cell29_voltage float8,
 li_ba_cell30_voltage float8,
-li_ba_discharge_energy float8,
 li_ba_power_temp float8,
-li_ba_status_dz int8,
+li_ba_status int8,
 li_ba_fet_status float8,
 li_ba_cell_temp_highest float8,
 li_ba_cell_temp_lowest float8,
@@ -178,7 +177,7 @@ li_ba_total_current float8,
 li_ba_light_discharge_counts int8,
 li_ba_deep_discharge_counts int8,
 li_ba_over_discharge_counts int8,
-li_ba_total_discharge_capacity_for_single_battery float8,
+li_ba_discharge_energy_single float8,
 li_ba_current_alarm_status int8,
 li_ba_bms_balance_event_alarm_status_dz int8,
 li_ba_bms_voltage_event_alarm_status_dz int8,
@@ -212,27 +211,27 @@ li_ba_battery_temp2_low2 int8,
 li_ba_btrm1 int8,
 li_ba_btrm2 int8,
 li_ba_alarm_state1 int8,
-li_ba_bms1_communica_fault int8,
-li_ba_bms2_communica_fault int8,
-li_ba_bms3_communica_fault int8,
-li_ba_bms4_communica_fault int8,
-li_ba_bms5_communica_fault int8,
-li_ba_bms6_communica_fault int8,
-li_ba_bms7_communica_fault int8,
-li_ba_bms8_communica_fault int8,
-li_ba_bms9_communica_fault int8,
-li_ba_bms10_communica_fault int8,
-li_ba_bms11_communica_fault int8,
-li_ba_bms12_communica_fault int8,
-li_ba_bms13_communica_fault int8,
-li_ba_bms14_communica_fault int8,
-li_ba_bms15_communica_fault int8,
-li_ba_bms16_communica_fault int8,
-li_ba_bms17_communica_fault int8,
-li_ba_bms18_communica_fault int8,
-li_ba_bms19_communica_fault int8,
-li_ba_bms20_communica_fault int8,
-li_ba_communica_alarm_state2 int8,
+li_ba_bms1_comm_fault int8,
+li_ba_bms2_comm_fault int8,
+li_ba_bms3_comm_fault int8,
+li_ba_bms4_comm_fault int8,
+li_ba_bms5_comm_fault int8,
+li_ba_bms6_comm_fault int8,
+li_ba_bms7_comm_fault int8,
+li_ba_bms8_comm_fault int8,
+li_ba_bms9_comm_fault int8,
+li_ba_bms10_comm_fault int8,
+li_ba_bms11_comm_fault int8,
+li_ba_bms12_comm_fault int8,
+li_ba_bms13_comm_fault int8,
+li_ba_bms14_comm_fault int8,
+li_ba_bms15_comm_fault int8,
+li_ba_bms16_comm_fault int8,
+li_ba_bms17_comm_fault int8,
+li_ba_bms18_comm_fault int8,
+li_ba_bms19_comm_fault int8,
+li_ba_bms20_comm_fault int8,
+li_ba_comm_alarm_state2 int8,
 li_ba_bms_alarm_status5 int8,
 li_ba_bms_alarm_status4 int8,
 li_ba_bms_alarm_status3 int8,
@@ -271,9 +270,7 @@ li_ba_bms_current_event_alarm_status_dz int8,
 li_ba_output_short_circuit_protection_dz int8,
 li_ba_bms_balance_module_switch_on_dz int8,
 li_ba_bank_discharge_energy float8,
-li_ba_state_for_battery_bank int8,
-li_ba_mos_temp float8,
-li_ba_bms_running_status int8); 
+li_ba_mos_temp float8); 
 COMMENT ON COLUMN "public"."bak_li_battery_15m"."id" IS 'Ö÷¼ü';
 COMMENT ON COLUMN "public"."bak_li_battery_15m"."create_time" IS '´´½¨Ê±¼ä';
 COMMENT ON COLUMN "public"."bak_li_battery_15m"."customer_id" IS '¹«Ë¾ID';
@@ -335,9 +332,8 @@ COMMENT ON COLUMN "public"."bak_li_battery_15m"."li_ba_cell27_voltage" IS 'ï®µç³
 COMMENT ON COLUMN "public"."bak_li_battery_15m"."li_ba_cell28_voltage" IS 'ï®µç³ØµçĞ¾28µçÑ¹'; 
 COMMENT ON COLUMN "public"."bak_li_battery_15m"."li_ba_cell29_voltage" IS 'ï®µç³ØµçĞ¾29µçÑ¹'; 
 COMMENT ON COLUMN "public"."bak_li_battery_15m"."li_ba_cell30_voltage" IS 'ï®µç³ØµçĞ¾30µçÑ¹'; 
-COMMENT ON COLUMN "public"."bak_li_battery_15m"."li_ba_discharge_energy" IS 'ï®µç³Ø·ÅµçÄÜÁ¿'; 
 COMMENT ON COLUMN "public"."bak_li_battery_15m"."li_ba_power_temp" IS 'ï®µç³Ø¹¦ÂÊÎÂ¶È'; 
-COMMENT ON COLUMN "public"."bak_li_battery_15m"."li_ba_status_dz" IS 'µç×Üï®µç³Ø×´Ì¬'; 
+COMMENT ON COLUMN "public"."bak_li_battery_15m"."li_ba_status" IS 'ï®µç³ØÔËĞĞ×´Ì¬×´Ì¬'; 
 COMMENT ON COLUMN "public"."bak_li_battery_15m"."li_ba_fet_status" IS 'ï®µç³ØFET×´Ì¬'; 
 COMMENT ON COLUMN "public"."bak_li_battery_15m"."li_ba_cell_temp_highest" IS 'ï®µç³ØµçĞ¾ÎÂ¶È×î¸ß'; 
 COMMENT ON COLUMN "public"."bak_li_battery_15m"."li_ba_cell_temp_lowest" IS 'ï®µç³ØµçĞ¾ÎÂ¶È×îµÍ'; 
@@ -451,7 +447,7 @@ COMMENT ON COLUMN "public"."bak_li_battery_15m"."li_ba_total_current" IS 'ï®µç³Ø
 COMMENT ON COLUMN "public"."bak_li_battery_15m"."li_ba_light_discharge_counts" IS 'Ìúï®µç³ØÇ³·Åµç´ÎÊı'; 
 COMMENT ON COLUMN "public"."bak_li_battery_15m"."li_ba_deep_discharge_counts" IS 'Ìúï®µç³ØÉî·Åµç´ÎÊı'; 
 COMMENT ON COLUMN "public"."bak_li_battery_15m"."li_ba_over_discharge_counts" IS 'Ìúï®µç³Ø¹ı·Åµç´ÎÊı'; 
-COMMENT ON COLUMN "public"."bak_li_battery_15m"."li_ba_total_discharge_capacity_for_single_battery" IS 'ï®µç³Ø×Ü·ÅkWh	'; 
+COMMENT ON COLUMN "public"."bak_li_battery_15m"."li_ba_discharge_energy_single" IS 'ï®µç³Ø×Ü·ÅkWh	'; 
 COMMENT ON COLUMN "public"."bak_li_battery_15m"."li_ba_current_alarm_status" IS 'µçÁ÷¸æ¾¯×´Ì¬'; 
 COMMENT ON COLUMN "public"."bak_li_battery_15m"."li_ba_bms_balance_event_alarm_status_dz" IS 'µç×ÜÆ½ºâÊÂ¼ş¸æ¾¯×´Ì¬'; 
 COMMENT ON COLUMN "public"."bak_li_battery_15m"."li_ba_bms_voltage_event_alarm_status_dz" IS 'µç×ÜµçÑ¹ÊÂ¼ş¸æ¾¯×´Ì¬'; 
@@ -485,27 +481,27 @@ COMMENT ON COLUMN "public"."bak_li_battery_15m"."li_ba_battery_temp2_low2" IS 'µ
 COMMENT ON COLUMN "public"."bak_li_battery_15m"."li_ba_btrm1" IS 'BTRM1'; 
 COMMENT ON COLUMN "public"."bak_li_battery_15m"."li_ba_btrm2" IS 'BTRM2'; 
 COMMENT ON COLUMN "public"."bak_li_battery_15m"."li_ba_alarm_state1" IS 'µç³Ø¸æ¾¯×´Ì¬1'; 
-COMMENT ON COLUMN "public"."bak_li_battery_15m"."li_ba_bms1_communica_fault" IS 'BMS1Í¨Ñ¶¹ÊÕÏ'; 
-COMMENT ON COLUMN "public"."bak_li_battery_15m"."li_ba_bms2_communica_fault" IS 'BMS2Í¨Ñ¶¹ÊÕÏ'; 
-COMMENT ON COLUMN "public"."bak_li_battery_15m"."li_ba_bms3_communica_fault" IS 'BMS3Í¨Ñ¶¹ÊÕÏ'; 
-COMMENT ON COLUMN "public"."bak_li_battery_15m"."li_ba_bms4_communica_fault" IS 'BMS4Í¨Ñ¶¹ÊÕÏ'; 
-COMMENT ON COLUMN "public"."bak_li_battery_15m"."li_ba_bms5_communica_fault" IS 'BMS5Í¨Ñ¶¹ÊÕÏ'; 
-COMMENT ON COLUMN "public"."bak_li_battery_15m"."li_ba_bms6_communica_fault" IS 'BMS6Í¨Ñ¶¹ÊÕÏ'; 
-COMMENT ON COLUMN "public"."bak_li_battery_15m"."li_ba_bms7_communica_fault" IS 'BMS7Í¨Ñ¶¹ÊÕÏ'; 
-COMMENT ON COLUMN "public"."bak_li_battery_15m"."li_ba_bms8_communica_fault" IS 'BMS8Í¨Ñ¶¹ÊÕÏ'; 
-COMMENT ON COLUMN "public"."bak_li_battery_15m"."li_ba_bms9_communica_fault" IS 'BMS9Í¨Ñ¶¹ÊÕÏ'; 
-COMMENT ON COLUMN "public"."bak_li_battery_15m"."li_ba_bms10_communica_fault" IS 'BMS10Í¨Ñ¶¹ÊÕÏ'; 
-COMMENT ON COLUMN "public"."bak_li_battery_15m"."li_ba_bms11_communica_fault" IS 'BMS11Í¨Ñ¶¹ÊÕÏ'; 
-COMMENT ON COLUMN "public"."bak_li_battery_15m"."li_ba_bms12_communica_fault" IS 'BMS12Í¨Ñ¶¹ÊÕÏ'; 
-COMMENT ON COLUMN "public"."bak_li_battery_15m"."li_ba_bms13_communica_fault" IS 'BMS13Í¨Ñ¶¹ÊÕÏ'; 
-COMMENT ON COLUMN "public"."bak_li_battery_15m"."li_ba_bms14_communica_fault" IS 'BMS14Í¨Ñ¶¹ÊÕÏ'; 
-COMMENT ON COLUMN "public"."bak_li_battery_15m"."li_ba_bms15_communica_fault" IS 'BMS15Í¨Ñ¶¹ÊÕÏ'; 
-COMMENT ON COLUMN "public"."bak_li_battery_15m"."li_ba_bms16_communica_fault" IS 'BMS16Í¨Ñ¶¹ÊÕÏ'; 
-COMMENT ON COLUMN "public"."bak_li_battery_15m"."li_ba_bms17_communica_fault" IS 'BMS17Í¨Ñ¶¹ÊÕÏ'; 
-COMMENT ON COLUMN "public"."bak_li_battery_15m"."li_ba_bms18_communica_fault" IS 'BMS18Í¨Ñ¶¹ÊÕÏ'; 
-COMMENT ON COLUMN "public"."bak_li_battery_15m"."li_ba_bms19_communica_fault" IS 'BMS19Í¨Ñ¶¹ÊÕÏ'; 
-COMMENT ON COLUMN "public"."bak_li_battery_15m"."li_ba_bms20_communica_fault" IS 'BMS20Í¨Ñ¶¹ÊÕÏ'; 
-COMMENT ON COLUMN "public"."bak_li_battery_15m"."li_ba_communica_alarm_state2" IS 'Í¨Ñ¶¹ÊÕÏ¸æ¾¯×´Ì¬2'; 
+COMMENT ON COLUMN "public"."bak_li_battery_15m"."li_ba_bms1_comm_fault" IS 'BMS1Í¨Ñ¶¹ÊÕÏ'; 
+COMMENT ON COLUMN "public"."bak_li_battery_15m"."li_ba_bms2_comm_fault" IS 'BMS2Í¨Ñ¶¹ÊÕÏ'; 
+COMMENT ON COLUMN "public"."bak_li_battery_15m"."li_ba_bms3_comm_fault" IS 'BMS3Í¨Ñ¶¹ÊÕÏ'; 
+COMMENT ON COLUMN "public"."bak_li_battery_15m"."li_ba_bms4_comm_fault" IS 'BMS4Í¨Ñ¶¹ÊÕÏ'; 
+COMMENT ON COLUMN "public"."bak_li_battery_15m"."li_ba_bms5_comm_fault" IS 'BMS5Í¨Ñ¶¹ÊÕÏ'; 
+COMMENT ON COLUMN "public"."bak_li_battery_15m"."li_ba_bms6_comm_fault" IS 'BMS6Í¨Ñ¶¹ÊÕÏ'; 
+COMMENT ON COLUMN "public"."bak_li_battery_15m"."li_ba_bms7_comm_fault" IS 'BMS7Í¨Ñ¶¹ÊÕÏ'; 
+COMMENT ON COLUMN "public"."bak_li_battery_15m"."li_ba_bms8_comm_fault" IS 'BMS8Í¨Ñ¶¹ÊÕÏ'; 
+COMMENT ON COLUMN "public"."bak_li_battery_15m"."li_ba_bms9_comm_fault" IS 'BMS9Í¨Ñ¶¹ÊÕÏ'; 
+COMMENT ON COLUMN "public"."bak_li_battery_15m"."li_ba_bms10_comm_fault" IS 'BMS10Í¨Ñ¶¹ÊÕÏ'; 
+COMMENT ON COLUMN "public"."bak_li_battery_15m"."li_ba_bms11_comm_fault" IS 'BMS11Í¨Ñ¶¹ÊÕÏ'; 
+COMMENT ON COLUMN "public"."bak_li_battery_15m"."li_ba_bms12_comm_fault" IS 'BMS12Í¨Ñ¶¹ÊÕÏ'; 
+COMMENT ON COLUMN "public"."bak_li_battery_15m"."li_ba_bms13_comm_fault" IS 'BMS13Í¨Ñ¶¹ÊÕÏ'; 
+COMMENT ON COLUMN "public"."bak_li_battery_15m"."li_ba_bms14_comm_fault" IS 'BMS14Í¨Ñ¶¹ÊÕÏ'; 
+COMMENT ON COLUMN "public"."bak_li_battery_15m"."li_ba_bms15_comm_fault" IS 'BMS15Í¨Ñ¶¹ÊÕÏ'; 
+COMMENT ON COLUMN "public"."bak_li_battery_15m"."li_ba_bms16_comm_fault" IS 'BMS16Í¨Ñ¶¹ÊÕÏ'; 
+COMMENT ON COLUMN "public"."bak_li_battery_15m"."li_ba_bms17_comm_fault" IS 'BMS17Í¨Ñ¶¹ÊÕÏ'; 
+COMMENT ON COLUMN "public"."bak_li_battery_15m"."li_ba_bms18_comm_fault" IS 'BMS18Í¨Ñ¶¹ÊÕÏ'; 
+COMMENT ON COLUMN "public"."bak_li_battery_15m"."li_ba_bms19_comm_fault" IS 'BMS19Í¨Ñ¶¹ÊÕÏ'; 
+COMMENT ON COLUMN "public"."bak_li_battery_15m"."li_ba_bms20_comm_fault" IS 'BMS20Í¨Ñ¶¹ÊÕÏ'; 
+COMMENT ON COLUMN "public"."bak_li_battery_15m"."li_ba_comm_alarm_state2" IS 'Í¨Ñ¶¹ÊÕÏ¸æ¾¯×´Ì¬2'; 
 COMMENT ON COLUMN "public"."bak_li_battery_15m"."li_ba_bms_alarm_status5" IS 'BMS¸æ¾¯×´Ì¬5'; 
 COMMENT ON COLUMN "public"."bak_li_battery_15m"."li_ba_bms_alarm_status4" IS 'BMS¸æ¾¯×´Ì¬4'; 
 COMMENT ON COLUMN "public"."bak_li_battery_15m"."li_ba_bms_alarm_status3" IS 'BMS¸æ¾¯×´Ì¬3'; 
@@ -544,9 +540,7 @@ COMMENT ON COLUMN "public"."bak_li_battery_15m"."li_ba_bms_current_event_alarm_s
 COMMENT ON COLUMN "public"."bak_li_battery_15m"."li_ba_output_short_circuit_protection_dz" IS 'µç×Ü--Êä³ö¶ÌÂ·±£»¤'; 
 COMMENT ON COLUMN "public"."bak_li_battery_15m"."li_ba_bms_balance_module_switch_on_dz" IS 'µç×Ü¾ùºâÄ£¿é¿ªÆô'; 
 COMMENT ON COLUMN "public"."bak_li_battery_15m"."li_ba_bank_discharge_energy" IS 'ÕûÌåµç³Ø×é·ÅµçÄÜÁ¿'; 
-COMMENT ON COLUMN "public"."bak_li_battery_15m"."li_ba_state_for_battery_bank" IS 'ÕûÌåµç³Ø×é³ä·Åµç×´Ì¬'; 
 COMMENT ON COLUMN "public"."bak_li_battery_15m"."li_ba_mos_temp" IS 'µç³Ømos ÎÂ¶È'; 
-COMMENT ON COLUMN "public"."bak_li_battery_15m"."li_ba_bms_running_status" IS 'µç³ØBMSÔËĞĞ×´Ì¬'; 
 DROP TABLE IF EXISTS "public"."bak_li_battery_1h";
                             CREATE TABLE "public"."bak_li_battery_1h" (
                           "id" int8,
@@ -611,9 +605,8 @@ li_ba_cell27_voltage float8,
 li_ba_cell28_voltage float8,
 li_ba_cell29_voltage float8,
 li_ba_cell30_voltage float8,
-li_ba_discharge_energy float8,
 li_ba_power_temp float8,
-li_ba_status_dz int8,
+li_ba_status int8,
 li_ba_fet_status float8,
 li_ba_cell_temp_highest float8,
 li_ba_cell_temp_lowest float8,
@@ -727,7 +720,7 @@ li_ba_total_current float8,
 li_ba_light_discharge_counts int8,
 li_ba_deep_discharge_counts int8,
 li_ba_over_discharge_counts int8,
-li_ba_total_discharge_capacity_for_single_battery float8,
+li_ba_discharge_energy_single float8,
 li_ba_current_alarm_status int8,
 li_ba_bms_balance_event_alarm_status_dz int8,
 li_ba_bms_voltage_event_alarm_status_dz int8,
@@ -761,27 +754,27 @@ li_ba_battery_temp2_low2 int8,
 li_ba_btrm1 int8,
 li_ba_btrm2 int8,
 li_ba_alarm_state1 int8,
-li_ba_bms1_communica_fault int8,
-li_ba_bms2_communica_fault int8,
-li_ba_bms3_communica_fault int8,
-li_ba_bms4_communica_fault int8,
-li_ba_bms5_communica_fault int8,
-li_ba_bms6_communica_fault int8,
-li_ba_bms7_communica_fault int8,
-li_ba_bms8_communica_fault int8,
-li_ba_bms9_communica_fault int8,
-li_ba_bms10_communica_fault int8,
-li_ba_bms11_communica_fault int8,
-li_ba_bms12_communica_fault int8,
-li_ba_bms13_communica_fault int8,
-li_ba_bms14_communica_fault int8,
-li_ba_bms15_communica_fault int8,
-li_ba_bms16_communica_fault int8,
-li_ba_bms17_communica_fault int8,
-li_ba_bms18_communica_fault int8,
-li_ba_bms19_communica_fault int8,
-li_ba_bms20_communica_fault int8,
-li_ba_communica_alarm_state2 int8,
+li_ba_bms1_comm_fault int8,
+li_ba_bms2_comm_fault int8,
+li_ba_bms3_comm_fault int8,
+li_ba_bms4_comm_fault int8,
+li_ba_bms5_comm_fault int8,
+li_ba_bms6_comm_fault int8,
+li_ba_bms7_comm_fault int8,
+li_ba_bms8_comm_fault int8,
+li_ba_bms9_comm_fault int8,
+li_ba_bms10_comm_fault int8,
+li_ba_bms11_comm_fault int8,
+li_ba_bms12_comm_fault int8,
+li_ba_bms13_comm_fault int8,
+li_ba_bms14_comm_fault int8,
+li_ba_bms15_comm_fault int8,
+li_ba_bms16_comm_fault int8,
+li_ba_bms17_comm_fault int8,
+li_ba_bms18_comm_fault int8,
+li_ba_bms19_comm_fault int8,
+li_ba_bms20_comm_fault int8,
+li_ba_comm_alarm_state2 int8,
 li_ba_bms_alarm_status5 int8,
 li_ba_bms_alarm_status4 int8,
 li_ba_bms_alarm_status3 int8,
@@ -820,9 +813,7 @@ li_ba_bms_current_event_alarm_status_dz int8,
 li_ba_output_short_circuit_protection_dz int8,
 li_ba_bms_balance_module_switch_on_dz int8,
 li_ba_bank_discharge_energy float8,
-li_ba_state_for_battery_bank int8,
-li_ba_mos_temp float8,
-li_ba_bms_running_status int8); 
+li_ba_mos_temp float8); 
 COMMENT ON COLUMN "public"."bak_li_battery_1h"."id" IS 'Ö÷¼ü';
     COMMENT ON COLUMN "public"."bak_li_battery_1h"."create_time" IS '´´½¨Ê±¼ä';
     COMMENT ON COLUMN "public"."bak_li_battery_1h"."customer_id" IS '¹«Ë¾ID';
@@ -884,9 +875,8 @@ COMMENT ON COLUMN "public"."bak_li_battery_1h"."li_ba_cell27_voltage" IS 'ï®µç³Ø
 COMMENT ON COLUMN "public"."bak_li_battery_1h"."li_ba_cell28_voltage" IS 'ï®µç³ØµçĞ¾28µçÑ¹'; 
 COMMENT ON COLUMN "public"."bak_li_battery_1h"."li_ba_cell29_voltage" IS 'ï®µç³ØµçĞ¾29µçÑ¹'; 
 COMMENT ON COLUMN "public"."bak_li_battery_1h"."li_ba_cell30_voltage" IS 'ï®µç³ØµçĞ¾30µçÑ¹'; 
-COMMENT ON COLUMN "public"."bak_li_battery_1h"."li_ba_discharge_energy" IS 'ï®µç³Ø·ÅµçÄÜÁ¿'; 
 COMMENT ON COLUMN "public"."bak_li_battery_1h"."li_ba_power_temp" IS 'ï®µç³Ø¹¦ÂÊÎÂ¶È'; 
-COMMENT ON COLUMN "public"."bak_li_battery_1h"."li_ba_status_dz" IS 'µç×Üï®µç³Ø×´Ì¬'; 
+COMMENT ON COLUMN "public"."bak_li_battery_1h"."li_ba_status" IS 'ï®µç³ØÔËĞĞ×´Ì¬×´Ì¬'; 
 COMMENT ON COLUMN "public"."bak_li_battery_1h"."li_ba_fet_status" IS 'ï®µç³ØFET×´Ì¬'; 
 COMMENT ON COLUMN "public"."bak_li_battery_1h"."li_ba_cell_temp_highest" IS 'ï®µç³ØµçĞ¾ÎÂ¶È×î¸ß'; 
 COMMENT ON COLUMN "public"."bak_li_battery_1h"."li_ba_cell_temp_lowest" IS 'ï®µç³ØµçĞ¾ÎÂ¶È×îµÍ'; 
@@ -1000,7 +990,7 @@ COMMENT ON COLUMN "public"."bak_li_battery_1h"."li_ba_total_current" IS 'ï®µç³Ø×
 COMMENT ON COLUMN "public"."bak_li_battery_1h"."li_ba_light_discharge_counts" IS 'Ìúï®µç³ØÇ³·Åµç´ÎÊı'; 
 COMMENT ON COLUMN "public"."bak_li_battery_1h"."li_ba_deep_discharge_counts" IS 'Ìúï®µç³ØÉî·Åµç´ÎÊı'; 
 COMMENT ON COLUMN "public"."bak_li_battery_1h"."li_ba_over_discharge_counts" IS 'Ìúï®µç³Ø¹ı·Åµç´ÎÊı'; 
-COMMENT ON COLUMN "public"."bak_li_battery_1h"."li_ba_total_discharge_capacity_for_single_battery" IS 'ï®µç³Ø×Ü·ÅkWh	'; 
+COMMENT ON COLUMN "public"."bak_li_battery_1h"."li_ba_discharge_energy_single" IS 'ï®µç³Ø×Ü·ÅkWh	'; 
 COMMENT ON COLUMN "public"."bak_li_battery_1h"."li_ba_current_alarm_status" IS 'µçÁ÷¸æ¾¯×´Ì¬'; 
 COMMENT ON COLUMN "public"."bak_li_battery_1h"."li_ba_bms_balance_event_alarm_status_dz" IS 'µç×ÜÆ½ºâÊÂ¼ş¸æ¾¯×´Ì¬'; 
 COMMENT ON COLUMN "public"."bak_li_battery_1h"."li_ba_bms_voltage_event_alarm_status_dz" IS 'µç×ÜµçÑ¹ÊÂ¼ş¸æ¾¯×´Ì¬'; 
@@ -1034,27 +1024,27 @@ COMMENT ON COLUMN "public"."bak_li_battery_1h"."li_ba_battery_temp2_low2" IS 'µç
 COMMENT ON COLUMN "public"."bak_li_battery_1h"."li_ba_btrm1" IS 'BTRM1'; 
 COMMENT ON COLUMN "public"."bak_li_battery_1h"."li_ba_btrm2" IS 'BTRM2'; 
 COMMENT ON COLUMN "public"."bak_li_battery_1h"."li_ba_alarm_state1" IS 'µç³Ø¸æ¾¯×´Ì¬1'; 
-COMMENT ON COLUMN "public"."bak_li_battery_1h"."li_ba_bms1_communica_fault" IS 'BMS1Í¨Ñ¶¹ÊÕÏ'; 
-COMMENT ON COLUMN "public"."bak_li_battery_1h"."li_ba_bms2_communica_fault" IS 'BMS2Í¨Ñ¶¹ÊÕÏ'; 
-COMMENT ON COLUMN "public"."bak_li_battery_1h"."li_ba_bms3_communica_fault" IS 'BMS3Í¨Ñ¶¹ÊÕÏ'; 
-COMMENT ON COLUMN "public"."bak_li_battery_1h"."li_ba_bms4_communica_fault" IS 'BMS4Í¨Ñ¶¹ÊÕÏ'; 
-COMMENT ON COLUMN "public"."bak_li_battery_1h"."li_ba_bms5_communica_fault" IS 'BMS5Í¨Ñ¶¹ÊÕÏ'; 
-COMMENT ON COLUMN "public"."bak_li_battery_1h"."li_ba_bms6_communica_fault" IS 'BMS6Í¨Ñ¶¹ÊÕÏ'; 
-COMMENT ON COLUMN "public"."bak_li_battery_1h"."li_ba_bms7_communica_fault" IS 'BMS7Í¨Ñ¶¹ÊÕÏ'; 
-COMMENT ON COLUMN "public"."bak_li_battery_1h"."li_ba_bms8_communica_fault" IS 'BMS8Í¨Ñ¶¹ÊÕÏ'; 
-COMMENT ON COLUMN "public"."bak_li_battery_1h"."li_ba_bms9_communica_fault" IS 'BMS9Í¨Ñ¶¹ÊÕÏ'; 
-COMMENT ON COLUMN "public"."bak_li_battery_1h"."li_ba_bms10_communica_fault" IS 'BMS10Í¨Ñ¶¹ÊÕÏ'; 
-COMMENT ON COLUMN "public"."bak_li_battery_1h"."li_ba_bms11_communica_fault" IS 'BMS11Í¨Ñ¶¹ÊÕÏ'; 
-COMMENT ON COLUMN "public"."bak_li_battery_1h"."li_ba_bms12_communica_fault" IS 'BMS12Í¨Ñ¶¹ÊÕÏ'; 
-COMMENT ON COLUMN "public"."bak_li_battery_1h"."li_ba_bms13_communica_fault" IS 'BMS13Í¨Ñ¶¹ÊÕÏ'; 
-COMMENT ON COLUMN "public"."bak_li_battery_1h"."li_ba_bms14_communica_fault" IS 'BMS14Í¨Ñ¶¹ÊÕÏ'; 
-COMMENT ON COLUMN "public"."bak_li_battery_1h"."li_ba_bms15_communica_fault" IS 'BMS15Í¨Ñ¶¹ÊÕÏ'; 
-COMMENT ON COLUMN "public"."bak_li_battery_1h"."li_ba_bms16_communica_fault" IS 'BMS16Í¨Ñ¶¹ÊÕÏ'; 
-COMMENT ON COLUMN "public"."bak_li_battery_1h"."li_ba_bms17_communica_fault" IS 'BMS17Í¨Ñ¶¹ÊÕÏ'; 
-COMMENT ON COLUMN "public"."bak_li_battery_1h"."li_ba_bms18_communica_fault" IS 'BMS18Í¨Ñ¶¹ÊÕÏ'; 
-COMMENT ON COLUMN "public"."bak_li_battery_1h"."li_ba_bms19_communica_fault" IS 'BMS19Í¨Ñ¶¹ÊÕÏ'; 
-COMMENT ON COLUMN "public"."bak_li_battery_1h"."li_ba_bms20_communica_fault" IS 'BMS20Í¨Ñ¶¹ÊÕÏ'; 
-COMMENT ON COLUMN "public"."bak_li_battery_1h"."li_ba_communica_alarm_state2" IS 'Í¨Ñ¶¹ÊÕÏ¸æ¾¯×´Ì¬2'; 
+COMMENT ON COLUMN "public"."bak_li_battery_1h"."li_ba_bms1_comm_fault" IS 'BMS1Í¨Ñ¶¹ÊÕÏ'; 
+COMMENT ON COLUMN "public"."bak_li_battery_1h"."li_ba_bms2_comm_fault" IS 'BMS2Í¨Ñ¶¹ÊÕÏ'; 
+COMMENT ON COLUMN "public"."bak_li_battery_1h"."li_ba_bms3_comm_fault" IS 'BMS3Í¨Ñ¶¹ÊÕÏ'; 
+COMMENT ON COLUMN "public"."bak_li_battery_1h"."li_ba_bms4_comm_fault" IS 'BMS4Í¨Ñ¶¹ÊÕÏ'; 
+COMMENT ON COLUMN "public"."bak_li_battery_1h"."li_ba_bms5_comm_fault" IS 'BMS5Í¨Ñ¶¹ÊÕÏ'; 
+COMMENT ON COLUMN "public"."bak_li_battery_1h"."li_ba_bms6_comm_fault" IS 'BMS6Í¨Ñ¶¹ÊÕÏ'; 
+COMMENT ON COLUMN "public"."bak_li_battery_1h"."li_ba_bms7_comm_fault" IS 'BMS7Í¨Ñ¶¹ÊÕÏ'; 
+COMMENT ON COLUMN "public"."bak_li_battery_1h"."li_ba_bms8_comm_fault" IS 'BMS8Í¨Ñ¶¹ÊÕÏ'; 
+COMMENT ON COLUMN "public"."bak_li_battery_1h"."li_ba_bms9_comm_fault" IS 'BMS9Í¨Ñ¶¹ÊÕÏ'; 
+COMMENT ON COLUMN "public"."bak_li_battery_1h"."li_ba_bms10_comm_fault" IS 'BMS10Í¨Ñ¶¹ÊÕÏ'; 
+COMMENT ON COLUMN "public"."bak_li_battery_1h"."li_ba_bms11_comm_fault" IS 'BMS11Í¨Ñ¶¹ÊÕÏ'; 
+COMMENT ON COLUMN "public"."bak_li_battery_1h"."li_ba_bms12_comm_fault" IS 'BMS12Í¨Ñ¶¹ÊÕÏ'; 
+COMMENT ON COLUMN "public"."bak_li_battery_1h"."li_ba_bms13_comm_fault" IS 'BMS13Í¨Ñ¶¹ÊÕÏ'; 
+COMMENT ON COLUMN "public"."bak_li_battery_1h"."li_ba_bms14_comm_fault" IS 'BMS14Í¨Ñ¶¹ÊÕÏ'; 
+COMMENT ON COLUMN "public"."bak_li_battery_1h"."li_ba_bms15_comm_fault" IS 'BMS15Í¨Ñ¶¹ÊÕÏ'; 
+COMMENT ON COLUMN "public"."bak_li_battery_1h"."li_ba_bms16_comm_fault" IS 'BMS16Í¨Ñ¶¹ÊÕÏ'; 
+COMMENT ON COLUMN "public"."bak_li_battery_1h"."li_ba_bms17_comm_fault" IS 'BMS17Í¨Ñ¶¹ÊÕÏ'; 
+COMMENT ON COLUMN "public"."bak_li_battery_1h"."li_ba_bms18_comm_fault" IS 'BMS18Í¨Ñ¶¹ÊÕÏ'; 
+COMMENT ON COLUMN "public"."bak_li_battery_1h"."li_ba_bms19_comm_fault" IS 'BMS19Í¨Ñ¶¹ÊÕÏ'; 
+COMMENT ON COLUMN "public"."bak_li_battery_1h"."li_ba_bms20_comm_fault" IS 'BMS20Í¨Ñ¶¹ÊÕÏ'; 
+COMMENT ON COLUMN "public"."bak_li_battery_1h"."li_ba_comm_alarm_state2" IS 'Í¨Ñ¶¹ÊÕÏ¸æ¾¯×´Ì¬2'; 
 COMMENT ON COLUMN "public"."bak_li_battery_1h"."li_ba_bms_alarm_status5" IS 'BMS¸æ¾¯×´Ì¬5'; 
 COMMENT ON COLUMN "public"."bak_li_battery_1h"."li_ba_bms_alarm_status4" IS 'BMS¸æ¾¯×´Ì¬4'; 
 COMMENT ON COLUMN "public"."bak_li_battery_1h"."li_ba_bms_alarm_status3" IS 'BMS¸æ¾¯×´Ì¬3'; 
@@ -1093,6 +1083,4 @@ COMMENT ON COLUMN "public"."bak_li_battery_1h"."li_ba_bms_current_event_alarm_st
 COMMENT ON COLUMN "public"."bak_li_battery_1h"."li_ba_output_short_circuit_protection_dz" IS 'µç×Ü--Êä³ö¶ÌÂ·±£»¤'; 
 COMMENT ON COLUMN "public"."bak_li_battery_1h"."li_ba_bms_balance_module_switch_on_dz" IS 'µç×Ü¾ùºâÄ£¿é¿ªÆô'; 
 COMMENT ON COLUMN "public"."bak_li_battery_1h"."li_ba_bank_discharge_energy" IS 'ÕûÌåµç³Ø×é·ÅµçÄÜÁ¿'; 
-COMMENT ON COLUMN "public"."bak_li_battery_1h"."li_ba_state_for_battery_bank" IS 'ÕûÌåµç³Ø×é³ä·Åµç×´Ì¬'; 
 COMMENT ON COLUMN "public"."bak_li_battery_1h"."li_ba_mos_temp" IS 'µç³Ømos ÎÂ¶È'; 
-COMMENT ON COLUMN "public"."bak_li_battery_1h"."li_ba_bms_running_status" IS 'µç³ØBMSÔËĞĞ×´Ì¬'; 

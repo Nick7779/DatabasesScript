@@ -295,20 +295,15 @@
  @Column(name = "li_ba_cell30_voltage") 
  private Double liBaCell30Voltage;
  /** 
- * 锂电池放电能量.Lithium battery Discharge energy 
- */ 
- @Column(name = "li_ba_discharge_energy") 
- private Double liBaDischargeEnergy;
- /** 
  * 锂电池功率温度.Lithium battery power temp 
  */ 
  @Column(name = "li_ba_power_temp") 
  private Double liBaPowerTemp;
  /** 
- * 电总锂电池状态.Lithium battery status dz 
+ * 锂电池运行状态状态.Lithium battery status  
  */ 
- @Column(name = "li_ba_status_dz") 
- private Long liBaStatusDz;
+ @Column(name = "li_ba_status") 
+ private Long liBaStatus;
  /** 
  * 锂电池FET状态.Lithium battery FET status 
  */ 
@@ -875,10 +870,10 @@
  @Column(name = "li_ba_over_discharge_counts") 
  private Long liBaOverDischargeCounts;
  /** 
- * 锂电池总放kWh	.Lithium battery total discharge for single battery 
+ * 锂电池总放kWh	.Lithium battery discharge energy for single battery 
  */ 
- @Column(name = "li_ba_total_discharge_capacity_for_single_battery") 
- private Double liBaTotalDischargeCapacityForSingleBattery;
+ @Column(name = "li_ba_discharge_energy_single") 
+ private Double liBaDischargeEnergySingle;
  /** 
  * 电流告警状态.current alarm status 
  */ 
@@ -1047,108 +1042,108 @@
  /** 
  * BMS1通讯故障.BMS1 communication fault 
  */ 
- @Column(name = "li_ba_bms1_communica_fault") 
- private Long liBaBms1CommunicaFault;
+ @Column(name = "li_ba_bms1_comm_fault") 
+ private Long liBaBms1CommFault;
  /** 
  * BMS2通讯故障.BMS2 communication fault 
  */ 
- @Column(name = "li_ba_bms2_communica_fault") 
- private Long liBaBms2CommunicaFault;
+ @Column(name = "li_ba_bms2_comm_fault") 
+ private Long liBaBms2CommFault;
  /** 
  * BMS3通讯故障.BMS3 communication fault 
  */ 
- @Column(name = "li_ba_bms3_communica_fault") 
- private Long liBaBms3CommunicaFault;
+ @Column(name = "li_ba_bms3_comm_fault") 
+ private Long liBaBms3CommFault;
  /** 
  * BMS4通讯故障.BMS4 communication fault 
  */ 
- @Column(name = "li_ba_bms4_communica_fault") 
- private Long liBaBms4CommunicaFault;
+ @Column(name = "li_ba_bms4_comm_fault") 
+ private Long liBaBms4CommFault;
  /** 
  * BMS5通讯故障.BMS5 communication fault 
  */ 
- @Column(name = "li_ba_bms5_communica_fault") 
- private Long liBaBms5CommunicaFault;
+ @Column(name = "li_ba_bms5_comm_fault") 
+ private Long liBaBms5CommFault;
  /** 
  * BMS6通讯故障.BMS6 communication fault 
  */ 
- @Column(name = "li_ba_bms6_communica_fault") 
- private Long liBaBms6CommunicaFault;
+ @Column(name = "li_ba_bms6_comm_fault") 
+ private Long liBaBms6CommFault;
  /** 
  * BMS7通讯故障.BMS7 communication fault 
  */ 
- @Column(name = "li_ba_bms7_communica_fault") 
- private Long liBaBms7CommunicaFault;
+ @Column(name = "li_ba_bms7_comm_fault") 
+ private Long liBaBms7CommFault;
  /** 
  * BMS8通讯故障.BMS8 communication fault 
  */ 
- @Column(name = "li_ba_bms8_communica_fault") 
- private Long liBaBms8CommunicaFault;
+ @Column(name = "li_ba_bms8_comm_fault") 
+ private Long liBaBms8CommFault;
  /** 
  * BMS9通讯故障.BMS9 communication fault 
  */ 
- @Column(name = "li_ba_bms9_communica_fault") 
- private Long liBaBms9CommunicaFault;
+ @Column(name = "li_ba_bms9_comm_fault") 
+ private Long liBaBms9CommFault;
  /** 
  * BMS10通讯故障.BMS10 communication fault 
  */ 
- @Column(name = "li_ba_bms10_communica_fault") 
- private Long liBaBms10CommunicaFault;
+ @Column(name = "li_ba_bms10_comm_fault") 
+ private Long liBaBms10CommFault;
  /** 
  * BMS11通讯故障.BMS11 communication fault 
  */ 
- @Column(name = "li_ba_bms11_communica_fault") 
- private Long liBaBms11CommunicaFault;
+ @Column(name = "li_ba_bms11_comm_fault") 
+ private Long liBaBms11CommFault;
  /** 
  * BMS12通讯故障.BMS12 communication fault 
  */ 
- @Column(name = "li_ba_bms12_communica_fault") 
- private Long liBaBms12CommunicaFault;
+ @Column(name = "li_ba_bms12_comm_fault") 
+ private Long liBaBms12CommFault;
  /** 
  * BMS13通讯故障.BMS13 communication fault 
  */ 
- @Column(name = "li_ba_bms13_communica_fault") 
- private Long liBaBms13CommunicaFault;
+ @Column(name = "li_ba_bms13_comm_fault") 
+ private Long liBaBms13CommFault;
  /** 
  * BMS14通讯故障.BMS14 communication fault 
  */ 
- @Column(name = "li_ba_bms14_communica_fault") 
- private Long liBaBms14CommunicaFault;
+ @Column(name = "li_ba_bms14_comm_fault") 
+ private Long liBaBms14CommFault;
  /** 
  * BMS15通讯故障.BMS15 communication fault 
  */ 
- @Column(name = "li_ba_bms15_communica_fault") 
- private Long liBaBms15CommunicaFault;
+ @Column(name = "li_ba_bms15_comm_fault") 
+ private Long liBaBms15CommFault;
  /** 
  * BMS16通讯故障.BMS16 communication fault 
  */ 
- @Column(name = "li_ba_bms16_communica_fault") 
- private Long liBaBms16CommunicaFault;
+ @Column(name = "li_ba_bms16_comm_fault") 
+ private Long liBaBms16CommFault;
  /** 
  * BMS17通讯故障.BMS17 communication fault 
  */ 
- @Column(name = "li_ba_bms17_communica_fault") 
- private Long liBaBms17CommunicaFault;
+ @Column(name = "li_ba_bms17_comm_fault") 
+ private Long liBaBms17CommFault;
  /** 
  * BMS18通讯故障.BMS18 communication fault 
  */ 
- @Column(name = "li_ba_bms18_communica_fault") 
- private Long liBaBms18CommunicaFault;
+ @Column(name = "li_ba_bms18_comm_fault") 
+ private Long liBaBms18CommFault;
  /** 
  * BMS19通讯故障.BMS19 communication fault 
  */ 
- @Column(name = "li_ba_bms19_communica_fault") 
- private Long liBaBms19CommunicaFault;
+ @Column(name = "li_ba_bms19_comm_fault") 
+ private Long liBaBms19CommFault;
  /** 
  * BMS20通讯故障.BMS20 communication fault 
  */ 
- @Column(name = "li_ba_bms20_communica_fault") 
- private Long liBaBms20CommunicaFault;
+ @Column(name = "li_ba_bms20_comm_fault") 
+ private Long liBaBms20CommFault;
  /** 
  * 通讯故障告警状态2.Communication alarm state2 
  */ 
- @Column(name = "li_ba_communica_alarm_state2") 
- private Long liBaCommunicaAlarmState2;
+ @Column(name = "li_ba_comm_alarm_state2") 
+ private Long liBaCommAlarmState2;
  /** 
  * BMS告警状态5.bms alarm status5 
  */ 
@@ -1340,20 +1335,10 @@
  @Column(name = "li_ba_bank_discharge_energy") 
  private Double liBaBankDischargeEnergy;
  /** 
- * 整体电池组充放电状态.battery state for battery bank 
- */ 
- @Column(name = "li_ba_state_for_battery_bank") 
- private Long liBaStateForBatteryBank;
- /** 
  * 电池mos 温度.battery mos temperature 
  */ 
  @Column(name = "li_ba_mos_temp") 
  private Double liBaMosTemp;
- /** 
- * 电池BMS运行状态.BMS running status 
- */ 
- @Column(name = "li_ba_bms_running_status") 
- private Long liBaBmsRunningStatus;
 
     public Date getTime() {
         return Date.from(time);

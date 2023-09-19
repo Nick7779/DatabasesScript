@@ -223,17 +223,13 @@
  */ 
  String LI_BA_CELL30_VOLTAGE = "li_ba_cell30_voltage";
  /** 
- * 锂电池放电能量. 
- */ 
- String LI_BA_DISCHARGE_ENERGY = "li_ba_discharge_energy";
- /** 
  * 锂电池功率温度. 
  */ 
  String LI_BA_POWER_TEMP = "li_ba_power_temp";
  /** 
- * 电总锂电池状态. 
+ * 锂电池运行状态状态. 
  */ 
- String LI_BA_STATUS_DZ = "li_ba_status_dz";
+ String LI_BA_STATUS = "li_ba_status";
  /** 
  * 锂电池FET状态. 
  */ 
@@ -689,7 +685,7 @@
  /** 
  * 锂电池总放kWh	. 
  */ 
- String LI_BA_TOTAL_DISCHARGE_CAPACITY_FOR_SINGLE_BATTERY = "li_ba_total_discharge_capacity_for_single_battery";
+ String LI_BA_DISCHARGE_ENERGY_SINGLE = "li_ba_discharge_energy_single";
  /** 
  * 电流告警状态. 
  */ 
@@ -825,87 +821,87 @@
  /** 
  * BMS1通讯故障. 
  */ 
- String LI_BA_BMS1_COMMUNICA_FAULT = "li_ba_bms1_communica_fault";
+ String LI_BA_BMS1_COMM_FAULT = "li_ba_bms1_comm_fault";
  /** 
  * BMS2通讯故障. 
  */ 
- String LI_BA_BMS2_COMMUNICA_FAULT = "li_ba_bms2_communica_fault";
+ String LI_BA_BMS2_COMM_FAULT = "li_ba_bms2_comm_fault";
  /** 
  * BMS3通讯故障. 
  */ 
- String LI_BA_BMS3_COMMUNICA_FAULT = "li_ba_bms3_communica_fault";
+ String LI_BA_BMS3_COMM_FAULT = "li_ba_bms3_comm_fault";
  /** 
  * BMS4通讯故障. 
  */ 
- String LI_BA_BMS4_COMMUNICA_FAULT = "li_ba_bms4_communica_fault";
+ String LI_BA_BMS4_COMM_FAULT = "li_ba_bms4_comm_fault";
  /** 
  * BMS5通讯故障. 
  */ 
- String LI_BA_BMS5_COMMUNICA_FAULT = "li_ba_bms5_communica_fault";
+ String LI_BA_BMS5_COMM_FAULT = "li_ba_bms5_comm_fault";
  /** 
  * BMS6通讯故障. 
  */ 
- String LI_BA_BMS6_COMMUNICA_FAULT = "li_ba_bms6_communica_fault";
+ String LI_BA_BMS6_COMM_FAULT = "li_ba_bms6_comm_fault";
  /** 
  * BMS7通讯故障. 
  */ 
- String LI_BA_BMS7_COMMUNICA_FAULT = "li_ba_bms7_communica_fault";
+ String LI_BA_BMS7_COMM_FAULT = "li_ba_bms7_comm_fault";
  /** 
  * BMS8通讯故障. 
  */ 
- String LI_BA_BMS8_COMMUNICA_FAULT = "li_ba_bms8_communica_fault";
+ String LI_BA_BMS8_COMM_FAULT = "li_ba_bms8_comm_fault";
  /** 
  * BMS9通讯故障. 
  */ 
- String LI_BA_BMS9_COMMUNICA_FAULT = "li_ba_bms9_communica_fault";
+ String LI_BA_BMS9_COMM_FAULT = "li_ba_bms9_comm_fault";
  /** 
  * BMS10通讯故障. 
  */ 
- String LI_BA_BMS10_COMMUNICA_FAULT = "li_ba_bms10_communica_fault";
+ String LI_BA_BMS10_COMM_FAULT = "li_ba_bms10_comm_fault";
  /** 
  * BMS11通讯故障. 
  */ 
- String LI_BA_BMS11_COMMUNICA_FAULT = "li_ba_bms11_communica_fault";
+ String LI_BA_BMS11_COMM_FAULT = "li_ba_bms11_comm_fault";
  /** 
  * BMS12通讯故障. 
  */ 
- String LI_BA_BMS12_COMMUNICA_FAULT = "li_ba_bms12_communica_fault";
+ String LI_BA_BMS12_COMM_FAULT = "li_ba_bms12_comm_fault";
  /** 
  * BMS13通讯故障. 
  */ 
- String LI_BA_BMS13_COMMUNICA_FAULT = "li_ba_bms13_communica_fault";
+ String LI_BA_BMS13_COMM_FAULT = "li_ba_bms13_comm_fault";
  /** 
  * BMS14通讯故障. 
  */ 
- String LI_BA_BMS14_COMMUNICA_FAULT = "li_ba_bms14_communica_fault";
+ String LI_BA_BMS14_COMM_FAULT = "li_ba_bms14_comm_fault";
  /** 
  * BMS15通讯故障. 
  */ 
- String LI_BA_BMS15_COMMUNICA_FAULT = "li_ba_bms15_communica_fault";
+ String LI_BA_BMS15_COMM_FAULT = "li_ba_bms15_comm_fault";
  /** 
  * BMS16通讯故障. 
  */ 
- String LI_BA_BMS16_COMMUNICA_FAULT = "li_ba_bms16_communica_fault";
+ String LI_BA_BMS16_COMM_FAULT = "li_ba_bms16_comm_fault";
  /** 
  * BMS17通讯故障. 
  */ 
- String LI_BA_BMS17_COMMUNICA_FAULT = "li_ba_bms17_communica_fault";
+ String LI_BA_BMS17_COMM_FAULT = "li_ba_bms17_comm_fault";
  /** 
  * BMS18通讯故障. 
  */ 
- String LI_BA_BMS18_COMMUNICA_FAULT = "li_ba_bms18_communica_fault";
+ String LI_BA_BMS18_COMM_FAULT = "li_ba_bms18_comm_fault";
  /** 
  * BMS19通讯故障. 
  */ 
- String LI_BA_BMS19_COMMUNICA_FAULT = "li_ba_bms19_communica_fault";
+ String LI_BA_BMS19_COMM_FAULT = "li_ba_bms19_comm_fault";
  /** 
  * BMS20通讯故障. 
  */ 
- String LI_BA_BMS20_COMMUNICA_FAULT = "li_ba_bms20_communica_fault";
+ String LI_BA_BMS20_COMM_FAULT = "li_ba_bms20_comm_fault";
  /** 
  * 通讯故障告警状态2. 
  */ 
- String LI_BA_COMMUNICA_ALARM_STATE2 = "li_ba_communica_alarm_state2";
+ String LI_BA_COMM_ALARM_STATE2 = "li_ba_comm_alarm_state2";
  /** 
  * BMS告警状态5. 
  */ 
@@ -1059,14 +1055,6 @@
  */ 
  String LI_BA_BANK_DISCHARGE_ENERGY = "li_ba_bank_discharge_energy";
  /** 
- * 整体电池组充放电状态. 
- */ 
- String LI_BA_STATE_FOR_BATTERY_BANK = "li_ba_state_for_battery_bank";
- /** 
  * 电池mos 温度. 
  */ 
  String LI_BA_MOS_TEMP = "li_ba_mos_temp";
- /** 
- * 电池BMS运行状态. 
- */ 
- String LI_BA_BMS_RUNNING_STATUS = "li_ba_bms_running_status";
