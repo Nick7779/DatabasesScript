@@ -168,12 +168,14 @@ if __name__ == '__main__':
     # 获取资产类
     # asset_class_list = asset_class()
     # asset_class_list = [(1001, 'Solar', 1, 'solar', None, '太阳能', 'solar_', 99)]
-    asset_class_list = [(1002, 'Lithium Battery', 2, 'li_battery', None, '铁锂电池', 'li_ba', 99)]
+    # asset_class_list = [(1002, 'Lithium Battery', 2, 'li_battery', None, '铁锂电池', 'li_ba', 99)]
     # asset_class_list = [(1003, 'Gel Battery', 3, 'gel_battery', None, '胶体电池', 'vrla_', 99)]
     # asset_class_list = [(1004, 'Grid', 4, 'grid', None, '市电', 'grid_', 99)]
     # asset_class_list = [(1005, 'Ac Generator', 5, 'ac_generator', None, '交流发电机', 'genset_', 99)]
+    asset_class_list = [(1007, 'Air con', 7, 'air_con', None, '空调', 'air_con_', 99)]
     # asset_class_list = [(1008, 'Rectifier', 8, 'rectifier', None, '整流器', 'rectifier_', 99)]
     # asset_class_list = [(1009, 'Load-DC', 9, 'load_dc', None, '负载 直流', 'load_dc_', 99)]
+    # asset_class_list = [(1011, 'Heat Exchanger', 11, 'heat_exchanger', None, '热交换器', 'heat_ex_', 99)]
     # asset_class_list = [(1013, 'Fuel Level Sensor', 13, 'fuel', None, '液位计', 'fuel_', 99)]
 
     print(asset_class_list)
