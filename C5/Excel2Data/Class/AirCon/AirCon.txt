@@ -68,7 +68,7 @@
  * 外部风扇速.external fan speed 
  */ 
  @Column(name = "air_con_external_fan_speed") 
- private Long airConExternalFanSpeed;
+ private Double airConExternalFanSpeed;
  /** 
  * 交流输入电压.ac input voltage 
  */ 
