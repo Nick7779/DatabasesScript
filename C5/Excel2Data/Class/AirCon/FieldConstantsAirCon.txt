@@ -1,55 +1,75 @@
  /** 
- * 内风机故障. 
+ * 机器工作状态. 
  */ 
- String AIR_CON_INTERNAL_FAN_FAULT = "air_con_internal_fan_fault";
+ String AIR_CON_WORKING_STATUS = "air_con_working_status";
  /** 
- * 交流输入电压. 
+ * 内部风扇状态. 
  */ 
- String AIR_CON_AC_INPUT_VOLTAGE = "air_con_ac_input_voltage";
+ String AIR_CON_INTERNAL_FAN_STATUS = "air_con_internal_fan_status";
  /** 
- * 环境温度传感器故障. 
+ * 外部风扇状态. 
  */ 
- String AIR_CON_AMBIENT_TEMP_SENSOR_FAULT = "air_con_ambient_temp_sensor_fault";
+ String AIR_CON_EXTERNAL_FAN_STATUS = "air_con_external_fan_status";
  /** 
- * 外风机故障. 
+ * 压缩机状态. 
  */ 
- String AIR_CON_EXTERNAL_FAN_FAULT = "air_con_external_fan_fault";
+ String AIR_CON_COMPRESSOR_STATUS = "air_con_compressor_status";
  /** 
- * 回风温度传感器故障. 
+ * 机柜回风温度. 
  */ 
- String AIR_CON_AIR_RETURN_TEMP_PROBE_FAULT = "air_con_air_return_temp_probe_fault";
+ String AIR_CON_RETURN_AIR_TEMP = "air_con_return_air_temp";
  /** 
- * 冷凝器温度传感器故障. 
+ * 水泵状态. 
  */ 
- String AIR_CON_CONDENSER_TEMP_SENSOR_FAULT = "air_con_condenser_temp_sensor_fault";
+ String AIR_CON_PUMP_STATUS = "air_con_pump_status";
  /** 
- * 高压报警. 
+ * 环境温度. 
  */ 
- String AIR_CON_HIGH_PRESSURE = "air_con_high_pressure";
+ String AIR_CON_AMBIENT_TEMP = "air_con_ambient_temp";
  /** 
- * 交流工作电流. 
+ * 冷凝器温度. 
  */ 
- String AIR_CON_AC_OPERATING_CURRENT = "air_con_ac_operating_current";
- /** 
- * 压缩机故障. 
- */ 
- String AIR_CON_COMPRESSOR_FAULT = "air_con_compressor_fault";
- /** 
- * 冷却状态. 
- */ 
- String AIR_CON_STATE_OF_COOLING = "air_con_state_of_cooling";
- /** 
- * 交流断电告警. 
- */ 
- String AIR_CON_AC_POWER_DISCONNECTION = "air_con_ac_power_disconnection";
+ String AIR_CON_CONDENSER_TEMP = "air_con_condenser_temp";
  /** 
  * 蒸发器温度数值. 
  */ 
  String AIR_CON_EVAPORATOR_TEMP = "air_con_evaporator_temp";
  /** 
- * 冷凝器温度. 
+ * 内部风扇速. 
  */ 
- String AIR_CON_CONDENSER_TEMP = "air_con_condenser_temp";
+ String AIR_CON_INTERNAL_FAN_SPEED = "air_con_internal_fan_speed";
+ /** 
+ * 外部风扇速. 
+ */ 
+ String AIR_CON_EXTERNAL_FAN_SPEED = "air_con_external_fan_speed";
+ /** 
+ * 交流输入电压. 
+ */ 
+ String AIR_CON_AC_INPUT_VOLTAGE = "air_con_ac_input_voltage";
+ /** 
+ * 直流输入电压. 
+ */ 
+ String AIR_CON_DC_INPUT_VOLTAGE = "air_con_dc_input_voltage";
+ /** 
+ * 交流工作电流. 
+ */ 
+ String AIR_CON_AC_OPERATING_CURRENT = "air_con_ac_operating_current";
+ /** 
+ * 机器运行时间. 
+ */ 
+ String AIR_CON_MACHINE_RUNNING_HOURS = "air_con_machine_running_hours";
+ /** 
+ * 压缩机运行时间. 
+ */ 
+ String AIR_CON_COMPRESSOR_RUNNING_HOURS = "air_con_compressor_running_hours";
+ /** 
+ * 内风机运行时间. 
+ */ 
+ String AIR_CON_INTERNAL_FAN_RUNNING_HOURS = "air_con_internal_fan_running_hours";
+ /** 
+ * 压缩机动作次数. 
+ */ 
+ String AIR_CON_NUMBER_OF_COMPRESSOR_ACTIONS = "air_con_number_of_compressor_actions";
  /** 
  * 直流工作电流. 
  */ 
@@ -67,73 +87,49 @@
  */ 
  String AIR_CON_REFRIGERATING_CAPACITY = "air_con_refrigerating_capacity";
  /** 
- * 压缩机动作次数. 
+ * 内风机故障. 
  */ 
- String AIR_CON_NUMBER_OF_COMPRESSOR_ACTIONS = "air_con_number_of_compressor_actions";
+ String AIR_CON_INTERNAL_FAN_FAULT = "air_con_internal_fan_fault";
  /** 
- * 机器工作状态. 
+ * 外风机故障. 
  */ 
- String AIR_CON_WORKING_STATUS = "air_con_working_status";
+ String AIR_CON_EXTERNAL_FAN_FAULT = "air_con_external_fan_fault";
  /** 
- * 频繁高压力告警. 
+ * 压缩机故障. 
  */ 
- String AIR_CON_FREQUENT_HIGH_PRESSURE = "air_con_frequent_high_pressure";
+ String AIR_CON_COMPRESSOR_FAULT = "air_con_compressor_fault";
  /** 
- * 内部风扇速. 
+ * 高压报警. 
  */ 
- String AIR_CON_INTERNAL_FAN_SPEED = "air_con_internal_fan_speed";
+ String AIR_CON_HIGH_PRESSURE = "air_con_high_pressure";
  /** 
- * 内部风扇状态. 
+ * 交流断电告警. 
  */ 
- String AIR_CON_INTERNAL_FAN_STATUS = "air_con_internal_fan_status";
- /** 
- * 外部风扇状态. 
- */ 
- String AIR_CON_EXTERNAL_FAN_STATUS = "air_con_external_fan_status";
- /** 
- * 外部风扇速. 
- */ 
- String AIR_CON_EXTERNAL_FAN_SPEED = "air_con_external_fan_speed";
- /** 
- * 机器运行时间. 
- */ 
- String AIR_CON_MACHINE_RUNNING_HOURS = "air_con_machine_running_hours";
- /** 
- * 环境温度. 
- */ 
- String AIR_CON_AMBIENT_TEMP = "air_con_ambient_temp";
- /** 
- * 压缩机运行时间. 
- */ 
- String AIR_CON_COMPRESSOR_RUNNING_HOURS = "air_con_compressor_running_hours";
- /** 
- * 内风机运行时间. 
- */ 
- String AIR_CON_INTERNAL_FAN_RUNNING_HOURS = "air_con_internal_fan_running_hours";
- /** 
- * 压缩机状态. 
- */ 
- String AIR_CON_COMPRESSOR_STATUS = "air_con_compressor_status";
- /** 
- * 蒸发器冻结报警. 
- */ 
- String AIR_CON_EVAPORATOR_FREEZE_UP = "air_con_evaporator_freeze_up";
+ String AIR_CON_AC_POWER_DISCONNECTION = "air_con_ac_power_disconnection";
  /** 
  * 蒸发器温度传感器故障. 
  */ 
  String AIR_CON_EVAPORATOR_TEMP_SENSOR_FAULT = "air_con_evaporator_temp_sensor_fault";
  /** 
- * 直流输入电压. 
+ * 冷凝器温度传感器故障. 
  */ 
- String AIR_CON_DC_INPUT_VOLTAGE = "air_con_dc_input_voltage";
+ String AIR_CON_CONDENSER_TEMP_SENSOR_FAULT = "air_con_condenser_temp_sensor_fault";
  /** 
- * 机柜回风温度. 
+ * 环境温度传感器故障. 
  */ 
- String AIR_CON_RETURN_AIR_TEMP = "air_con_return_air_temp";
+ String AIR_CON_AMBIENT_TEMP_SENSOR_FAULT = "air_con_ambient_temp_sensor_fault";
  /** 
- * 水泵状态. 
+ * 蒸发器冻结报警. 
  */ 
- String AIR_CON_PUMP_STATUS = "air_con_pump_status";
+ String AIR_CON_EVAPORATOR_FREEZE_UP = "air_con_evaporator_freeze_up";
+ /** 
+ * 频繁高压力告警. 
+ */ 
+ String AIR_CON_FREQUENT_HIGH_PRESSURE = "air_con_frequent_high_pressure";
+ /** 
+ * 冷却状态. 
+ */ 
+ String AIR_CON_STATE_OF_COOLING = "air_con_state_of_cooling";
  /** 
  * 柜内高温限定值. 
  */ 

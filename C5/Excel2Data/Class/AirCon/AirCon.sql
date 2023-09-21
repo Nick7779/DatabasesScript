@@ -6,40 +6,39 @@ DROP TABLE IF EXISTS "public"."bak_air_con_15m";
                       "site_id" int8,
                       "asset_id" int8,
                       "time" timestamp(6), 
-air_con_internal_fan_fault int8,
-air_con_ac_input_voltage float8,
-air_con_ambient_temp_sensor_fault int8,
-air_con_external_fan_fault int8,
-air_con_air_return_temp_probe_fault int8,
-air_con_condenser_temp_sensor_fault int8,
-air_con_high_pressure int8,
-air_con_ac_operating_current float8,
-air_con_compressor_fault int8,
-air_con_state_of_cooling int8,
-air_con_ac_power_disconnection int8,
-air_con_evaporator_temp float8,
+air_con_working_status int8,
+air_con_internal_fan_status int8,
+air_con_external_fan_status int8,
+air_con_compressor_status int8,
+air_con_return_air_temp float8,
+air_con_pump_status int8,
+air_con_ambient_temp float8,
 air_con_condenser_temp float8,
+air_con_evaporator_temp float8,
+air_con_internal_fan_speed float8,
+air_con_external_fan_speed int8,
+air_con_ac_input_voltage float8,
+air_con_dc_input_voltage float8,
+air_con_ac_operating_current float8,
+air_con_machine_running_hours float8,
+air_con_compressor_running_hours float8,
+air_con_internal_fan_running_hours float8,
+air_con_number_of_compressor_actions int8,
 air_con_dc_operating_current float8,
 air_con_dc_power float8,
 air_con_ac_power float8,
 air_con_refrigerating_capacity float8,
-air_con_number_of_compressor_actions int8,
-air_con_working_status int8,
-air_con_frequent_high_pressure int8,
-air_con_internal_fan_speed float8,
-air_con_internal_fan_status int8,
-air_con_external_fan_status int8,
-air_con_external_fan_speed int8,
-air_con_machine_running_hours float8,
-air_con_ambient_temp float8,
-air_con_compressor_running_hours float8,
-air_con_internal_fan_running_hours float8,
-air_con_compressor_status int8,
-air_con_evaporator_freeze_up int8,
+air_con_internal_fan_fault int8,
+air_con_external_fan_fault int8,
+air_con_compressor_fault int8,
+air_con_high_pressure int8,
+air_con_ac_power_disconnection int8,
 air_con_evaporator_temp_sensor_fault int8,
-air_con_dc_input_voltage float8,
-air_con_return_air_temp float8,
-air_con_pump_status int8,
+air_con_condenser_temp_sensor_fault int8,
+air_con_ambient_temp_sensor_fault int8,
+air_con_evaporator_freeze_up int8,
+air_con_frequent_high_pressure int8,
+air_con_state_of_cooling int8,
 air_con_high_temp_setting float8,
 air_con_compressor_starting_temp_setting float8,
 air_con_supply_air_temp float8,
@@ -92,40 +91,39 @@ COMMENT ON COLUMN "public"."bak_air_con_15m"."create_time" IS '创建时间';
 COMMENT ON COLUMN "public"."bak_air_con_15m"."customer_id" IS '公司ID';
 COMMENT ON COLUMN "public"."bak_air_con_15m"."site_id" IS '站点ID';
 COMMENT ON COLUMN "public"."bak_air_con_15m"."asset_id" IS '资产ID';
-COMMENT ON COLUMN "public"."bak_air_con_15m"."time" IS 'influxdb时间';COMMENT ON COLUMN "public"."bak_air_con_15m"."air_con_internal_fan_fault" IS '内风机故障'; 
-COMMENT ON COLUMN "public"."bak_air_con_15m"."air_con_ac_input_voltage" IS '交流输入电压'; 
-COMMENT ON COLUMN "public"."bak_air_con_15m"."air_con_ambient_temp_sensor_fault" IS '环境温度传感器故障'; 
-COMMENT ON COLUMN "public"."bak_air_con_15m"."air_con_external_fan_fault" IS '外风机故障'; 
-COMMENT ON COLUMN "public"."bak_air_con_15m"."air_con_air_return_temp_probe_fault" IS '回风温度传感器故障'; 
-COMMENT ON COLUMN "public"."bak_air_con_15m"."air_con_condenser_temp_sensor_fault" IS '冷凝器温度传感器故障'; 
-COMMENT ON COLUMN "public"."bak_air_con_15m"."air_con_high_pressure" IS '高压报警'; 
-COMMENT ON COLUMN "public"."bak_air_con_15m"."air_con_ac_operating_current" IS '交流工作电流'; 
-COMMENT ON COLUMN "public"."bak_air_con_15m"."air_con_compressor_fault" IS '压缩机故障'; 
-COMMENT ON COLUMN "public"."bak_air_con_15m"."air_con_state_of_cooling" IS '冷却状态'; 
-COMMENT ON COLUMN "public"."bak_air_con_15m"."air_con_ac_power_disconnection" IS '交流断电告警'; 
-COMMENT ON COLUMN "public"."bak_air_con_15m"."air_con_evaporator_temp" IS '蒸发器温度数值'; 
+COMMENT ON COLUMN "public"."bak_air_con_15m"."time" IS 'influxdb时间';COMMENT ON COLUMN "public"."bak_air_con_15m"."air_con_working_status" IS '机器工作状态'; 
+COMMENT ON COLUMN "public"."bak_air_con_15m"."air_con_internal_fan_status" IS '内部风扇状态'; 
+COMMENT ON COLUMN "public"."bak_air_con_15m"."air_con_external_fan_status" IS '外部风扇状态'; 
+COMMENT ON COLUMN "public"."bak_air_con_15m"."air_con_compressor_status" IS '压缩机状态'; 
+COMMENT ON COLUMN "public"."bak_air_con_15m"."air_con_return_air_temp" IS '机柜回风温度'; 
+COMMENT ON COLUMN "public"."bak_air_con_15m"."air_con_pump_status" IS '水泵状态'; 
+COMMENT ON COLUMN "public"."bak_air_con_15m"."air_con_ambient_temp" IS '环境温度'; 
 COMMENT ON COLUMN "public"."bak_air_con_15m"."air_con_condenser_temp" IS '冷凝器温度'; 
+COMMENT ON COLUMN "public"."bak_air_con_15m"."air_con_evaporator_temp" IS '蒸发器温度数值'; 
+COMMENT ON COLUMN "public"."bak_air_con_15m"."air_con_internal_fan_speed" IS '内部风扇速'; 
+COMMENT ON COLUMN "public"."bak_air_con_15m"."air_con_external_fan_speed" IS '外部风扇速'; 
+COMMENT ON COLUMN "public"."bak_air_con_15m"."air_con_ac_input_voltage" IS '交流输入电压'; 
+COMMENT ON COLUMN "public"."bak_air_con_15m"."air_con_dc_input_voltage" IS '直流输入电压'; 
+COMMENT ON COLUMN "public"."bak_air_con_15m"."air_con_ac_operating_current" IS '交流工作电流'; 
+COMMENT ON COLUMN "public"."bak_air_con_15m"."air_con_machine_running_hours" IS '机器运行时间'; 
+COMMENT ON COLUMN "public"."bak_air_con_15m"."air_con_compressor_running_hours" IS '压缩机运行时间'; 
+COMMENT ON COLUMN "public"."bak_air_con_15m"."air_con_internal_fan_running_hours" IS '内风机运行时间'; 
+COMMENT ON COLUMN "public"."bak_air_con_15m"."air_con_number_of_compressor_actions" IS '压缩机动作次数'; 
 COMMENT ON COLUMN "public"."bak_air_con_15m"."air_con_dc_operating_current" IS '直流工作电流'; 
 COMMENT ON COLUMN "public"."bak_air_con_15m"."air_con_dc_power" IS '直流功率'; 
 COMMENT ON COLUMN "public"."bak_air_con_15m"."air_con_ac_power" IS '交流功率'; 
 COMMENT ON COLUMN "public"."bak_air_con_15m"."air_con_refrigerating_capacity" IS '制冷量'; 
-COMMENT ON COLUMN "public"."bak_air_con_15m"."air_con_number_of_compressor_actions" IS '压缩机动作次数'; 
-COMMENT ON COLUMN "public"."bak_air_con_15m"."air_con_working_status" IS '机器工作状态'; 
-COMMENT ON COLUMN "public"."bak_air_con_15m"."air_con_frequent_high_pressure" IS '频繁高压力告警'; 
-COMMENT ON COLUMN "public"."bak_air_con_15m"."air_con_internal_fan_speed" IS '内部风扇速'; 
-COMMENT ON COLUMN "public"."bak_air_con_15m"."air_con_internal_fan_status" IS '内部风扇状态'; 
-COMMENT ON COLUMN "public"."bak_air_con_15m"."air_con_external_fan_status" IS '外部风扇状态'; 
-COMMENT ON COLUMN "public"."bak_air_con_15m"."air_con_external_fan_speed" IS '外部风扇速'; 
-COMMENT ON COLUMN "public"."bak_air_con_15m"."air_con_machine_running_hours" IS '机器运行时间'; 
-COMMENT ON COLUMN "public"."bak_air_con_15m"."air_con_ambient_temp" IS '环境温度'; 
-COMMENT ON COLUMN "public"."bak_air_con_15m"."air_con_compressor_running_hours" IS '压缩机运行时间'; 
-COMMENT ON COLUMN "public"."bak_air_con_15m"."air_con_internal_fan_running_hours" IS '内风机运行时间'; 
-COMMENT ON COLUMN "public"."bak_air_con_15m"."air_con_compressor_status" IS '压缩机状态'; 
-COMMENT ON COLUMN "public"."bak_air_con_15m"."air_con_evaporator_freeze_up" IS '蒸发器冻结报警'; 
+COMMENT ON COLUMN "public"."bak_air_con_15m"."air_con_internal_fan_fault" IS '内风机故障'; 
+COMMENT ON COLUMN "public"."bak_air_con_15m"."air_con_external_fan_fault" IS '外风机故障'; 
+COMMENT ON COLUMN "public"."bak_air_con_15m"."air_con_compressor_fault" IS '压缩机故障'; 
+COMMENT ON COLUMN "public"."bak_air_con_15m"."air_con_high_pressure" IS '高压报警'; 
+COMMENT ON COLUMN "public"."bak_air_con_15m"."air_con_ac_power_disconnection" IS '交流断电告警'; 
 COMMENT ON COLUMN "public"."bak_air_con_15m"."air_con_evaporator_temp_sensor_fault" IS '蒸发器温度传感器故障'; 
-COMMENT ON COLUMN "public"."bak_air_con_15m"."air_con_dc_input_voltage" IS '直流输入电压'; 
-COMMENT ON COLUMN "public"."bak_air_con_15m"."air_con_return_air_temp" IS '机柜回风温度'; 
-COMMENT ON COLUMN "public"."bak_air_con_15m"."air_con_pump_status" IS '水泵状态'; 
+COMMENT ON COLUMN "public"."bak_air_con_15m"."air_con_condenser_temp_sensor_fault" IS '冷凝器温度传感器故障'; 
+COMMENT ON COLUMN "public"."bak_air_con_15m"."air_con_ambient_temp_sensor_fault" IS '环境温度传感器故障'; 
+COMMENT ON COLUMN "public"."bak_air_con_15m"."air_con_evaporator_freeze_up" IS '蒸发器冻结报警'; 
+COMMENT ON COLUMN "public"."bak_air_con_15m"."air_con_frequent_high_pressure" IS '频繁高压力告警'; 
+COMMENT ON COLUMN "public"."bak_air_con_15m"."air_con_state_of_cooling" IS '冷却状态'; 
 COMMENT ON COLUMN "public"."bak_air_con_15m"."air_con_high_temp_setting" IS '柜内高温限定值'; 
 COMMENT ON COLUMN "public"."bak_air_con_15m"."air_con_compressor_starting_temp_setting" IS '压缩机启动温度设定'; 
 COMMENT ON COLUMN "public"."bak_air_con_15m"."air_con_supply_air_temp" IS '送风温度'; 
@@ -181,40 +179,39 @@ DROP TABLE IF EXISTS "public"."bak_air_con_1h";
                           "site_id" int8,
                           "asset_id" int8,
                           "time" timestamp(6), 
-air_con_internal_fan_fault int8,
-air_con_ac_input_voltage float8,
-air_con_ambient_temp_sensor_fault int8,
-air_con_external_fan_fault int8,
-air_con_air_return_temp_probe_fault int8,
-air_con_condenser_temp_sensor_fault int8,
-air_con_high_pressure int8,
-air_con_ac_operating_current float8,
-air_con_compressor_fault int8,
-air_con_state_of_cooling int8,
-air_con_ac_power_disconnection int8,
-air_con_evaporator_temp float8,
+air_con_working_status int8,
+air_con_internal_fan_status int8,
+air_con_external_fan_status int8,
+air_con_compressor_status int8,
+air_con_return_air_temp float8,
+air_con_pump_status int8,
+air_con_ambient_temp float8,
 air_con_condenser_temp float8,
+air_con_evaporator_temp float8,
+air_con_internal_fan_speed float8,
+air_con_external_fan_speed int8,
+air_con_ac_input_voltage float8,
+air_con_dc_input_voltage float8,
+air_con_ac_operating_current float8,
+air_con_machine_running_hours float8,
+air_con_compressor_running_hours float8,
+air_con_internal_fan_running_hours float8,
+air_con_number_of_compressor_actions int8,
 air_con_dc_operating_current float8,
 air_con_dc_power float8,
 air_con_ac_power float8,
 air_con_refrigerating_capacity float8,
-air_con_number_of_compressor_actions int8,
-air_con_working_status int8,
-air_con_frequent_high_pressure int8,
-air_con_internal_fan_speed float8,
-air_con_internal_fan_status int8,
-air_con_external_fan_status int8,
-air_con_external_fan_speed int8,
-air_con_machine_running_hours float8,
-air_con_ambient_temp float8,
-air_con_compressor_running_hours float8,
-air_con_internal_fan_running_hours float8,
-air_con_compressor_status int8,
-air_con_evaporator_freeze_up int8,
+air_con_internal_fan_fault int8,
+air_con_external_fan_fault int8,
+air_con_compressor_fault int8,
+air_con_high_pressure int8,
+air_con_ac_power_disconnection int8,
 air_con_evaporator_temp_sensor_fault int8,
-air_con_dc_input_voltage float8,
-air_con_return_air_temp float8,
-air_con_pump_status int8,
+air_con_condenser_temp_sensor_fault int8,
+air_con_ambient_temp_sensor_fault int8,
+air_con_evaporator_freeze_up int8,
+air_con_frequent_high_pressure int8,
+air_con_state_of_cooling int8,
 air_con_high_temp_setting float8,
 air_con_compressor_starting_temp_setting float8,
 air_con_supply_air_temp float8,
@@ -267,40 +264,39 @@ COMMENT ON COLUMN "public"."bak_air_con_1h"."id" IS '主键';
     COMMENT ON COLUMN "public"."bak_air_con_1h"."customer_id" IS '公司ID';
     COMMENT ON COLUMN "public"."bak_air_con_1h"."site_id" IS '站点ID';
     COMMENT ON COLUMN "public"."bak_air_con_1h"."asset_id" IS '资产ID';
-    COMMENT ON COLUMN "public"."bak_air_con_1h"."time" IS 'influxdb时间';COMMENT ON COLUMN "public"."bak_air_con_1h"."air_con_internal_fan_fault" IS '内风机故障'; 
-COMMENT ON COLUMN "public"."bak_air_con_1h"."air_con_ac_input_voltage" IS '交流输入电压'; 
-COMMENT ON COLUMN "public"."bak_air_con_1h"."air_con_ambient_temp_sensor_fault" IS '环境温度传感器故障'; 
-COMMENT ON COLUMN "public"."bak_air_con_1h"."air_con_external_fan_fault" IS '外风机故障'; 
-COMMENT ON COLUMN "public"."bak_air_con_1h"."air_con_air_return_temp_probe_fault" IS '回风温度传感器故障'; 
-COMMENT ON COLUMN "public"."bak_air_con_1h"."air_con_condenser_temp_sensor_fault" IS '冷凝器温度传感器故障'; 
-COMMENT ON COLUMN "public"."bak_air_con_1h"."air_con_high_pressure" IS '高压报警'; 
-COMMENT ON COLUMN "public"."bak_air_con_1h"."air_con_ac_operating_current" IS '交流工作电流'; 
-COMMENT ON COLUMN "public"."bak_air_con_1h"."air_con_compressor_fault" IS '压缩机故障'; 
-COMMENT ON COLUMN "public"."bak_air_con_1h"."air_con_state_of_cooling" IS '冷却状态'; 
-COMMENT ON COLUMN "public"."bak_air_con_1h"."air_con_ac_power_disconnection" IS '交流断电告警'; 
-COMMENT ON COLUMN "public"."bak_air_con_1h"."air_con_evaporator_temp" IS '蒸发器温度数值'; 
+    COMMENT ON COLUMN "public"."bak_air_con_1h"."time" IS 'influxdb时间';COMMENT ON COLUMN "public"."bak_air_con_1h"."air_con_working_status" IS '机器工作状态'; 
+COMMENT ON COLUMN "public"."bak_air_con_1h"."air_con_internal_fan_status" IS '内部风扇状态'; 
+COMMENT ON COLUMN "public"."bak_air_con_1h"."air_con_external_fan_status" IS '外部风扇状态'; 
+COMMENT ON COLUMN "public"."bak_air_con_1h"."air_con_compressor_status" IS '压缩机状态'; 
+COMMENT ON COLUMN "public"."bak_air_con_1h"."air_con_return_air_temp" IS '机柜回风温度'; 
+COMMENT ON COLUMN "public"."bak_air_con_1h"."air_con_pump_status" IS '水泵状态'; 
+COMMENT ON COLUMN "public"."bak_air_con_1h"."air_con_ambient_temp" IS '环境温度'; 
 COMMENT ON COLUMN "public"."bak_air_con_1h"."air_con_condenser_temp" IS '冷凝器温度'; 
+COMMENT ON COLUMN "public"."bak_air_con_1h"."air_con_evaporator_temp" IS '蒸发器温度数值'; 
+COMMENT ON COLUMN "public"."bak_air_con_1h"."air_con_internal_fan_speed" IS '内部风扇速'; 
+COMMENT ON COLUMN "public"."bak_air_con_1h"."air_con_external_fan_speed" IS '外部风扇速'; 
+COMMENT ON COLUMN "public"."bak_air_con_1h"."air_con_ac_input_voltage" IS '交流输入电压'; 
+COMMENT ON COLUMN "public"."bak_air_con_1h"."air_con_dc_input_voltage" IS '直流输入电压'; 
+COMMENT ON COLUMN "public"."bak_air_con_1h"."air_con_ac_operating_current" IS '交流工作电流'; 
+COMMENT ON COLUMN "public"."bak_air_con_1h"."air_con_machine_running_hours" IS '机器运行时间'; 
+COMMENT ON COLUMN "public"."bak_air_con_1h"."air_con_compressor_running_hours" IS '压缩机运行时间'; 
+COMMENT ON COLUMN "public"."bak_air_con_1h"."air_con_internal_fan_running_hours" IS '内风机运行时间'; 
+COMMENT ON COLUMN "public"."bak_air_con_1h"."air_con_number_of_compressor_actions" IS '压缩机动作次数'; 
 COMMENT ON COLUMN "public"."bak_air_con_1h"."air_con_dc_operating_current" IS '直流工作电流'; 
 COMMENT ON COLUMN "public"."bak_air_con_1h"."air_con_dc_power" IS '直流功率'; 
 COMMENT ON COLUMN "public"."bak_air_con_1h"."air_con_ac_power" IS '交流功率'; 
 COMMENT ON COLUMN "public"."bak_air_con_1h"."air_con_refrigerating_capacity" IS '制冷量'; 
-COMMENT ON COLUMN "public"."bak_air_con_1h"."air_con_number_of_compressor_actions" IS '压缩机动作次数'; 
-COMMENT ON COLUMN "public"."bak_air_con_1h"."air_con_working_status" IS '机器工作状态'; 
-COMMENT ON COLUMN "public"."bak_air_con_1h"."air_con_frequent_high_pressure" IS '频繁高压力告警'; 
-COMMENT ON COLUMN "public"."bak_air_con_1h"."air_con_internal_fan_speed" IS '内部风扇速'; 
-COMMENT ON COLUMN "public"."bak_air_con_1h"."air_con_internal_fan_status" IS '内部风扇状态'; 
-COMMENT ON COLUMN "public"."bak_air_con_1h"."air_con_external_fan_status" IS '外部风扇状态'; 
-COMMENT ON COLUMN "public"."bak_air_con_1h"."air_con_external_fan_speed" IS '外部风扇速'; 
-COMMENT ON COLUMN "public"."bak_air_con_1h"."air_con_machine_running_hours" IS '机器运行时间'; 
-COMMENT ON COLUMN "public"."bak_air_con_1h"."air_con_ambient_temp" IS '环境温度'; 
-COMMENT ON COLUMN "public"."bak_air_con_1h"."air_con_compressor_running_hours" IS '压缩机运行时间'; 
-COMMENT ON COLUMN "public"."bak_air_con_1h"."air_con_internal_fan_running_hours" IS '内风机运行时间'; 
-COMMENT ON COLUMN "public"."bak_air_con_1h"."air_con_compressor_status" IS '压缩机状态'; 
-COMMENT ON COLUMN "public"."bak_air_con_1h"."air_con_evaporator_freeze_up" IS '蒸发器冻结报警'; 
+COMMENT ON COLUMN "public"."bak_air_con_1h"."air_con_internal_fan_fault" IS '内风机故障'; 
+COMMENT ON COLUMN "public"."bak_air_con_1h"."air_con_external_fan_fault" IS '外风机故障'; 
+COMMENT ON COLUMN "public"."bak_air_con_1h"."air_con_compressor_fault" IS '压缩机故障'; 
+COMMENT ON COLUMN "public"."bak_air_con_1h"."air_con_high_pressure" IS '高压报警'; 
+COMMENT ON COLUMN "public"."bak_air_con_1h"."air_con_ac_power_disconnection" IS '交流断电告警'; 
 COMMENT ON COLUMN "public"."bak_air_con_1h"."air_con_evaporator_temp_sensor_fault" IS '蒸发器温度传感器故障'; 
-COMMENT ON COLUMN "public"."bak_air_con_1h"."air_con_dc_input_voltage" IS '直流输入电压'; 
-COMMENT ON COLUMN "public"."bak_air_con_1h"."air_con_return_air_temp" IS '机柜回风温度'; 
-COMMENT ON COLUMN "public"."bak_air_con_1h"."air_con_pump_status" IS '水泵状态'; 
+COMMENT ON COLUMN "public"."bak_air_con_1h"."air_con_condenser_temp_sensor_fault" IS '冷凝器温度传感器故障'; 
+COMMENT ON COLUMN "public"."bak_air_con_1h"."air_con_ambient_temp_sensor_fault" IS '环境温度传感器故障'; 
+COMMENT ON COLUMN "public"."bak_air_con_1h"."air_con_evaporator_freeze_up" IS '蒸发器冻结报警'; 
+COMMENT ON COLUMN "public"."bak_air_con_1h"."air_con_frequent_high_pressure" IS '频繁高压力告警'; 
+COMMENT ON COLUMN "public"."bak_air_con_1h"."air_con_state_of_cooling" IS '冷却状态'; 
 COMMENT ON COLUMN "public"."bak_air_con_1h"."air_con_high_temp_setting" IS '柜内高温限定值'; 
 COMMENT ON COLUMN "public"."bak_air_con_1h"."air_con_compressor_starting_temp_setting" IS '压缩机启动温度设定'; 
 COMMENT ON COLUMN "public"."bak_air_con_1h"."air_con_supply_air_temp" IS '送风温度'; 

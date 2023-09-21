@@ -15,70 +15,95 @@
     @Column(name = "time", tag = true)
     private Instant time;
  /** 
- * 内风机故障.Internal Fan Fault 
+ * 机器工作状态.working status 
  */ 
- @Column(name = "air_con_internal_fan_fault") 
- private Long airConInternalFanFault;
+ @Column(name = "air_con_working_status") 
+ private Long airConWorkingStatus;
  /** 
- * 交流输入电压.ac input voltage 
+ * 内部风扇状态.internal fan status 
  */ 
- @Column(name = "air_con_ac_input_voltage") 
- private Double airConAcInputVoltage;
+ @Column(name = "air_con_internal_fan_status") 
+ private Long airConInternalFanStatus;
  /** 
- * 环境温度传感器故障.Ambient Temp Sensor Fault 
+ * 外部风扇状态.external fan status 
  */ 
- @Column(name = "air_con_ambient_temp_sensor_fault") 
- private Long airConAmbientTempSensorFault;
+ @Column(name = "air_con_external_fan_status") 
+ private Long airConExternalFanStatus;
  /** 
- * 外风机故障.External Fan Fault 
+ * 压缩机状态.compressor status  
  */ 
- @Column(name = "air_con_external_fan_fault") 
- private Long airConExternalFanFault;
+ @Column(name = "air_con_compressor_status") 
+ private Long airConCompressorStatus;
  /** 
- * 回风温度传感器故障.Air Return Temp Probe Fault 
+ * 机柜回风温度.return air temp 
  */ 
- @Column(name = "air_con_air_return_temp_probe_fault") 
- private Long airConAirReturnTempProbeFault;
+ @Column(name = "air_con_return_air_temp") 
+ private Double airConReturnAirTemp;
  /** 
- * 冷凝器温度传感器故障.Condenser Temp Sensor Fault 
+ * 水泵状态.pump status 
  */ 
- @Column(name = "air_con_condenser_temp_sensor_fault") 
- private Long airConCondenserTempSensorFault;
+ @Column(name = "air_con_pump_status") 
+ private Long airConPumpStatus;
  /** 
- * 高压报警.High Pressure Alarm 
+ * 环境温度.ambient temp 
  */ 
- @Column(name = "air_con_high_pressure") 
- private Long airConHighPressure;
+ @Column(name = "air_con_ambient_temp") 
+ private Double airConAmbientTemp;
  /** 
- * 交流工作电流.ac operating current 
+ * 冷凝器温度.condenser temp 
  */ 
- @Column(name = "air_con_ac_operating_current") 
- private Double airConAcOperatingCurrent;
- /** 
- * 压缩机故障.Compressor Fault 
- */ 
- @Column(name = "air_con_compressor_fault") 
- private Long airConCompressorFault;
- /** 
- * 冷却状态.state of cooling 
- */ 
- @Column(name = "air_con_state_of_cooling") 
- private Long airConStateOfCooling;
- /** 
- * 交流断电告警.AC Power Disconnection Alarm 
- */ 
- @Column(name = "air_con_ac_power_disconnection") 
- private Long airConAcPowerDisconnection;
+ @Column(name = "air_con_condenser_temp") 
+ private Double airConCondenserTemp;
  /** 
  * 蒸发器温度数值.evaporator temp 
  */ 
  @Column(name = "air_con_evaporator_temp") 
  private Double airConEvaporatorTemp;
  /** 
- * 冷凝器温度.condenser temp 
+ * 内部风扇速.internal fan speed 
  */ 
- @Column(name = "air_con_condenser_temp") 
- private Double airConCondenserTemp;
+ @Column(name = "air_con_internal_fan_speed") 
+ private Double airConInternalFanSpeed;
+ /** 
+ * 外部风扇速.external fan speed 
+ */ 
+ @Column(name = "air_con_external_fan_speed") 
+ private Long airConExternalFanSpeed;
+ /** 
+ * 交流输入电压.ac input voltage 
+ */ 
+ @Column(name = "air_con_ac_input_voltage") 
+ private Double airConAcInputVoltage;
+ /** 
+ * 直流输入电压.dc input voltage 
+ */ 
+ @Column(name = "air_con_dc_input_voltage") 
+ private Double airConDcInputVoltage;
+ /** 
+ * 交流工作电流.ac operating current 
+ */ 
+ @Column(name = "air_con_ac_operating_current") 
+ private Double airConAcOperatingCurrent;
+ /** 
+ * 机器运行时间.machine running hours 
+ */ 
+ @Column(name = "air_con_machine_running_hours") 
+ private Double airConMachineRunningHours;
+ /** 
+ * 压缩机运行时间.compressor running hours 
+ */ 
+ @Column(name = "air_con_compressor_running_hours") 
+ private Double airConCompressorRunningHours;
+ /** 
+ * 内风机运行时间.internal fan running hours 
+ */ 
+ @Column(name = "air_con_internal_fan_running_hours") 
+ private Double airConInternalFanRunningHours;
+ /** 
+ * 压缩机动作次数.number of compressor actions 
+ */ 
+ @Column(name = "air_con_number_of_compressor_actions") 
+ private Long airConNumberOfCompressorActions;
  /** 
  * 直流工作电流.dc operating current 
  */ 
@@ -100,90 +125,60 @@
  @Column(name = "air_con_refrigerating_capacity") 
  private Double airConRefrigeratingCapacity;
  /** 
- * 压缩机动作次数.number of compressor actions 
+ * 内风机故障.Internal Fan Fault 
  */ 
- @Column(name = "air_con_number_of_compressor_actions") 
- private Long airConNumberOfCompressorActions;
+ @Column(name = "air_con_internal_fan_fault") 
+ private Long airConInternalFanFault;
  /** 
- * 机器工作状态.working status 
+ * 外风机故障.External Fan Fault 
  */ 
- @Column(name = "air_con_working_status") 
- private Long airConWorkingStatus;
+ @Column(name = "air_con_external_fan_fault") 
+ private Long airConExternalFanFault;
  /** 
- * 频繁高压力告警.Frequent High Pressure Alarm 
+ * 压缩机故障.Compressor Fault 
  */ 
- @Column(name = "air_con_frequent_high_pressure") 
- private Long airConFrequentHighPressure;
+ @Column(name = "air_con_compressor_fault") 
+ private Long airConCompressorFault;
  /** 
- * 内部风扇速.internal fan speed 
+ * 高压报警.High Pressure Alarm 
  */ 
- @Column(name = "air_con_internal_fan_speed") 
- private Double airConInternalFanSpeed;
+ @Column(name = "air_con_high_pressure") 
+ private Long airConHighPressure;
  /** 
- * 内部风扇状态.internal fan status 
+ * 交流断电告警.AC Power Disconnection Alarm 
  */ 
- @Column(name = "air_con_internal_fan_status") 
- private Long airConInternalFanStatus;
- /** 
- * 外部风扇状态.external fan status 
- */ 
- @Column(name = "air_con_external_fan_status") 
- private Long airConExternalFanStatus;
- /** 
- * 外部风扇速.external fan speed 
- */ 
- @Column(name = "air_con_external_fan_speed") 
- private Long airConExternalFanSpeed;
- /** 
- * 机器运行时间.machine running hours 
- */ 
- @Column(name = "air_con_machine_running_hours") 
- private Double airConMachineRunningHours;
- /** 
- * 环境温度.ambient temp 
- */ 
- @Column(name = "air_con_ambient_temp") 
- private Double airConAmbientTemp;
- /** 
- * 压缩机运行时间.compressor running hours 
- */ 
- @Column(name = "air_con_compressor_running_hours") 
- private Double airConCompressorRunningHours;
- /** 
- * 内风机运行时间.internal fan running hours 
- */ 
- @Column(name = "air_con_internal_fan_running_hours") 
- private Double airConInternalFanRunningHours;
- /** 
- * 压缩机状态.compressor status  
- */ 
- @Column(name = "air_con_compressor_status") 
- private Long airConCompressorStatus;
- /** 
- * 蒸发器冻结报警.Evaporator freezing alarm 
- */ 
- @Column(name = "air_con_evaporator_freeze_up") 
- private Long airConEvaporatorFreezeUp;
+ @Column(name = "air_con_ac_power_disconnection") 
+ private Long airConAcPowerDisconnection;
  /** 
  * 蒸发器温度传感器故障.Evaporator Temp Sensor Fault 
  */ 
  @Column(name = "air_con_evaporator_temp_sensor_fault") 
  private Long airConEvaporatorTempSensorFault;
  /** 
- * 直流输入电压.dc input voltage 
+ * 冷凝器温度传感器故障.Condenser Temp Sensor Fault 
  */ 
- @Column(name = "air_con_dc_input_voltage") 
- private Double airConDcInputVoltage;
+ @Column(name = "air_con_condenser_temp_sensor_fault") 
+ private Long airConCondenserTempSensorFault;
  /** 
- * 机柜回风温度.return air temp 
+ * 环境温度传感器故障.Ambient Temp Sensor Fault 
  */ 
- @Column(name = "air_con_return_air_temp") 
- private Double airConReturnAirTemp;
+ @Column(name = "air_con_ambient_temp_sensor_fault") 
+ private Long airConAmbientTempSensorFault;
  /** 
- * 水泵状态.pump status 
+ * 蒸发器冻结报警.Evaporator freezing alarm 
  */ 
- @Column(name = "air_con_pump_status") 
- private Long airConPumpStatus;
+ @Column(name = "air_con_evaporator_freeze_up") 
+ private Long airConEvaporatorFreezeUp;
+ /** 
+ * 频繁高压力告警.Frequent High Pressure Alarm 
+ */ 
+ @Column(name = "air_con_frequent_high_pressure") 
+ private Long airConFrequentHighPressure;
+ /** 
+ * 冷却状态.state of cooling 
+ */ 
+ @Column(name = "air_con_state_of_cooling") 
+ private Long airConStateOfCooling;
  /** 
  * 柜内高温限定值.Air Con High temp setting 
  */ 
