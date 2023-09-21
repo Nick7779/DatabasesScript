@@ -14,7 +14,7 @@ def asset_class():
 
 
 def get_asset_point_list(cid):
-    asset_point_sql = "select * from aiot_asset_point aap where aap.asset_class_id={class_id} order by create_time".format(
+    asset_point_sql = "select * from aiot_asset_point aap where aap.asset_class_id={class_id} order by create_time, id".format(
         class_id=cid)
     curses.execute(asset_point_sql)
     point_list = curses.fetchall()
@@ -176,7 +176,6 @@ if __name__ == '__main__':
     # asset_class_list = [(1008, 'Rectifier', 8, 'rectifier', None, '整流器', 'rectifier_', 99)]
     # asset_class_list = [(1009, 'Load-DC', 9, 'load_dc', None, '负载 直流', 'load_dc_', 99)]
     # asset_class_list = [(1011, 'Heat Exchanger', 11, 'heat_exchanger', None, '热交换器', 'heat_ex_', 99)]
-    # asset_class_list = [(1013, 'Fuel Level Sensor', 13, 'fuel', None, '液位计', 'fuel_', 99)]
 
     print(asset_class_list)
     # 依次生成所有资产类
