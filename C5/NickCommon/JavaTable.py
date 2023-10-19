@@ -21,6 +21,21 @@ def get_asset_point_list(cid):
     return point_list
 
 
+def write_field_head(name):
+    field_head = '''
+    package com.tellhow.iot.common.constant.field;
+    /**
+     * {name} fields.
+     *
+     * @Author: Nick
+     * @Description: 空调字段常量
+     * @Date: {time}
+     */
+     public interface FieldAirCon "{"
+     '''.format(name=name, time=datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S'))
+    FieldConstantsFile.writelines(field_head + "\n")
+
+
 def write_field_txt():
     # 资产常量
     field_constant = ''' /** \n * {name}. \n */ \n String {field_constant_key} = "{field}";''' \
@@ -172,10 +187,12 @@ if __name__ == '__main__':
     # asset_class_list = [(1003, 'Gel Battery', 3, 'gel_battery', None, '胶体电池', 'vrla_', 99)]
     # asset_class_list = [(1004, 'Grid', 4, 'grid', None, '市电', 'grid_', 99)]
     # asset_class_list = [(1005, 'Ac Generator', 5, 'ac_generator', None, '交流发电机', 'genset_', 99)]
-    asset_class_list = [(1007, 'Air con', 7, 'air_con', None, '空调', 'air_con_', 99)]
+    # asset_class_list = [(1007, 'Air con', 7, 'air_con', None, '空调', 'air_con_', 99)]
     # asset_class_list = [(1008, 'Rectifier', 8, 'rectifier', None, '整流器', 'rectifier_', 99)]
     # asset_class_list = [(1009, 'Load-DC', 9, 'load_dc', None, '负载 直流', 'load_dc_', 99)]
+    # asset_class_list = [(1010, 'Electronic Lock', 10, 'electronic_lock', None, '电子锁', 'elec_lock_', 99)]
     # asset_class_list = [(1011, 'Heat Exchanger', 11, 'heat_exchanger', None, '热交换器', 'heat_ex_', 99)]
+    asset_class_list = [(1013, 'Fuel Level Sensor', 13, 'fuel', None, '液位计', 'fuel_', 99)]
 
     print(asset_class_list)
     # 依次生成所有资产类
@@ -204,6 +221,7 @@ if __name__ == '__main__':
         write_java_class_head()
         # 字段常量
         FieldConstantsFile = open("../Excel2Data/Class/" + tnp + "/FieldConstants" + table_name + ".txt", 'w+')
+        # write_field_head(table_name)
         # 15分钟表数据备份
         Backups15mFile = open("../Excel2Data/Class/" + tnp + "/" + table_name + "15m.txt", 'w+')
         # 1小时表数据备份
