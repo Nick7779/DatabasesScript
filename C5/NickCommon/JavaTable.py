@@ -193,8 +193,9 @@ if __name__ == '__main__':
     # asset_class_list = [(1010, 'Electronic Lock', 10, 'electronic_lock', None, '电子锁', 'elec_lock_', 99)]
     # asset_class_list = [(1011, 'Heat Exchanger', 11, 'heat_exchanger', None, '热交换器', 'heat_ex_', 99)]
     # asset_class_list = [(1013, 'Fuel Level Sensor', 13, 'fuel', None, '液位计', 'fuel_', 99)]
-    asset_class_list = [(1024, 'ATS', 24, 'ats', None, 'ATS', 'ats_', 99)]
-    # asset_class_list = [(1027, 'Inverter', 22, 'inverter', None, '逆变器', 'inverter_', 99)]
+    # asset_class_list = [(1024, 'ATS', 24, 'ats', None, 'ATS', 'ats_', 99)]
+    asset_class_list = [(1027, 'Inverter', 22, 'inverter', None, '逆变器', 'inverter_', 99)]
+
 
     print(asset_class_list)
     # 依次生成所有资产类
