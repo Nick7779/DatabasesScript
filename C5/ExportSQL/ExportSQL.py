@@ -21,9 +21,9 @@ def equipment_model_sql():
     equipment_model_list = curses.fetchall()
     # ID最大值
     global modelId
-    for model in equipment_model_list:
-        if model[0] > modelId:
-            modelId = model[0]
+    # for model in equipment_model_list:
+    #     if model[0] > modelId:
+    #         modelId = model[0]
 
     for model in equipment_model_list:
         modelId += 1
@@ -78,8 +78,8 @@ def equipment_param_sql(model_old, model_new):
 
 if __name__ == '__main__':
     # 公司ID
-    company_id = 527844610047737856
-    modelId = 0
+    company_id = 533286671924330496
+    modelId = 1099694948917182576
 
     # 连接数据库
     conn = psycopg2.connect(database="owleye_sys_databse", user='postgres', password='@mail.3tech.net',
@@ -92,10 +92,10 @@ if __name__ == '__main__':
     curses.execute("select * from aiot_equipment_point")
     point_list = curses.fetchall()
     # ID最大值
-    point_id = 0
-    for point in point_list:
-        if point[0] > point_id:
-            point_id = point[0]
+    point_id = 1099695697046800813
+    # for point in point_list:
+    #     if point[0] > point_id:
+    #         point_id = point[0]
     print(point_id)
     # 创建文件夹，文件名为日期
     tnp = datetime.datetime.now().strftime('%Y%m%d')
