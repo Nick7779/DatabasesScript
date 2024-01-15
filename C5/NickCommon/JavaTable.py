@@ -174,6 +174,15 @@ def write_java_class_tail():
     JavaClassTableFile.writelines(default_tail)
 
 
+def write_update_sql():
+    update_sql = "ALTER TABLE {table_name}".format(table_name=table_name_snake)
+
+# ADD COLUMN grid_ac1_mains_failure FLOAT8,
+# ADD COLUMN grid_ac_alarm_state FLOAT8;
+# COMMENT ON COLUMN bak_grid_1h.grid_ac1_mains_failure IS "市电异常";
+# COMMENT ON COLUMN bak_grid_1h.grid_ac_alarm_state IS "交流告警状态";
+
+
 if __name__ == '__main__':
     conn = psycopg2.connect(database="owleye_sys_databse", user='postgres', password='@mail.3tech.net',
                             host='192.168.2.159',
@@ -197,8 +206,9 @@ if __name__ == '__main__':
     # asset_class_list = [(1024, 'ATS', 24, 'ats', None, 'ATS', 'ats_', 99)]
     # asset_class_list = [(1027, 'Inverter', 22, 'inverter', None, '逆变器', 'inverter_', 99)]
 
-
     print(asset_class_list)
+    # flag 为True时，生成表update语句
+    flag = True
     # 依次生成所有资产类
     for asset_class in asset_class_list:
         class_id = asset_class[0]
@@ -231,6 +241,8 @@ if __name__ == '__main__':
         # 1小时表数据备份
         Backups1hFile = open("../Excel2Data/Class/" + tnp + "/" + table_name + "1h.txt", 'w+')
         SqlCreateFile = open("../Excel2Data/Class/" + tnp + "/" + table_name + ".sql", 'w+')
+        if flag:
+            SqlUpdateFile = open("../Excel2Data/Class/" + tnp + "/" + table_name + "_update.sql", 'w+')
         # 创建表结构SQL
         write_create15m_sql()
         write_create1h_sql()
@@ -256,6 +268,9 @@ if __name__ == '__main__':
             write_java_class_txt()
             # 写入备份数据
             write_backups_txt()
+            # 写入更新表结构SQL
+            if flag:
+                write_update_sql()
         Backups15mFile.writelines("private static final long serialVersionUID = 1L;")
         Backups1hFile.writelines("private static final long serialVersionUID = 1L;")
         # 写入Java类尾部

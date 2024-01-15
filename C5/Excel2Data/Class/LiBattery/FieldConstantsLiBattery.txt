@@ -1058,3 +1058,19 @@
  * 电池mos 温度. 
  */ 
  String LI_BA_MOS_TEMP = "li_ba_mos_temp";
+ /** 
+ * 过温点. 
+ */ 
+ String LI_BA_OVER_TEMP_POINT = "li_ba_over_temp_point";
+ /** 
+ * 高温点. 
+ */ 
+ String LI_BA_HIGH_TEMP_POINT = "li_ba_high_temp_point";
+ /** 
+ * 低温点. 
+ */ 
+ String LI_BA_LOW_TEMP_POINT = "li_ba_low_temp_point";
+ /** 
+ * 传感器配置. 
+ */ 
+ String LI_BA_SENSOR_TEMP_CONFIG = "li_ba_sensor_temp_config";

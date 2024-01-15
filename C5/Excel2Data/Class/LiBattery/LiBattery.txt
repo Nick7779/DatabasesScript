@@ -1339,6 +1339,26 @@
  */ 
  @Column(name = "li_ba_mos_temp") 
  private Double liBaMosTemp;
+ /** 
+ * 过温点.Over temp point 
+ */ 
+ @Column(name = "li_ba_over_temp_point") 
+ private Double liBaOverTempPoint;
+ /** 
+ * 高温点.High temp point 
+ */ 
+ @Column(name = "li_ba_high_temp_point") 
+ private Double liBaHighTempPoint;
+ /** 
+ * 低温点.Low temp point 
+ */ 
+ @Column(name = "li_ba_low_temp_point") 
+ private Double liBaLowTempPoint;
+ /** 
+ * 传感器配置.Sensor Temp Config 
+ */ 
+ @Column(name = "li_ba_sensor_temp_config") 
+ private Double liBaSensorTempConfig;
 
     public Date getTime() {
         return Date.from(time);

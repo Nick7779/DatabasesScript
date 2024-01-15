@@ -1323,4 +1323,24 @@
  */ 
  @ApiModelProperty("电池mos 温度") 
  private Double liBaMosTemp;
+/** 
+ * 过温点.Over temp point 
+ */ 
+ @ApiModelProperty("过温点") 
+ private Double liBaOverTempPoint;
+/** 
+ * 高温点.High temp point 
+ */ 
+ @ApiModelProperty("高温点") 
+ private Double liBaHighTempPoint;
+/** 
+ * 低温点.Low temp point 
+ */ 
+ @ApiModelProperty("低温点") 
+ private Double liBaLowTempPoint;
+/** 
+ * 传感器配置.Sensor Temp Config 
+ */ 
+ @ApiModelProperty("传感器配置") 
+ private Double liBaSensorTempConfig;
 private static final long serialVersionUID = 1L;
