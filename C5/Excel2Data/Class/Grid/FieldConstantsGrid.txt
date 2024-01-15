@@ -234,3 +234,27 @@
  * 市电LED状态. 
  */ 
  String GRID_LED_STATUS = "grid_led_status";
+ /** 
+ * 交流过压点. 
+ */ 
+ String GRID_AC_OVER_VOLT = "grid_ac_over_volt";
+ /** 
+ * 交流欠压点. 
+ */ 
+ String GRID_AC_LOW_VOLT = "grid_ac_low_volt";
+ /** 
+ * 交流缺相点. 
+ */ 
+ String GRID_AC_LOST_VOLT = "grid_ac_lost_volt";
+ /** 
+ * 频率过高点. 
+ */ 
+ String GRID_LOW_FREQUENCY_POINT = "grid_low_frequency_point";
+ /** 
+ * 交流相数. 
+ */ 
+ String GRID_AC_PHASE_NUMBER = "grid_ac_phase_number";
+ /** 
+ * AC路数. 
+ */ 
+ String GRID_AC_ROUTES_NUMBER = "grid_ac_routes_number";

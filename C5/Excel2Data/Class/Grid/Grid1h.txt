@@ -293,4 +293,34 @@
  */ 
  @ApiModelProperty("市电LED状态") 
  private Long gridLedStatus;
+/** 
+ * 交流过压点.AC Over Volt 
+ */ 
+ @ApiModelProperty("交流过压点") 
+ private Double gridAcOverVolt;
+/** 
+ * 交流欠压点.AC Low Volt 
+ */ 
+ @ApiModelProperty("交流欠压点") 
+ private Double gridAcLowVolt;
+/** 
+ * 交流缺相点.AC Lost Volt 
+ */ 
+ @ApiModelProperty("交流缺相点") 
+ private Double gridAcLostVolt;
+/** 
+ * 频率过高点.High frequency point 
+ */ 
+ @ApiModelProperty("频率过高点") 
+ private Double gridLowFrequencyPoint;
+/** 
+ * 交流相数.AC phase number 
+ */ 
+ @ApiModelProperty("交流相数") 
+ private Double gridAcPhaseNumber;
+/** 
+ * AC路数.AC routes Number 
+ */ 
+ @ApiModelProperty("AC路数") 
+ private Double gridAcRoutesNumber;
 private static final long serialVersionUID = 1L;

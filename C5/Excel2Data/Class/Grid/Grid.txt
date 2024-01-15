@@ -309,6 +309,36 @@
  */ 
  @Column(name = "grid_led_status") 
  private Long gridLedStatus;
+ /** 
+ * 交流过压点.AC Over Volt 
+ */ 
+ @Column(name = "grid_ac_over_volt") 
+ private Double gridAcOverVolt;
+ /** 
+ * 交流欠压点.AC Low Volt 
+ */ 
+ @Column(name = "grid_ac_low_volt") 
+ private Double gridAcLowVolt;
+ /** 
+ * 交流缺相点.AC Lost Volt 
+ */ 
+ @Column(name = "grid_ac_lost_volt") 
+ private Double gridAcLostVolt;
+ /** 
+ * 频率过高点.High frequency point 
+ */ 
+ @Column(name = "grid_low_frequency_point") 
+ private Double gridLowFrequencyPoint;
+ /** 
+ * 交流相数.AC phase number 
+ */ 
+ @Column(name = "grid_ac_phase_number") 
+ private Double gridAcPhaseNumber;
+ /** 
+ * AC路数.AC routes Number 
+ */ 
+ @Column(name = "grid_ac_routes_number") 
+ private Double gridAcRoutesNumber;
 
     public Date getTime() {
         return Date.from(time);
