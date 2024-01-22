@@ -140,7 +140,7 @@ COMMENT ON COLUMN "public"."bak_grid_15m"."grid_ac_low_volt" IS '交流欠压点';
 COMMENT ON COLUMN "public"."bak_grid_15m"."grid_ac_lost_volt" IS '交流缺相点'; 
 COMMENT ON COLUMN "public"."bak_grid_15m"."grid_low_frequency_point" IS '频率过高点'; 
 COMMENT ON COLUMN "public"."bak_grid_15m"."grid_ac_phase_number" IS '交流相数'; 
-COMMENT ON COLUMN "public"."bak_grid_15m"."grid_ac_routes_number" IS 'AC路数'; 
+COMMENT ON COLUMN "public"."bak_grid_15m"."grid_ac_routes_number" IS 'AC路数';
 DROP TABLE IF EXISTS "public"."bak_grid_1h";
                             CREATE TABLE "public"."bak_grid_1h" (
                           "id" int8,

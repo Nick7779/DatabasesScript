@@ -219,6 +219,41 @@
  */ 
  @Column(name = "load_dc_dc_alarm_state") 
  private Long loadDcDcAlarmState;
+ /** 
+ * 下电电压.LLVD.V 
+ */ 
+ @Column(name = "load_dc_llvd_vol") 
+ private Double loadDcLlvdVol;
+ /** 
+ * 恢复电压.LLVD1.Rec.V 
+ */ 
+ @Column(name = "load_dc_llvd1_rec_vol") 
+ private Double loadDcLlvd1RecVol;
+ /** 
+ * 下电时间.LLVD1.Time 
+ */ 
+ @Column(name = "load_dc_llvd1_time") 
+ private Double loadDcLlvd1Time;
+ /** 
+ * 负载1下电模式.LVD1 Mode 
+ */ 
+ @Column(name = "load_dc_lvd1_mode") 
+ private Double loadDcLvd1Mode;
+ /** 
+ * 负载2下电模式.LVD2 Mode 
+ */ 
+ @Column(name = "load_dc_lvd2_mode") 
+ private Double loadDcLvd2Mode;
+ /** 
+ * 负载3下电模式.LVD3 Mode 
+ */ 
+ @Column(name = "load_dc_lvd3_mode") 
+ private Double loadDcLvd3Mode;
+ /** 
+ * 负载4下电模式.LVD4 Mode 
+ */ 
+ @Column(name = "load_dc_lvd4_mode") 
+ private Double loadDcLvd4Mode;
 
     public Date getTime() {
         return Date.from(time);

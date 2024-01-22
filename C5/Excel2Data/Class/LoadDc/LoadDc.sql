@@ -46,7 +46,14 @@ load_dc_load2_last_month_energy float8,
 load_dc_load_branch_insulation_fault int8,
 load_dc_dc_total_load_slight_over int8,
 load_dc_dc_total_load_severe_over int8,
-load_dc_dc_alarm_state int8); 
+load_dc_dc_alarm_state int8,
+load_dc_llvd_vol float8,
+load_dc_llvd1_rec_vol float8,
+load_dc_llvd1_time float8,
+load_dc_lvd1_mode float8,
+load_dc_lvd2_mode float8,
+load_dc_lvd3_mode float8,
+load_dc_lvd4_mode float8); 
 COMMENT ON COLUMN "public"."bak_load_dc_15m"."id" IS '主键';
 COMMENT ON COLUMN "public"."bak_load_dc_15m"."create_time" IS '创建时间';
 COMMENT ON COLUMN "public"."bak_load_dc_15m"."customer_id" IS '公司ID';
@@ -93,6 +100,45 @@ COMMENT ON COLUMN "public"."bak_load_dc_15m"."load_dc_load_branch_insulation_fau
 COMMENT ON COLUMN "public"."bak_load_dc_15m"."load_dc_dc_total_load_slight_over" IS ' 直流总负载略超'; 
 COMMENT ON COLUMN "public"."bak_load_dc_15m"."load_dc_dc_total_load_severe_over" IS '直流总负载严重超过'; 
 COMMENT ON COLUMN "public"."bak_load_dc_15m"."load_dc_dc_alarm_state" IS '直流告警状态'; 
+COMMENT ON COLUMN "public"."bak_load_dc_15m"."load_dc_llvd_vol" IS '下电电压'; 
+COMMENT ON COLUMN "public"."bak_load_dc_15m"."load_dc_llvd1_rec_vol" IS '恢复电压'; 
+COMMENT ON COLUMN "public"."bak_load_dc_15m"."load_dc_llvd1_time" IS '下电时间'; 
+COMMENT ON COLUMN "public"."bak_load_dc_15m"."load_dc_lvd1_mode" IS '负载1下电模式'; 
+COMMENT ON COLUMN "public"."bak_load_dc_15m"."load_dc_lvd2_mode" IS '负载2下电模式'; 
+COMMENT ON COLUMN "public"."bak_load_dc_15m"."load_dc_lvd3_mode" IS '负载3下电模式'; 
+COMMENT ON COLUMN "public"."bak_load_dc_15m"."load_dc_lvd4_mode" IS '负载4下电模式';
+
+ALTER TABLE bak_load_dc_15m
+    ADD COLUMN load_dc_llvd_vol FLOAT8,
+    ADD COLUMN load_dc_llvd1_rec_vol FLOAT8,
+    ADD COLUMN load_dc_llvd1_time FLOAT8,
+    ADD COLUMN load_dc_lvd1_mode FLOAT8,
+    ADD COLUMN load_dc_lvd2_mode FLOAT8,
+    ADD COLUMN load_dc_lvd3_mode FLOAT8,
+    ADD COLUMN load_dc_lvd4_mode FLOAT8;
+    COMMENT ON COLUMN bak_load_dc_15m.load_dc_llvd_vol IS '下电电压';
+    COMMENT ON COLUMN bak_load_dc_15m.load_dc_llvd1_rec_vol IS '恢复电压';
+    COMMENT ON COLUMN bak_load_dc_15m.load_dc_llvd1_time IS '下电时间';
+    COMMENT ON COLUMN bak_load_dc_15m.load_dc_lvd1_mode IS '负载1下电模式';
+    COMMENT ON COLUMN bak_load_dc_15m.load_dc_lvd2_mode IS '负载2下电模式';
+    COMMENT ON COLUMN bak_load_dc_15m.load_dc_lvd3_mode IS '负载3下电模式';
+    COMMENT ON COLUMN bak_load_dc_15m.load_dc_lvd4_mode IS '负载4下电模';
+ALTER TABLE bak_load_dc_1h
+    ADD COLUMN load_dc_llvd_vol FLOAT8,
+    ADD COLUMN load_dc_llvd1_rec_vol FLOAT8,
+    ADD COLUMN load_dc_llvd1_time FLOAT8,
+    ADD COLUMN load_dc_lvd1_mode FLOAT8,
+    ADD COLUMN load_dc_lvd2_mode FLOAT8,
+    ADD COLUMN load_dc_lvd3_mode FLOAT8,
+    ADD COLUMN load_dc_lvd4_mode FLOAT8;
+    COMMENT ON COLUMN bak_load_dc_1h.load_dc_llvd_vol IS '下电电压';
+    COMMENT ON COLUMN bak_load_dc_1h.load_dc_llvd1_rec_vol IS '恢复电压';
+    COMMENT ON COLUMN bak_load_dc_1h.load_dc_llvd1_time IS '下电时间';
+    COMMENT ON COLUMN bak_load_dc_1h.load_dc_lvd1_mode IS '负载1下电模式';
+    COMMENT ON COLUMN bak_load_dc_1h.load_dc_lvd2_mode IS '负载2下电模式';
+    COMMENT ON COLUMN bak_load_dc_1h.load_dc_lvd3_mode IS '负载3下电模式';
+    COMMENT ON COLUMN bak_load_dc_1h.load_dc_lvd4_mode IS '负载4下电模';
+
 DROP TABLE IF EXISTS "public"."bak_load_dc_1h";
                             CREATE TABLE "public"."bak_load_dc_1h" (
                           "id" int8,
@@ -141,7 +187,14 @@ load_dc_load2_last_month_energy float8,
 load_dc_load_branch_insulation_fault int8,
 load_dc_dc_total_load_slight_over int8,
 load_dc_dc_total_load_severe_over int8,
-load_dc_dc_alarm_state int8); 
+load_dc_dc_alarm_state int8,
+load_dc_llvd_vol float8,
+load_dc_llvd1_rec_vol float8,
+load_dc_llvd1_time float8,
+load_dc_lvd1_mode float8,
+load_dc_lvd2_mode float8,
+load_dc_lvd3_mode float8,
+load_dc_lvd4_mode float8); 
 COMMENT ON COLUMN "public"."bak_load_dc_1h"."id" IS '主键';
     COMMENT ON COLUMN "public"."bak_load_dc_1h"."create_time" IS '创建时间';
     COMMENT ON COLUMN "public"."bak_load_dc_1h"."customer_id" IS '公司ID';
@@ -188,3 +241,10 @@ COMMENT ON COLUMN "public"."bak_load_dc_1h"."load_dc_load_branch_insulation_faul
 COMMENT ON COLUMN "public"."bak_load_dc_1h"."load_dc_dc_total_load_slight_over" IS ' 直流总负载略超'; 
 COMMENT ON COLUMN "public"."bak_load_dc_1h"."load_dc_dc_total_load_severe_over" IS '直流总负载严重超过'; 
 COMMENT ON COLUMN "public"."bak_load_dc_1h"."load_dc_dc_alarm_state" IS '直流告警状态'; 
+COMMENT ON COLUMN "public"."bak_load_dc_1h"."load_dc_llvd_vol" IS '下电电压'; 
+COMMENT ON COLUMN "public"."bak_load_dc_1h"."load_dc_llvd1_rec_vol" IS '恢复电压'; 
+COMMENT ON COLUMN "public"."bak_load_dc_1h"."load_dc_llvd1_time" IS '下电时间'; 
+COMMENT ON COLUMN "public"."bak_load_dc_1h"."load_dc_lvd1_mode" IS '负载1下电模式'; 
+COMMENT ON COLUMN "public"."bak_load_dc_1h"."load_dc_lvd2_mode" IS '负载2下电模式'; 
+COMMENT ON COLUMN "public"."bak_load_dc_1h"."load_dc_lvd3_mode" IS '负载3下电模式'; 
+COMMENT ON COLUMN "public"."bak_load_dc_1h"."load_dc_lvd4_mode" IS '负载4下电模式'; 

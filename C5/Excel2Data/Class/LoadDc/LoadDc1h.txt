@@ -203,4 +203,39 @@
  */ 
  @ApiModelProperty("直流告警状态") 
  private Long loadDcDcAlarmState;
+/** 
+ * 下电电压.LLVD.V 
+ */ 
+ @ApiModelProperty("下电电压") 
+ private Double loadDcLlvdVol;
+/** 
+ * 恢复电压.LLVD1.Rec.V 
+ */ 
+ @ApiModelProperty("恢复电压") 
+ private Double loadDcLlvd1RecVol;
+/** 
+ * 下电时间.LLVD1.Time 
+ */ 
+ @ApiModelProperty("下电时间") 
+ private Double loadDcLlvd1Time;
+/** 
+ * 负载1下电模式.LVD1 Mode 
+ */ 
+ @ApiModelProperty("负载1下电模式") 
+ private Double loadDcLvd1Mode;
+/** 
+ * 负载2下电模式.LVD2 Mode 
+ */ 
+ @ApiModelProperty("负载2下电模式") 
+ private Double loadDcLvd2Mode;
+/** 
+ * 负载3下电模式.LVD3 Mode 
+ */ 
+ @ApiModelProperty("负载3下电模式") 
+ private Double loadDcLvd3Mode;
+/** 
+ * 负载4下电模式.LVD4 Mode 
+ */ 
+ @ApiModelProperty("负载4下电模式") 
+ private Double loadDcLvd4Mode;
 private static final long serialVersionUID = 1L;

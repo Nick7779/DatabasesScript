@@ -162,3 +162,31 @@
  * 直流告警状态. 
  */ 
  String LOAD_DC_DC_ALARM_STATE = "load_dc_dc_alarm_state";
+ /** 
+ * 下电电压. 
+ */ 
+ String LOAD_DC_LLVD_VOL = "load_dc_llvd_vol";
+ /** 
+ * 恢复电压. 
+ */ 
+ String LOAD_DC_LLVD1_REC_VOL = "load_dc_llvd1_rec_vol";
+ /** 
+ * 下电时间. 
+ */ 
+ String LOAD_DC_LLVD1_TIME = "load_dc_llvd1_time";
+ /** 
+ * 负载1下电模式. 
+ */ 
+ String LOAD_DC_LVD1_MODE = "load_dc_lvd1_mode";
+ /** 
+ * 负载2下电模式. 
+ */ 
+ String LOAD_DC_LVD2_MODE = "load_dc_lvd2_mode";
+ /** 
+ * 负载3下电模式. 
+ */ 
+ String LOAD_DC_LVD3_MODE = "load_dc_lvd3_mode";
+ /** 
+ * 负载4下电模式. 
+ */ 
+ String LOAD_DC_LVD4_MODE = "load_dc_lvd4_mode";
