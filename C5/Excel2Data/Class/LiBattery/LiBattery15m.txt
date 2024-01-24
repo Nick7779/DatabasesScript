@@ -1343,4 +1343,34 @@
  */ 
  @ApiModelProperty("传感器配置") 
  private Double liBaSensorTempConfig;
+/** 
+ * 放电模式状态.Discharge mode status 
+ */ 
+ @ApiModelProperty("放电模式状态") 
+ private Long liBaDischargeModeStatus;
+/** 
+ * 总运行状态.Overall running status 
+ */ 
+ @ApiModelProperty("总运行状态") 
+ private Long liBaOverallRunningStatus;
+/** 
+ * 电池温度低.Batt1 Temp Low 
+ */ 
+ @ApiModelProperty("电池温度低") 
+ private Long liBaTempLow;
+/** 
+ * 电池温度高.Temp High 
+ */ 
+ @ApiModelProperty("电池温度高") 
+ private Long liBaTempHigh;
+/** 
+ * 电池温度过高.Overtemperature alarm 
+ */ 
+ @ApiModelProperty("电池温度过高") 
+ private Long liBaOverTemp;
+/** 
+ * 电池保险丝报警.Fuse Alarm 
+ */ 
+ @ApiModelProperty("电池保险丝报警") 
+ private Long liBaFuseAlarm;
 private static final long serialVersionUID = 1L;

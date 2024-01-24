@@ -1074,3 +1074,27 @@
  * 传感器配置. 
  */ 
  String LI_BA_SENSOR_TEMP_CONFIG = "li_ba_sensor_temp_config";
+ /** 
+ * 放电模式状态. 
+ */ 
+ String LI_BA_DISCHARGE_MODE_STATUS = "li_ba_discharge_mode_status";
+ /** 
+ * 总运行状态. 
+ */ 
+ String LI_BA_OVERALL_RUNNING_STATUS = "li_ba_overall_running_status";
+ /** 
+ * 电池温度低. 
+ */ 
+ String LI_BA_TEMP_LOW = "li_ba_temp_low";
+ /** 
+ * 电池温度高. 
+ */ 
+ String LI_BA_TEMP_HIGH = "li_ba_temp_high";
+ /** 
+ * 电池温度过高. 
+ */ 
+ String LI_BA_OVER_TEMP = "li_ba_over_temp";
+ /** 
+ * 电池保险丝报警. 
+ */ 
+ String LI_BA_FUSE_ALARM = "li_ba_fuse_alarm";

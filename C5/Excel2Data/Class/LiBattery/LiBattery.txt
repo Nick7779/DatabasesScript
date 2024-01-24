@@ -1359,6 +1359,36 @@
  */ 
  @Column(name = "li_ba_sensor_temp_config") 
  private Double liBaSensorTempConfig;
+ /** 
+ * 放电模式状态.Discharge mode status 
+ */ 
+ @Column(name = "li_ba_discharge_mode_status") 
+ private Long liBaDischargeModeStatus;
+ /** 
+ * 总运行状态.Overall running status 
+ */ 
+ @Column(name = "li_ba_overall_running_status") 
+ private Long liBaOverallRunningStatus;
+ /** 
+ * 电池温度低.Batt1 Temp Low 
+ */ 
+ @Column(name = "li_ba_temp_low") 
+ private Long liBaTempLow;
+ /** 
+ * 电池温度高.Temp High 
+ */ 
+ @Column(name = "li_ba_temp_high") 
+ private Long liBaTempHigh;
+ /** 
+ * 电池温度过高.Overtemperature alarm 
+ */ 
+ @Column(name = "li_ba_over_temp") 
+ private Long liBaOverTemp;
+ /** 
+ * 电池保险丝报警.Fuse Alarm 
+ */ 
+ @Column(name = "li_ba_fuse_alarm") 
+ private Long liBaFuseAlarm;
 
     public Date getTime() {
         return Date.from(time);
