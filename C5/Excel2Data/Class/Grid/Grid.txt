@@ -339,6 +339,86 @@
  */ 
  @Column(name = "grid_ac_routes_number") 
  private Double gridAcRoutesNumber;
+ /** 
+ * 电流总谐波失真.THD Current 
+ */ 
+ @Column(name = "grid_thd_current") 
+ private Long gridThdCurrent;
+ /** 
+ * L1电流总谐波失真.L1 Current THD 
+ */ 
+ @Column(name = "grid_l1_current_thd") 
+ private Long gridL1CurrentThd;
+ /** 
+ * L2电流总谐波失真.L2 Current THD 
+ */ 
+ @Column(name = "grid_l2_current_thd") 
+ private Long gridL2CurrentThd;
+ /** 
+ * L3电流总谐波失真.L3 Current THD 
+ */ 
+ @Column(name = "grid_l3_current_thd") 
+ private Long gridL3CurrentThd;
+ /** 
+ * 最高负荷供电.Apparent Power Max Demand 
+ */ 
+ @Column(name = "grid_apparent_power_max_demand") 
+ private Long gridApparentPowerMaxDemand;
+ /** 
+ * 总有效能耗.Total Active Energy Consumption 
+ */ 
+ @Column(name = "grid_total_active_energy_consumption") 
+ private Double gridTotalActiveEnergyConsumption;
+ /** 
+ * 交流L1故障.AC L1 PH Fail 
+ */ 
+ @Column(name = "grid_ac_l1_ph_fail") 
+ private Long gridAcL1PhFail;
+ /** 
+ * 交流L1电压低.AC L1 Vol Low 
+ */ 
+ @Column(name = "grid_ac_l1_vol_low") 
+ private Long gridAcL1VolLow;
+ /** 
+ * 交流L1电压高.AC L1 Vol High 
+ */ 
+ @Column(name = "grid_ac_l1_vol_high") 
+ private Long gridAcL1VolHigh;
+ /** 
+ * 交流L2故障.AC L2 PH Fail 
+ */ 
+ @Column(name = "grid_ac_l2_ph_fail") 
+ private Long gridAcL2PhFail;
+ /** 
+ * 交流L2电压低.AC L2 Vol Low 
+ */ 
+ @Column(name = "grid_ac_l2_vol_low") 
+ private Long gridAcL2VolLow;
+ /** 
+ * 交流L2电压高.AC L2 Vol High 
+ */ 
+ @Column(name = "grid_ac_l2_vol_high") 
+ private Long gridAcL2VolHigh;
+ /** 
+ * 交流L3故障.AC L3 PH Fail 
+ */ 
+ @Column(name = "grid_ac_l3_ph_fail") 
+ private Long gridAcL3PhFail;
+ /** 
+ * 交流L3电压低.AC L3 Vol Low 
+ */ 
+ @Column(name = "grid_ac_l3_vol_low") 
+ private Long gridAcL3VolLow;
+ /** 
+ * 电流不平衡.Curr Imbalance 
+ */ 
+ @Column(name = "grid_curr_imbalance") 
+ private Long gridCurrImbalance;
+ /** 
+ * 交流L3电压高.AC L3 Vol High 
+ */ 
+ @Column(name = "grid_ac_l3_vol_high") 
+ private Long gridAcL3VolHigh;
 
     public Date getTime() {
         return Date.from(time);

@@ -323,4 +323,84 @@
  */ 
  @ApiModelProperty("AC路数") 
  private Double gridAcRoutesNumber;
+/** 
+ * 电流总谐波失真.THD Current 
+ */ 
+ @ApiModelProperty("电流总谐波失真") 
+ private Long gridThdCurrent;
+/** 
+ * L1电流总谐波失真.L1 Current THD 
+ */ 
+ @ApiModelProperty("L1电流总谐波失真") 
+ private Long gridL1CurrentThd;
+/** 
+ * L2电流总谐波失真.L2 Current THD 
+ */ 
+ @ApiModelProperty("L2电流总谐波失真") 
+ private Long gridL2CurrentThd;
+/** 
+ * L3电流总谐波失真.L3 Current THD 
+ */ 
+ @ApiModelProperty("L3电流总谐波失真") 
+ private Long gridL3CurrentThd;
+/** 
+ * 最高负荷供电.Apparent Power Max Demand 
+ */ 
+ @ApiModelProperty("最高负荷供电") 
+ private Long gridApparentPowerMaxDemand;
+/** 
+ * 总有效能耗.Total Active Energy Consumption 
+ */ 
+ @ApiModelProperty("总有效能耗") 
+ private Double gridTotalActiveEnergyConsumption;
+/** 
+ * 交流L1故障.AC L1 PH Fail 
+ */ 
+ @ApiModelProperty("交流L1故障") 
+ private Long gridAcL1PhFail;
+/** 
+ * 交流L1电压低.AC L1 Vol Low 
+ */ 
+ @ApiModelProperty("交流L1电压低") 
+ private Long gridAcL1VolLow;
+/** 
+ * 交流L1电压高.AC L1 Vol High 
+ */ 
+ @ApiModelProperty("交流L1电压高") 
+ private Long gridAcL1VolHigh;
+/** 
+ * 交流L2故障.AC L2 PH Fail 
+ */ 
+ @ApiModelProperty("交流L2故障") 
+ private Long gridAcL2PhFail;
+/** 
+ * 交流L2电压低.AC L2 Vol Low 
+ */ 
+ @ApiModelProperty("交流L2电压低") 
+ private Long gridAcL2VolLow;
+/** 
+ * 交流L2电压高.AC L2 Vol High 
+ */ 
+ @ApiModelProperty("交流L2电压高") 
+ private Long gridAcL2VolHigh;
+/** 
+ * 交流L3故障.AC L3 PH Fail 
+ */ 
+ @ApiModelProperty("交流L3故障") 
+ private Long gridAcL3PhFail;
+/** 
+ * 交流L3电压低.AC L3 Vol Low 
+ */ 
+ @ApiModelProperty("交流L3电压低") 
+ private Long gridAcL3VolLow;
+/** 
+ * 电流不平衡.Curr Imbalance 
+ */ 
+ @ApiModelProperty("电流不平衡") 
+ private Long gridCurrImbalance;
+/** 
+ * 交流L3电压高.AC L3 Vol High 
+ */ 
+ @ApiModelProperty("交流L3电压高") 
+ private Long gridAcL3VolHigh;
 private static final long serialVersionUID = 1L;

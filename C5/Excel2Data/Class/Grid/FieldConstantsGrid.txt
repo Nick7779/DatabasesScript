@@ -258,3 +258,67 @@
  * AC路数. 
  */ 
  String GRID_AC_ROUTES_NUMBER = "grid_ac_routes_number";
+ /** 
+ * 电流总谐波失真. 
+ */ 
+ String GRID_THD_CURRENT = "grid_thd_current";
+ /** 
+ * L1电流总谐波失真. 
+ */ 
+ String GRID_L1_CURRENT_THD = "grid_l1_current_thd";
+ /** 
+ * L2电流总谐波失真. 
+ */ 
+ String GRID_L2_CURRENT_THD = "grid_l2_current_thd";
+ /** 
+ * L3电流总谐波失真. 
+ */ 
+ String GRID_L3_CURRENT_THD = "grid_l3_current_thd";
+ /** 
+ * 最高负荷供电. 
+ */ 
+ String GRID_APPARENT_POWER_MAX_DEMAND = "grid_apparent_power_max_demand";
+ /** 
+ * 总有效能耗. 
+ */ 
+ String GRID_TOTAL_ACTIVE_ENERGY_CONSUMPTION = "grid_total_active_energy_consumption";
+ /** 
+ * 交流L1故障. 
+ */ 
+ String GRID_AC_L1_PH_FAIL = "grid_ac_l1_ph_fail";
+ /** 
+ * 交流L1电压低. 
+ */ 
+ String GRID_AC_L1_VOL_LOW = "grid_ac_l1_vol_low";
+ /** 
+ * 交流L1电压高. 
+ */ 
+ String GRID_AC_L1_VOL_HIGH = "grid_ac_l1_vol_high";
+ /** 
+ * 交流L2故障. 
+ */ 
+ String GRID_AC_L2_PH_FAIL = "grid_ac_l2_ph_fail";
+ /** 
+ * 交流L2电压低. 
+ */ 
+ String GRID_AC_L2_VOL_LOW = "grid_ac_l2_vol_low";
+ /** 
+ * 交流L2电压高. 
+ */ 
+ String GRID_AC_L2_VOL_HIGH = "grid_ac_l2_vol_high";
+ /** 
+ * 交流L3故障. 
+ */ 
+ String GRID_AC_L3_PH_FAIL = "grid_ac_l3_ph_fail";
+ /** 
+ * 交流L3电压低. 
+ */ 
+ String GRID_AC_L3_VOL_LOW = "grid_ac_l3_vol_low";
+ /** 
+ * 电流不平衡. 
+ */ 
+ String GRID_CURR_IMBALANCE = "grid_curr_imbalance";
+ /** 
+ * 交流L3电压高. 
+ */ 
+ String GRID_AC_L3_VOL_HIGH = "grid_ac_l3_vol_high";
