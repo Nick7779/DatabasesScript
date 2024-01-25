@@ -175,11 +175,10 @@ def write_java_class_tail():
 
 
 def write_update_sql():
-    update_sql_heat = f"ALTER TABLE bak_{table_name_snake}_15m \n"
-    SqlUpdateFile.writelines(update_sql_heat)
-
-    field_row_sql_list = []
-    comment_sql_list = []
+    field_row_sql_list15m = []
+    field_row_sql_list1h = []
+    comment_sql_list15m = []
+    comment_sql_list1h = []
     for point in asset_point_list:
         update_name = point[1]
         update_field = point[3]
@@ -190,10 +189,17 @@ def write_update_sql():
             field_row_sql = f"ADD COLUMN {update_field} float8"
         else:
             field_row_sql = f"ADD COLUMN {update_field} varchar(255)"
-        field_row_sql_list.append(field_row_sql)
-        comment_sql_list.append(f'''COMMENT ON COLUMN "public"."bak_{table_name_snake}_15m"."{update_field}" IS '{update_name}'; \n''')
-    SqlUpdateFile.write(",\n".join(field_row_sql_list) + "; \n")
-    SqlUpdateFile.writelines(comment_sql_list)
+        field_row_sql_list15m.append(field_row_sql)
+        field_row_sql_list1h.append(field_row_sql)
+        comment_sql_list15m.append(f'''COMMENT ON COLUMN "public"."bak_{table_name_snake}_15m"."{update_field}" IS '{update_name}'; \n''')
+        comment_sql_list1h.append(f'''COMMENT ON COLUMN "public"."bak_{table_name_snake}_1h"."{update_field}" IS '{update_name}'; \n''')
+
+    SqlUpdateFile.writelines(f"ALTER TABLE bak_{table_name_snake}_15m \n")
+    SqlUpdateFile.write(",\n".join(field_row_sql_list15m) + "; \n")
+    SqlUpdateFile.writelines(comment_sql_list15m)
+    SqlUpdateFile.writelines(f"\nALTER TABLE bak_{table_name_snake}_1h \n")
+    SqlUpdateFile.write(",\n".join(field_row_sql_list1h) + "; \n")
+    SqlUpdateFile.writelines(comment_sql_list1h)
 
 if __name__ == '__main__':
     conn = psycopg2.connect(database="owleye_sys_databse", user='postgres', password='@mail.3tech.net',
@@ -215,10 +221,10 @@ if __name__ == '__main__':
     # asset_class_list = [(1011, 'Heat Exchanger', 11, 'heat_exchanger', None, '热交换器', 'heat_ex_', 99)]
     # asset_class_list = [(1012, 'Hybrid System', 12, 'site', None, '虚资产', 'site_', 99)]
     # asset_class_list = [(1013, 'Fuel Level Sensor', 13, 'fuel', None, '液位计', 'fuel_', 99)]
-    # asset_class_list = [(1015, 'Temp & humidity Sensor', 15, 'temp_humidity', None, '温湿度传感器', 'temp_humiture_', 99)]
+    asset_class_list = [(1015, 'Temp & humidity Sensor', 15, 'temp_humidity', None, '温湿度传感器', 'temp_humiture_', 99)]
     # asset_class_list = [(1024, 'ATS', 24, 'ats', None, 'ATS', 'ats_', 99)]
     # asset_class_list = [(1028, 'DiDo', 28, 'di', None, 'DiDo', 'dido_', 99)]
-    asset_class_list = [(1029, 'Sensors', 29, 'sensors', None, '传感器', 'sensors_', 99)]
+    # asset_class_list = [(1029, 'Sensors', 29, 'sensors', None, '传感器', 'sensors_', 99)]
 
     print(asset_class_list)
     # 依次生成所有资产类
