@@ -412,27 +412,3 @@ COMMENT ON COLUMN "public"."bak_site_1h"."site_boost_volt" IS '均充电压';
 COMMENT ON COLUMN "public"."bak_site_1h"."site_pv_over_volt_point" IS 'PV过压点'; 
 COMMENT ON COLUMN "public"."bak_site_1h"."site_pv_low_volt_point" IS 'PV欠压点'; 
 COMMENT ON COLUMN "public"."bak_site_1h"."site_manual_mode" IS '手动模式'; 
-
-ALTER TABLE bak_site_15m
-ADD COLUMN site_float_volt FLOAT8,
-ADD COLUMN site_boost_volt FLOAT8,
-ADD COLUMN site_pv_over_volt_point FLOAT8,
-ADD COLUMN site_pv_low_volt_point FLOAT8,
-ADD COLUMN site_manual_mode FLOAT8;
-COMMENT ON COLUMN bak_site_15m.site_float_volt IS '系统电压低';
-COMMENT ON COLUMN bak_site_15m.site_boost_volt IS 'LLVD1';
-COMMENT ON COLUMN bak_site_15m.site_pv_over_volt_point IS 'LLVD2';
-COMMENT ON COLUMN bak_site_15m.site_pv_low_volt_point IS 'LLVD3';
-COMMENT ON COLUMN bak_site_15m.site_manual_mode IS 'LLVD4';
-
-ALTER TABLE bak_site_1h
-ADD COLUMN site_float_volt FLOAT8,
-ADD COLUMN site_boost_volt FLOAT8,
-ADD COLUMN site_pv_over_volt_point FLOAT8,
-ADD COLUMN site_pv_low_volt_point FLOAT8,
-ADD COLUMN site_manual_mode FLOAT8;
-COMMENT ON COLUMN bak_site_1h.site_float_volt IS '系统电压低';
-COMMENT ON COLUMN bak_site_1h.site_boost_volt IS 'LLVD1';
-COMMENT ON COLUMN bak_site_1h.site_pv_over_volt_point IS 'LLVD2';
-COMMENT ON COLUMN bak_site_1h.site_pv_low_volt_point IS 'LLVD3';
-COMMENT ON COLUMN bak_site_1h.site_manual_mode IS 'LLVD4';

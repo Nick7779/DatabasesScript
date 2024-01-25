@@ -172,44 +172,7 @@ COMMENT ON COLUMN "public"."bak_grid_15m"."grid_ac_l2_vol_high" IS '交流L2电压高
 COMMENT ON COLUMN "public"."bak_grid_15m"."grid_ac_l3_ph_fail" IS '交流L3故障'; 
 COMMENT ON COLUMN "public"."bak_grid_15m"."grid_ac_l3_vol_low" IS '交流L3电压低'; 
 COMMENT ON COLUMN "public"."bak_grid_15m"."grid_curr_imbalance" IS '电流不平衡'; 
-COMMENT ON COLUMN "public"."bak_grid_15m"."grid_ac_l3_vol_high" IS '交流L3电压高';
-
-ALTER TABLE bak_grid_15m
-ADD COLUMN grid_thd_current FLOAT8,
-ADD COLUMN grid_l1_current_thd FLOAT8,
-ADD COLUMN grid_l2_current_thd FLOAT8,
-ADD COLUMN grid_l3_current_thd FLOAT8,
-ADD COLUMN grid_apparent_power_max_demand FLOAT8,
-ADD COLUMN grid_total_active_energy_consumption FLOAT8,
-ADD COLUMN grid_ac_l1_ph_fail FLOAT8,
-ADD COLUMN grid_ac_l1_vol_low FLOAT8,
-ADD COLUMN grid_ac_l1_vol_high FLOAT8,
-ADD COLUMN grid_ac_l2_ph_fail FLOAT8,
-ADD COLUMN grid_ac_l2_vol_low FLOAT8,
-ADD COLUMN grid_ac_l2_vol_high FLOAT8,
-ADD COLUMN grid_ac_l3_ph_fail FLOAT8,
-ADD COLUMN grid_ac_l3_vol_low FLOAT8,
-ADD COLUMN grid_curr_imbalance FLOAT8,
-ADD COLUMN grid_ac_l3_vol_high FLOAT8;
-COMMENT ON COLUMN bak_grid_15m.grid_thd_current IS '电流总谐波失真';
-COMMENT ON COLUMN bak_grid_15m.grid_l1_current_thd IS 'L1电流总谐波失真';
-COMMENT ON COLUMN bak_grid_15m.grid_l2_current_thd IS 'L2电流总谐波失真';
-COMMENT ON COLUMN bak_grid_15m.grid_l3_current_thd IS 'L3电流总谐波失真';
-COMMENT ON COLUMN bak_grid_15m.grid_apparent_power_max_demand IS '最高负荷供电';
-COMMENT ON COLUMN bak_grid_15m.grid_total_active_energy_consumption IS '总有效能耗';
-COMMENT ON COLUMN bak_grid_15m.grid_ac_l1_ph_fail IS '交流L1故障';
-COMMENT ON COLUMN bak_grid_15m.grid_ac_l1_vol_low IS '交流L1电压低';
-COMMENT ON COLUMN bak_grid_15m.grid_ac_l1_vol_high IS '交流L1电压高';
-COMMENT ON COLUMN bak_grid_15m.grid_ac_l2_ph_fail IS '交流L2故障';
-COMMENT ON COLUMN bak_grid_15m.grid_ac_l2_vol_low IS '交流L2电压低';
-COMMENT ON COLUMN bak_grid_15m.grid_ac_l2_vol_high IS '交流L2电压高';
-COMMENT ON COLUMN bak_grid_15m.grid_ac_l3_ph_fail IS '交流L3故障';
-COMMENT ON COLUMN bak_grid_15m.grid_ac_l3_vol_low IS '交流L3电压低';
-COMMENT ON COLUMN bak_grid_15m.grid_curr_imbalance IS '电流不平衡';
-COMMENT ON COLUMN bak_grid_15m.grid_ac_l3_vol_high IS '交流L3电压高';
-
-
-
+COMMENT ON COLUMN "public"."bak_grid_15m"."grid_ac_l3_vol_high" IS '交流L3电压高'; 
 DROP TABLE IF EXISTS "public"."bak_grid_1h";
                             CREATE TABLE "public"."bak_grid_1h" (
                           "id" int8,

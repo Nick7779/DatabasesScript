@@ -3,10 +3,6 @@
  */ 
  String RECTIFIER_NUMBER_OF_MODULES = "rectifier_number_of_modules";
  /** 
- * 整流器电压. 
- */ 
- String RECTIFIER_VOLTAGE = "rectifier_voltage";
- /** 
  * 整流器电流. 
  */ 
  String RECTIFIER_OUTPUT_CURRENT = "rectifier_output_current";

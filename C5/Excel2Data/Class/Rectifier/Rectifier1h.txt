@@ -4,11 +4,6 @@
  @ApiModelProperty("整流器模块数量") 
  private Long rectifierNumberOfModules;
 /** 
- * 整流器电压.Rectifier voltage 
- */ 
- @ApiModelProperty("整流器电压") 
- private Double rectifierVoltage;
-/** 
  * 整流器电流.Rectifier output current 
  */ 
  @ApiModelProperty("整流器电流") 

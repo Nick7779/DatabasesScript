@@ -1370,7 +1370,7 @@
  @Column(name = "li_ba_overall_running_status") 
  private Long liBaOverallRunningStatus;
  /** 
- * 电池温度低.Batt1 Temp Low 
+ * 电池温度低.Temp Low 
  */ 
  @Column(name = "li_ba_temp_low") 
  private Long liBaTempLow;

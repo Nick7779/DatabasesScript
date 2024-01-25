@@ -194,11 +194,6 @@ def write_update_sql():
         comment_sql_list.append(f'''COMMENT ON COLUMN "public"."bak_{table_name_snake}_15m"."{update_field}" IS '{update_name}'; \n''')
     SqlUpdateFile.write(",\n".join(field_row_sql_list) + "; \n")
     SqlUpdateFile.writelines(comment_sql_list)
-# ADD COLUMN grid_ac1_mains_failure FLOAT8,
-# ADD COLUMN grid_ac_alarm_state FLOAT8;
-# COMMENT ON COLUMN bak_grid_1h.grid_ac1_mains_failure IS "市电异常";
-# COMMENT ON COLUMN bak_grid_1h.grid_ac_alarm_state IS "交流告警状态";
-
 
 if __name__ == '__main__':
     conn = psycopg2.connect(database="owleye_sys_databse", user='postgres', password='@mail.3tech.net',
@@ -208,7 +203,7 @@ if __name__ == '__main__':
 
     # 获取资产类
     # asset_class_list = asset_class()
-    asset_class_list = [(1001, 'Solar', 1, 'solar', None, '太阳能', 'solar_', 99)]
+    # asset_class_list = [(1001, 'Solar', 1, 'solar', None, '太阳能', 'solar_', 99)]
     # asset_class_list = [(1002, 'Lithium Battery', 2, 'li_battery', None, '铁锂电池', 'li_ba', 99)]
     # asset_class_list = [(1003, 'Gel Battery', 3, 'gel_battery', None, '胶体电池', 'vrla_', 99)]
     # asset_class_list = [(1004, 'Grid', 4, 'grid', None, '市电', 'grid_', 99)]
@@ -220,13 +215,12 @@ if __name__ == '__main__':
     # asset_class_list = [(1011, 'Heat Exchanger', 11, 'heat_exchanger', None, '热交换器', 'heat_ex_', 99)]
     # asset_class_list = [(1012, 'Hybrid System', 12, 'site', None, '虚资产', 'site_', 99)]
     # asset_class_list = [(1013, 'Fuel Level Sensor', 13, 'fuel', None, '液位计', 'fuel_', 99)]
+    # asset_class_list = [(1015, 'Temp & humidity Sensor', 15, 'temp_humidity', None, '温湿度传感器', 'temp_humiture_', 99)]
     # asset_class_list = [(1024, 'ATS', 24, 'ats', None, 'ATS', 'ats_', 99)]
-    # asset_class_list = [(1027, 'Inverter', 22, 'inverter', None, '逆变器', 'inverter_', 99)]
     # asset_class_list = [(1028, 'DiDo', 28, 'di', None, 'DiDo', 'dido_', 99)]
+    asset_class_list = [(1029, 'Sensors', 29, 'sensors', None, '传感器', 'sensors_', 99)]
 
     print(asset_class_list)
-    # flag 为True时，生成表update语句
-    flag = True
     # 依次生成所有资产类
     for asset_class in asset_class_list:
         class_id = asset_class[0]
@@ -259,14 +253,12 @@ if __name__ == '__main__':
         # 1小时表数据备份
         Backups1hFile = open("../Excel2Data/Class/" + tnp + "/" + table_name + "1h.txt", 'w+')
         SqlCreateFile = open("../Excel2Data/Class/" + tnp + "/" + table_name + ".sql", 'w+')
-        if flag:
-            SqlUpdateFile = open("../Excel2Data/Class/" + tnp + "/" + table_name + "_update.sql", 'w+')
+        SqlUpdateFile = open("../Excel2Data/Class/" + tnp + "/" + table_name + "_update.sql", 'w+')
         # 创建表结构SQL
         write_create15m_sql()
         write_create1h_sql()
         # 写入更新表结构SQL
-        if flag:
-            write_update_sql()
+        write_update_sql()
         for asset_point in asset_point_list:
             # 中文名
             name = asset_point[1]

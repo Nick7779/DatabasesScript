@@ -560,22 +560,7 @@ COMMENT ON COLUMN "public"."bak_li_battery_15m"."li_ba_overall_running_status" I
 COMMENT ON COLUMN "public"."bak_li_battery_15m"."li_ba_temp_low" IS '电池温度低'; 
 COMMENT ON COLUMN "public"."bak_li_battery_15m"."li_ba_temp_high" IS '电池温度高'; 
 COMMENT ON COLUMN "public"."bak_li_battery_15m"."li_ba_over_temp" IS '电池温度过高'; 
-COMMENT ON COLUMN "public"."bak_li_battery_15m"."li_ba_fuse_alarm" IS '电池保险丝报警';
-
-ALTER TABLE bak_li_battery_1h
-ADD COLUMN li_ba_discharge_mode_status FLOAT8,
-ADD COLUMN li_ba_overall_running_status FLOAT8,
-ADD COLUMN li_ba_temp_low FLOAT8,
-ADD COLUMN li_ba_temp_high FLOAT8,
-ADD COLUMN li_ba_over_temp FLOAT8,
-ADD COLUMN li_ba_fuse_alarm FLOAT8;
-COMMENT ON COLUMN bak_li_battery_1h.li_ba_discharge_mode_status IS '放电模式状态';
-COMMENT ON COLUMN bak_li_battery_1h.li_ba_overall_running_status IS '总运行状态';
-COMMENT ON COLUMN bak_li_battery_1h.li_ba_temp_low IS '电池温度低';
-COMMENT ON COLUMN bak_li_battery_1h.li_ba_temp_high IS '电池温度高';
-COMMENT ON COLUMN bak_li_battery_1h.li_ba_over_temp IS '电池温度过高';
-COMMENT ON COLUMN bak_li_battery_1h.li_ba_fuse_alarm IS '电池保险丝报警';
-
+COMMENT ON COLUMN "public"."bak_li_battery_15m"."li_ba_fuse_alarm" IS '电池保险丝报警'; 
 DROP TABLE IF EXISTS "public"."bak_li_battery_1h";
                             CREATE TABLE "public"."bak_li_battery_1h" (
                           "id" int8,

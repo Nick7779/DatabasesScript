@@ -1354,7 +1354,7 @@
  @ApiModelProperty("总运行状态") 
  private Long liBaOverallRunningStatus;
 /** 
- * 电池温度低.Batt1 Temp Low 
+ * 电池温度低.Temp Low 
  */ 
  @ApiModelProperty("电池温度低") 
  private Long liBaTempLow;

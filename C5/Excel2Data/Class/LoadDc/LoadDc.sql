@@ -252,39 +252,3 @@ COMMENT ON COLUMN "public"."bak_load_dc_1h"."load_dc_llvd2" IS 'LLVD2';
 COMMENT ON COLUMN "public"."bak_load_dc_1h"."load_dc_llvd3" IS 'LLVD3'; 
 COMMENT ON COLUMN "public"."bak_load_dc_1h"."load_dc_llvd4" IS 'LLVD4'; 
 COMMENT ON COLUMN "public"."bak_load_dc_1h"."load_dc_blvd" IS 'BLVD'; 
-
-ALTER TABLE bak_load_dc_15m
-ADD COLUMN load_dc_sys_volts_low FLOAT8,
-ADD COLUMN load_dc_sys_volts_high FLOAT8,
-ADD COLUMN load_dc_load_fuse_alarm FLOAT8,
-ADD COLUMN load_dc_dc_lvd_mode FLOAT8,
-ADD COLUMN load_dc_llvd1 FLOAT8,
-ADD COLUMN load_dc_llvd2 FLOAT8,
-ADD COLUMN load_dc_llvd3 FLOAT8,
-ADD COLUMN load_dc_llvd4 FLOAT8;
-COMMENT ON COLUMN bak_load_dc_15m.load_dc_sys_volts_low IS '系统电压低';
-COMMENT ON COLUMN bak_load_dc_15m.load_dc_sys_volts_low IS '系统电压高';
-COMMENT ON COLUMN bak_load_dc_15m.load_dc_sys_volts_low IS '负载保险丝告警';
-COMMENT ON COLUMN bak_load_dc_15m.load_dc_sys_volts_high IS '负载下电模式';
-COMMENT ON COLUMN bak_load_dc_15m.load_dc_load_fuse_alarm IS 'LLVD1';
-COMMENT ON COLUMN bak_load_dc_15m.load_dc_dc_lvd_mode IS 'LLVD2';
-COMMENT ON COLUMN bak_load_dc_15m.load_dc_llvd1 IS 'LLVD3';
-COMMENT ON COLUMN bak_load_dc_15m.load_dc_llvd2 IS 'LLVD4';
-
-ALTER TABLE bak_load_dc_1h
-ADD COLUMN load_dc_sys_volts_low FLOAT8,
-ADD COLUMN load_dc_sys_volts_high FLOAT8,
-ADD COLUMN load_dc_load_fuse_alarm FLOAT8,
-ADD COLUMN load_dc_dc_lvd_mode FLOAT8,
-ADD COLUMN load_dc_llvd1 FLOAT8,
-ADD COLUMN load_dc_llvd2 FLOAT8,
-ADD COLUMN load_dc_llvd3 FLOAT8,
-ADD COLUMN load_dc_llvd4 FLOAT8;
-COMMENT ON COLUMN bak_load_dc_1h.load_dc_sys_volts_low IS '系统电压低';
-COMMENT ON COLUMN bak_load_dc_1h.load_dc_sys_volts_low IS '系统电压高';
-COMMENT ON COLUMN bak_load_dc_1h.load_dc_sys_volts_low IS '负载保险丝告警';
-COMMENT ON COLUMN bak_load_dc_1h.load_dc_sys_volts_high IS '负载下电模式';
-COMMENT ON COLUMN bak_load_dc_1h.load_dc_load_fuse_alarm IS 'LLVD1';
-COMMENT ON COLUMN bak_load_dc_1h.load_dc_dc_lvd_mode IS 'LLVD2';
-COMMENT ON COLUMN bak_load_dc_1h.load_dc_llvd1 IS 'LLVD3';
-COMMENT ON COLUMN bak_load_dc_1h.load_dc_llvd2 IS 'LLVD4';

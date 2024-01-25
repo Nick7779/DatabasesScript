@@ -20,11 +20,6 @@
  @Column(name = "rectifier_number_of_modules") 
  private Long rectifierNumberOfModules;
  /** 
- * 整流器电压.Rectifier voltage 
- */ 
- @Column(name = "rectifier_voltage") 
- private Double rectifierVoltage;
- /** 
  * 整流器电流.Rectifier output current 
  */ 
  @Column(name = "rectifier_output_current") 
