@@ -249,6 +249,26 @@
  */ 
  @Column(name = "solar_module_operation_status") 
  private Long solarModuleOperationStatus;
+ /** 
+ *  太阳能输入电流.Solar Input current 
+ */ 
+ @Column(name = "solar_input_current") 
+ private Double solarInputCurrent;
+ /** 
+ * 太阳能输入失败.PV Vin Fail 
+ */ 
+ @Column(name = "solar_pv_vin_fail") 
+ private Long solarPvVinFail;
+ /** 
+ * 太阳能输入低.PV Vin Low 
+ */ 
+ @Column(name = "solar_pv_vin_low") 
+ private Long solarPvVinLow;
+ /** 
+ * 太阳能输入高.PV Vin High 
+ */ 
+ @Column(name = "solar_pv_vin_high") 
+ private Long solarPvVinHigh;
 
     public Date getTime() {
         return Date.from(time);

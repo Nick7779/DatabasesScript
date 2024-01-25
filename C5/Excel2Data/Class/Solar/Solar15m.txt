@@ -233,4 +233,24 @@
  */ 
  @ApiModelProperty("光伏模块运行状态") 
  private Long solarModuleOperationStatus;
+/** 
+ *  太阳能输入电流.Solar Input current 
+ */ 
+ @ApiModelProperty(" 太阳能输入电流") 
+ private Double solarInputCurrent;
+/** 
+ * 太阳能输入失败.PV Vin Fail 
+ */ 
+ @ApiModelProperty("太阳能输入失败") 
+ private Long solarPvVinFail;
+/** 
+ * 太阳能输入低.PV Vin Low 
+ */ 
+ @ApiModelProperty("太阳能输入低") 
+ private Long solarPvVinLow;
+/** 
+ * 太阳能输入高.PV Vin High 
+ */ 
+ @ApiModelProperty("太阳能输入高") 
+ private Long solarPvVinHigh;
 private static final long serialVersionUID = 1L;

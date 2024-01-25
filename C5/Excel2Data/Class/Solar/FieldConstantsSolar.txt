@@ -186,3 +186,19 @@
  * 光伏模块运行状态. 
  */ 
  String SOLAR_MODULE_OPERATION_STATUS = "solar_module_operation_status";
+ /** 
+ *  太阳能输入电流. 
+ */ 
+ String SOLAR_INPUT_CURRENT = "solar_input_current";
+ /** 
+ * 太阳能输入失败. 
+ */ 
+ String SOLAR_PV_VIN_FAIL = "solar_pv_vin_fail";
+ /** 
+ * 太阳能输入低. 
+ */ 
+ String SOLAR_PV_VIN_LOW = "solar_pv_vin_low";
+ /** 
+ * 太阳能输入高. 
+ */ 
+ String SOLAR_PV_VIN_HIGH = "solar_pv_vin_high";

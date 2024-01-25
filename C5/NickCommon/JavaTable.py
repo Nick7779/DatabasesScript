@@ -175,8 +175,25 @@ def write_java_class_tail():
 
 
 def write_update_sql():
-    update_sql = "ALTER TABLE {table_name}".format(table_name=table_name_snake)
+    update_sql_heat = f"ALTER TABLE bak_{table_name_snake}_15m \n"
+    SqlUpdateFile.writelines(update_sql_heat)
 
+    field_row_sql_list = []
+    comment_sql_list = []
+    for point in asset_point_list:
+        update_name = point[1]
+        update_field = point[3]
+        update_data_type = point[9]
+        if update_data_type == 1:
+            field_row_sql = f"ADD COLUMN {update_field} int8"
+        elif update_data_type == 2:
+            field_row_sql = f"ADD COLUMN {update_field} float8"
+        else:
+            field_row_sql = f"ADD COLUMN {update_field} varchar(255)"
+        field_row_sql_list.append(field_row_sql)
+        comment_sql_list.append(f'''COMMENT ON COLUMN "public"."bak_{table_name_snake}_15m"."{update_field}" IS '{update_name}'; \n''')
+    SqlUpdateFile.write(",\n".join(field_row_sql_list) + "; \n")
+    SqlUpdateFile.writelines(comment_sql_list)
 # ADD COLUMN grid_ac1_mains_failure FLOAT8,
 # ADD COLUMN grid_ac_alarm_state FLOAT8;
 # COMMENT ON COLUMN bak_grid_1h.grid_ac1_mains_failure IS "市电异常";
@@ -191,7 +208,7 @@ if __name__ == '__main__':
 
     # 获取资产类
     # asset_class_list = asset_class()
-    # asset_class_list = [(1001, 'Solar', 1, 'solar', None, '太阳能', 'solar_', 99)]
+    asset_class_list = [(1001, 'Solar', 1, 'solar', None, '太阳能', 'solar_', 99)]
     # asset_class_list = [(1002, 'Lithium Battery', 2, 'li_battery', None, '铁锂电池', 'li_ba', 99)]
     # asset_class_list = [(1003, 'Gel Battery', 3, 'gel_battery', None, '胶体电池', 'vrla_', 99)]
     # asset_class_list = [(1004, 'Grid', 4, 'grid', None, '市电', 'grid_', 99)]
@@ -201,7 +218,7 @@ if __name__ == '__main__':
     # asset_class_list = [(1009, 'Load-DC', 9, 'load_dc', None, '负载 直流', 'load_dc_', 99)]
     # asset_class_list = [(1010, 'Electronic Lock', 10, 'electronic_lock', None, '电子锁', 'elec_lock_', 99)]
     # asset_class_list = [(1011, 'Heat Exchanger', 11, 'heat_exchanger', None, '热交换器', 'heat_ex_', 99)]
-    asset_class_list = [(1012, 'Hybrid System', 12, 'site', None, '虚资产', 'site_', 99)]
+    # asset_class_list = [(1012, 'Hybrid System', 12, 'site', None, '虚资产', 'site_', 99)]
     # asset_class_list = [(1013, 'Fuel Level Sensor', 13, 'fuel', None, '液位计', 'fuel_', 99)]
     # asset_class_list = [(1024, 'ATS', 24, 'ats', None, 'ATS', 'ats_', 99)]
     # asset_class_list = [(1027, 'Inverter', 22, 'inverter', None, '逆变器', 'inverter_', 99)]
@@ -209,7 +226,7 @@ if __name__ == '__main__':
 
     print(asset_class_list)
     # flag 为True时，生成表update语句
-    flag = False
+    flag = True
     # 依次生成所有资产类
     for asset_class in asset_class_list:
         class_id = asset_class[0]
@@ -247,6 +264,9 @@ if __name__ == '__main__':
         # 创建表结构SQL
         write_create15m_sql()
         write_create1h_sql()
+        # 写入更新表结构SQL
+        if flag:
+            write_update_sql()
         for asset_point in asset_point_list:
             # 中文名
             name = asset_point[1]
@@ -269,9 +289,6 @@ if __name__ == '__main__':
             write_java_class_txt()
             # 写入备份数据
             write_backups_txt()
-            # 写入更新表结构SQL
-            if flag:
-                write_update_sql()
         Backups15mFile.writelines("private static final long serialVersionUID = 1L;")
         Backups1hFile.writelines("private static final long serialVersionUID = 1L;")
         # 写入Java类尾部
