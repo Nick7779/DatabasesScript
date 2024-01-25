@@ -366,3 +366,23 @@
  * 电池组温度. 
  */ 
  String SITE_BATTERY_TEMP = "site_battery_temp";
+ /** 
+ * 浮充电压. 
+ */ 
+ String SITE_FLOAT_VOLT = "site_float_volt";
+ /** 
+ * 均充电压. 
+ */ 
+ String SITE_BOOST_VOLT = "site_boost_volt";
+ /** 
+ * PV过压点. 
+ */ 
+ String SITE_PV_OVER_VOLT_POINT = "site_pv_over_volt_point";
+ /** 
+ * PV欠压点. 
+ */ 
+ String SITE_PV_LOW_VOLT_POINT = "site_pv_low_volt_point";
+ /** 
+ * 手动模式. 
+ */ 
+ String SITE_MANUAL_MODE = "site_manual_mode";

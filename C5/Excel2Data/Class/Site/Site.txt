@@ -474,6 +474,31 @@
  */ 
  @Column(name = "site_battery_temp") 
  private Double siteBatteryTemp;
+ /** 
+ * 浮充电压.Float Volt 
+ */ 
+ @Column(name = "site_float_volt") 
+ private Double siteFloatVolt;
+ /** 
+ * 均充电压.Boost Volt 
+ */ 
+ @Column(name = "site_boost_volt") 
+ private Double siteBoostVolt;
+ /** 
+ * PV过压点.PVin OverVolt 
+ */ 
+ @Column(name = "site_pv_over_volt_point") 
+ private Double sitePvOverVoltPoint;
+ /** 
+ * PV欠压点.PVin LowVolt 
+ */ 
+ @Column(name = "site_pv_low_volt_point") 
+ private Double sitePvLowVoltPoint;
+ /** 
+ * 手动模式.Manual Mode 
+ */ 
+ @Column(name = "site_manual_mode") 
+ private Long siteManualMode;
 
     public Date getTime() {
         return Date.from(time);

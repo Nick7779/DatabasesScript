@@ -190,3 +190,39 @@
  * 负载4下电模式. 
  */ 
  String LOAD_DC_LVD4_MODE = "load_dc_lvd4_mode";
+ /** 
+ * 系统电压低. 
+ */ 
+ String LOAD_DC_SYS_VOLTS_LOW = "load_dc_sys_volts_low";
+ /** 
+ * 系统电压高. 
+ */ 
+ String LOAD_DC_SYS_VOLTS_HIGH = "load_dc_sys_volts_high";
+ /** 
+ * 负载保险丝告警. 
+ */ 
+ String LOAD_DC_LOAD_FUSE_ALARM = "load_dc_load_fuse_alarm";
+ /** 
+ * 负载下电模式. 
+ */ 
+ String LOAD_DC_DC_LVD_MODE = "load_dc_dc_lvd_mode";
+ /** 
+ * LLVD1. 
+ */ 
+ String LOAD_DC_LLVD1 = "load_dc_llvd1";
+ /** 
+ * LLVD2. 
+ */ 
+ String LOAD_DC_LLVD2 = "load_dc_llvd2";
+ /** 
+ * LLVD3. 
+ */ 
+ String LOAD_DC_LLVD3 = "load_dc_llvd3";
+ /** 
+ * LLVD4. 
+ */ 
+ String LOAD_DC_LLVD4 = "load_dc_llvd4";
+ /** 
+ * BLVD. 
+ */ 
+ String LOAD_DC_BLVD = "load_dc_blvd";

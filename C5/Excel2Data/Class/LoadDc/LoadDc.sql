@@ -53,7 +53,16 @@ load_dc_llvd1_time float8,
 load_dc_lvd1_mode float8,
 load_dc_lvd2_mode float8,
 load_dc_lvd3_mode float8,
-load_dc_lvd4_mode float8); 
+load_dc_lvd4_mode float8,
+load_dc_sys_volts_low int8,
+load_dc_sys_volts_high int8,
+load_dc_load_fuse_alarm int8,
+load_dc_dc_lvd_mode int8,
+load_dc_llvd1 int8,
+load_dc_llvd2 int8,
+load_dc_llvd3 int8,
+load_dc_llvd4 int8,
+load_dc_blvd int8); 
 COMMENT ON COLUMN "public"."bak_load_dc_15m"."id" IS 'Ö÷¼ü';
 COMMENT ON COLUMN "public"."bak_load_dc_15m"."create_time" IS '´´½¨Ê±¼ä';
 COMMENT ON COLUMN "public"."bak_load_dc_15m"."customer_id" IS '¹«Ë¾ID';
@@ -106,39 +115,16 @@ COMMENT ON COLUMN "public"."bak_load_dc_15m"."load_dc_llvd1_time" IS 'ÏÂµçÊ±¼ä';
 COMMENT ON COLUMN "public"."bak_load_dc_15m"."load_dc_lvd1_mode" IS '¸ºÔØ1ÏÂµçÄ£Ê½'; 
 COMMENT ON COLUMN "public"."bak_load_dc_15m"."load_dc_lvd2_mode" IS '¸ºÔØ2ÏÂµçÄ£Ê½'; 
 COMMENT ON COLUMN "public"."bak_load_dc_15m"."load_dc_lvd3_mode" IS '¸ºÔØ3ÏÂµçÄ£Ê½'; 
-COMMENT ON COLUMN "public"."bak_load_dc_15m"."load_dc_lvd4_mode" IS '¸ºÔØ4ÏÂµçÄ£Ê½';
-
-ALTER TABLE bak_load_dc_15m
-    ADD COLUMN load_dc_llvd_vol FLOAT8,
-    ADD COLUMN load_dc_llvd1_rec_vol FLOAT8,
-    ADD COLUMN load_dc_llvd1_time FLOAT8,
-    ADD COLUMN load_dc_lvd1_mode FLOAT8,
-    ADD COLUMN load_dc_lvd2_mode FLOAT8,
-    ADD COLUMN load_dc_lvd3_mode FLOAT8,
-    ADD COLUMN load_dc_lvd4_mode FLOAT8;
-    COMMENT ON COLUMN bak_load_dc_15m.load_dc_llvd_vol IS 'ÏÂµçµçÑ¹';
-    COMMENT ON COLUMN bak_load_dc_15m.load_dc_llvd1_rec_vol IS '»Ö¸´µçÑ¹';
-    COMMENT ON COLUMN bak_load_dc_15m.load_dc_llvd1_time IS 'ÏÂµçÊ±¼ä';
-    COMMENT ON COLUMN bak_load_dc_15m.load_dc_lvd1_mode IS '¸ºÔØ1ÏÂµçÄ£Ê½';
-    COMMENT ON COLUMN bak_load_dc_15m.load_dc_lvd2_mode IS '¸ºÔØ2ÏÂµçÄ£Ê½';
-    COMMENT ON COLUMN bak_load_dc_15m.load_dc_lvd3_mode IS '¸ºÔØ3ÏÂµçÄ£Ê½';
-    COMMENT ON COLUMN bak_load_dc_15m.load_dc_lvd4_mode IS '¸ºÔØ4ÏÂµçÄ£';
-ALTER TABLE bak_load_dc_1h
-    ADD COLUMN load_dc_llvd_vol FLOAT8,
-    ADD COLUMN load_dc_llvd1_rec_vol FLOAT8,
-    ADD COLUMN load_dc_llvd1_time FLOAT8,
-    ADD COLUMN load_dc_lvd1_mode FLOAT8,
-    ADD COLUMN load_dc_lvd2_mode FLOAT8,
-    ADD COLUMN load_dc_lvd3_mode FLOAT8,
-    ADD COLUMN load_dc_lvd4_mode FLOAT8;
-    COMMENT ON COLUMN bak_load_dc_1h.load_dc_llvd_vol IS 'ÏÂµçµçÑ¹';
-    COMMENT ON COLUMN bak_load_dc_1h.load_dc_llvd1_rec_vol IS '»Ö¸´µçÑ¹';
-    COMMENT ON COLUMN bak_load_dc_1h.load_dc_llvd1_time IS 'ÏÂµçÊ±¼ä';
-    COMMENT ON COLUMN bak_load_dc_1h.load_dc_lvd1_mode IS '¸ºÔØ1ÏÂµçÄ£Ê½';
-    COMMENT ON COLUMN bak_load_dc_1h.load_dc_lvd2_mode IS '¸ºÔØ2ÏÂµçÄ£Ê½';
-    COMMENT ON COLUMN bak_load_dc_1h.load_dc_lvd3_mode IS '¸ºÔØ3ÏÂµçÄ£Ê½';
-    COMMENT ON COLUMN bak_load_dc_1h.load_dc_lvd4_mode IS '¸ºÔØ4ÏÂµçÄ£';
-
+COMMENT ON COLUMN "public"."bak_load_dc_15m"."load_dc_lvd4_mode" IS '¸ºÔØ4ÏÂµçÄ£Ê½'; 
+COMMENT ON COLUMN "public"."bak_load_dc_15m"."load_dc_sys_volts_low" IS 'ÏµÍ³µçÑ¹µÍ'; 
+COMMENT ON COLUMN "public"."bak_load_dc_15m"."load_dc_sys_volts_high" IS 'ÏµÍ³µçÑ¹¸ß'; 
+COMMENT ON COLUMN "public"."bak_load_dc_15m"."load_dc_load_fuse_alarm" IS '¸ºÔØ±£ÏÕË¿¸æ¾¯'; 
+COMMENT ON COLUMN "public"."bak_load_dc_15m"."load_dc_dc_lvd_mode" IS '¸ºÔØÏÂµçÄ£Ê½'; 
+COMMENT ON COLUMN "public"."bak_load_dc_15m"."load_dc_llvd1" IS 'LLVD1'; 
+COMMENT ON COLUMN "public"."bak_load_dc_15m"."load_dc_llvd2" IS 'LLVD2'; 
+COMMENT ON COLUMN "public"."bak_load_dc_15m"."load_dc_llvd3" IS 'LLVD3'; 
+COMMENT ON COLUMN "public"."bak_load_dc_15m"."load_dc_llvd4" IS 'LLVD4'; 
+COMMENT ON COLUMN "public"."bak_load_dc_15m"."load_dc_blvd" IS 'BLVD'; 
 DROP TABLE IF EXISTS "public"."bak_load_dc_1h";
                             CREATE TABLE "public"."bak_load_dc_1h" (
                           "id" int8,
@@ -194,7 +180,16 @@ load_dc_llvd1_time float8,
 load_dc_lvd1_mode float8,
 load_dc_lvd2_mode float8,
 load_dc_lvd3_mode float8,
-load_dc_lvd4_mode float8); 
+load_dc_lvd4_mode float8,
+load_dc_sys_volts_low int8,
+load_dc_sys_volts_high int8,
+load_dc_load_fuse_alarm int8,
+load_dc_dc_lvd_mode int8,
+load_dc_llvd1 int8,
+load_dc_llvd2 int8,
+load_dc_llvd3 int8,
+load_dc_llvd4 int8,
+load_dc_blvd int8); 
 COMMENT ON COLUMN "public"."bak_load_dc_1h"."id" IS 'Ö÷¼ü';
     COMMENT ON COLUMN "public"."bak_load_dc_1h"."create_time" IS '´´½¨Ê±¼ä';
     COMMENT ON COLUMN "public"."bak_load_dc_1h"."customer_id" IS '¹«Ë¾ID';
@@ -248,3 +243,48 @@ COMMENT ON COLUMN "public"."bak_load_dc_1h"."load_dc_lvd1_mode" IS '¸ºÔØ1ÏÂµçÄ£Ê
 COMMENT ON COLUMN "public"."bak_load_dc_1h"."load_dc_lvd2_mode" IS '¸ºÔØ2ÏÂµçÄ£Ê½'; 
 COMMENT ON COLUMN "public"."bak_load_dc_1h"."load_dc_lvd3_mode" IS '¸ºÔØ3ÏÂµçÄ£Ê½'; 
 COMMENT ON COLUMN "public"."bak_load_dc_1h"."load_dc_lvd4_mode" IS '¸ºÔØ4ÏÂµçÄ£Ê½'; 
+COMMENT ON COLUMN "public"."bak_load_dc_1h"."load_dc_sys_volts_low" IS 'ÏµÍ³µçÑ¹µÍ'; 
+COMMENT ON COLUMN "public"."bak_load_dc_1h"."load_dc_sys_volts_high" IS 'ÏµÍ³µçÑ¹¸ß'; 
+COMMENT ON COLUMN "public"."bak_load_dc_1h"."load_dc_load_fuse_alarm" IS '¸ºÔØ±£ÏÕË¿¸æ¾¯'; 
+COMMENT ON COLUMN "public"."bak_load_dc_1h"."load_dc_dc_lvd_mode" IS '¸ºÔØÏÂµçÄ£Ê½'; 
+COMMENT ON COLUMN "public"."bak_load_dc_1h"."load_dc_llvd1" IS 'LLVD1'; 
+COMMENT ON COLUMN "public"."bak_load_dc_1h"."load_dc_llvd2" IS 'LLVD2'; 
+COMMENT ON COLUMN "public"."bak_load_dc_1h"."load_dc_llvd3" IS 'LLVD3'; 
+COMMENT ON COLUMN "public"."bak_load_dc_1h"."load_dc_llvd4" IS 'LLVD4'; 
+COMMENT ON COLUMN "public"."bak_load_dc_1h"."load_dc_blvd" IS 'BLVD'; 
+
+ALTER TABLE bak_load_dc_15m
+ADD COLUMN load_dc_sys_volts_low FLOAT8,
+ADD COLUMN load_dc_sys_volts_high FLOAT8,
+ADD COLUMN load_dc_load_fuse_alarm FLOAT8,
+ADD COLUMN load_dc_dc_lvd_mode FLOAT8,
+ADD COLUMN load_dc_llvd1 FLOAT8,
+ADD COLUMN load_dc_llvd2 FLOAT8,
+ADD COLUMN load_dc_llvd3 FLOAT8,
+ADD COLUMN load_dc_llvd4 FLOAT8;
+COMMENT ON COLUMN bak_load_dc_15m.load_dc_sys_volts_low IS 'ÏµÍ³µçÑ¹µÍ';
+COMMENT ON COLUMN bak_load_dc_15m.load_dc_sys_volts_low IS 'ÏµÍ³µçÑ¹¸ß';
+COMMENT ON COLUMN bak_load_dc_15m.load_dc_sys_volts_low IS '¸ºÔØ±£ÏÕË¿¸æ¾¯';
+COMMENT ON COLUMN bak_load_dc_15m.load_dc_sys_volts_high IS '¸ºÔØÏÂµçÄ£Ê½';
+COMMENT ON COLUMN bak_load_dc_15m.load_dc_load_fuse_alarm IS 'LLVD1';
+COMMENT ON COLUMN bak_load_dc_15m.load_dc_dc_lvd_mode IS 'LLVD2';
+COMMENT ON COLUMN bak_load_dc_15m.load_dc_llvd1 IS 'LLVD3';
+COMMENT ON COLUMN bak_load_dc_15m.load_dc_llvd2 IS 'LLVD4';
+
+ALTER TABLE bak_load_dc_1h
+ADD COLUMN load_dc_sys_volts_low FLOAT8,
+ADD COLUMN load_dc_sys_volts_high FLOAT8,
+ADD COLUMN load_dc_load_fuse_alarm FLOAT8,
+ADD COLUMN load_dc_dc_lvd_mode FLOAT8,
+ADD COLUMN load_dc_llvd1 FLOAT8,
+ADD COLUMN load_dc_llvd2 FLOAT8,
+ADD COLUMN load_dc_llvd3 FLOAT8,
+ADD COLUMN load_dc_llvd4 FLOAT8;
+COMMENT ON COLUMN bak_load_dc_1h.load_dc_sys_volts_low IS 'ÏµÍ³µçÑ¹µÍ';
+COMMENT ON COLUMN bak_load_dc_1h.load_dc_sys_volts_low IS 'ÏµÍ³µçÑ¹¸ß';
+COMMENT ON COLUMN bak_load_dc_1h.load_dc_sys_volts_low IS '¸ºÔØ±£ÏÕË¿¸æ¾¯';
+COMMENT ON COLUMN bak_load_dc_1h.load_dc_sys_volts_high IS '¸ºÔØÏÂµçÄ£Ê½';
+COMMENT ON COLUMN bak_load_dc_1h.load_dc_load_fuse_alarm IS 'LLVD1';
+COMMENT ON COLUMN bak_load_dc_1h.load_dc_dc_lvd_mode IS 'LLVD2';
+COMMENT ON COLUMN bak_load_dc_1h.load_dc_llvd1 IS 'LLVD3';
+COMMENT ON COLUMN bak_load_dc_1h.load_dc_llvd2 IS 'LLVD4';

@@ -238,4 +238,49 @@
  */ 
  @ApiModelProperty("负载4下电模式") 
  private Double loadDcLvd4Mode;
+/** 
+ * 系统电压低.Sys.Volts Low 
+ */ 
+ @ApiModelProperty("系统电压低") 
+ private Long loadDcSysVoltsLow;
+/** 
+ * 系统电压高.Sys Volts High 
+ */ 
+ @ApiModelProperty("系统电压高") 
+ private Long loadDcSysVoltsHigh;
+/** 
+ * 负载保险丝告警.Load Fuse Alarm 
+ */ 
+ @ApiModelProperty("负载保险丝告警") 
+ private Long loadDcLoadFuseAlarm;
+/** 
+ * 负载下电模式.LVD1 Mode 
+ */ 
+ @ApiModelProperty("负载下电模式") 
+ private Long loadDcDcLvdMode;
+/** 
+ * LLVD1.LLVD1 
+ */ 
+ @ApiModelProperty("LLVD1") 
+ private Long loadDcLlvd1;
+/** 
+ * LLVD2.LLVD2 
+ */ 
+ @ApiModelProperty("LLVD2") 
+ private Long loadDcLlvd2;
+/** 
+ * LLVD3.LLVD3 
+ */ 
+ @ApiModelProperty("LLVD3") 
+ private Long loadDcLlvd3;
+/** 
+ * LLVD4.LLVD4 
+ */ 
+ @ApiModelProperty("LLVD4") 
+ private Long loadDcLlvd4;
+/** 
+ * BLVD.BLVD 
+ */ 
+ @ApiModelProperty("BLVD") 
+ private Long loadDcBlvd;
 private static final long serialVersionUID = 1L;

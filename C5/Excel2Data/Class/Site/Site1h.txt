@@ -458,4 +458,29 @@
  */ 
  @ApiModelProperty("电池组温度") 
  private Double siteBatteryTemp;
+/** 
+ * 浮充电压.Float Volt 
+ */ 
+ @ApiModelProperty("浮充电压") 
+ private Double siteFloatVolt;
+/** 
+ * 均充电压.Boost Volt 
+ */ 
+ @ApiModelProperty("均充电压") 
+ private Double siteBoostVolt;
+/** 
+ * PV过压点.PVin OverVolt 
+ */ 
+ @ApiModelProperty("PV过压点") 
+ private Double sitePvOverVoltPoint;
+/** 
+ * PV欠压点.PVin LowVolt 
+ */ 
+ @ApiModelProperty("PV欠压点") 
+ private Double sitePvLowVoltPoint;
+/** 
+ * 手动模式.Manual Mode 
+ */ 
+ @ApiModelProperty("手动模式") 
+ private Long siteManualMode;
 private static final long serialVersionUID = 1L;

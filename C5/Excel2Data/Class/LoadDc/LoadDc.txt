@@ -254,6 +254,51 @@
  */ 
  @Column(name = "load_dc_lvd4_mode") 
  private Double loadDcLvd4Mode;
+ /** 
+ * 系统电压低.Sys.Volts Low 
+ */ 
+ @Column(name = "load_dc_sys_volts_low") 
+ private Long loadDcSysVoltsLow;
+ /** 
+ * 系统电压高.Sys Volts High 
+ */ 
+ @Column(name = "load_dc_sys_volts_high") 
+ private Long loadDcSysVoltsHigh;
+ /** 
+ * 负载保险丝告警.Load Fuse Alarm 
+ */ 
+ @Column(name = "load_dc_load_fuse_alarm") 
+ private Long loadDcLoadFuseAlarm;
+ /** 
+ * 负载下电模式.LVD1 Mode 
+ */ 
+ @Column(name = "load_dc_dc_lvd_mode") 
+ private Long loadDcDcLvdMode;
+ /** 
+ * LLVD1.LLVD1 
+ */ 
+ @Column(name = "load_dc_llvd1") 
+ private Long loadDcLlvd1;
+ /** 
+ * LLVD2.LLVD2 
+ */ 
+ @Column(name = "load_dc_llvd2") 
+ private Long loadDcLlvd2;
+ /** 
+ * LLVD3.LLVD3 
+ */ 
+ @Column(name = "load_dc_llvd3") 
+ private Long loadDcLlvd3;
+ /** 
+ * LLVD4.LLVD4 
+ */ 
+ @Column(name = "load_dc_llvd4") 
+ private Long loadDcLlvd4;
+ /** 
+ * BLVD.BLVD 
+ */ 
+ @Column(name = "load_dc_blvd") 
+ private Long loadDcBlvd;
 
     public Date getTime() {
         return Date.from(time);

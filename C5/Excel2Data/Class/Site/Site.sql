@@ -97,7 +97,12 @@ site_solar_total_output_voltage float8,
 site_solar_total_energy float8,
 site_battery_discharge int8,
 site_battery_alarm_state1 int8,
-site_battery_temp float8); 
+site_battery_temp float8,
+site_float_volt float8,
+site_boost_volt float8,
+site_pv_over_volt_point float8,
+site_pv_low_volt_point float8,
+site_manual_mode int8); 
 COMMENT ON COLUMN "public"."bak_site_15m"."id" IS 'Ö÷¼ü';
 COMMENT ON COLUMN "public"."bak_site_15m"."create_time" IS '´´½¨Ê±¼ä';
 COMMENT ON COLUMN "public"."bak_site_15m"."customer_id" IS '¹«Ë¾ID';
@@ -195,6 +200,11 @@ COMMENT ON COLUMN "public"."bak_site_15m"."site_solar_total_energy" IS 'Ì«ÑôÄÜ×Ü
 COMMENT ON COLUMN "public"."bak_site_15m"."site_battery_discharge" IS 'µç³Ø·Åµç¸æ¾¯'; 
 COMMENT ON COLUMN "public"."bak_site_15m"."site_battery_alarm_state1" IS 'µç³Ø¸æ¾¯×´Ì¬1'; 
 COMMENT ON COLUMN "public"."bak_site_15m"."site_battery_temp" IS 'µç³Ø×éÎÂ¶È'; 
+COMMENT ON COLUMN "public"."bak_site_15m"."site_float_volt" IS '¸¡³äµçÑ¹'; 
+COMMENT ON COLUMN "public"."bak_site_15m"."site_boost_volt" IS '¾ù³äµçÑ¹'; 
+COMMENT ON COLUMN "public"."bak_site_15m"."site_pv_over_volt_point" IS 'PV¹ýÑ¹µã'; 
+COMMENT ON COLUMN "public"."bak_site_15m"."site_pv_low_volt_point" IS 'PVÇ·Ñ¹µã'; 
+COMMENT ON COLUMN "public"."bak_site_15m"."site_manual_mode" IS 'ÊÖ¶¯Ä£Ê½'; 
 DROP TABLE IF EXISTS "public"."bak_site_1h";
                             CREATE TABLE "public"."bak_site_1h" (
                           "id" int8,
@@ -294,7 +304,12 @@ site_solar_total_output_voltage float8,
 site_solar_total_energy float8,
 site_battery_discharge int8,
 site_battery_alarm_state1 int8,
-site_battery_temp float8); 
+site_battery_temp float8,
+site_float_volt float8,
+site_boost_volt float8,
+site_pv_over_volt_point float8,
+site_pv_low_volt_point float8,
+site_manual_mode int8); 
 COMMENT ON COLUMN "public"."bak_site_1h"."id" IS 'Ö÷¼ü';
     COMMENT ON COLUMN "public"."bak_site_1h"."create_time" IS '´´½¨Ê±¼ä';
     COMMENT ON COLUMN "public"."bak_site_1h"."customer_id" IS '¹«Ë¾ID';
@@ -392,3 +407,32 @@ COMMENT ON COLUMN "public"."bak_site_1h"."site_solar_total_energy" IS 'Ì«ÑôÄÜ×ÜÄ
 COMMENT ON COLUMN "public"."bak_site_1h"."site_battery_discharge" IS 'µç³Ø·Åµç¸æ¾¯'; 
 COMMENT ON COLUMN "public"."bak_site_1h"."site_battery_alarm_state1" IS 'µç³Ø¸æ¾¯×´Ì¬1'; 
 COMMENT ON COLUMN "public"."bak_site_1h"."site_battery_temp" IS 'µç³Ø×éÎÂ¶È'; 
+COMMENT ON COLUMN "public"."bak_site_1h"."site_float_volt" IS '¸¡³äµçÑ¹'; 
+COMMENT ON COLUMN "public"."bak_site_1h"."site_boost_volt" IS '¾ù³äµçÑ¹'; 
+COMMENT ON COLUMN "public"."bak_site_1h"."site_pv_over_volt_point" IS 'PV¹ýÑ¹µã'; 
+COMMENT ON COLUMN "public"."bak_site_1h"."site_pv_low_volt_point" IS 'PVÇ·Ñ¹µã'; 
+COMMENT ON COLUMN "public"."bak_site_1h"."site_manual_mode" IS 'ÊÖ¶¯Ä£Ê½'; 
+
+ALTER TABLE bak_site_15m
+ADD COLUMN site_float_volt FLOAT8,
+ADD COLUMN site_boost_volt FLOAT8,
+ADD COLUMN site_pv_over_volt_point FLOAT8,
+ADD COLUMN site_pv_low_volt_point FLOAT8,
+ADD COLUMN site_manual_mode FLOAT8;
+COMMENT ON COLUMN bak_site_15m.site_float_volt IS 'ÏµÍ³µçÑ¹µÍ';
+COMMENT ON COLUMN bak_site_15m.site_boost_volt IS 'LLVD1';
+COMMENT ON COLUMN bak_site_15m.site_pv_over_volt_point IS 'LLVD2';
+COMMENT ON COLUMN bak_site_15m.site_pv_low_volt_point IS 'LLVD3';
+COMMENT ON COLUMN bak_site_15m.site_manual_mode IS 'LLVD4';
+
+ALTER TABLE bak_site_1h
+ADD COLUMN site_float_volt FLOAT8,
+ADD COLUMN site_boost_volt FLOAT8,
+ADD COLUMN site_pv_over_volt_point FLOAT8,
+ADD COLUMN site_pv_low_volt_point FLOAT8,
+ADD COLUMN site_manual_mode FLOAT8;
+COMMENT ON COLUMN bak_site_1h.site_float_volt IS 'ÏµÍ³µçÑ¹µÍ';
+COMMENT ON COLUMN bak_site_1h.site_boost_volt IS 'LLVD1';
+COMMENT ON COLUMN bak_site_1h.site_pv_over_volt_point IS 'LLVD2';
+COMMENT ON COLUMN bak_site_1h.site_pv_low_volt_point IS 'LLVD3';
+COMMENT ON COLUMN bak_site_1h.site_manual_mode IS 'LLVD4';
