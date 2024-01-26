@@ -95,7 +95,8 @@ ADD COLUMN site_float_volt float8,
 ADD COLUMN site_boost_volt float8,
 ADD COLUMN site_pv_over_volt_point float8,
 ADD COLUMN site_pv_low_volt_point float8,
-ADD COLUMN site_manual_mode int8; 
+ADD COLUMN site_manual_mode int8,
+ADD COLUMN site_battery_bank2_current float8; 
 COMMENT ON COLUMN "public"."bak_site_15m"."site_ac_alarm_state" IS 'AC告警详情'; 
 COMMENT ON COLUMN "public"."bak_site_15m"."site_dc_alarm_state" IS 'DC告警详情'; 
 COMMENT ON COLUMN "public"."bak_site_15m"."site_communication_alarm_state1" IS 'SC通信故障告警详情'; 
@@ -193,6 +194,7 @@ COMMENT ON COLUMN "public"."bak_site_15m"."site_boost_volt" IS '均充电压';
 COMMENT ON COLUMN "public"."bak_site_15m"."site_pv_over_volt_point" IS 'PV过压点'; 
 COMMENT ON COLUMN "public"."bak_site_15m"."site_pv_low_volt_point" IS 'PV欠压点'; 
 COMMENT ON COLUMN "public"."bak_site_15m"."site_manual_mode" IS '手动模式'; 
+COMMENT ON COLUMN "public"."bak_site_15m"."site_battery_bank2_current" IS '2号电池组电流'; 
 
 ALTER TABLE bak_site_1h 
 ADD COLUMN site_ac_alarm_state int8,
@@ -291,7 +293,8 @@ ADD COLUMN site_float_volt float8,
 ADD COLUMN site_boost_volt float8,
 ADD COLUMN site_pv_over_volt_point float8,
 ADD COLUMN site_pv_low_volt_point float8,
-ADD COLUMN site_manual_mode int8; 
+ADD COLUMN site_manual_mode int8,
+ADD COLUMN site_battery_bank2_current float8; 
 COMMENT ON COLUMN "public"."bak_site_1h"."site_ac_alarm_state" IS 'AC告警详情'; 
 COMMENT ON COLUMN "public"."bak_site_1h"."site_dc_alarm_state" IS 'DC告警详情'; 
 COMMENT ON COLUMN "public"."bak_site_1h"."site_communication_alarm_state1" IS 'SC通信故障告警详情'; 
@@ -389,3 +392,4 @@ COMMENT ON COLUMN "public"."bak_site_1h"."site_boost_volt" IS '均充电压';
 COMMENT ON COLUMN "public"."bak_site_1h"."site_pv_over_volt_point" IS 'PV过压点'; 
 COMMENT ON COLUMN "public"."bak_site_1h"."site_pv_low_volt_point" IS 'PV欠压点'; 
 COMMENT ON COLUMN "public"."bak_site_1h"."site_manual_mode" IS '手动模式'; 
+COMMENT ON COLUMN "public"."bak_site_1h"."site_battery_bank2_current" IS '2号电池组电流'; 

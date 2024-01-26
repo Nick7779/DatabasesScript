@@ -102,7 +102,8 @@ site_float_volt float8,
 site_boost_volt float8,
 site_pv_over_volt_point float8,
 site_pv_low_volt_point float8,
-site_manual_mode int8); 
+site_manual_mode int8,
+site_battery_bank2_current float8); 
 COMMENT ON COLUMN "public"."bak_site_15m"."id" IS '主键';
 COMMENT ON COLUMN "public"."bak_site_15m"."create_time" IS '创建时间';
 COMMENT ON COLUMN "public"."bak_site_15m"."customer_id" IS '公司ID';
@@ -205,6 +206,7 @@ COMMENT ON COLUMN "public"."bak_site_15m"."site_boost_volt" IS '均充电压';
 COMMENT ON COLUMN "public"."bak_site_15m"."site_pv_over_volt_point" IS 'PV过压点'; 
 COMMENT ON COLUMN "public"."bak_site_15m"."site_pv_low_volt_point" IS 'PV欠压点'; 
 COMMENT ON COLUMN "public"."bak_site_15m"."site_manual_mode" IS '手动模式'; 
+COMMENT ON COLUMN "public"."bak_site_15m"."site_battery_bank2_current" IS '2号电池组电流'; 
 DROP TABLE IF EXISTS "public"."bak_site_1h";
                             CREATE TABLE "public"."bak_site_1h" (
                           "id" int8,
@@ -309,7 +311,8 @@ site_float_volt float8,
 site_boost_volt float8,
 site_pv_over_volt_point float8,
 site_pv_low_volt_point float8,
-site_manual_mode int8); 
+site_manual_mode int8,
+site_battery_bank2_current float8); 
 COMMENT ON COLUMN "public"."bak_site_1h"."id" IS '主键';
     COMMENT ON COLUMN "public"."bak_site_1h"."create_time" IS '创建时间';
     COMMENT ON COLUMN "public"."bak_site_1h"."customer_id" IS '公司ID';
@@ -412,3 +415,4 @@ COMMENT ON COLUMN "public"."bak_site_1h"."site_boost_volt" IS '均充电压';
 COMMENT ON COLUMN "public"."bak_site_1h"."site_pv_over_volt_point" IS 'PV过压点'; 
 COMMENT ON COLUMN "public"."bak_site_1h"."site_pv_low_volt_point" IS 'PV欠压点'; 
 COMMENT ON COLUMN "public"."bak_site_1h"."site_manual_mode" IS '手动模式'; 
+COMMENT ON COLUMN "public"."bak_site_1h"."site_battery_bank2_current" IS '2号电池组电流'; 

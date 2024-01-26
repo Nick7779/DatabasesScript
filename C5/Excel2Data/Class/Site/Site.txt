@@ -499,6 +499,11 @@
  */ 
  @Column(name = "site_manual_mode") 
  private Long siteManualMode;
+ /** 
+ * 2号电池组电流.Battery bank2 current 
+ */ 
+ @Column(name = "site_battery_bank2_current") 
+ private Double siteBatteryBank2Current;
 
     public Date getTime() {
         return Date.from(time);

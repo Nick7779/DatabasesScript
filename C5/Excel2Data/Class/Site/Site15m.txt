@@ -483,4 +483,9 @@
  */ 
  @ApiModelProperty("手动模式") 
  private Long siteManualMode;
+/** 
+ * 2号电池组电流.Battery bank2 current 
+ */ 
+ @ApiModelProperty("2号电池组电流") 
+ private Double siteBatteryBank2Current;
 private static final long serialVersionUID = 1L;

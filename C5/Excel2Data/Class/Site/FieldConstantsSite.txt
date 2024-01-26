@@ -386,3 +386,7 @@
  * 手动模式. 
  */ 
  String SITE_MANUAL_MODE = "site_manual_mode";
+ /** 
+ * 2号电池组电流. 
+ */ 
+ String SITE_BATTERY_BANK2_CURRENT = "site_battery_bank2_current";
