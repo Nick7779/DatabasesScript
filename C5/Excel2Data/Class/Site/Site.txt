@@ -504,6 +504,91 @@
  */ 
  @Column(name = "site_battery_bank2_current") 
  private Double siteBatteryBank2Current;
+ /** 
+ * 通信告警状态2.Communication alarm state 2 
+ */ 
+ @Column(name = "site_communication_alarm_state2") 
+ private Long siteCommunicationAlarmState2;
+ /** 
+ * BMS1通讯失败.BMS1 communication fault 
+ */ 
+ @Column(name = "site_bms1_communication_fault") 
+ private Long siteBms1CommunicationFault;
+ /** 
+ * BMS2通讯失败.BMS2 communication fault 
+ */ 
+ @Column(name = "site_bms2_communication_fault") 
+ private Long siteBms2CommunicationFault;
+ /** 
+ * BMS3通讯失败.BMS3 communication fault 
+ */ 
+ @Column(name = "site_bms3_communication_fault") 
+ private Long siteBms3CommunicationFault;
+ /** 
+ * BMS4通讯失败.BMS4 communication fault 
+ */ 
+ @Column(name = "site_bms4_communication_fault") 
+ private Long siteBms4CommunicationFault;
+ /** 
+ * BMS5通讯失败.BMS5 communication fault 
+ */ 
+ @Column(name = "site_bms5_communication_fault") 
+ private Long siteBms5CommunicationFault;
+ /** 
+ * BMS6通讯失败.BMS6 communication fault 
+ */ 
+ @Column(name = "site_bms6_communication_fault") 
+ private Long siteBms6CommunicationFault;
+ /** 
+ * BMS7通讯失败.BMS7 communication fault 
+ */ 
+ @Column(name = "site_bms7_communication_fault") 
+ private Long siteBms7CommunicationFault;
+ /** 
+ * BMS8通讯失败.BMS8 communication fault 
+ */ 
+ @Column(name = "site_bms8_communication_fault") 
+ private Long siteBms8CommunicationFault;
+ /** 
+ * BMS9通讯失败.BMS9 communication fault 
+ */ 
+ @Column(name = "site_bms9_communication_fault") 
+ private Long siteBms9CommunicationFault;
+ /** 
+ * BMS10通讯失败.BMS10 communication fault 
+ */ 
+ @Column(name = "site_bms10_communication_fault") 
+ private Long siteBms10CommunicationFault;
+ /** 
+ * BMS11通讯失败.BMS11 communication fault 
+ */ 
+ @Column(name = "site_bms11_communication_fault") 
+ private Long siteBms11CommunicationFault;
+ /** 
+ * BMS12通讯失败.BMS12 communication fault 
+ */ 
+ @Column(name = "site_bms12_communication_fault") 
+ private Long siteBms12CommunicationFault;
+ /** 
+ * BMS13通讯失败.BMS13 communication fault 
+ */ 
+ @Column(name = "site_bms13_communication_fault") 
+ private Long siteBms13CommunicationFault;
+ /** 
+ * BMS14通讯失败.BMS14 communication fault 
+ */ 
+ @Column(name = "site_bms14_communication_fault") 
+ private Long siteBms14CommunicationFault;
+ /** 
+ * BMS15通讯失败.BMS15 communication fault 
+ */ 
+ @Column(name = "site_bms15_communication_fault") 
+ private Long siteBms15CommunicationFault;
+ /** 
+ * BMS16通讯失败.BMS16 communication fault 
+ */ 
+ @Column(name = "site_bms16_communication_fault") 
+ private Long siteBms16CommunicationFault;
 
     public Date getTime() {
         return Date.from(time);

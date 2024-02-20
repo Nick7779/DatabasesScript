@@ -390,3 +390,71 @@
  * 2号电池组电流. 
  */ 
  String SITE_BATTERY_BANK2_CURRENT = "site_battery_bank2_current";
+ /** 
+ * 通信告警状态2. 
+ */ 
+ String SITE_COMMUNICATION_ALARM_STATE2 = "site_communication_alarm_state2";
+ /** 
+ * BMS1通讯失败. 
+ */ 
+ String SITE_BMS1_COMMUNICATION_FAULT = "site_bms1_communication_fault";
+ /** 
+ * BMS2通讯失败. 
+ */ 
+ String SITE_BMS2_COMMUNICATION_FAULT = "site_bms2_communication_fault";
+ /** 
+ * BMS3通讯失败. 
+ */ 
+ String SITE_BMS3_COMMUNICATION_FAULT = "site_bms3_communication_fault";
+ /** 
+ * BMS4通讯失败. 
+ */ 
+ String SITE_BMS4_COMMUNICATION_FAULT = "site_bms4_communication_fault";
+ /** 
+ * BMS5通讯失败. 
+ */ 
+ String SITE_BMS5_COMMUNICATION_FAULT = "site_bms5_communication_fault";
+ /** 
+ * BMS6通讯失败. 
+ */ 
+ String SITE_BMS6_COMMUNICATION_FAULT = "site_bms6_communication_fault";
+ /** 
+ * BMS7通讯失败. 
+ */ 
+ String SITE_BMS7_COMMUNICATION_FAULT = "site_bms7_communication_fault";
+ /** 
+ * BMS8通讯失败. 
+ */ 
+ String SITE_BMS8_COMMUNICATION_FAULT = "site_bms8_communication_fault";
+ /** 
+ * BMS9通讯失败. 
+ */ 
+ String SITE_BMS9_COMMUNICATION_FAULT = "site_bms9_communication_fault";
+ /** 
+ * BMS10通讯失败. 
+ */ 
+ String SITE_BMS10_COMMUNICATION_FAULT = "site_bms10_communication_fault";
+ /** 
+ * BMS11通讯失败. 
+ */ 
+ String SITE_BMS11_COMMUNICATION_FAULT = "site_bms11_communication_fault";
+ /** 
+ * BMS12通讯失败. 
+ */ 
+ String SITE_BMS12_COMMUNICATION_FAULT = "site_bms12_communication_fault";
+ /** 
+ * BMS13通讯失败. 
+ */ 
+ String SITE_BMS13_COMMUNICATION_FAULT = "site_bms13_communication_fault";
+ /** 
+ * BMS14通讯失败. 
+ */ 
+ String SITE_BMS14_COMMUNICATION_FAULT = "site_bms14_communication_fault";
+ /** 
+ * BMS15通讯失败. 
+ */ 
+ String SITE_BMS15_COMMUNICATION_FAULT = "site_bms15_communication_fault";
+ /** 
+ * BMS16通讯失败. 
+ */ 
+ String SITE_BMS16_COMMUNICATION_FAULT = "site_bms16_communication_fault";

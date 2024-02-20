@@ -488,4 +488,89 @@
  */ 
  @ApiModelProperty("2号电池组电流") 
  private Double siteBatteryBank2Current;
+/** 
+ * 通信告警状态2.Communication alarm state 2 
+ */ 
+ @ApiModelProperty("通信告警状态2") 
+ private Long siteCommunicationAlarmState2;
+/** 
+ * BMS1通讯失败.BMS1 communication fault 
+ */ 
+ @ApiModelProperty("BMS1通讯失败") 
+ private Long siteBms1CommunicationFault;
+/** 
+ * BMS2通讯失败.BMS2 communication fault 
+ */ 
+ @ApiModelProperty("BMS2通讯失败") 
+ private Long siteBms2CommunicationFault;
+/** 
+ * BMS3通讯失败.BMS3 communication fault 
+ */ 
+ @ApiModelProperty("BMS3通讯失败") 
+ private Long siteBms3CommunicationFault;
+/** 
+ * BMS4通讯失败.BMS4 communication fault 
+ */ 
+ @ApiModelProperty("BMS4通讯失败") 
+ private Long siteBms4CommunicationFault;
+/** 
+ * BMS5通讯失败.BMS5 communication fault 
+ */ 
+ @ApiModelProperty("BMS5通讯失败") 
+ private Long siteBms5CommunicationFault;
+/** 
+ * BMS6通讯失败.BMS6 communication fault 
+ */ 
+ @ApiModelProperty("BMS6通讯失败") 
+ private Long siteBms6CommunicationFault;
+/** 
+ * BMS7通讯失败.BMS7 communication fault 
+ */ 
+ @ApiModelProperty("BMS7通讯失败") 
+ private Long siteBms7CommunicationFault;
+/** 
+ * BMS8通讯失败.BMS8 communication fault 
+ */ 
+ @ApiModelProperty("BMS8通讯失败") 
+ private Long siteBms8CommunicationFault;
+/** 
+ * BMS9通讯失败.BMS9 communication fault 
+ */ 
+ @ApiModelProperty("BMS9通讯失败") 
+ private Long siteBms9CommunicationFault;
+/** 
+ * BMS10通讯失败.BMS10 communication fault 
+ */ 
+ @ApiModelProperty("BMS10通讯失败") 
+ private Long siteBms10CommunicationFault;
+/** 
+ * BMS11通讯失败.BMS11 communication fault 
+ */ 
+ @ApiModelProperty("BMS11通讯失败") 
+ private Long siteBms11CommunicationFault;
+/** 
+ * BMS12通讯失败.BMS12 communication fault 
+ */ 
+ @ApiModelProperty("BMS12通讯失败") 
+ private Long siteBms12CommunicationFault;
+/** 
+ * BMS13通讯失败.BMS13 communication fault 
+ */ 
+ @ApiModelProperty("BMS13通讯失败") 
+ private Long siteBms13CommunicationFault;
+/** 
+ * BMS14通讯失败.BMS14 communication fault 
+ */ 
+ @ApiModelProperty("BMS14通讯失败") 
+ private Long siteBms14CommunicationFault;
+/** 
+ * BMS15通讯失败.BMS15 communication fault 
+ */ 
+ @ApiModelProperty("BMS15通讯失败") 
+ private Long siteBms15CommunicationFault;
+/** 
+ * BMS16通讯失败.BMS16 communication fault 
+ */ 
+ @ApiModelProperty("BMS16通讯失败") 
+ private Long siteBms16CommunicationFault;
 private static final long serialVersionUID = 1L;
