@@ -201,6 +201,7 @@ def write_update_sql():
     SqlUpdateFile.write(",\n".join(field_row_sql_list1h) + "; \n")
     SqlUpdateFile.writelines(comment_sql_list1h)
 
+
 if __name__ == '__main__':
     conn = psycopg2.connect(database="owleye_sys_databse", user='postgres', password='@mail.3tech.net',
                             host='192.168.2.159',
@@ -209,8 +210,22 @@ if __name__ == '__main__':
 
     # 获取资产类
     # asset_class_list = asset_class()
-    # asset_class_list = [(1001, 'Solar', 1, 'solar', None, '太阳能', 'solar_', 99)]
-    # asset_class_list = [(1002, 'Lithium Battery', 2, 'li_battery', None, '铁锂电池', 'li_ba', 99)]
+    asset_class_list = [(1001, 'Solar', 1, 'solar', None, '太阳能', 'solar_', 99),
+                        (1002, 'Lithium Battery', 2, 'li_battery', None, '铁锂电池', 'li_ba', 99),
+                        (1003, 'Gel Battery', 3, 'gel_battery', None, '胶体电池', 'vrla_', 99),
+                        (1004, 'Grid', 4, 'grid', None, '市电', 'grid_', 99),
+                        (1005, 'Ac Generator', 5, 'ac_generator', None, '交流发电机', 'genset_', 99),
+                        (1007, 'Air con', 7, 'air_con', None, '空调', 'air_con_', 99),
+                        (1008, 'Rectifier', 8, 'rectifier', None, '整流器', 'rectifier_', 99),
+                        (1009, 'Load-DC', 9, 'load_dc', None, '负载 直流', 'load_dc_', 99),
+                        (1010, 'Electronic Lock', 10, 'electronic_lock', None, '电子锁', 'elec_lock_', 99),
+                        (1011, 'Heat Exchanger', 11, 'heat_exchanger', None, '热交换器', 'heat_ex_', 99),
+                        (1012, 'Hybrid System', 12, 'site', None, '虚资产', 'site_', 99),
+                        (1013, 'Fuel Level Sensor', 13, 'fuel', None, '液位计', 'fuel_', 99),
+                        (1015, 'Temp & humidity Sensor', 15, 'temp_humidity', None, '温湿度传感器', 'temp_humiture_', 99),
+                        (1024, 'ATS', 24, 'ats', None, 'ATS', 'ats_', 99),
+                        (1028, 'DiDo', 28, 'di', None, 'DiDo', 'dido_', 99),
+                        (1029, 'Sensors', 29, 'sensors', None, '传感器', 'sensors_', 99)]
     # asset_class_list = [(1003, 'Gel Battery', 3, 'gel_battery', None, '胶体电池', 'vrla_', 99)]
     # asset_class_list = [(1004, 'Grid', 4, 'grid', None, '市电', 'grid_', 99)]
     # asset_class_list = [(1005, 'Ac Generator', 5, 'ac_generator', None, '交流发电机', 'genset_', 99)]
@@ -219,14 +234,13 @@ if __name__ == '__main__':
     # asset_class_list = [(1009, 'Load-DC', 9, 'load_dc', None, '负载 直流', 'load_dc_', 99)]
     # asset_class_list = [(1010, 'Electronic Lock', 10, 'electronic_lock', None, '电子锁', 'elec_lock_', 99)]
     # asset_class_list = [(1011, 'Heat Exchanger', 11, 'heat_exchanger', None, '热交换器', 'heat_ex_', 99)]
-    asset_class_list = [(1012, 'Hybrid System', 12, 'site', None, '虚资产', 'site_', 99)]
+    # asset_class_list = [(1012, 'Hybrid System', 12, 'site', None, '虚资产', 'site_', 99)]
     # asset_class_list = [(1013, 'Fuel Level Sensor', 13, 'fuel', None, '液位计', 'fuel_', 99)]
     # asset_class_list = [(1015, 'Temp & humidity Sensor', 15, 'temp_humidity', None, '温湿度传感器', 'temp_humiture_', 99)]
     # asset_class_list = [(1024, 'ATS', 24, 'ats', None, 'ATS', 'ats_', 99)]
     # asset_class_list = [(1028, 'DiDo', 28, 'di', None, 'DiDo', 'dido_', 99)]
     # asset_class_list = [(1029, 'Sensors', 29, 'sensors', None, '传感器', 'sensors_', 99)]
 
-    print(asset_class_list)
     # 依次生成所有资产类
     for asset_class in asset_class_list:
         class_id = asset_class[0]
@@ -292,8 +306,8 @@ if __name__ == '__main__':
         # 写入Java类尾部
         write_java_class_tail()
 
-    # 提交数据
-    conn.commit()
-    # 关闭数据库&游标
-    curses.close()
-    sys.exit()
+# 提交数据
+conn.commit()
+# 关闭数据库&游标
+curses.close()
+sys.exit()
